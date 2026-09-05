@@ -1,0 +1,207 @@
+# =========================================================
+# SalimGPT
+# File: .github/workflows/deploy.yml
+# Purpose:
+# Automatic Documentary Build + GitHub Pages Deployment
+#
+# FUTURE WORKFLOW:
+# 1. নতুন content/*.md upload
+# 2. ৪টি documentary image upload
+# 3. GitHub push
+# 4. এই workflow নিজে build করবে
+# 5. Homepage/documentary pages/data/sitemap generate হবে
+# 6. GitHub Pages automatically deploy হবে
+# =========================================================
+
+name: Build and Deploy SalimGPT
+
+
+# =========================================================
+# 01. WHEN TO RUN
+# =========================================================
+
+on:
+
+  # main branch-এ কিছু push হলেই build হবে
+  push:
+    branches:
+      - main
+
+  # GitHub Actions page থেকে চাইলে manually run করা যাবে
+  workflow_dispatch:
+
+
+# =========================================================
+# 02. REQUIRED PERMISSIONS
+# =========================================================
+
+permissions:
+
+  # Repository read করার permission
+  contents: read
+
+  # GitHub Pages deploy করার permission
+  pages: write
+
+  # GitHub Pages deployment authentication
+  id-token: write
+
+
+# =========================================================
+# 03. PREVENT DUPLICATE DEPLOYMENTS
+# =========================================================
+
+concurrency:
+
+  group: "pages"
+
+  # নতুন deployment শুরু হলে পুরোনো incomplete deployment
+  # automatically cancel হবে
+  cancel-in-progress: true
+
+
+# =========================================================
+# 04. BUILD JOB
+# =========================================================
+
+jobs:
+
+  build:
+
+    name: Build SalimGPT
+
+    runs-on: ubuntu-latest
+
+
+    steps:
+
+      # -----------------------------------------------------
+      # STEP 1
+      # Repository download
+      # -----------------------------------------------------
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+
+      # -----------------------------------------------------
+      # STEP 2
+      # Node.js setup
+      # -----------------------------------------------------
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+
+        with:
+          node-version: "20"
+
+          cache: "npm"
+
+
+      # -----------------------------------------------------
+      # STEP 3
+      # Install dependencies
+      # -----------------------------------------------------
+
+      - name: Install dependencies
+        run: npm ci
+
+
+      # -----------------------------------------------------
+      # STEP 4
+      # Generate complete website
+      #
+      # scripts/build.js will:
+      #
+      # - scan content/*.md
+      # - read documentary metadata
+      # - validate slug/title/date
+      # - extract YouTube ID
+      # - generate documentary pages
+      # - generate homepage documentary data
+      # - sort newest first
+      # - generate sitemap.xml
+      # - generate robots.txt
+      # - copy required static site files
+      # - create final website inside _site/
+      # -----------------------------------------------------
+
+      - name: Build website
+        run: npm run build
+
+        env:
+
+          # Example:
+          # username/salimgpt
+          GITHUB_REPOSITORY: ${{ github.repository }}
+
+          # Current branch/ref information
+          GITHUB_REF_NAME: ${{ github.ref_name }}
+
+          # Marks this as GitHub Actions build
+          CI: "true"
+
+
+      # -----------------------------------------------------
+      # STEP 5
+      # Configure GitHub Pages
+      # -----------------------------------------------------
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+
+      # -----------------------------------------------------
+      # STEP 6
+      # Upload generated website
+      #
+      # IMPORTANT:
+      # Only _site/ is published.
+      #
+      # These source folders will NOT become public build
+      # dependencies by accident:
+      #
+      # .github/
+      # scripts/
+      # templates/
+      # content/
+      # node_modules/
+      # -----------------------------------------------------
+
+      - name: Upload GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v3
+
+        with:
+          path: "./_site"
+
+
+  # =======================================================
+  # 05. DEPLOY JOB
+  # =======================================================
+
+  deploy:
+
+    name: Deploy SalimGPT
+
+    needs:
+      - build
+
+    runs-on: ubuntu-latest
+
+
+    environment:
+
+      name: github-pages
+
+      url: ${{ steps.deployment.outputs.page_url }}
+
+
+    steps:
+
+      # -----------------------------------------------------
+      # Deploy generated _site artifact
+      # -----------------------------------------------------
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
