@@ -1,0 +1,2107 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, viewport-fit=cover"
+  >
+
+  <title>{{TITLE}} — SalimGPT</title>
+
+
+  <!-- =====================================================
+       BASIC SEO
+  ====================================================== -->
+
+  <meta
+    name="description"
+    content="{{DESCRIPTION}}"
+  >
+
+  <meta
+    name="author"
+    content="Mohammad Salim"
+  >
+
+  <meta
+    name="robots"
+    content="index, follow, max-image-preview:large"
+  >
+
+  <meta
+    name="theme-color"
+    content="#ffffff"
+  >
+
+  <meta
+    name="color-scheme"
+    content="light"
+  >
+
+
+  <!-- =====================================================
+       CANONICAL
+  ====================================================== -->
+
+  <link
+    rel="canonical"
+    href="{{PAGE_URL}}"
+  >
+
+
+  <!-- =====================================================
+       OPEN GRAPH
+  ====================================================== -->
+
+  <meta
+    property="og:type"
+    content="article"
+  >
+
+  <meta
+    property="og:locale"
+    content="bn_BD"
+  >
+
+  <meta
+    property="og:site_name"
+    content="SalimGPT"
+  >
+
+  <meta
+    property="og:title"
+    content="{{TITLE}}"
+  >
+
+  <meta
+    property="og:description"
+    content="{{DESCRIPTION}}"
+  >
+
+  <meta
+    property="og:url"
+    content="{{PAGE_URL}}"
+  >
+
+  <meta
+    property="og:image"
+    content="{{OG_IMAGE_URL}}"
+  >
+
+  <meta
+    property="article:published_time"
+    content="{{DATE_ISO}}"
+  >
+
+  <meta
+    property="article:modified_time"
+    content="{{DATE_ISO}}"
+  >
+
+
+  <!-- =====================================================
+       TWITTER / X
+  ====================================================== -->
+
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  >
+
+  <meta
+    name="twitter:title"
+    content="{{TITLE}}"
+  >
+
+  <meta
+    name="twitter:description"
+    content="{{DESCRIPTION}}"
+  >
+
+  <meta
+    name="twitter:image"
+    content="{{OG_IMAGE_URL}}"
+  >
+
+
+  <!-- =====================================================
+       SITE FILES
+  ====================================================== -->
+
+  <link
+    rel="icon"
+    href="../../favicon.svg"
+    type="image/svg+xml"
+  >
+
+  <link
+    rel="manifest"
+    href="../../manifest.webmanifest"
+  >
+
+  <link
+    rel="stylesheet"
+    href="../../css/documentary.css"
+  >
+
+
+  <!-- =====================================================
+       STRUCTURED DATA
+  ====================================================== -->
+
+  <script type="application/ld+json">
+{{STRUCTURED_DATA}}
+  </script>
+
+</head>
+
+
+<body
+  data-documentary="{{SLUG}}"
+  data-documentary-source="{{SOURCE_FILE}}"
+  data-documentary-date="{{DATE_ISO}}"
+>
+
+
+  <!-- =====================================================
+       READING PROGRESS
+  ====================================================== -->
+
+  <div
+    class="reading-progress"
+    id="readingProgressBar"
+    role="progressbar"
+    aria-label="ডকুমেন্টারি পড়ার অগ্রগতি"
+    aria-valuemin="0"
+    aria-valuemax="100"
+    aria-valuenow="0"
+  ></div>
+
+
+  <!-- =====================================================
+       HEADER
+  ====================================================== -->
+
+  <header class="site-header">
+
+    <div class="header-inner">
+
+      <a
+        class="header-brand"
+        href="../../"
+        aria-label="SalimGPT হোম"
+      >
+
+        <img
+          class="header-logo"
+          src="../../assets/brand/logo.svg"
+          alt="SalimGPT"
+          width="46"
+          height="46"
+        >
+
+        <div class="header-brand-text">
+
+          <strong class="header-wordmark">
+            <span>Salim</span><span class="brand-red">GPT</span>
+          </strong>
+
+          <small class="header-tagline">
+            Research-Based Documentary Media
+          </small>
+
+        </div>
+
+      </a>
+
+
+      <button
+        class="menu-open-button"
+        id="menuOpenButton"
+        type="button"
+        aria-label="সাইড মেনু খুলুন"
+        aria-controls="sideMenu"
+        aria-expanded="false"
+      >
+
+        <svg
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+        >
+          <path d="M4 6h16"></path>
+          <path d="M4 12h16"></path>
+          <path d="M4 18h16"></path>
+        </svg>
+
+        <span>
+          মেনু
+        </span>
+
+      </button>
+
+    </div>
+
+  </header>
+
+
+  <!-- =====================================================
+       MAIN
+  ====================================================== -->
+
+  <main id="main-content">
+
+
+    <article
+      class="documentary-article"
+      data-documentary-article
+      aria-labelledby="documentaryTitle"
+    >
+
+
+      <!-- =================================================
+           HERO
+      ================================================== -->
+
+      <header class="documentary-hero">
+
+
+        <!-- ===============================================
+             BREADCRUMB
+        ================================================ -->
+
+        <nav
+          class="breadcrumb"
+          aria-label="Breadcrumb"
+        >
+
+          <a href="../../">
+            হোম
+          </a>
+
+          <span aria-hidden="true">
+            /
+          </span>
+
+          <a href="../../#documentaries">
+            ডকুমেন্টারি
+          </a>
+
+          <span aria-hidden="true">
+            /
+          </span>
+
+          <span aria-current="page">
+            {{TITLE}}
+          </span>
+
+        </nav>
+
+
+        <span class="documentary-kicker">
+          SALIMGPT DOCUMENTARY
+        </span>
+
+
+        <h1 id="documentaryTitle">
+          {{TITLE}}
+        </h1>
+
+
+        <p class="documentary-deck">
+          {{DESCRIPTION}}
+        </p>
+
+
+        <!-- ===============================================
+             ARTICLE META
+        ================================================ -->
+
+        <div class="article-meta">
+
+
+          <!-- Director -->
+
+          <span class="meta-item">
+
+            <svg
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <circle
+                cx="12"
+                cy="8"
+                r="4"
+              ></circle>
+
+              <path
+                d="M5 21c.8-4.2 3.1-6.3 7-6.3S18.2 16.8 19 21"
+              ></path>
+            </svg>
+
+            <span>
+              গবেষণা ও পরিচালনা:
+              <strong>
+                Mohammad Salim
+              </strong>
+            </span>
+
+          </span>
+
+
+          <!-- Publication date -->
+
+          <span class="meta-item">
+
+            <svg
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <rect
+                x="4"
+                y="5"
+                width="16"
+                height="15"
+                rx="2"
+              ></rect>
+
+              <path d="M8 3v4"></path>
+              <path d="M16 3v4"></path>
+              <path d="M4 10h16"></path>
+            </svg>
+
+            <time datetime="{{DATE_ISO}}">
+              {{DATE_BN}}
+            </time>
+
+          </span>
+
+
+          <!-- Reading time -->
+
+          <span class="meta-item">
+
+            <svg
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="9"
+              ></circle>
+
+              <path d="M12 7v5l3 2"></path>
+            </svg>
+
+            <span>
+              পড়তে আনুমানিক
+
+              <strong
+                id="readingTime"
+                data-generated-reading-time
+              >
+                {{READING_TIME}} মিনিট
+              </strong>
+
+            </span>
+
+          </span>
+
+
+          <!-- Article type -->
+
+          <span class="meta-item">
+
+            <svg
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path d="M5 3h10l4 4v14H5z"></path>
+              <path d="M15 3v5h5"></path>
+              <path d="M8 12h8"></path>
+              <path d="M8 16h6"></path>
+            </svg>
+
+            <span>
+              পূর্ণ লিখিত ডকুমেন্টারি
+            </span>
+
+          </span>
+
+        </div>
+
+
+        <!-- ===============================================
+             MAIN MEDIA
+
+             build.js automatically inserts:
+
+             YouTube available:
+             → real YouTube thumbnail
+
+             YouTube unavailable:
+             → uploaded local image
+        ================================================ -->
+
+        {{HERO_MEDIA_HTML}}
+
+
+        <!-- ===============================================
+             PRIMARY ACTIONS
+        ================================================ -->
+
+        <div class="article-actions">
+
+
+          <!-- Generated YouTube button -->
+
+          {{YOUTUBE_ACTION_HTML}}
+
+
+          <!-- Copy -->
+
+          <button
+            class="copy-link-button"
+            id="copyDocumentaryLink"
+            data-copy-button
+            type="button"
+            aria-label="ডকুমেন্টারির লিংক কপি করুন"
+          >
+
+            <svg
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <rect
+                x="8"
+                y="8"
+                width="11"
+                height="11"
+                rx="2"
+              ></rect>
+
+              <path
+                d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"
+              ></path>
+            </svg>
+
+            <span data-copy-label>
+              লিংক কপি
+            </span>
+
+          </button>
+
+
+          <!-- Share -->
+
+          <button
+            class="share-button"
+            id="shareDocumentaryButton"
+            data-share-button
+            type="button"
+            aria-label="ডকুমেন্টারি শেয়ার করুন"
+          >
+
+            <svg
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+
+              <circle
+                cx="6"
+                cy="12"
+                r="3"
+              ></circle>
+
+              <circle
+                cx="18"
+                cy="6"
+                r="3"
+              ></circle>
+
+              <circle
+                cx="18"
+                cy="18"
+                r="3"
+              ></circle>
+
+              <path d="m8.7 10.7 6.6-3.4"></path>
+              <path d="m8.7 13.3 6.6 3.4"></path>
+
+            </svg>
+
+            <span data-share-label>
+              শেয়ার
+            </span>
+
+          </button>
+
+        </div>
+
+      </header>
+
+
+      <!-- =================================================
+           MOBILE TABLE OF CONTENTS
+      ================================================== -->
+
+      <div
+        class="mobile-toc"
+        data-mobile-toc
+      >
+
+        <details>
+
+          <summary>
+            এই ডকুমেন্টারির অধ্যায়সমূহ
+          </summary>
+
+          <ol
+            class="mobile-toc-list"
+            id="mobileTocList"
+            data-toc-list
+          >
+            {{MOBILE_TOC_HTML}}
+          </ol>
+
+        </details>
+
+      </div>
+
+
+      <!-- =================================================
+           DOCUMENTARY LAYOUT
+      ================================================== -->
+
+      <div class="documentary-layout">
+
+
+        <!-- ===============================================
+             ARTICLE COLUMN
+        ================================================ -->
+
+        <div class="article-column">
+
+          <div
+            class="article-body"
+            id="documentaryArticle"
+            data-documentary-body
+          >
+
+            {{ARTICLE_HTML}}
+
+
+            <!-- ===========================================
+                 DOCUMENTARY DISCLAIMER
+            ============================================ -->
+
+            <div class="documentary-disclaimer">
+
+              <strong>
+                তথ্য ও নিরাপত্তা নোট
+              </strong>
+
+              <p>
+                এই ডকুমেন্টারি গবেষণা, শিক্ষা এবং
+                তথ্যভিত্তিক আলোচনার উদ্দেশ্যে প্রকাশিত।
+                চিকিৎসা, আইন, অর্থনীতি, জননিরাপত্তা
+                বা অন্য কোনো regulated professional বিষয়ে
+                এটি ব্যক্তিগত professional advice-এর বিকল্প নয়।
+                গুরুত্বপূর্ণ সিদ্ধান্তের ক্ষেত্রে বর্তমান
+                primary source এবং প্রয়োজন হলে qualified
+                professional-এর পরামর্শ বিবেচনা করুন।
+              </p>
+
+            </div>
+
+
+            <!-- ===========================================
+                 EDITORIAL NOTE
+            ============================================ -->
+
+            <div class="article-end-note">
+
+              <span class="section-kicker">
+                SALIMGPT EDITORIAL NOTE
+              </span>
+
+              <h3>
+                গবেষণা থেকে গল্প,
+                গল্প থেকে জ্ঞান
+              </h3>
+
+              <p>
+                SalimGPT গুরুত্বপূর্ণ factual claim
+                সম্ভব হলে একাধিক source-এর সঙ্গে
+                cross-check করার চেষ্টা করে।
+                তবে historical record,
+                scientific knowledge,
+                public data,
+                law-enforcement assessment
+                ও evolving events
+                সময়ের সঙ্গে পরিবর্তিত হতে পারে।
+              </p>
+
+              <p>
+                কোনো factual error,
+                attribution issue
+                বা source-related concern শনাক্ত করলে
+                specific evidenceসহ
+                SalimGPT-এর যোগাযোগ page ব্যবহার করা যেতে পারে।
+              </p>
+
+            </div>
+
+
+            <!-- ===========================================
+                 BOTTOM SHARE BAR
+            ============================================ -->
+
+            <div class="share-bar">
+
+
+              <button
+                class="share-button"
+                id="articleShareButton"
+                data-share-button
+                type="button"
+                aria-label="ডকুমেন্টারি শেয়ার করুন"
+              >
+
+                <svg
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+
+                  <circle
+                    cx="6"
+                    cy="12"
+                    r="3"
+                  ></circle>
+
+                  <circle
+                    cx="18"
+                    cy="6"
+                    r="3"
+                  ></circle>
+
+                  <circle
+                    cx="18"
+                    cy="18"
+                    r="3"
+                  ></circle>
+
+                  <path d="m8.7 10.7 6.6-3.4"></path>
+                  <path d="m8.7 13.3 6.6 3.4"></path>
+
+                </svg>
+
+                <span data-share-label>
+                  ডকুমেন্টারি শেয়ার
+                </span>
+
+              </button>
+
+
+              <button
+                class="copy-link-button"
+                id="articleCopyLinkButton"
+                data-copy-button
+                type="button"
+                aria-label="ডকুমেন্টারির লিংক কপি করুন"
+              >
+
+                <svg
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+
+                  <rect
+                    x="8"
+                    y="8"
+                    width="11"
+                    height="11"
+                    rx="2"
+                  ></rect>
+
+                  <path
+                    d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"
+                  ></path>
+
+                </svg>
+
+                <span data-copy-label>
+                  লিংক কপি
+                </span>
+
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- ===============================================
+             SIDEBAR
+        ================================================ -->
+
+        <aside
+          class="article-sidebar"
+          aria-label="ডকুমেন্টারি নেভিগেশন"
+        >
+
+
+          <!-- =============================================
+               TABLE OF CONTENTS
+          ============================================== -->
+
+          <nav
+            class="article-toc"
+            id="documentaryToc"
+            aria-label="ডকুমেন্টারির অধ্যায়সমূহ"
+          >
+
+            <div class="toc-header">
+
+              <span>
+                CONTENT
+              </span>
+
+              <strong>
+                এই ডকুমেন্টারিতে
+              </strong>
+
+            </div>
+
+
+            <ol
+              class="toc-list documentary-toc-list"
+              id="tocList"
+              data-toc-list
+            >
+              {{TOC_HTML}}
+            </ol>
+
+          </nav>
+
+
+          <!-- =============================================
+               DIRECTOR
+          ============================================== -->
+
+          <div class="author-card">
+
+            <div class="author-card-top">
+
+              <span
+                class="author-avatar"
+                aria-hidden="true"
+              >
+                MS
+              </span>
+
+              <div>
+
+                <strong>
+                  Mohammad Salim
+                </strong>
+
+                <small>
+                  Founder &amp; Director
+                </small>
+
+              </div>
+
+            </div>
+
+
+            <p>
+              Topic selection,
+              research,
+              fact-checking,
+              scripting,
+              editorial direction,
+              visual planning
+              এবং final publication review।
+            </p>
+
+          </div>
+
+
+          <!-- =============================================
+               FACT CHECKING
+          ============================================== -->
+
+          <div class="sidebar-card">
+
+            <span class="sidebar-card-label">
+              RESEARCH
+            </span>
+
+            <h3>
+              তথ্য যাচাই ও সূত্র
+            </h3>
+
+            <p>
+              SalimGPT-এর research,
+              source evaluation
+              এবং correction process সম্পর্কে জানুন।
+            </p>
+
+            <a href="../../fact-checking/">
+              নীতিমালা দেখুন →
+            </a>
+
+          </div>
+
+
+          <!-- =============================================
+               AI POLICY
+          ============================================== -->
+
+          <div class="sidebar-card">
+
+            <span class="sidebar-card-label">
+              AI DISCLOSURE
+            </span>
+
+            <h3>
+              AI-assisted production
+            </h3>
+
+            <p>
+              Narration synthetic হতে পারে
+              এবং কিছু visual
+              AI-generated বা AI-assisted হতে পারে।
+            </p>
+
+            <a href="../../ai-policy/">
+              AI নীতি →
+            </a>
+
+          </div>
+
+
+          <!-- =============================================
+               CONTACT
+          ============================================== -->
+
+          <div class="sidebar-card">
+
+            <span class="sidebar-card-label">
+              CORRECTION
+            </span>
+
+            <h3>
+              কোনো ভুল পেয়েছেন?
+            </h3>
+
+            <p>
+              Specific claim,
+              source
+              এবং supporting evidenceসহ
+              correction পাঠাতে পারেন।
+            </p>
+
+            <a href="../../contact/">
+              যোগাযোগ →
+            </a>
+
+          </div>
+
+        </aside>
+
+      </div>
+
+    </article>
+
+
+    <!-- ===================================================
+         RELATED DOCUMENTARIES
+    ==================================================== -->
+
+    <section
+      class="related-section"
+      aria-labelledby="relatedTitle"
+    >
+
+      <div class="related-heading">
+
+        <span>
+          MORE DOCUMENTARIES
+        </span>
+
+        <h2 id="relatedTitle">
+          সম্পর্কিত ডকুমেন্টারি
+        </h2>
+
+      </div>
+
+
+      <div
+        class="related-grid"
+        id="relatedDocumentaries"
+      >
+        {{RELATED_HTML}}
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         EXPLORE
+    ==================================================== -->
+
+    <section class="next-section">
+
+      <div class="next-heading">
+
+        <span>
+          EXPLORE SALIMGPT
+        </span>
+
+        <h2>
+          আরও জানুন
+        </h2>
+
+      </div>
+
+
+      <div class="next-grid">
+
+
+        <a
+          class="next-card"
+          href="../../fact-checking/"
+        >
+
+          <span class="next-icon">
+
+            <svg
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path d="M4 4h12v16H4z"></path>
+
+              <circle
+                cx="17"
+                cy="16"
+                r="4"
+              ></circle>
+
+              <path d="m20 19 2 2"></path>
+            </svg>
+
+          </span>
+
+
+          <div>
+
+            <strong>
+              তথ্য যাচাই ও সূত্র
+            </strong>
+
+            <small>
+              Research verification process
+            </small>
+
+          </div>
+
+
+          <svg
+            class="next-arrow"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <path d="m9 6 6 6-6 6"></path>
+          </svg>
+
+        </a>
+
+
+        <a
+          class="next-card"
+          href="../../production-process/"
+        >
+
+          <span class="next-icon">
+
+            <svg
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="9"
+              ></circle>
+
+              <path d="m10 8 6 4-6 4z"></path>
+            </svg>
+
+          </span>
+
+
+          <div>
+
+            <strong>
+              নির্মাণ প্রক্রিয়া
+            </strong>
+
+            <small>
+              Documentary কীভাবে তৈরি হয়
+            </small>
+
+          </div>
+
+
+          <svg
+            class="next-arrow"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <path d="m9 6 6 6-6 6"></path>
+          </svg>
+
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =====================================================
+       FOOTER
+  ====================================================== -->
+
+  <footer class="site-footer">
+
+    <div class="footer-main">
+
+
+      <!-- ===============================================
+           BRAND
+      ================================================ -->
+
+      <div class="footer-brand">
+
+        <a
+          class="footer-logo-link"
+          href="../../"
+          aria-label="SalimGPT হোম"
+        >
+
+          <img
+            src="../../assets/brand/logo.svg"
+            alt="SalimGPT"
+            width="44"
+            height="44"
+          >
+
+          <strong>
+            Salim<span>GPT</span>
+          </strong>
+
+        </a>
+
+
+        <p>
+          গবেষণা থেকে গল্প,
+          গল্প থেকে জ্ঞান।
+          ইতিহাস,
+          বিজ্ঞান,
+          সমাজ
+          এবং মানব সভ্যতার
+          জটিল বিষয়কে
+          research-based documentary-তে
+          উপস্থাপন করে SalimGPT।
+        </p>
+
+      </div>
+
+
+      <!-- ===============================================
+           QUICK MENU
+      ================================================ -->
+
+      <nav
+        class="footer-menu"
+        aria-label="Quick Menu"
+      >
+
+        <h2>
+          Quick Menu
+        </h2>
+
+
+        <div class="footer-menu-links">
+
+          <a href="../../about/">
+            সম্পর্কে
+          </a>
+
+          <a href="../../director/">
+            পরিচালক
+          </a>
+
+          <a href="../../production-process/">
+            নির্মাণ প্রক্রিয়া
+          </a>
+
+          <a href="../../fact-checking/">
+            তথ্য যাচাই
+          </a>
+
+          <a href="../../ai-policy/">
+            AI নীতি
+          </a>
+
+          <a href="../../faq/">
+            FAQ
+          </a>
+
+          <a href="../../social/">
+            Social
+          </a>
+
+          <a href="../../contact/">
+            যোগাযোগ
+          </a>
+
+        </div>
+
+      </nav>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      <p>
+        © <span id="footerYear"></span>
+        SalimGPT. সর্বস্বত্ব সংরক্ষিত।
+      </p>
+
+
+      <nav
+        class="footer-legal"
+        aria-label="Legal Menu"
+      >
+
+        <a href="../../legal/privacy/">
+          Privacy
+        </a>
+
+        <a href="../../legal/terms/">
+          Terms
+        </a>
+
+        <a href="../../legal/disclaimer/">
+          Disclaimer
+        </a>
+
+      </nav>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =====================================================
+       DRAWER OVERLAY
+  ====================================================== -->
+
+  <div
+    class="menu-overlay"
+    id="menuOverlay"
+    aria-hidden="true"
+  ></div>
+
+
+  <!-- =====================================================
+       SIDE MENU
+  ====================================================== -->
+
+  <aside
+    class="side-menu"
+    id="sideMenu"
+    aria-label="SalimGPT সাইড মেনু"
+    aria-hidden="true"
+  >
+
+
+    <!-- ===================================================
+         DRAWER HEADER
+    ==================================================== -->
+
+    <header class="side-menu-header">
+
+      <a
+        class="side-menu-brand"
+        href="../../"
+        aria-label="SalimGPT হোম"
+      >
+
+        <img
+          class="side-menu-logo"
+          src="../../assets/brand/logo.svg"
+          alt="SalimGPT"
+          width="54"
+          height="54"
+        >
+
+
+        <div>
+
+          <strong>
+            Salim<span>GPT</span>
+          </strong>
+
+          <small>
+            Documentary Media
+          </small>
+
+        </div>
+
+      </a>
+
+
+      <button
+        class="menu-close-button"
+        id="menuCloseButton"
+        type="button"
+        aria-label="সাইড মেনু বন্ধ করুন"
+      >
+
+        <svg
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+        >
+          <path d="M6 6l12 12"></path>
+          <path d="M18 6 6 18"></path>
+        </svg>
+
+      </button>
+
+    </header>
+
+
+    <!-- ===================================================
+         DRAWER CONTENT
+    ==================================================== -->
+
+    <div class="side-menu-content">
+
+
+      <!-- ===============================================
+           পরিচিতি
+      ================================================ -->
+
+      <section class="menu-section">
+
+        <h2 class="menu-section-title">
+          পরিচিতি
+        </h2>
+
+        <nav class="menu-items">
+
+
+          <a
+            class="menu-item"
+            href="../../"
+          >
+
+            <span class="menu-icon">
+
+              <svg viewBox="0 0 24 24">
+                <path d="M3.5 11 12 4l8.5 7"></path>
+                <path d="M5.5 10v10h13V10"></path>
+                <path d="M9.5 20v-6h5v6"></path>
+              </svg>
+
+            </span>
+
+            <span class="menu-label">
+              হোম
+            </span>
+
+            <span class="menu-chevron">
+
+              <svg viewBox="0 0 24 24">
+                <path d="m9 6 6 6-6 6"></path>
+              </svg>
+
+            </span>
+
+          </a>
+
+
+          <a
+            class="menu-item"
+            href="../../about/"
+          >
+
+            <span class="menu-icon">
+
+              <svg viewBox="0 0 24 24">
+
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="9"
+                ></circle>
+
+                <path d="M12 11v6"></path>
+                <path d="M12 7.5h.01"></path>
+
+              </svg>
+
+            </span>
+
+            <span class="menu-label">
+              SalimGPT সম্পর্কে
+            </span>
+
+            <span class="menu-chevron">
+
+              <svg viewBox="0 0 24 24">
+                <path d="m9 6 6 6-6 6"></path>
+              </svg>
+
+            </span>
+
+          </a>
+
+
+          <a
+            class="menu-item"
+            href="../../director/"
+          >
+
+            <span class="menu-icon">
+
+              <svg viewBox="0 0 24 24">
+
+                <circle
+                  cx="12"
+                  cy="8"
+                  r="4"
+                ></circle>
+
+                <path d="M4.5 20c.7-4 3.2-6 7.5-6s6.8 2 7.5 6"></path>
+
+              </svg>
+
+            </span>
+
+            <span class="menu-label">
+              পরিচালক — Mohammad Salim
+            </span>
+
+            <span class="menu-chevron">
+
+              <svg viewBox="0 0 24 24">
+                <path d="m9 6 6 6-6 6"></path>
+              </svg>
+
+            </span>
+
+          </a>
+
+
+          <a
+            class="menu-item"
+            href="../../originality/"
+          >
+
+            <span class="menu-icon">
+
+              <svg viewBox="0 0 24 24">
+
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="9"
+                ></circle>
+
+                <path d="m8 12 2.7 2.7L16.5 9"></path>
+
+              </svg>
+
+            </span>
+
+            <span class="menu-label">
+              নিজস্বতা
+            </span>
+
+            <span class="menu-chevron">
+
+              <svg viewBox="0 0 24 24">
+                <path d="m9 6 6 6-6 6"></path>
+              </svg>
+
+            </span>
+
+          </a>
+
+        </nav>
+
+      </section>
+
+
+      <div
+        class="menu-divider"
+        aria-hidden="true"
+      ></div>
+
+
+      <!-- ===============================================
+           ডকুমেন্টারি
+      ================================================ -->
+
+      <section class="menu-section">
+
+        <h2 class="menu-section-title">
+          ডকুমেন্টারি
+        </h2>
+
+        <nav class="menu-items">
+
+
+          <a
+            class="menu-item"
+            href="../../production-process/"
+          >
+
+            <span class="menu-icon">
+
+              <svg viewBox="0 0 24 24">
+
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="9"
+                ></circle>
+
+                <path d="m10 8 6 4-6 4z"></path>
+
+              </svg>
+
+            </span>
+
+            <span class="menu-label">
+              নির্মাণ প্রক্রিয়া
+            </span>
+
+            <span class="menu-chevron">
+
+              <svg viewBox="0 0 24 24">
+                <path d="m9 6 6 6-6 6"></path>
+              </svg>
+
+            </span>
+
+          </a>
+
+
+          <a
+            class="menu-item"
+            href="../../studio/"
+          >
+
+            <span class="menu-icon">
+
+              <svg viewBox="0 0 24 24">
+
+                <rect
+                  x="3"
+                  y="5"
+                  width="18"
+                  height="14"
+                  rx="2"
+                ></rect>
+
+                <path d="M8 9h8"></path>
+                <path d="M8 13h5"></path>
+
+              </svg>
+
+            </span>
+
+            <span class="menu-label">
+              স্টুডিও ও প্রোডাকশন
+            </span>
+
+            <span class="menu-chevron">
+
+              <svg viewBox="0 0 24 24">
+                <path d="m9 6 6 6-6 6"></path>
+              </svg>
+
+            </span>
+
+          </a>
+
+
+          <a
+            class="menu-item"
+            href="../../visual-media/"
+          >
+
+            <span class="menu-icon">
+
+              <svg viewBox="0 0 24 24">
+
+                <rect
+                  x="3"
+                  y="4"
+                  width="18"
+                  height="16"
+                  rx="2"
+                ></rect>
+
+                <circle
+                  cx="9"
+                  cy="9"
+                  r="2"
+                ></circle>
+
+                <path d="m5 18 5-5 3 3 2-2 4 4"></path>
+
+              </svg>
+
+            </span>
+
+            <span class="menu-label">
+              ভিজ্যুয়াল ও মিডিয়া সোর্স
+            </span>
+
+            <span class="menu-chevron">
+
+              <svg viewBox="0 0 24 24">
+                <path d="m9 6 6 6-6 6"></path>
+              </svg>
+
+            </span>
+
+          </a>
+
+
+          <a
+            class="menu-item"
+            href="../../fact-checking/"
+          >
+
+            <span class="menu-icon">
+
+              <svg viewBox="0 0 24 24">
+
+                <path d="M4 4h12v16H4z"></path>
+                <path d="M8 8h4"></path>
+                <path d="M8 12h3"></path>
+
+                <circle
+                  cx="17"
+                  cy="16"
+                  r="4"
+                ></circle>
+
+                <path d="m20 19 2 2"></path>
+
+              </svg>
+
+            </span>
+
+            <span class="menu-label">
+              তথ্য যাচাই ও সূত্র
+            </span>
+
+            <span class="menu-chevron">
+
+              <svg viewBox="0 0 24 24">
+                <path d="m9 6 6 6-6 6"></path>
+              </svg>
+
+            </span>
+
+          </a>
+
+        </nav>
+
+      </section>
+
+
+      <div
+        class="menu-divider"
+        aria-hidden="true"
+      ></div>
+
+
+      <!-- ===============================================
+           নীতিমালা
+      ================================================ -->
+
+      <section class="menu-section">
+
+        <h2 class="menu-section-title">
+          নীতিমালা
+        </h2>
+
+        <nav class="menu-items">
+
+
+          <a
+            class="menu-item"
+            href="../../ai-policy/"
+          >
+
+            <span class="menu-icon">
+
+              <svg viewBox="0 0 24 24">
+
+                <rect
+                  x="5"
+                  y="5"
+                  width="14"
+                  height="14"
+                  rx="3"
+                ></rect>
+
+                <path d="M9 2v3M15 2v3M9 19v3M15 19v3"></path>
+
+                <path d="M2 9h3M2 15h3M19 9h3M19 15h3"></path>
+
+              </svg>
+
+            </span>
+
+            <span class="menu-label">
+              AI নীতি
+            </span>
+
+            <span class="menu-chevron">
+
+              <svg viewBox="0 0 24 24">
+                <path d="m9 6 6 6-6 6"></path>
+              </svg>
+
+            </span>
+
+          </a>
+
+
+          <a
+            class="menu-item"
+            href="../../editorial-policy/"
+          >
+
+            <span class="menu-icon">
+
+              <svg viewBox="0 0 24 24">
+
+                <path d="M5 3h10l4 4v14H5z"></path>
+                <path d="M15 3v5h5"></path>
+                <path d="M8 12h8"></path>
+                <path d="M8 16h6"></path>
+
+              </svg>
+
+            </span>
+
+            <span class="menu-label">
+              সম্পাদকীয় নীতি
+            </span>
+
+            <span class="menu-chevron">
+
+              <svg viewBox="0 0 24 24">
+                <path d="m9 6 6 6-6 6"></path>
+              </svg>
+
+            </span>
+
+          </a>
+
+
+          <a
+            class="menu-item"
+            href="../../ownership-copyright/"
+          >
+
+            <span class="menu-icon">
+
+              <svg viewBox="0 0 24 24">
+
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="9"
+                ></circle>
+
+                <path d="M15 9.5a4 4 0 1 0 0 5"></path>
+
+              </svg>
+
+            </span>
+
+            <span class="menu-label">
+              মালিকানা ও কপিরাইট
+            </span>
+
+            <span class="menu-chevron">
+
+              <svg viewBox="0 0 24 24">
+                <path d="m9 6 6 6-6 6"></path>
+              </svg>
+
+            </span>
+
+          </a>
+
+
+          <a
+            class="menu-item"
+            href="../../content-use/"
+          >
+
+            <span class="menu-icon">
+
+              <svg viewBox="0 0 24 24">
+
+                <path d="M6 3h12v18H6z"></path>
+                <path d="M9 8h6"></path>
+                <path d="M9 12h6"></path>
+                <path d="m9 16 1.5 1.5L15 14"></path>
+
+              </svg>
+
+            </span>
+
+            <span class="menu-label">
+              কনটেন্ট ব্যবহারের নীতিমালা
+            </span>
+
+            <span class="menu-chevron">
+
+              <svg viewBox="0 0 24 24">
+                <path d="m9 6 6 6-6 6"></path>
+              </svg>
+
+            </span>
+
+          </a>
+
+        </nav>
+
+      </section>
+
+
+      <div
+        class="menu-divider"
+        aria-hidden="true"
+      ></div>
+
+
+      <!-- ===============================================
+           সহায়তা ও যোগাযোগ
+      ================================================ -->
+
+      <section class="menu-section">
+
+        <h2 class="menu-section-title">
+          সহায়তা ও যোগাযোগ
+        </h2>
+
+        <nav class="menu-items">
+
+
+          <a
+            class="menu-item"
+            href="../../faq/"
+          >
+
+            <span class="menu-icon">
+
+              <svg viewBox="0 0 24 24">
+
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="9"
+                ></circle>
+
+                <path d="M9.5 9a2.6 2.6 0 1 1 3.8 2.3c-.9.5-1.3 1-1.3 2"></path>
+
+                <path d="M12 17h.01"></path>
+
+              </svg>
+
+            </span>
+
+            <span class="menu-label">
+              সাধারণ প্রশ্ন (FAQ)
+            </span>
+
+            <span class="menu-chevron">
+
+              <svg viewBox="0 0 24 24">
+                <path d="m9 6 6 6-6 6"></path>
+              </svg>
+
+            </span>
+
+          </a>
+
+
+          <a
+            class="menu-item"
+            href="../../social/"
+          >
+
+            <span class="menu-icon">
+
+              <svg viewBox="0 0 24 24">
+
+                <circle
+                  cx="6"
+                  cy="12"
+                  r="3"
+                ></circle>
+
+                <circle
+                  cx="18"
+                  cy="6"
+                  r="3"
+                ></circle>
+
+                <circle
+                  cx="18"
+                  cy="18"
+                  r="3"
+                ></circle>
+
+                <path d="m8.7 10.7 6.6-3.4"></path>
+                <path d="m8.7 13.3 6.6 3.4"></path>
+
+              </svg>
+
+            </span>
+
+            <span class="menu-label">
+              সোশ্যাল নেটওয়ার্ক
+            </span>
+
+            <span class="menu-chevron">
+
+              <svg viewBox="0 0 24 24">
+                <path d="m9 6 6 6-6 6"></path>
+              </svg>
+
+            </span>
+
+          </a>
+
+
+          <a
+            class="menu-item"
+            href="../../contact/"
+          >
+
+            <span class="menu-icon">
+
+              <svg viewBox="0 0 24 24">
+
+                <rect
+                  x="3"
+                  y="5"
+                  width="18"
+                  height="14"
+                  rx="2"
+                ></rect>
+
+                <path d="m4 7 8 6 8-6"></path>
+
+              </svg>
+
+            </span>
+
+            <span class="menu-label">
+              যোগাযোগ
+            </span>
+
+            <span class="menu-chevron">
+
+              <svg viewBox="0 0 24 24">
+                <path d="m9 6 6 6-6 6"></path>
+              </svg>
+
+            </span>
+
+          </a>
+
+        </nav>
+
+      </section>
+
+
+      <div
+        class="menu-divider"
+        aria-hidden="true"
+      ></div>
+
+
+      <!-- ===============================================
+           আইন ও গোপনীয়তা
+      ================================================ -->
+
+      <section class="menu-section">
+
+        <h2 class="menu-section-title">
+          আইন ও গোপনীয়তা
+        </h2>
+
+        <nav class="menu-items">
+
+
+          <a
+            class="menu-item"
+            href="../../legal/privacy/"
+          >
+
+            <span class="menu-icon">
+
+              <svg viewBox="0 0 24 24">
+
+                <path d="M12 3 5 6v5c0 4.8 2.8 8 7 10 4.2-2 7-5.2 7-10V6z"></path>
+
+                <path d="m9 12 2 2 4-4"></path>
+
+              </svg>
+
+            </span>
+
+            <span class="menu-label">
+              Privacy Policy
+            </span>
+
+            <span class="menu-chevron">
+
+              <svg viewBox="0 0 24 24">
+                <path d="m9 6 6 6-6 6"></path>
+              </svg>
+
+            </span>
+
+          </a>
+
+
+          <a
+            class="menu-item"
+            href="../../legal/terms/"
+          >
+
+            <span class="menu-icon">
+
+              <svg viewBox="0 0 24 24">
+
+                <path d="M5 3h14v18H5z"></path>
+                <path d="M8 8h8"></path>
+                <path d="M8 12h8"></path>
+                <path d="M8 16h5"></path>
+
+              </svg>
+
+            </span>
+
+            <span class="menu-label">
+              Terms of Use
+            </span>
+
+            <span class="menu-chevron">
+
+              <svg viewBox="0 0 24 24">
+                <path d="m9 6 6 6-6 6"></path>
+              </svg>
+
+            </span>
+
+          </a>
+
+
+          <a
+            class="menu-item"
+            href="../../legal/disclaimer/"
+          >
+
+            <span class="menu-icon">
+
+              <svg viewBox="0 0 24 24">
+
+                <path d="M12 3 2.8 20h18.4z"></path>
+                <path d="M12 9v5"></path>
+                <path d="M12 17h.01"></path>
+
+              </svg>
+
+            </span>
+
+            <span class="menu-label">
+              Disclaimer
+            </span>
+
+            <span class="menu-chevron">
+
+              <svg viewBox="0 0 24 24">
+                <path d="m9 6 6 6-6 6"></path>
+              </svg>
+
+            </span>
+
+          </a>
+
+        </nav>
+
+      </section>
+
+    </div>
+
+
+    <!-- ===================================================
+         DRAWER FOOTER
+    ==================================================== -->
+
+    <footer class="side-menu-footer">
+
+      <span>
+        © <span id="menuYear"></span>
+        SalimGPT
+      </span>
+
+      <span>
+        Mohammad Salim
+      </span>
+
+    </footer>
+
+  </aside>
+
+
+  <!-- =====================================================
+       JAVASCRIPT
+  ====================================================== -->
+
+  <script src="../../js/menu.js"></script>
+
+  <script src="../../js/documentary.js"></script>
+
+</body>
+
+</html>
