@@ -1,0 +1,51 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 512 512"
+  role="img"
+  aria-labelledby="title desc"
+>
+  <title id="title">Threads</title>
+
+  <desc id="desc">
+    Threads platform icon
+  </desc>
+
+  <rect
+    width="512"
+    height="512"
+    rx="118"
+    fill="#111111"
+  />
+
+  <path
+    fill="none"
+    stroke="#ffffff"
+    stroke-width="28"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    d="
+      M329 207
+      c-10-54-42-85-91-85
+      -59 0-101 47-101 134
+      0 91 45 137 111 137
+      59 0 97-31 97-79
+      0-42-31-70-79-70
+      -43 0-72 22-72 54
+      0 29 24 49 59 49
+      50 0 84-38 84-100
+      0-73-39-119-105-119
+    "
+  />
+
+  <path
+    fill="none"
+    stroke="#ffffff"
+    stroke-width="28"
+    stroke-linecap="round"
+    d="
+      M187 196
+      c19-18 42-27 69-27
+      54 0 96 30 113 77
+    "
+  />
+</svg>

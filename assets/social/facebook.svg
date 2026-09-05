@@ -1,0 +1,49 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 512 512"
+  role="img"
+  aria-labelledby="title desc"
+>
+  <title id="title">Facebook</title>
+
+  <desc id="desc">
+    Facebook platform icon
+  </desc>
+
+  <rect
+    width="512"
+    height="512"
+    rx="118"
+    fill="#1877f2"
+  />
+
+  <path
+    fill="#ffffff"
+    d="
+      M288.6 408
+      V270.7
+      h46.1
+      l6.9-53.5
+      h-53
+      V183
+      c0-15.5
+      4.3-26
+      26.5-26
+      h28.3
+      v-47.8
+      c-4.9-.7
+      -21.7-2.1
+      -41.7-2.1
+      -41.2 0
+      -69.4 25.2
+      -69.4 71.6
+      v38.5
+      H196
+      v53.5
+      h41.3
+      V408
+      h51.3
+      Z
+    "
+  />
+</svg>

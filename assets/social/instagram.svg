@@ -1,0 +1,80 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 512 512"
+  role="img"
+  aria-labelledby="title desc"
+>
+  <title id="title">Instagram</title>
+
+  <desc id="desc">
+    Instagram platform icon
+  </desc>
+
+  <defs>
+    <radialGradient
+      id="instagramGradient"
+      cx="30%"
+      cy="107%"
+      r="150%"
+    >
+      <stop
+        offset="0%"
+        stop-color="#ffd600"
+      />
+
+      <stop
+        offset="28%"
+        stop-color="#ff7a00"
+      />
+
+      <stop
+        offset="48%"
+        stop-color="#ff0169"
+      />
+
+      <stop
+        offset="72%"
+        stop-color="#d300c5"
+      />
+
+      <stop
+        offset="100%"
+        stop-color="#7638fa"
+      />
+    </radialGradient>
+  </defs>
+
+  <rect
+    width="512"
+    height="512"
+    rx="118"
+    fill="url(#instagramGradient)"
+  />
+
+  <rect
+    x="126"
+    y="126"
+    width="260"
+    height="260"
+    rx="78"
+    fill="none"
+    stroke="#ffffff"
+    stroke-width="30"
+  />
+
+  <circle
+    cx="256"
+    cy="256"
+    r="62"
+    fill="none"
+    stroke="#ffffff"
+    stroke-width="30"
+  />
+
+  <circle
+    cx="337"
+    cy="176"
+    r="19"
+    fill="#ffffff"
+  />
+</svg>
