@@ -1,0 +1,32 @@
+{
+  "name": "SalimGPT — গবেষণাভিত্তিক বাংলা ডকুমেন্টারি",
+  "short_name": "SalimGPT",
+  "description": "গবেষণা, তথ্য যাচাই ও মৌলিক উপস্থাপনার মাধ্যমে নির্মিত বাংলা ডকুমেন্টারি প্ল্যাটফর্ম।",
+  "lang": "bn-BD",
+  "dir": "ltr",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "categories": [
+    "education",
+    "entertainment",
+    "news"
+  ],
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/brand/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

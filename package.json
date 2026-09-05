@@ -1,0 +1,16 @@
+{
+  "name": "salimgpt",
+  "version": "1.0.0",
+  "private": true,
+  "description": "SalimGPT automatic documentary publishing system for GitHub Pages.",
+  "scripts": {
+    "build": "node scripts/build.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "gray-matter": "^4.0.3",
+    "markdown-it": "^14.1.0"
+  }
+}
