@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ======================================================
+     SalimGPT
+     File: assets/brand/logo.svg
+     Purpose: Primary Brand Logo / App Icon / Header Mark
+     ====================================================== -->
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 256 256"
+  role="img"
+  aria-labelledby="salimgptLogoTitle salimgptLogoDesc"
+>
+
+  <title id="salimgptLogoTitle">
+    SalimGPT Logo
+  </title>
+
+  <desc id="salimgptLogoDesc">
+    SalimGPT-এর কালো, সাদা ও লাল রঙের স্বতন্ত্র SG monogram logo।
+  </desc>
+
+
+  <!-- ====================================================
+       DEFINITIONS
+       ==================================================== -->
+
+  <defs>
+
+    <linearGradient
+      id="bgGradient"
+      x1="28"
+      y1="20"
+      x2="232"
+      y2="240"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop
+        offset="0"
+        stop-color="#16171b"
+      />
+
+      <stop
+        offset="0.55"
+        stop-color="#101114"
+      />
+
+      <stop
+        offset="1"
+        stop-color="#090a0c"
+      />
+    </linearGradient>
+
+
+    <linearGradient
+      id="redGradient"
+      x1="40"
+      y1="30"
+      x2="215"
+      y2="224"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop
+        offset="0"
+        stop-color="#ff3767"
+      />
+
+      <stop
+        offset="0.5"
+        stop-color="#f71950"
+      />
+
+      <stop
+        offset="1"
+        stop-color="#d80f41"
+      />
+    </linearGradient>
+
+
+    <linearGradient
+      id="whiteGradient"
+      x1="75"
+      y1="64"
+      x2="151"
+      y2="193"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop
+        offset="0"
+        stop-color="#ffffff"
+      />
+
+      <stop
+        offset="1"
+        stop-color="#e9ebef"
+      />
+    </linearGradient>
+
+
+    <filter
+      id="softShadow"
+      x="-20%"
+      y="-20%"
+      width="140%"
+      height="140%"
+    >
+      <feDropShadow
+        dx="0"
+        dy="10"
+        stdDeviation="12"
+        flood-color="#000000"
+        flood-opacity="0.28"
+      />
+    </filter>
+
+
+    <filter
+      id="redGlow"
+      x="-30%"
+      y="-30%"
+      width="160%"
+      height="160%"
+    >
+      <feGaussianBlur
+        stdDeviation="7"
+        result="blur"
+      />
+
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+  </defs>
+
+
+  <!-- ====================================================
+       BACKGROUND
+       ==================================================== -->
+
+  <rect
+    x="10"
+    y="10"
+    width="236"
+    height="236"
+    rx="58"
+    fill="url(#bgGradient)"
+    filter="url(#softShadow)"
+  />
+
+
+  <!-- Inner precision border -->
+
+  <rect
+    x="18.5"
+    y="18.5"
+    width="219"
+    height="219"
+    rx="50"
+    fill="none"
+    stroke="#ffffff"
+    stroke-opacity="0.09"
+    stroke-width="1.5"
+  />
+
+
+  <!-- ====================================================
+       BRAND ACCENTS
+       ==================================================== -->
+
+  <!-- Top-left red identity bar -->
+
+  <path
+    d="
+      M45 28
+      H88
+      C94 28 98 32 98 38
+      V43
+      C98 49 94 53 88 53
+      H45
+      C38 53 33 48 33 41
+      C33 34 38 28 45 28Z
+    "
+    fill="url(#redGradient)"
+  />
+
+
+  <!-- Subtle blue micro accent -->
+
+  <circle
+    cx="213"
+    cy="43"
+    r="5"
+    fill="#087cf0"
+  />
+
+
+  <!-- ====================================================
+       SG MONOGRAM
+       ==================================================== -->
+
+  <g
+    transform="translate(0 1)"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+
+
+    <!-- S -->
+
+    <path
+      d="
+        M137 76
+        C126 66 112 61 96 61
+        C72 61 55 73 55 92
+        C55 110 69 119 94 124
+        L109 127
+        C125 130 132 135 132 143
+        C132 153 122 159 107 159
+        C89 159 75 152 64 140
+      "
+      fill="none"
+      stroke="url(#whiteGradient)"
+      stroke-width="18"
+    />
+
+
+    <!-- S lower continuation -->
+
+    <path
+      d="
+        M64 140
+        C74 157 89 166 108 166
+        C133 166 151 155 151 136
+      "
+      fill="none"
+      stroke="url(#whiteGradient)"
+      stroke-width="18"
+    />
+
+
+    <!-- G -->
+
+    <path
+      d="
+        M184 89
+        C175 71 160 61 141 61
+        C112 61 92 84 92 116
+        C92 148 113 171 143 171
+        C162 171 177 164 187 151
+      "
+      fill="none"
+      stroke="url(#redGradient)"
+      stroke-width="18"
+    />
+
+
+    <!-- G horizontal -->
+
+    <path
+      d="
+        M148 126
+        H190
+        V158
+      "
+      fill="none"
+      stroke="url(#redGradient)"
+      stroke-width="18"
+    />
+
+  </g>
+
+
+  <!-- ====================================================
+       LOWER BRAND SIGNATURE
+       ==================================================== -->
+
+  <rect
+    x="68"
+    y="204"
+    width="82"
+    height="5"
+    rx="2.5"
+    fill="#ffffff"
+    opacity="0.88"
+  />
+
+  <rect
+    x="154"
+    y="204"
+    width="34"
+    height="5"
+    rx="2.5"
+    fill="url(#redGradient)"
+  />
+
+  <rect
+    x="192"
+    y="204"
+    width="13"
+    height="5"
+    rx="2.5"
+    fill="#087cf0"
+  />
+
+
+  <!-- ====================================================
+       SMALL CORNER DETAIL
+       ==================================================== -->
+
+  <path
+    d="
+      M219 178
+      V198
+      C219 209 210 218 199 218
+      H180
+    "
+    fill="none"
+    stroke="#ffffff"
+    stroke-opacity="0.12"
+    stroke-width="2"
+    stroke-linecap="round"
+  />
+
+</svg>
