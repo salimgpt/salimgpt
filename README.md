@@ -323,7 +323,7 @@ YouTube ID Extraction
 Markdown Rendering
         ↓
 TOC Generation
-        ↓
+    ↓
 Reading Time Calculation
         ↓
 Image Distribution
@@ -483,6 +483,7 @@ Example:
 
 এরপর documentary-এর মূল research-based content থাকবে।
 ```
+
 
 ---
 
