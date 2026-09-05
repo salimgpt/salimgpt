@@ -16,6 +16,7 @@
       তারপর uploaded local documentary image ব্যবহার হবে।
    9. Local documentary image fallback support:
       JPG / JPEG / PNG / WebP
+   10. Homepage icons self-contained এবং size-safe।
    ========================================================= */
 
 (function () {
@@ -58,15 +59,8 @@
 
 
   /*
-    build.js-এর image format support-এর সঙ্গে
+    build.js-এর supported image formats-এর
     একই priority রাখা হয়েছে।
-
-    Example:
-
-    fentanyl-1.jpg
-    fentanyl-1.jpeg
-    fentanyl-1.png
-    fentanyl-1.webp
   */
 
   const LOCAL_IMAGE_EXTENSIONS = [
@@ -137,15 +131,11 @@
   function getDocumentaryData() {
 
     /*
-      Primary source:
+      Primary generated source:
 
       window.SALIMGPT_DOCUMENTARIES
 
-      build.js এই data automatically
-      generate করবে।
-
-      Safe legacy fallbacks রাখা হয়েছে যাতে migration-এর
-      সময় website ভেঙে না যায়।
+      Legacy fallbacks রাখা হয়েছে।
     */
 
     const possibleSources = [
@@ -187,7 +177,7 @@
 
 
     /*
-      Already a YouTube video ID.
+      Direct YouTube video ID.
     */
 
     if (
@@ -234,7 +224,7 @@
 
 
       /*
-        youtube.com
+        youtube.com formats
       */
 
       if (
@@ -242,10 +232,6 @@
         hostname === "m.youtube.com" ||
         hostname === "music.youtube.com"
       ) {
-
-        /*
-          youtube.com/watch?v=VIDEO_ID
-        */
 
         const watchId =
           url.searchParams.get("v");
@@ -260,12 +246,6 @@
           return watchId;
         }
 
-
-        /*
-          youtube.com/shorts/VIDEO_ID
-          youtube.com/embed/VIDEO_ID
-          youtube.com/live/VIDEO_ID
-        */
 
         const parts =
           url.pathname
@@ -293,11 +273,6 @@
       }
 
     } catch (error) {
-
-      /*
-        Full URL না হলেও common YouTube URL text
-        থেকে ID extract করার চেষ্টা।
-      */
 
       const match =
         input.match(
@@ -390,8 +365,7 @@
 
 
     /*
-      Explicit URL থাকলে সেটি ব্যবহার করা হবে।
-      Fake URL তৈরি করা হবে না।
+      Explicit real URL থাকলে সেটিই ব্যবহার।
     */
 
     if (
@@ -502,15 +476,13 @@
 
 
   /*
-    Documentary-এর প্রথম uploaded image-এর
-    সম্ভাব্য সব supported URL তৈরি করবে।
+    সম্ভাব্য local thumbnail URLs।
 
     Priority:
-
-    1. .jpg
-    2. .jpeg
-    3. .png
-    4. .webp
+    .jpg
+    .jpeg
+    .png
+    .webp
   */
 
   function getLocalThumbnailCandidates(
@@ -541,14 +513,6 @@
   }
 
 
-  /*
-    Legacy/no-generated-data situation-এর জন্য
-    প্রথম candidate return করবে।
-
-    বর্তমান SalimGPT documentary images
-    .jpg হওয়ায় .jpg first priority।
-  */
-
   function getLocalThumbnail(item) {
 
     const candidates =
@@ -569,11 +533,9 @@
     /*
       Priority:
 
-      1. build.js generated explicit thumbnail
-      2. Real YouTube maxres thumbnail
-      3. Uploaded local documentary image
-
-      কোনো fake placeholder নয়।
+      1. build.js generated thumbnail
+      2. Real YouTube maxres
+      3. Local documentary image
     */
 
     const explicitThumbnail =
@@ -667,7 +629,10 @@
             "long",
 
           year:
-            "numeric"
+            "numeric",
+
+          timeZone:
+            "UTC"
         }
       ).format(date);
 
@@ -705,6 +670,7 @@
         if (
           dateA !== dateB
         ) {
+
           return (
             dateB - dateA
           );
@@ -712,7 +678,7 @@
 
 
         /*
-          Same date হলে build-generated order ব্যবহার।
+          Same date হলে generated order।
         */
 
         const orderA =
@@ -735,49 +701,155 @@
 
 
   /* =======================================================
-     10. ICONS
+     10. SAFE SELF-CONTAINED ICONS
      ======================================================= */
+
+  /*
+    IMPORTANT:
+
+    SVG-এর width/height/fill/stroke এখানেই দেওয়া হয়েছে।
+
+    ফলে CSS load/cache problem হলেও browser-এর
+    default 300 × 150 SVG size ব্যবহার হবে না।
+
+    Giant black icon problem এখানেই prevent করা হয়েছে।
+  */
 
   const icons = {
 
     article: `
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M5 3h10l4 4v14H5z"></path>
-        <path d="M15 3v5h5"></path>
-        <path d="M8 12h8"></path>
-        <path d="M8 16h6"></path>
+      <svg
+        class="documentary-action-icon"
+        width="18"
+        height="18"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.8"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+        focusable="false"
+        style="
+          width:18px;
+          height:18px;
+          min-width:18px;
+          max-width:18px;
+          min-height:18px;
+          max-height:18px;
+          flex:0 0 18px;
+          display:block;
+          fill:none;
+          stroke:currentColor;
+        "
+      >
+        <path
+          d="M6 3.75h8.2L18 7.55v12.7H6z"
+          fill="none"
+          stroke="currentColor"
+        ></path>
+
+        <path
+          d="M14 3.75V8h4"
+          fill="none"
+          stroke="currentColor"
+        ></path>
+
+        <path
+          d="M9 12h6M9 15.5h5"
+          fill="none"
+          stroke="currentColor"
+        ></path>
       </svg>
     `,
+
 
     youtube: `
-      <svg viewBox="0 0 24 24" aria-hidden="true">
+      <svg
+        class="documentary-action-icon"
+        width="18"
+        height="18"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.8"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+        focusable="false"
+        style="
+          width:18px;
+          height:18px;
+          min-width:18px;
+          max-width:18px;
+          min-height:18px;
+          max-height:18px;
+          flex:0 0 18px;
+          display:block;
+          fill:none;
+          stroke:currentColor;
+        "
+      >
         <rect
-          x="3"
-          y="5"
-          width="18"
-          height="14"
-          rx="4"
+          x="3.5"
+          y="6"
+          width="17"
+          height="12"
+          rx="3.5"
+          fill="none"
+          stroke="currentColor"
         ></rect>
-        <path d="m10 9 5 3-5 3Z"></path>
+
+        <path
+          d="M10 9.25 15 12l-5 2.75z"
+          fill="none"
+          stroke="currentColor"
+        ></path>
       </svg>
     `,
+
 
     calendar: `
-      <svg viewBox="0 0 24 24" aria-hidden="true">
+      <svg
+        class="documentary-calendar-icon"
+        width="16"
+        height="16"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.8"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+        focusable="false"
+        style="
+          width:16px;
+          height:16px;
+          min-width:16px;
+          max-width:16px;
+          min-height:16px;
+          max-height:16px;
+          flex:0 0 16px;
+          display:block;
+          fill:none;
+          stroke:currentColor;
+        "
+      >
         <rect
           x="4"
-          y="5"
+          y="5.5"
           width="16"
-          height="15"
-          rx="2"
+          height="14.5"
+          rx="2.5"
+          fill="none"
+          stroke="currentColor"
         ></rect>
-        <path d="M8 3v4M16 3v4M4 10h16"></path>
-      </svg>
-    `,
 
-    arrow: `
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="m9 6 6 6-6 6"></path>
+        <path
+          d="M8 3.5v4M16 3.5v4M4 10h16"
+          fill="none"
+          stroke="currentColor"
+        ></path>
       </svg>
     `
 
@@ -808,11 +880,6 @@
       );
 
 
-    /*
-      Multiple local fallback URLs safely
-      data attribute-এ রাখা হচ্ছে।
-    */
-
     const encodedLocalFallbacks =
       encodeURIComponent(
         JSON.stringify(
@@ -820,11 +887,6 @@
         )
       );
 
-
-    /*
-      Article URL না থাকলে documentary publish করা উচিত নয়।
-      তবুও migration safety হিসেবে non-click image return।
-    */
 
     const imageMarkup = `
       <img
@@ -847,26 +909,27 @@
     `;
 
 
+    /*
+      Article URL না থাকলে non-click image।
+    */
+
     if (!articleUrl) {
 
       return `
         <div
           class="documentary-thumb documentary-thumbnail"
         >
+
           ${imageMarkup}
+
         </div>
       `;
     }
 
 
     /*
-      IMPORTANT:
-
       Thumbnail click =
-      Documentary Article
-
-      YouTube thumbnail click-এ
-      YouTube খুলবে না।
+      documentary article।
     */
 
     return `
@@ -909,7 +972,7 @@
 
     /*
       Primary action:
-      Full documentary article.
+      Full documentary article।
     */
 
     if (
@@ -935,7 +998,7 @@
 
     /*
       Secondary action:
-      Real YouTube URL only.
+      Real YouTube URL only।
     */
 
     if (
@@ -961,7 +1024,9 @@
     }
 
 
-    if (!markup) {
+    if (
+      !markup
+    ) {
       return "";
     }
 
@@ -1157,7 +1222,9 @@
       );
 
 
-    if (!encoded) {
+    if (
+      !encoded
+    ) {
       return [];
     }
 
@@ -1200,7 +1267,9 @@
       cleanText(value);
 
 
-    if (!input) {
+    if (
+      !input
+    ) {
       return "";
     }
 
@@ -1284,8 +1353,7 @@
 
 
       /*
-        বর্তমানে যে URL already fail করেছে,
-        একই URL আবার load করার দরকার নেই।
+        একই failed URL আবার ব্যবহার নয়।
       */
 
       if (
@@ -1335,9 +1403,7 @@
 
             /*
               STEP 1:
-
-              YouTube maxresdefault fail করলে
-              hqdefault চেষ্টা।
+              maxresdefault → hqdefault
             */
 
             if (
@@ -1354,6 +1420,7 @@
                 resolveUrl(
                   image.src
                 );
+
 
               const fallbackUrl =
                 resolveUrl(
@@ -1377,16 +1444,14 @@
 
             /*
               STEP 2:
+              YouTube fail →
+              local documentary image।
 
-              YouTube thumbnail fail করলে
-              documentary-এর নিজের uploaded image।
-
-              Supported fallback sequence:
-
-              .jpg
-              .jpeg
-              .png
-              .webp
+              Sequence:
+              jpg
+              jpeg
+              png
+              webp
             */
 
             if (
@@ -1400,11 +1465,8 @@
 
             /*
               STEP 3:
-
-              Fake placeholder দেখানো হবে না।
-
-              YouTube এবং সব real local source fail করলে
-              image element hidden থাকবে।
+              সব real source fail করলে
+              image hide করা হবে।
             */
 
             image.hidden =
@@ -1507,13 +1569,8 @@
 
 
     /*
-      Automation system-এ minimum requirement:
-
-      - title
-      - slug
-
-      Empty placeholder documentary homepage-এ
-      render হবে না।
+      Minimum:
+      title + slug
     */
 
     if (
@@ -1525,12 +1582,7 @@
 
 
     /*
-      Future draft item:
-
-      status: "draft"
-      published: false
-
-      হলে homepage-এ দেখানো হবে না।
+      Draft homepage-এ দেখানো হবে না।
     */
 
     if (
@@ -1589,8 +1641,7 @@
 
 
     /*
-      Draft, empty or invalid entries homepage-এ
-      automatically বাদ যাবে।
+      Draft/invalid item বাদ।
     */
 
     const validItems =
@@ -1624,7 +1675,7 @@
 
 
     /*
-      Newest documentary first.
+      Newest first।
     */
 
     const sortedItems =
@@ -1677,8 +1728,7 @@
 
 
     /*
-      search.js ও home.js
-      এই event শুনতে পারবে।
+      search.js / home.js event।
     */
 
     document.dispatchEvent(
