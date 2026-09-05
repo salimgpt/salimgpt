@@ -69,6 +69,7 @@ html {
 body {
   margin: 0;
   min-width: 320px;
+
   background: var(--color-white);
   color: var(--color-text);
 
@@ -269,11 +270,14 @@ input:focus-visible {
   width: 19px;
   height: 19px;
 
+  flex: 0 0 19px;
+
   fill: none;
   stroke: currentColor;
 
   stroke-width: 2;
   stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .menu-open-button:hover {
@@ -331,6 +335,7 @@ input:focus-visible {
 
   stroke-width: 2;
   stroke-linecap: round;
+  stroke-linejoin: round;
 
   pointer-events: none;
 }
@@ -374,7 +379,8 @@ input:focus-visible {
 }
 
 .search-input:focus {
-  border-color: var(--color-blue);
+  border-color:
+    var(--color-blue);
 
   background:
     var(--color-white);
@@ -424,6 +430,7 @@ input:focus-visible {
 
   stroke-width: 2;
   stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .search-clear:hover {
@@ -453,9 +460,9 @@ input:focus-visible {
 
 .documentary-heading {
   padding:
-    21px
+    23px
     0
-    12px;
+    15px;
 
   display: flex;
   align-items: flex-end;
@@ -528,15 +535,20 @@ input:focus-visible {
 
 
 /* =========================================================
-   07. DOCUMENTARY GRID
+   07. DOCUMENTARY LIST
    ========================================================= */
 
 .documentary-list-section {
   padding:
-    3px
+    4px
     0
-    34px;
+    38px;
 }
+
+
+/* =========================================================
+   08. DOCUMENTARY GRID
+   ========================================================= */
 
 .documentary-grid {
   display: grid;
@@ -547,23 +559,33 @@ input:focus-visible {
       minmax(0, 1fr)
     );
 
-  gap: 16px;
+  gap: 18px;
+
+  align-items: stretch;
 }
 
 
-/* Documentary Card */
+/* =========================================================
+   09. DOCUMENTARY CARD
+   ========================================================= */
 
 .documentary-card {
+  min-width: 0;
+
   overflow: hidden;
 
   border:
     1px solid var(--color-border);
 
   border-radius:
-    var(--radius-medium);
+    var(--radius-large);
 
   background:
     var(--color-white);
+
+  box-shadow:
+    0 5px 18px
+    rgba(15, 17, 20, 0.045);
 
   transition:
     transform var(--transition),
@@ -572,7 +594,8 @@ input:focus-visible {
 }
 
 .documentary-card:hover {
-  transform: translateY(-3px);
+  transform:
+    translateY(-3px);
 
   border-color:
     var(--color-border-strong);
@@ -582,7 +605,35 @@ input:focus-visible {
 }
 
 
-/* Thumbnail */
+/*
+   যদি শুধু ১টি documentary থাকে,
+   desktop-এ ছোট ১/৩ card না হয়ে
+   সুন্দর horizontal featured card হবে।
+*/
+
+.documentary-card:only-child {
+  grid-column:
+    1 / -1;
+
+  width:
+    min(
+      100%,
+      920px
+    );
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.14fr)
+    minmax(0, 0.86fr);
+
+  align-items: stretch;
+}
+
+
+/* =========================================================
+   10. DOCUMENTARY THUMBNAIL
+   ========================================================= */
 
 .documentary-thumbnail,
 .documentary-thumb {
@@ -592,16 +643,22 @@ input:focus-visible {
 
   width: 100%;
 
-  aspect-ratio: 16 / 9;
+  aspect-ratio:
+    16 / 9;
 
   overflow: hidden;
 
   background:
-    #eceff2;
+    #e9edf2;
+
+  isolation: isolate;
 }
 
 .documentary-thumbnail img,
-.documentary-thumb img {
+.documentary-thumb img,
+.documentary-thumbnail-image {
+  display: block;
+
   width: 100%;
   height: 100%;
 
@@ -616,11 +673,94 @@ input:focus-visible {
 
 .documentary-card:hover
 .documentary-thumb img {
-  transform: scale(1.025);
+  transform:
+    scale(1.02);
 }
 
 
-/* Video badge */
+/*
+   Desktop featured card-এর thumbnail
+   full-height left panel।
+*/
+
+.documentary-card:only-child
+.documentary-thumbnail,
+
+.documentary-card:only-child
+.documentary-thumb {
+  height: 100%;
+
+  min-height: 330px;
+
+  aspect-ratio: auto;
+}
+
+
+/* =========================================================
+   11. THUMBNAIL LABEL
+   ========================================================= */
+
+.documentary-thumb-label {
+  position: absolute;
+
+  right: 10px;
+  bottom: 10px;
+
+  z-index: 4;
+
+  display: inline-flex;
+  align-items: center;
+
+  max-width:
+    calc(100% - 20px);
+
+  min-height: 25px;
+
+  padding:
+    5px
+    9px;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.16);
+
+  border-radius: 7px;
+
+  background:
+    rgba(10, 12, 16, 0.82);
+
+  color:
+    #ffffff;
+
+  font-size:
+    0.67rem;
+
+  font-weight:
+    800;
+
+  line-height:
+    1;
+
+  text-overflow:
+    ellipsis;
+
+  white-space:
+    nowrap;
+
+  backdrop-filter:
+    blur(5px);
+
+  -webkit-backdrop-filter:
+    blur(5px);
+
+  pointer-events:
+    none;
+}
+
+
+/* Legacy video badge */
 
 .youtube-badge,
 .youtube-label {
@@ -629,7 +769,9 @@ input:focus-visible {
   right: 9px;
   bottom: 9px;
 
-  min-height: 28px;
+  z-index: 4;
+
+  min-height: 27px;
 
   display: inline-flex;
   align-items: center;
@@ -652,7 +794,7 @@ input:focus-visible {
     Arial,
     sans-serif;
 
-  font-size: 0.7rem;
+  font-size: 0.69rem;
   font-weight: 800;
 }
 
@@ -661,7 +803,12 @@ input:focus-visible {
   width: 7px;
   height: 7px;
 
-  border-radius: 50%;
+  flex:
+    0 0
+    7px;
+
+  border-radius:
+    50%;
 
   background:
     var(--color-red);
@@ -670,37 +817,159 @@ input:focus-visible {
 }
 
 
-/* Card Content */
+/* =========================================================
+   12. CARD CONTENT
+   ========================================================= */
 
 .documentary-card-content,
 .documentary-content {
-  padding: 13px;
+  min-width: 0;
+
+  padding:
+    15px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+
+/*
+   Single featured card content।
+*/
+
+.documentary-card:only-child
+.documentary-card-content,
+
+.documentary-card:only-child
+.documentary-content {
+  justify-content: center;
+
+  padding:
+    27px;
+}
+
+
+/* =========================================================
+   13. DOCUMENTARY META / DATE
+   ========================================================= */
+
+.documentary-meta {
+  margin:
+    0
+    0
+    7px;
 }
 
 .documentary-date {
-  margin-bottom: 5px;
+  display: inline-flex;
+  align-items: center;
+
+  gap: 6px;
+
+  margin: 0;
 
   color:
     var(--color-red-dark);
 
-  font-size: 0.71rem;
-  font-weight: 800;
+  font-size:
+    0.72rem;
+
+  font-weight:
+    800;
+
+  line-height:
+    1.25;
 }
+
+.documentary-date time {
+  display: inline-block;
+}
+
+
+/*
+   IMPORTANT:
+   Calendar SVG-এর default 300×150 behaviour বন্ধ।
+*/
+
+.documentary-date svg,
+.documentary-meta svg {
+  display: block !important;
+
+  width: 15px !important;
+  height: 15px !important;
+
+  min-width: 15px !important;
+  max-width: 15px !important;
+
+  min-height: 15px !important;
+  max-height: 15px !important;
+
+  flex:
+    0 0
+    15px !important;
+
+  overflow:
+    visible;
+
+  fill:
+    none !important;
+
+  stroke:
+    currentColor !important;
+
+  stroke-width:
+    1.8 !important;
+
+  stroke-linecap:
+    round;
+
+  stroke-linejoin:
+    round;
+}
+
+.documentary-date svg *,
+.documentary-meta svg * {
+  fill:
+    none !important;
+
+  stroke:
+    currentColor !important;
+
+  stroke-width:
+    1.8 !important;
+
+  stroke-linecap:
+    round;
+
+  stroke-linejoin:
+    round;
+}
+
+
+/* =========================================================
+   14. DOCUMENTARY TITLE
+   ========================================================= */
 
 .documentary-title {
   margin:
     0
     0
-    6px;
+    7px;
 
   color:
     var(--color-black);
 
-  font-size: 1.04rem;
-  font-weight: 850;
-  line-height: 1.42;
+  font-size:
+    1.04rem;
 
-  letter-spacing: -0.015em;
+  font-weight:
+    850;
+
+  line-height:
+    1.42;
+
+  letter-spacing:
+    -0.015em;
 }
 
 .documentary-title a {
@@ -713,76 +982,245 @@ input:focus-visible {
     var(--color-red);
 }
 
+
+/* Featured title */
+
+.documentary-card:only-child
+.documentary-title {
+  font-size:
+    clamp(
+      1.25rem,
+      2vw,
+      1.55rem
+    );
+
+  line-height:
+    1.38;
+}
+
+
+/* =========================================================
+   15. DOCUMENTARY DESCRIPTION
+   ========================================================= */
+
 .documentary-description {
   display:
     -webkit-box;
 
-  overflow: hidden;
+  overflow:
+    hidden;
 
   margin: 0;
 
   color:
     var(--color-muted);
 
-  font-size: 0.84rem;
-  line-height: 1.6;
+  font-size:
+    0.84rem;
 
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
+  line-height:
+    1.62;
+
+  -webkit-line-clamp:
+    3;
+
+  -webkit-box-orient:
+    vertical;
+}
+
+.documentary-card:only-child
+.documentary-description {
+  font-size:
+    0.91rem;
+
+  line-height:
+    1.72;
+
+  -webkit-line-clamp:
+    4;
 }
 
 
-/* Card Buttons */
+/* =========================================================
+   16. CARD ACTIONS
+   ========================================================= */
 
 .documentary-actions {
   display: grid;
 
   grid-template-columns:
-    1fr
-    1fr;
+    repeat(
+      2,
+      minmax(0, 1fr)
+    );
 
-  gap: 8px;
+  gap:
+    9px;
 
-  margin-top: 11px;
+  margin-top:
+    14px;
 }
+
+.documentary-card:only-child
+.documentary-actions {
+  margin-top:
+    20px;
+}
+
+
+/* =========================================================
+   17. CARD BUTTONS
+   ========================================================= */
 
 .documentary-button,
 .read-documentary,
 .watch-documentary {
-  min-height: 39px;
+  width:
+    100%;
 
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  min-width:
+    0;
 
-  gap: 6px;
+  min-height:
+    42px;
+
+  display:
+    inline-flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  gap:
+    7px;
 
   padding:
-    7px
-    9px;
+    8px
+    11px;
+
+  overflow:
+    hidden;
 
   border-radius:
     var(--radius-small);
 
-  font-size: 0.8rem;
-  font-weight: 800;
+  font-size:
+    0.79rem;
 
-  text-align: center;
+  font-weight:
+    800;
+
+  line-height:
+    1.25;
+
+  text-align:
+    center;
 
   transition:
     background var(--transition),
     color var(--transition),
     border-color var(--transition),
+    box-shadow var(--transition),
     transform var(--transition);
 }
+
+.documentary-button span,
+.read-documentary span,
+.watch-documentary span {
+  min-width: 0;
+
+  display:
+    inline-block;
+
+  line-height:
+    1.25;
+}
+
+
+/*
+   IMPORTANT:
+   Document / YouTube SVG-এর giant black shape fix।
+*/
+
+.documentary-button svg,
+.read-documentary svg,
+.watch-documentary svg {
+  display:
+    block !important;
+
+  width:
+    17px !important;
+
+  height:
+    17px !important;
+
+  min-width:
+    17px !important;
+
+  max-width:
+    17px !important;
+
+  min-height:
+    17px !important;
+
+  max-height:
+    17px !important;
+
+  flex:
+    0 0
+    17px !important;
+
+  overflow:
+    visible;
+
+  fill:
+    none !important;
+
+  stroke:
+    currentColor !important;
+
+  stroke-width:
+    1.8 !important;
+
+  stroke-linecap:
+    round;
+
+  stroke-linejoin:
+    round;
+}
+
+.documentary-button svg *,
+.read-documentary svg *,
+.watch-documentary svg * {
+  fill:
+    none !important;
+
+  stroke:
+    currentColor !important;
+
+  stroke-width:
+    1.8 !important;
+
+  stroke-linecap:
+    round;
+
+  stroke-linejoin:
+    round;
+}
+
+
+/* Read button */
 
 .read-documentary,
 .documentary-button.read {
   border:
-    1px solid var(--color-border);
+    1px solid
+    var(--color-border-strong);
 
   background:
-    var(--color-soft);
+    #f5f6f8;
 
   color:
     var(--color-black);
@@ -798,12 +1236,20 @@ input:focus-visible {
 
   color:
     var(--color-blue-dark);
+
+  box-shadow:
+    0 4px 12px
+    rgba(8, 124, 240, 0.08);
 }
+
+
+/* YouTube button */
 
 .watch-documentary,
 .documentary-button.watch {
   border:
-    1px solid var(--color-red);
+    1px solid
+    var(--color-red);
 
   background:
     var(--color-red);
@@ -819,20 +1265,59 @@ input:focus-visible {
 
   background:
     var(--color-red-dark);
+
+  box-shadow:
+    0 5px 14px
+    rgba(247, 25, 80, 0.16);
 }
 
 .documentary-button:active,
 .read-documentary:active,
 .watch-documentary:active {
-  transform: scale(0.98);
+  transform:
+    scale(0.98);
 }
 
 
 /* =========================================================
-   08. SEARCH EMPTY STATE
+   18. THUMBNAIL UNAVAILABLE
    ========================================================= */
 
-.search-empty-state {
+.documentary-thumbnail.thumbnail-unavailable,
+.documentary-thumb.thumbnail-unavailable {
+  display: grid;
+  place-items: center;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f2f4f7,
+      #e7eaf0
+    );
+}
+
+.documentary-thumbnail.thumbnail-unavailable::after,
+.documentary-thumb.thumbnail-unavailable::after {
+  content:
+    "চিত্র পাওয়া যায়নি";
+
+  color:
+    #848991;
+
+  font-size:
+    0.75rem;
+
+  font-weight:
+    700;
+}
+
+
+/* =========================================================
+   19. SEARCH EMPTY STATE
+   ========================================================= */
+
+.search-empty-state,
+.documentary-data-empty {
   width: 100%;
 
   padding:
@@ -840,7 +1325,8 @@ input:focus-visible {
     20px;
 
   border:
-    1px dashed var(--color-border-strong);
+    1px dashed
+    var(--color-border-strong);
 
   border-radius:
     var(--radius-medium);
@@ -848,7 +1334,8 @@ input:focus-visible {
   background:
     var(--color-page);
 
-  text-align: center;
+  text-align:
+    center;
 }
 
 .search-empty-state[hidden] {
@@ -856,22 +1343,35 @@ input:focus-visible {
 }
 
 .search-empty-state svg {
-  width: 38px;
-  height: 38px;
+  width:
+    38px;
+
+  height:
+    38px;
 
   margin:
     0
     auto
     13px;
 
-  fill: none;
-  stroke: var(--color-muted);
+  fill:
+    none;
 
-  stroke-width: 1.7;
-  stroke-linecap: round;
+  stroke:
+    var(--color-muted);
+
+  stroke-width:
+    1.7;
+
+  stroke-linecap:
+    round;
+
+  stroke-linejoin:
+    round;
 }
 
-.search-empty-state h2 {
+.search-empty-state h2,
+.documentary-data-empty strong {
   margin:
     0
     0
@@ -879,35 +1379,51 @@ input:focus-visible {
 
   color:
     var(--color-black);
-
-  font-size: 1.08rem;
 }
 
-.search-empty-state p {
-  margin: 0;
+.search-empty-state h2 {
+  font-size:
+    1.08rem;
+}
+
+.documentary-data-empty strong {
+  display: block;
+
+  font-size:
+    1rem;
+}
+
+.search-empty-state p,
+.documentary-data-empty p {
+  margin:
+    0;
 
   color:
     var(--color-muted);
 
-  font-size: 0.84rem;
+  font-size:
+    0.84rem;
 }
 
 
 /* =========================================================
-   09. FOOTER
+   20. FOOTER
    ========================================================= */
 
 .site-footer {
-  width: 100%;
+  width:
+    100%;
 
   border-top:
-    1px solid #dce8f5;
+    1px solid
+    #dce8f5;
 
   background:
     #f2f7fd;
 
   box-shadow:
-    0 -5px 18px rgba(8, 124, 240, 0.045);
+    0 -5px 18px
+    rgba(8, 124, 240, 0.045);
 }
 
 .footer-main {
@@ -917,43 +1433,56 @@ input:focus-visible {
       var(--max-width)
     );
 
-  margin-inline: auto;
+  margin-inline:
+    auto;
 
   padding:
     24px
     0
     19px;
 
-  display: grid;
+  display:
+    grid;
 
   grid-template-columns:
     1.05fr
     1fr;
 
-  gap: 28px;
+  gap:
+    28px;
 }
 
 
 /* Footer Brand */
 
 .footer-brand {
-  max-width: 470px;
+  max-width:
+    470px;
 }
 
 .footer-logo-link {
-  display: inline-flex;
-  align-items: center;
+  display:
+    inline-flex;
 
-  gap: 10px;
+  align-items:
+    center;
 
-  margin-bottom: 8px;
+  gap:
+    10px;
+
+  margin-bottom:
+    8px;
 }
 
 .footer-logo-link img {
-  width: 42px;
-  height: 42px;
+  width:
+    42px;
 
-  object-fit: contain;
+  height:
+    42px;
+
+  object-fit:
+    contain;
 }
 
 .footer-logo-link strong {
@@ -964,10 +1493,14 @@ input:focus-visible {
     Arial,
     sans-serif;
 
-  font-size: 1.32rem;
-  font-weight: 900;
+  font-size:
+    1.32rem;
 
-  letter-spacing: -0.045em;
+  font-weight:
+    900;
+
+  letter-spacing:
+    -0.045em;
 }
 
 .footer-logo-link strong span {
@@ -976,13 +1509,17 @@ input:focus-visible {
 }
 
 .footer-brand p {
-  margin: 0;
+  margin:
+    0;
 
   color:
     var(--color-muted);
 
-  font-size: 0.81rem;
-  line-height: 1.7;
+  font-size:
+    0.81rem;
+
+  line-height:
+    1.7;
 }
 
 
@@ -1001,17 +1538,25 @@ input:focus-visible {
     Arial,
     sans-serif;
 
-  font-size: 0.72rem;
-  font-weight: 800;
+  font-size:
+    0.72rem;
 
-  letter-spacing: 0.075em;
+  font-weight:
+    800;
 
-  text-transform: uppercase;
+  letter-spacing:
+    0.075em;
+
+  text-transform:
+    uppercase;
 }
 
 .footer-menu-links {
-  display: flex;
-  flex-wrap: wrap;
+  display:
+    flex;
+
+  flex-wrap:
+    wrap;
 
   gap:
     8px
@@ -1022,8 +1567,11 @@ input:focus-visible {
   color:
     #555a62;
 
-  font-size: 0.8rem;
-  font-weight: 650;
+  font-size:
+    0.8rem;
+
+  font-weight:
+    650;
 
   transition:
     color var(--transition);
@@ -1044,34 +1592,49 @@ input:focus-visible {
       var(--max-width)
     );
 
-  min-height: 50px;
+  min-height:
+    50px;
 
-  margin-inline: auto;
+  margin-inline:
+    auto;
 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display:
+    flex;
 
-  gap: 20px;
+  align-items:
+    center;
+
+  justify-content:
+    space-between;
+
+  gap:
+    20px;
 
   border-top:
-    1px solid var(--color-border);
+    1px solid
+    var(--color-border);
 
   color:
     #7b7f86;
 
-  font-size: 0.73rem;
+  font-size:
+    0.73rem;
 }
 
 .footer-bottom p {
-  margin: 0;
+  margin:
+    0;
 }
 
 .footer-legal {
-  display: flex;
-  flex-wrap: wrap;
+  display:
+    flex;
 
-  gap: 13px;
+  flex-wrap:
+    wrap;
+
+  gap:
+    13px;
 }
 
 .footer-legal a {
@@ -1086,24 +1649,33 @@ input:focus-visible {
 
 
 /* =========================================================
-   10. MENU OVERLAY
+   21. MENU OVERLAY
    ========================================================= */
 
 .menu-overlay {
-  position: fixed;
-  inset: 0;
+  position:
+    fixed;
 
-  z-index: 1998;
+  inset:
+    0;
 
-  visibility: hidden;
+  z-index:
+    1998;
 
-  opacity: 0;
+  visibility:
+    hidden;
+
+  opacity:
+    0;
 
   background:
     rgba(12, 14, 18, 0.56);
 
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter:
+    blur(3px);
+
+  -webkit-backdrop-filter:
+    blur(3px);
 
   transition:
     opacity 220ms ease,
@@ -1112,22 +1684,30 @@ input:focus-visible {
 
 .menu-overlay.is-visible,
 .menu-overlay.active {
-  visibility: visible;
-  opacity: 1;
+  visibility:
+    visible;
+
+  opacity:
+    1;
 }
 
 
 /* =========================================================
-   11. SIDE MENU
+   22. SIDE MENU
    ========================================================= */
 
 .side-menu {
-  position: fixed;
+  position:
+    fixed;
 
-  top: 0;
-  right: 0;
+  top:
+    0;
 
-  z-index: 1999;
+  right:
+    0;
+
+  z-index:
+    1999;
 
   width:
     min(
@@ -1138,14 +1718,18 @@ input:focus-visible {
   height:
     100dvh;
 
-  display: flex;
-  flex-direction: column;
+  display:
+    flex;
+
+  flex-direction:
+    column;
 
   transform:
     translateX(100%);
 
   border-left:
-    1px solid var(--color-border);
+    1px solid
+    var(--color-border);
 
   background:
     var(--color-white);
@@ -1172,64 +1756,83 @@ input:focus-visible {
 
 
 /* =========================================================
-   12. SIDE MENU HEADER
+   23. SIDE MENU HEADER
    ========================================================= */
 
 .side-menu-header {
-  min-height: 80px;
+  min-height:
+    80px;
 
   flex:
     0
     0
     auto;
 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display:
+    flex;
 
-  gap: 14px;
+  align-items:
+    center;
+
+  justify-content:
+    space-between;
+
+  gap:
+    14px;
 
   padding:
     12px
     15px;
 
   border-bottom:
-    1px solid #dce8f5;
+    1px solid
+    #dce8f5;
 
   background:
     #f2f7fd;
 
   box-shadow:
-    0 5px 16px rgba(8, 124, 240, 0.045);
+    0 5px 16px
+    rgba(8, 124, 240, 0.045);
 }
 
 .side-menu-brand {
-  min-width: 0;
+  min-width:
+    0;
 
-  display: flex;
-  align-items: center;
+  display:
+    flex;
 
-  gap: 11px;
+  align-items:
+    center;
+
+  gap:
+    11px;
 }
 
 .side-menu-logo {
-  width: 52px;
-  height: 52px;
-
-  flex:
-    0
-    0
+  width:
     52px;
 
-  object-fit: contain;
+  height:
+    52px;
+
+  flex:
+    0 0
+    52px;
+
+  object-fit:
+    contain;
 }
 
 .side-menu-brand > div {
-  min-width: 0;
+  min-width:
+    0;
 }
 
 .side-menu-brand strong {
-  display: block;
+  display:
+    block;
 
   color:
     var(--color-black);
@@ -1238,11 +1841,17 @@ input:focus-visible {
     Arial,
     sans-serif;
 
-  font-size: 1.12rem;
-  font-weight: 900;
-  line-height: 1.15;
+  font-size:
+    1.12rem;
 
-  letter-spacing: -0.035em;
+  font-weight:
+    900;
+
+  line-height:
+    1.15;
+
+  letter-spacing:
+    -0.035em;
 }
 
 .side-menu-brand strong span {
@@ -1251,9 +1860,11 @@ input:focus-visible {
 }
 
 .side-menu-brand small {
-  display: block;
+  display:
+    block;
 
-  margin-top: 4px;
+  margin-top:
+    4px;
 
   color:
     var(--color-muted);
@@ -1262,31 +1873,43 @@ input:focus-visible {
     Arial,
     sans-serif;
 
-  font-size: 0.68rem;
-  line-height: 1.2;
+  font-size:
+    0.68rem;
+
+  line-height:
+    1.2;
 }
 
 
 /* Close Button */
 
 .menu-close-button {
-  width: 41px;
-  height: 41px;
+  width:
+    41px;
+
+  height:
+    41px;
 
   flex:
     0
     0
     41px;
 
-  display: grid;
-  place-items: center;
+  display:
+    grid;
 
-  padding: 0;
+  place-items:
+    center;
+
+  padding:
+    0;
 
   border:
-    1px solid var(--color-border);
+    1px solid
+    var(--color-border);
 
-  border-radius: 10px;
+  border-radius:
+    10px;
 
   background:
     #f5f6f8;
@@ -1302,14 +1925,26 @@ input:focus-visible {
 }
 
 .menu-close-button svg {
-  width: 19px;
-  height: 19px;
+  width:
+    19px;
 
-  fill: none;
-  stroke: currentColor;
+  height:
+    19px;
 
-  stroke-width: 2;
-  stroke-linecap: round;
+  fill:
+    none;
+
+  stroke:
+    currentColor;
+
+  stroke-width:
+    2;
+
+  stroke-linecap:
+    round;
+
+  stroke-linejoin:
+    round;
 }
 
 .menu-close-button:hover {
@@ -1324,27 +1959,32 @@ input:focus-visible {
 }
 
 .menu-close-button:active {
-  transform: scale(0.95);
+  transform:
+    scale(0.95);
 }
 
 
 /* =========================================================
-   13. SIDE MENU CONTENT
+   24. SIDE MENU CONTENT
    ========================================================= */
 
 .side-menu-content {
-  flex: 1;
+  flex:
+    1;
 
-  overflow-y: auto;
+  overflow-y:
+    auto;
 
   padding:
     10px
     10px
     14px;
 
-  overscroll-behavior: contain;
+  overscroll-behavior:
+    contain;
 
-  scrollbar-width: thin;
+  scrollbar-width:
+    thin;
 
   scrollbar-color:
     #d0d3d8
@@ -1352,11 +1992,13 @@ input:focus-visible {
 }
 
 .side-menu-content::-webkit-scrollbar {
-  width: 6px;
+  width:
+    6px;
 }
 
 .side-menu-content::-webkit-scrollbar-thumb {
-  border-radius: 10px;
+  border-radius:
+    10px;
 
   background:
     #d0d3d8;
@@ -1369,11 +2011,12 @@ input:focus-visible {
 
 
 /* =========================================================
-   14. MENU SECTIONS
+   25. MENU SECTIONS
    ========================================================= */
 
 .menu-section {
-  margin: 0;
+  margin:
+    0;
 
   padding:
     5px
@@ -1381,35 +2024,43 @@ input:focus-visible {
 }
 
 .menu-section-title {
-  margin: 0;
+  margin:
+    0;
 
   padding:
     7px
-    8px
-    7px;
+    8px;
 
   color:
     #93979e;
 
-  font-size: 0.66rem;
-  font-weight: 900;
-  line-height: 1;
+  font-size:
+    0.66rem;
 
-  letter-spacing: 0.08em;
+  font-weight:
+    900;
+
+  line-height:
+    1;
+
+  letter-spacing:
+    0.08em;
 }
 
 .menu-items {
-  display: flex;
-  flex-direction: column;
+  display:
+    flex;
 
-  gap: 3px;
+  flex-direction:
+    column;
+
+  gap:
+    3px;
 }
 
-
-/* Divider between sections */
-
 .menu-divider {
-  height: 1px;
+  height:
+    1px;
 
   margin:
     9px
@@ -1421,26 +2072,35 @@ input:focus-visible {
 
 
 /* =========================================================
-   15. SIDE MENU ITEM
+   26. SIDE MENU ITEM
    ========================================================= */
 
 .menu-item {
-  width: 100%;
-  min-height: 52px;
+  width:
+    100%;
 
-  display: flex;
-  align-items: center;
+  min-height:
+    52px;
 
-  gap: 11px;
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    11px;
 
   padding:
     6px
     8px;
 
   border:
-    1px solid transparent;
+    1px solid
+    transparent;
 
-  border-radius: 11px;
+  border-radius:
+    11px;
 
   color:
     #2b2e33;
@@ -1455,22 +2115,25 @@ input:focus-visible {
     transform var(--transition);
 }
 
-
-/* Icon */
-
 .menu-icon {
-  width: 39px;
-  height: 39px;
-
-  flex:
-    0
-    0
+  width:
     39px;
 
-  display: grid;
-  place-items: center;
+  height:
+    39px;
 
-  border-radius: 10px;
+  flex:
+    0 0
+    39px;
+
+  display:
+    grid;
+
+  place-items:
+    center;
+
+  border-radius:
+    10px;
 
   background:
     #f0f2f5;
@@ -1485,39 +2148,54 @@ input:focus-visible {
 }
 
 .menu-icon svg {
-  width: 19px;
-  height: 19px;
+  width:
+    19px;
 
-  fill: none;
-  stroke: currentColor;
+  height:
+    19px;
 
-  stroke-width: 1.9;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+  fill:
+    none;
+
+  stroke:
+    currentColor;
+
+  stroke-width:
+    1.9;
+
+  stroke-linecap:
+    round;
+
+  stroke-linejoin:
+    round;
 }
 
-
-/* Label */
-
 .menu-label {
-  flex: 1;
+  flex:
+    1;
 
-  min-width: 0;
+  min-width:
+    0;
 
-  font-size: 0.89rem;
-  font-weight: 750;
-  line-height: 1.35;
+  font-size:
+    0.89rem;
+
+  font-weight:
+    750;
+
+  line-height:
+    1.35;
 
   transition:
     color var(--transition);
 }
 
-
-/* Chevron */
-
 .menu-chevron {
-  width: 18px;
-  height: 18px;
+  width:
+    18px;
+
+  height:
+    18px;
 
   flex:
     0
@@ -1533,19 +2211,27 @@ input:focus-visible {
 }
 
 .menu-chevron svg {
-  width: 18px;
-  height: 18px;
+  width:
+    18px;
 
-  fill: none;
-  stroke: currentColor;
+  height:
+    18px;
 
-  stroke-width: 2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+  fill:
+    none;
+
+  stroke:
+    currentColor;
+
+  stroke-width:
+    2;
+
+  stroke-linecap:
+    round;
+
+  stroke-linejoin:
+    round;
 }
-
-
-/* Hover state */
 
 .menu-item:hover {
   border-color:
@@ -1588,9 +2274,6 @@ input:focus-visible {
     translateX(2px);
 }
 
-
-/* Current page */
-
 .menu-item.is-current {
   border-color:
     #ffcbd8;
@@ -1625,7 +2308,7 @@ input:focus-visible {
 
 
 /* =========================================================
-   16. SIDE MENU FOOTER
+   27. SIDE MENU FOOTER
    ========================================================= */
 
 .side-menu-footer {
@@ -1634,36 +2317,46 @@ input:focus-visible {
     0
     auto;
 
-  min-height: 47px;
+  min-height:
+    47px;
 
   padding:
     10px
     15px;
 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display:
+    flex;
 
-  gap: 10px;
+  align-items:
+    center;
+
+  justify-content:
+    space-between;
+
+  gap:
+    10px;
 
   border-top:
-    1px solid #dce8f5;
+    1px solid
+    #dce8f5;
 
   background:
     #f2f7fd;
 
   box-shadow:
-    0 -5px 16px rgba(8, 124, 240, 0.04);
+    0 -5px 16px
+    rgba(8, 124, 240, 0.04);
 
   color:
     var(--color-muted);
 
-  font-size: 0.68rem;
+  font-size:
+    0.68rem;
 }
 
 
 /* =========================================================
-   17. TABLET
+   28. TABLET
    ========================================================= */
 
 @media (max-width: 900px) {
@@ -1676,6 +2369,42 @@ input:focus-visible {
       );
   }
 
+
+  /*
+     Tablet-এ single documentary
+     এখনো horizontal থাকবে।
+  */
+
+  .documentary-card:only-child {
+    grid-column:
+      1 / -1;
+
+    width:
+      100%;
+
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(0, 1fr);
+  }
+
+  .documentary-card:only-child
+  .documentary-thumbnail,
+
+  .documentary-card:only-child
+  .documentary-thumb {
+    min-height:
+      290px;
+  }
+
+  .documentary-card:only-child
+  .documentary-card-content,
+
+  .documentary-card:only-child
+  .documentary-content {
+    padding:
+      22px;
+  }
+
   .footer-main {
     grid-template-columns:
       1fr;
@@ -1685,13 +2414,14 @@ input:focus-visible {
 
 
 /* =========================================================
-   18. MOBILE
+   29. MOBILE
    ========================================================= */
 
 @media (max-width: 620px) {
 
   :root {
-    --header-height: 60px;
+    --header-height:
+      60px;
   }
 
   .header-inner {
@@ -1700,32 +2430,47 @@ input:focus-visible {
   }
 
   .header-logo {
-    width: 37px;
-    height: 37px;
+    width:
+      37px;
 
-    flex-basis: 37px;
+    height:
+      37px;
+
+    flex-basis:
+      37px;
   }
 
   .header-wordmark {
-    font-size: 1.3rem;
+    font-size:
+      1.3rem;
   }
 
   .header-tagline {
-    display: none;
+    display:
+      none;
   }
 
   .menu-open-button {
-    width: 42px;
-    min-width: 42px;
+    width:
+      42px;
 
-    height: 40px;
+    min-width:
+      42px;
 
-    padding: 0;
+    height:
+      40px;
+
+    padding:
+      0;
   }
 
   .menu-open-button span {
-    display: none;
+    display:
+      none;
   }
+
+
+  /* Search */
 
   .search-section {
     padding:
@@ -1734,64 +2479,224 @@ input:focus-visible {
   }
 
   .search-input {
-    height: 46px;
+    height:
+      46px;
 
-    font-size: 0.89rem;
+    font-size:
+      0.89rem;
   }
+
+
+  /* Main */
 
   #main-content {
     width:
       calc(100% - 20px);
   }
 
+
+  /* Heading */
+
   .documentary-heading {
-    display: block;
+    display:
+      block;
 
     padding:
       17px
       0
-      10px;
+      11px;
   }
 
   .section-kicker {
-    font-size: 0.63rem;
+    font-size:
+      0.63rem;
   }
 
   .documentary-heading h1 {
-    font-size: 1.48rem;
+    font-size:
+      1.48rem;
   }
 
   .documentary-heading p {
-    font-size: 0.84rem;
+    font-size:
+      0.84rem;
   }
 
   .documentary-count {
-    margin-top: 6px;
+    margin-top:
+      6px;
   }
+
+
+  /* Grid */
 
   .documentary-grid {
     grid-template-columns:
       1fr;
 
-    gap: 13px;
+    gap:
+      14px;
   }
 
-  .documentary-list-section {
-    padding-bottom: 25px;
+
+  /*
+     Mobile-এ single documentary
+     আবার standard vertical card।
+  */
+
+  .documentary-card:only-child {
+    grid-column:
+      auto;
+
+    width:
+      100%;
+
+    display:
+      block;
   }
+
+  .documentary-card:only-child
+  .documentary-thumbnail,
+
+  .documentary-card:only-child
+  .documentary-thumb {
+    height:
+      auto;
+
+    min-height:
+      0;
+
+    aspect-ratio:
+      16 / 9;
+  }
+
+
+  /* Card content */
 
   .documentary-card-content,
+  .documentary-content,
+
+  .documentary-card:only-child
+  .documentary-card-content,
+
+  .documentary-card:only-child
   .documentary-content {
-    padding: 12px;
+    padding:
+      13px;
+
+    display:
+      block;
   }
 
+  .documentary-title,
+  .documentary-card:only-child
   .documentary-title {
-    font-size: 1rem;
+    font-size:
+      1.03rem;
+
+    line-height:
+      1.43;
   }
 
+  .documentary-description,
+  .documentary-card:only-child
   .documentary-description {
-    font-size: 0.82rem;
+    font-size:
+      0.83rem;
+
+    line-height:
+      1.65;
+
+    -webkit-line-clamp:
+      3;
   }
+
+  .documentary-actions,
+  .documentary-card:only-child
+  .documentary-actions {
+    margin-top:
+      13px;
+  }
+
+
+  /*
+     Mobile button আরও compact।
+  */
+
+  .documentary-button,
+  .read-documentary,
+  .watch-documentary {
+    min-height:
+      42px;
+
+    padding:
+      8px
+      8px;
+
+    gap:
+      6px;
+
+    font-size:
+      0.77rem;
+  }
+
+  .documentary-button svg,
+  .read-documentary svg,
+  .watch-documentary svg {
+    width:
+      16px !important;
+
+    height:
+      16px !important;
+
+    min-width:
+      16px !important;
+
+    max-width:
+      16px !important;
+
+    min-height:
+      16px !important;
+
+    max-height:
+      16px !important;
+
+    flex:
+      0 0
+      16px !important;
+  }
+
+
+  /* Thumbnail label */
+
+  .documentary-thumb-label {
+    right:
+      8px;
+
+    bottom:
+      8px;
+
+    min-height:
+      23px;
+
+    padding:
+      4px
+      7px;
+
+    font-size:
+      0.61rem;
+  }
+
+
+  /* Documentary section */
+
+  .documentary-list-section {
+    padding-bottom:
+      26px;
+  }
+
+
+  /* Footer */
 
   .footer-main {
     width:
@@ -1807,7 +2712,8 @@ input:focus-visible {
     width:
       calc(100% - 20px);
 
-    display: block;
+    display:
+      block;
 
     padding:
       12px
@@ -1815,8 +2721,12 @@ input:focus-visible {
   }
 
   .footer-legal {
-    margin-top: 7px;
+    margin-top:
+      7px;
   }
+
+
+  /* Drawer */
 
   .side-menu {
     width:
@@ -1824,7 +2734,8 @@ input:focus-visible {
   }
 
   .side-menu-header {
-    min-height: 73px;
+    min-height:
+      73px;
 
     padding:
       10px
@@ -1832,21 +2743,30 @@ input:focus-visible {
   }
 
   .side-menu-logo {
-    width: 47px;
-    height: 47px;
+    width:
+      47px;
 
-    flex-basis: 47px;
+    height:
+      47px;
+
+    flex-basis:
+      47px;
   }
 
   .side-menu-brand strong {
-    font-size: 1.05rem;
+    font-size:
+      1.05rem;
   }
 
   .menu-close-button {
-    width: 39px;
-    height: 39px;
+    width:
+      39px;
 
-    flex-basis: 39px;
+    height:
+      39px;
+
+    flex-basis:
+      39px;
   }
 
   .side-menu-content {
@@ -1869,9 +2789,11 @@ input:focus-visible {
   }
 
   .menu-item {
-    min-height: 50px;
+    min-height:
+      50px;
 
-    gap: 10px;
+    gap:
+      10px;
 
     padding:
       5px
@@ -1879,14 +2801,19 @@ input:focus-visible {
   }
 
   .menu-icon {
-    width: 38px;
-    height: 38px;
+    width:
+      38px;
 
-    flex-basis: 38px;
+    height:
+      38px;
+
+    flex-basis:
+      38px;
   }
 
   .menu-label {
-    font-size: 0.86rem;
+    font-size:
+      0.86rem;
   }
 
   .menu-divider {
@@ -1896,35 +2823,46 @@ input:focus-visible {
   }
 
   .side-menu-footer {
-    font-size: 0.65rem;
+    font-size:
+      0.65rem;
   }
 
 }
 
 
 /* =========================================================
-   19. VERY SMALL MOBILE
+   30. VERY SMALL MOBILE
    ========================================================= */
 
 @media (max-width: 380px) {
 
   .header-wordmark {
-    font-size: 1.2rem;
+    font-size:
+      1.2rem;
   }
 
   .documentary-actions {
-    grid-template-columns: 1fr;
+    grid-template-columns:
+      1fr;
+  }
+
+  .documentary-button,
+  .read-documentary,
+  .watch-documentary {
+    min-height:
+      40px;
   }
 
   .side-menu {
-    width: 66.6667vw;
+    width:
+      66.6667vw;
   }
 
 }
 
 
 /* =========================================================
-   20. REDUCED MOTION
+   31. REDUCED MOTION
    ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
@@ -1932,7 +2870,8 @@ input:focus-visible {
   *,
   *::before,
   *::after {
-    scroll-behavior: auto !important;
+    scroll-behavior:
+      auto !important;
 
     transition-duration:
       0.01ms !important;
