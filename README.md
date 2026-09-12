@@ -7,7 +7,7 @@ SalimGPT একটি research-based Bangla documentary media platform, যে�
 SalimGPT-এর documentary script, editorial direction এবং project management পরিচালনা করেন **Mohammad Salim**।
 
 ---
-
+ 
 # 1. Project Overview
 
 SalimGPT website একটি lightweight static website যা GitHub Pages-এ deploy করার জন্য তৈরি।
