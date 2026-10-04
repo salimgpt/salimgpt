@@ -1,0 +1,1378 @@
+/* =========================================================
+   SalimGPT Global
+   File: css/global.css
+
+   Global foundation only.
+
+   Page-specific layout and visual styles must remain
+   in their dedicated CSS files.
+
+   Shared design system for:
+   - Typography
+   - Brand colors
+   - Layout
+   - Accessibility
+   - Forms
+   - Buttons
+   - Cards
+   - Notices
+   - Responsive behavior
+   ========================================================= */
+
+
+/* =========================================================
+   ROOT VARIABLES
+   ========================================================= */
+
+:root {
+
+  /* -------------------------------------------------------
+     Brand
+     ------------------------------------------------------- */
+
+  --sg-pink: #f71950;
+  --sg-pink-dark: #d90e40;
+  --sg-pink-soft: #fff0f4;
+  --sg-pink-soft-2: #fff7f9;
+
+  --sg-blue: #087cf0;
+  --sg-blue-soft: #eef7ff;
+
+
+  /* -------------------------------------------------------
+     Neutral palette
+     ------------------------------------------------------- */
+
+  --sg-black: #111216;
+  --sg-dark: #202126;
+
+  --sg-text: #32353c;
+  --sg-text-soft: #616772;
+
+  --sg-muted: #858b96;
+  --sg-muted-light: #a2a7b0;
+
+  --sg-white: #ffffff;
+
+  --sg-page-bg: #f7f8fa;
+  --sg-soft-bg: #f1f3f6;
+
+  --sg-border: #e7e9ee;
+  --sg-border-strong: #d9dde4;
+  --sg-border-soft: #f0f1f4;
+
+
+  /* -------------------------------------------------------
+     Semantic colors
+     ------------------------------------------------------- */
+
+  --sg-success: #268447;
+  --sg-success-bg: #effaf3;
+
+  --sg-warning: #9a6800;
+  --sg-warning-bg: #fff8df;
+
+  --sg-error: #c62840;
+  --sg-error-bg: #fff1f3;
+
+  --sg-info: #087cf0;
+  --sg-info-bg: #eef7ff;
+
+
+  /* -------------------------------------------------------
+     Typography
+     ------------------------------------------------------- */
+
+  --sg-font:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+
+  --sg-font-bengali:
+    "Hind Siliguri",
+    "Noto Sans Bengali",
+    "Nirmala UI",
+    var(--sg-font);
+
+  --sg-font-devanagari:
+    "Noto Sans Devanagari",
+    "Nirmala UI",
+    var(--sg-font);
+
+  --sg-font-arabic:
+    "Noto Sans Arabic",
+    "Segoe UI",
+    Tahoma,
+    Arial,
+    sans-serif;
+
+
+  /* -------------------------------------------------------
+     Layout
+     ------------------------------------------------------- */
+
+  --sg-site-width: 1180px;
+  --sg-reading-width: 780px;
+
+  /*
+   * Compact sticky top bar:
+   * desktop header is roughly 76–78px tall.
+   * Extra space is included so anchored content
+   * does not sit directly beneath the sticky header.
+   */
+  --sg-header-offset: 88px;
+
+
+  /* -------------------------------------------------------
+     Radius
+     ------------------------------------------------------- */
+
+  --sg-radius-xs: 8px;
+  --sg-radius-sm: 12px;
+  --sg-radius-md: 18px;
+  --sg-radius-lg: 24px;
+  --sg-radius-xl: 30px;
+  --sg-radius-pill: 999px;
+
+
+  /* -------------------------------------------------------
+     Shadows
+     ------------------------------------------------------- */
+
+  --sg-shadow-xs:
+    0 2px 8px rgba(17, 18, 22, 0.035);
+
+  --sg-shadow-sm:
+    0 5px 16px rgba(17, 18, 22, 0.045);
+
+  --sg-shadow-md:
+    0 12px 34px rgba(17, 18, 22, 0.065);
+
+  --sg-shadow-lg:
+    0 24px 60px rgba(17, 18, 22, 0.10);
+
+
+  /* -------------------------------------------------------
+     Motion
+     ------------------------------------------------------- */
+
+  --sg-transition-fast: 140ms ease;
+  --sg-transition: 180ms ease;
+  --sg-transition-slow: 240ms ease;
+
+
+  /* -------------------------------------------------------
+     Layering
+     ------------------------------------------------------- */
+
+  --sg-z-header: 1000;
+  --sg-z-overlay: 1100;
+  --sg-z-menu: 1200;
+  --sg-z-modal: 1300;
+}
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
+html {
+  min-width: 320px;
+
+  scroll-behavior: smooth;
+
+  /*
+   * Keeps browser-driven anchor navigation
+   * below the sticky SalimGPT top bar.
+   */
+  scroll-padding-top:
+    var(--sg-header-offset);
+
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+
+  margin: 0;
+
+  overflow-x: hidden;
+
+  background: var(--sg-page-bg);
+
+  color: var(--sg-text);
+
+  font-family: var(--sg-font);
+  font-size: 16px;
+  font-weight: 400;
+
+  line-height: 1.6;
+}
+
+
+/*
+ * JS also manages menu accessibility state.
+ * This acts as the CSS scroll-lock fallback.
+ */
+body.menu-open {
+  overflow: hidden;
+
+  overscroll-behavior: none;
+}
+
+
+/* =========================================================
+   BASE ELEMENTS
+   ========================================================= */
+
+main,
+header,
+footer,
+nav,
+aside,
+section,
+article {
+  display: block;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-top: 0;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--sg-black);
+
+  font-family: inherit;
+
+  text-wrap: balance;
+}
+
+
+p {
+  text-wrap: pretty;
+}
+
+
+ul,
+ol {
+  margin-top: 0;
+}
+
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+
+  max-width: 100%;
+}
+
+
+img {
+  height: auto;
+}
+
+
+svg {
+  overflow: visible;
+}
+
+
+iframe {
+  max-width: 100%;
+
+  border: 0;
+}
+
+
+hr {
+  height: 1px;
+
+  margin: 32px 0;
+
+  border: 0;
+
+  background: var(--sg-border);
+}
+
+
+/* =========================================================
+   LINKS
+   ========================================================= */
+
+a {
+  color: inherit;
+
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+a:hover {
+  text-decoration-thickness: 1px;
+}
+
+
+a:focus-visible {
+  outline:
+    3px solid
+    rgba(247, 25, 80, 0.28);
+
+  outline-offset: 3px;
+
+  border-radius: 4px;
+}
+
+
+/* =========================================================
+   BUTTONS / FORM FONT
+   ========================================================= */
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+
+button {
+  border: 0;
+
+  background: none;
+
+  color: inherit;
+
+  cursor: pointer;
+
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+button:disabled {
+  cursor: not-allowed;
+
+  opacity: 0.55;
+}
+
+
+button:focus-visible {
+  outline:
+    3px solid
+    rgba(247, 25, 80, 0.28);
+
+  outline-offset: 3px;
+}
+
+
+/* =========================================================
+   FORM ELEMENTS
+   ========================================================= */
+
+input,
+textarea,
+select {
+  color: var(--sg-black);
+}
+
+
+input::placeholder,
+textarea::placeholder {
+  color: #9ba0aa;
+
+  opacity: 1;
+}
+
+
+input[type="search"] {
+  appearance: none;
+
+  -webkit-appearance: none;
+}
+
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button {
+  appearance: none;
+
+  -webkit-appearance: none;
+}
+
+
+textarea {
+  resize: vertical;
+}
+
+
+/* =========================================================
+   SELECTION
+   ========================================================= */
+
+::selection {
+  background:
+    rgba(247, 25, 80, 0.18);
+
+  color: var(--sg-black);
+}
+
+
+::-moz-selection {
+  background:
+    rgba(247, 25, 80, 0.18);
+
+  color: var(--sg-black);
+}
+
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
+@media (min-width: 768px) {
+
+  * {
+    scrollbar-width: thin;
+
+    scrollbar-color:
+      #c8cbd2
+      transparent;
+  }
+
+
+  *::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+
+  *::-webkit-scrollbar-thumb {
+    border:
+      3px solid
+      transparent;
+
+    border-radius: 999px;
+
+    background: #c8cbd2;
+
+    background-clip: padding-box;
+  }
+
+
+  *::-webkit-scrollbar-thumb:hover {
+    background: #adb1ba;
+
+    background-clip: padding-box;
+  }
+}
+
+
+/* =========================================================
+   SITE WIDTH UTILITIES
+   ========================================================= */
+
+.site-container {
+  width:
+    min(
+      100%,
+      var(--sg-site-width)
+    );
+
+  margin-inline: auto;
+
+  padding-inline: 24px;
+}
+
+
+.reading-container {
+  width:
+    min(
+      100%,
+      var(--sg-reading-width)
+    );
+
+  margin-inline: auto;
+
+  padding-inline: 24px;
+}
+
+
+/* =========================================================
+   SHARED BRAND TEXT
+   ========================================================= */
+
+.brand-salim {
+  color: var(--sg-black);
+}
+
+
+.brand-gpt {
+  color: var(--sg-pink);
+}
+
+
+/* =========================================================
+   CANONICAL LOGO BEHAVIOR
+   ========================================================= */
+
+.site-logo,
+.footer-logo,
+.side-menu-logo,
+.language-card-logo {
+  user-select: none;
+
+  -webkit-user-drag: none;
+}
+
+
+/* =========================================================
+   VISUALLY HIDDEN
+   ========================================================= */
+
+.visually-hidden {
+  position: absolute !important;
+
+  width: 1px !important;
+  height: 1px !important;
+
+  padding: 0 !important;
+  margin: -1px !important;
+
+  overflow: hidden !important;
+
+  clip: rect(0, 0, 0, 0) !important;
+
+  white-space: nowrap !important;
+
+  border: 0 !important;
+}
+
+
+/* =========================================================
+   SKIP LINK
+   ========================================================= */
+
+.skip-link {
+  position: fixed;
+
+  top: 12px;
+  left: 12px;
+
+  z-index: 9999;
+
+  max-width:
+    calc(100vw - 24px);
+
+  padding:
+    11px 16px;
+
+  border:
+    1px solid
+    rgba(247, 25, 80, 0.22);
+
+  border-radius: 10px;
+
+  background: var(--sg-black);
+
+  color: var(--sg-white);
+
+  font-size: 13px;
+  font-weight: 700;
+
+  line-height: 1.3;
+
+  text-decoration: none;
+
+  box-shadow:
+    0 10px 30px
+    rgba(17, 18, 22, 0.18);
+
+  transform:
+    translateY(-170%);
+
+  transition:
+    transform 160ms ease;
+}
+
+
+.skip-link:focus {
+  transform:
+    translateY(0);
+}
+
+
+/* =========================================================
+   GENERIC BRAND EYEBROW
+   ========================================================= */
+
+.sg-eyebrow {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  margin: 0 0 12px;
+
+  color: var(--sg-pink);
+
+  font-size: 11px;
+  font-weight: 800;
+
+  line-height: 1.4;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+}
+
+
+.sg-eyebrow::before {
+  content: "";
+
+  width: 7px;
+  height: 7px;
+
+  flex: 0 0 7px;
+
+  border-radius: 50%;
+
+  background: var(--sg-pink);
+
+  box-shadow:
+    0 0 0 5px
+    rgba(247, 25, 80, 0.08);
+}
+
+
+/* =========================================================
+   GENERIC SECTION HEADER
+   ========================================================= */
+
+.sg-section-header {
+  max-width: 760px;
+
+  margin-inline: auto;
+
+  text-align: center;
+}
+
+
+.sg-section-title {
+  margin: 0;
+
+  color: var(--sg-black);
+
+  font-size:
+    clamp(
+      32px,
+      4.3vw,
+      48px
+    );
+
+  font-weight: 820;
+
+  line-height: 1.08;
+
+  letter-spacing: -0.035em;
+}
+
+
+.sg-section-description {
+  max-width: 650px;
+
+  margin:
+    14px auto
+    0;
+
+  color: var(--sg-text-soft);
+
+  font-size: 15px;
+
+  line-height: 1.72;
+}
+
+
+/* =========================================================
+   GENERIC CARD
+   ========================================================= */
+
+.sg-card {
+  border:
+    1px solid
+    var(--sg-border);
+
+  border-radius:
+    var(--sg-radius-lg);
+
+  background:
+    var(--sg-white);
+
+  box-shadow:
+    var(--sg-shadow-sm);
+}
+
+
+/* =========================================================
+   GENERIC STATUS BADGES
+   ========================================================= */
+
+.sg-badge {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 28px;
+
+  padding:
+    0 10px;
+
+  border:
+    1px solid
+    var(--sg-border);
+
+  border-radius:
+    var(--sg-radius-pill);
+
+  background:
+    var(--sg-white);
+
+  color:
+    var(--sg-text-soft);
+
+  font-size: 10px;
+  font-weight: 750;
+
+  line-height: 1;
+}
+
+
+.sg-badge--pink {
+  border-color: #f3d2da;
+
+  background: var(--sg-pink-soft);
+
+  color: var(--sg-pink);
+}
+
+
+.sg-badge--success {
+  border-color: #d8ebde;
+
+  background: var(--sg-success-bg);
+
+  color: var(--sg-success);
+}
+
+
+.sg-badge--warning {
+  border-color: #f1df9e;
+
+  background: var(--sg-warning-bg);
+
+  color: var(--sg-warning);
+}
+
+
+.sg-badge--info {
+  border-color: #cce5ff;
+
+  background: var(--sg-blue-soft);
+
+  color: var(--sg-blue);
+}
+
+
+/* =========================================================
+   GENERIC BUTTONS
+   ========================================================= */
+
+.sg-button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  min-height: 44px;
+
+  padding:
+    0 18px;
+
+  border:
+    1px solid
+    transparent;
+
+  border-radius:
+    var(--sg-radius-pill);
+
+  font-size: 12px;
+  font-weight: 750;
+
+  line-height: 1;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition:
+    transform var(--sg-transition),
+    background var(--sg-transition),
+    border-color var(--sg-transition),
+    color var(--sg-transition),
+    box-shadow var(--sg-transition);
+}
+
+
+.sg-button:hover {
+  transform:
+    translateY(-1px);
+}
+
+
+.sg-button:active {
+  transform:
+    translateY(0);
+}
+
+
+.sg-button--primary {
+  border-color:
+    var(--sg-pink);
+
+  background:
+    var(--sg-pink);
+
+  color:
+    var(--sg-white);
+
+  box-shadow:
+    0 8px 22px
+    rgba(247, 25, 80, 0.18);
+}
+
+
+.sg-button--primary:hover {
+  border-color:
+    var(--sg-pink-dark);
+
+  background:
+    var(--sg-pink-dark);
+}
+
+
+.sg-button--secondary {
+  border-color:
+    var(--sg-border-strong);
+
+  background:
+    var(--sg-white);
+
+  color:
+    var(--sg-dark);
+}
+
+
+.sg-button--secondary:hover {
+  border-color:
+    rgba(247, 25, 80, 0.25);
+
+  background:
+    var(--sg-pink-soft);
+
+  color:
+    var(--sg-pink);
+}
+
+
+/* =========================================================
+   GENERIC NOTICE BOXES
+   ========================================================= */
+
+.sg-notice {
+  padding:
+    18px 20px;
+
+  border:
+    1px solid
+    var(--sg-border);
+
+  border-radius:
+    var(--sg-radius-md);
+
+  background:
+    var(--sg-white);
+
+  color:
+    var(--sg-text-soft);
+
+  font-size: 13px;
+
+  line-height: 1.7;
+}
+
+
+.sg-notice--info {
+  border-color:
+    #cfe7ff;
+
+  background:
+    var(--sg-blue-soft);
+}
+
+
+.sg-notice--warning {
+  border-color:
+    #efdfab;
+
+  background:
+    var(--sg-warning-bg);
+}
+
+
+.sg-notice--error {
+  border-color:
+    #f0ccd3;
+
+  background:
+    var(--sg-error-bg);
+}
+
+
+/* =========================================================
+   LANGUAGE-SPECIFIC TYPOGRAPHY
+   ========================================================= */
+
+:lang(bn) {
+  font-family:
+    var(--sg-font-bengali);
+}
+
+
+:lang(hi) {
+  font-family:
+    var(--sg-font-devanagari);
+}
+
+
+:lang(ar),
+:lang(ur) {
+  font-family:
+    var(--sg-font-arabic);
+}
+
+
+/* =========================================================
+   RTL SUPPORT
+   ========================================================= */
+
+[dir="rtl"] {
+  direction: rtl;
+}
+
+
+[dir="rtl"]
+.sg-eyebrow::before {
+  order: 2;
+}
+
+
+/* =========================================================
+   FOCUS SYSTEM
+   ========================================================= */
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+
+:focus-visible {
+  outline:
+    3px solid
+    rgba(247, 25, 80, 0.28);
+
+  outline-offset: 3px;
+}
+
+
+/* =========================================================
+   TARGET / ANCHOR OFFSET
+   ========================================================= */
+
+[id] {
+  scroll-margin-top:
+    var(--sg-header-offset);
+}
+
+
+/* =========================================================
+   NOSCRIPT
+   ========================================================= */
+
+noscript {
+  display: block;
+}
+
+
+.noscript-message {
+  width:
+    min(
+      calc(100% - 30px),
+      760px
+    );
+
+  margin:
+    20px auto;
+
+  padding:
+    14px 18px;
+
+  border:
+    1px solid
+    #efdfab;
+
+  border-radius: 12px;
+
+  background:
+    var(--sg-warning-bg);
+
+  color:
+    #7b5a09;
+
+  font-size: 12px;
+
+  line-height: 1.65;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   LOADING / DISABLED STATES
+   ========================================================= */
+
+.is-loading {
+  cursor: progress;
+}
+
+
+.is-disabled,
+[aria-disabled="true"] {
+  cursor: default;
+}
+
+
+.is-disabled {
+  pointer-events: none;
+
+  opacity: 0.58;
+}
+
+
+[aria-disabled="true"] {
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   HIDDEN ATTRIBUTE
+   ========================================================= */
+
+[hidden] {
+  display: none !important;
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+   ========================================================= */
+
+@media (max-width: 980px) {
+
+  :root {
+    /*
+     * Header remains compact at tablet size.
+     */
+    --sg-header-offset: 88px;
+  }
+
+
+  .site-container,
+  .reading-container {
+    padding-inline: 22px;
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+   ========================================================= */
+
+@media (max-width: 680px) {
+
+  :root {
+    /*
+     * Main mobile top bar is approximately 82px.
+     */
+    --sg-header-offset: 92px;
+  }
+
+
+  body {
+    font-size: 15px;
+  }
+
+
+  .site-container,
+  .reading-container {
+    padding-inline: 14px;
+  }
+
+
+  .sg-section-title {
+    font-size: 33px;
+  }
+
+
+  .sg-section-description {
+    font-size: 14px;
+
+    line-height: 1.68;
+  }
+
+
+  .sg-button {
+    min-height: 42px;
+
+    padding:
+      0 15px;
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE — SMALL MOBILE
+   Matches header.css <= 430px
+   ========================================================= */
+
+@media (max-width: 430px) {
+
+  :root {
+    /*
+     * Main top bar is approximately 78px.
+     */
+    --sg-header-offset: 88px;
+  }
+
+
+  .site-container,
+  .reading-container {
+    padding-inline: 11px;
+  }
+
+
+  .sg-section-title {
+    font-size: 30px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   Matches header.css <= 360px
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+  :root {
+    /*
+     * Main top bar is approximately 74px.
+     */
+    --sg-header-offset: 84px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  html {
+    scroll-behavior: auto;
+  }
+
+
+  *,
+  *::before,
+  *::after {
+    animation-duration:
+      0.01ms !important;
+
+    animation-iteration-count:
+      1 !important;
+
+    scroll-behavior:
+      auto !important;
+
+    transition-duration:
+      0.01ms !important;
+  }
+}
+
+
+/* =========================================================
+   HIGH CONTRAST
+   ========================================================= */
+
+@media (prefers-contrast: more) {
+
+  :root {
+    --sg-border: #c7cbd2;
+    --sg-border-strong: #aeb3bd;
+
+    --sg-text-soft: #454950;
+    --sg-muted: #565b64;
+  }
+
+
+  a:focus-visible,
+  button:focus-visible,
+  :focus-visible {
+    outline-color:
+      var(--sg-pink);
+  }
+}
+
+
+/* =========================================================
+   PRINT
+   ========================================================= */
+
+@media print {
+
+  :root {
+    --sg-black: #000000;
+    --sg-dark: #111111;
+
+    --sg-text: #222222;
+    --sg-text-soft: #444444;
+
+    --sg-muted: #555555;
+
+    --sg-page-bg: #ffffff;
+    --sg-soft-bg: #ffffff;
+    --sg-white: #ffffff;
+
+    --sg-border: #cccccc;
+    --sg-border-strong: #bbbbbb;
+
+    --sg-header-offset: 0px;
+  }
+
+
+  html,
+  body {
+    background:
+      #ffffff !important;
+
+    color:
+      #000000 !important;
+  }
+
+
+  html {
+    scroll-padding-top: 0;
+  }
+
+
+  body {
+    font-size: 11pt;
+
+    line-height: 1.5;
+  }
+
+
+  a {
+    color:
+      #000000 !important;
+
+    text-decoration:
+      underline;
+  }
+
+
+  .skip-link {
+    display:
+      none !important;
+  }
+
+
+  .sg-card,
+  .sg-notice {
+    box-shadow:
+      none !important;
+  }
+
+
+  * {
+    animation:
+      none !important;
+
+    transition:
+      none !important;
+  }
+}

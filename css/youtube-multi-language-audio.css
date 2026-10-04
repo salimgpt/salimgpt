@@ -1,0 +1,3084 @@
+/* =========================================================
+   SalimGPT Global
+   File: css/youtube-multi-language-audio.css
+
+   YouTube Multi-Language Audio Page
+   - Editorial introduction
+   - Primary page/share image
+   - One-channel multilingual model
+   - Audio availability notice
+   - Secondary supporting image
+   - Localization workflow
+   - Multilingual principles
+   - Audio vs language editions
+   - Viewer guidance
+   - Related global navigation
+
+   Shared:
+   - global.css
+   - header.css
+   - menu.css
+   - footer.css
+   ========================================================= */
+
+
+/* =========================================================
+   PAGE VARIABLES
+   ========================================================= */
+
+:root {
+  --youtube-audio-pink: #f71950;
+  --youtube-audio-pink-dark: #d90e40;
+  --youtube-audio-pink-soft: #fff0f4;
+
+  --youtube-audio-blue: #087cf0;
+  --youtube-audio-blue-soft: #eef6ff;
+
+  --youtube-audio-black: #111216;
+  --youtube-audio-dark: #202126;
+  --youtube-audio-text: #565d68;
+  --youtube-audio-muted: #7d8490;
+
+  --youtube-audio-bg: #f7f8fa;
+  --youtube-audio-bg-soft: #f1f3f6;
+  --youtube-audio-white: #ffffff;
+
+  --youtube-audio-border: #e5e8ed;
+  --youtube-audio-border-strong: #d7dbe2;
+
+  --youtube-audio-width: 1180px;
+
+  --youtube-audio-shadow-sm:
+    0 4px 14px rgba(17, 18, 22, 0.035);
+
+  --youtube-audio-shadow-md:
+    0 10px 28px rgba(17, 18, 22, 0.065);
+
+  --youtube-audio-shadow-lg:
+    0 16px 40px rgba(17, 18, 22, 0.08);
+}
+
+
+/* =========================================================
+   PAGE
+   ========================================================= */
+
+.youtube-audio-page {
+  width: 100%;
+  overflow: hidden;
+
+  background:
+    var(--youtube-audio-bg);
+
+  color:
+    var(--youtube-audio-dark);
+}
+
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.youtube-audio-container {
+  width:
+    min(
+      calc(100% - 48px),
+      var(--youtube-audio-width)
+    );
+
+  margin-inline: auto;
+}
+
+
+/* =========================================================
+   INTRO SECTION
+   ========================================================= */
+
+.youtube-audio-intro {
+  padding:
+    28px 0
+    22px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #f9fafb 0%,
+      #f7f8fa 100%
+    );
+}
+
+
+/* =========================================================
+   BREADCRUMB
+   ========================================================= */
+
+.youtube-audio-breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  gap: 6px;
+
+  margin:
+    0 0
+    13px;
+
+  color:
+    var(--youtube-audio-muted);
+
+  font-size: 11px;
+  font-weight: 650;
+  line-height: 1.4;
+}
+
+
+.youtube-audio-breadcrumb a {
+  color:
+    #626975;
+
+  text-decoration: none;
+
+  transition:
+    color 150ms ease;
+}
+
+
+.youtube-audio-breadcrumb a:hover {
+  color:
+    var(--youtube-audio-pink);
+}
+
+
+.youtube-audio-breadcrumb
+span[aria-hidden="true"] {
+  color:
+    #c2c6cd;
+}
+
+
+.youtube-audio-breadcrumb
+[aria-current="page"] {
+  color:
+    var(--youtube-audio-dark);
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   INTRO BOX
+   ========================================================= */
+
+.youtube-audio-intro-box {
+  position: relative;
+
+  overflow: hidden;
+
+  padding:
+    30px 32px;
+
+  border:
+    1px solid
+    var(--youtube-audio-border);
+
+  border-radius:
+    18px 18px 0 0;
+
+  background:
+    var(--youtube-audio-white);
+
+  box-shadow:
+    var(--youtube-audio-shadow-sm);
+}
+
+
+.youtube-audio-intro-box::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 4px;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      180deg,
+      var(--youtube-audio-pink),
+      var(--youtube-audio-pink-dark)
+    );
+}
+
+
+.youtube-audio-intro-copy {
+  max-width: 900px;
+}
+
+
+/* =========================================================
+   INTRO EYEBROW
+   ========================================================= */
+
+.youtube-audio-eyebrow {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 7px;
+
+  margin:
+    0 0
+    8px;
+
+  color:
+    var(--youtube-audio-pink);
+
+  font-size: 10px;
+  font-weight: 800;
+  line-height: 1.3;
+
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+
+.youtube-audio-eyebrow::before {
+  content: "";
+
+  width: 6px;
+  height: 6px;
+
+  flex:
+    0 0 6px;
+
+  border-radius: 50%;
+
+  background:
+    var(--youtube-audio-pink);
+
+  box-shadow:
+    0 0 0 4px
+    rgba(247, 25, 80, 0.07);
+}
+
+
+/* =========================================================
+   INTRO TITLE
+   ========================================================= */
+
+.youtube-audio-intro-box h1 {
+  max-width: 940px;
+
+  margin: 0;
+
+  color:
+    var(--youtube-audio-black);
+
+  font-size:
+    clamp(
+      36px,
+      4.5vw,
+      54px
+    );
+
+  font-weight: 850;
+  line-height: 1.03;
+
+  letter-spacing:
+    -0.045em;
+
+  text-align: left;
+}
+
+
+/* =========================================================
+   INTRO TEXT
+   ========================================================= */
+
+.youtube-audio-intro-text {
+  max-width: 860px;
+
+  margin:
+    14px 0
+    0;
+
+  color:
+    var(--youtube-audio-text);
+
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.68;
+
+  text-align: left;
+  text-wrap: pretty;
+}
+
+
+.youtube-audio-intro-note {
+  max-width: 870px;
+
+  margin:
+    9px 0
+    0;
+
+  color:
+    var(--youtube-audio-muted);
+
+  font-size: 12.5px;
+  line-height: 1.6;
+
+  text-align: left;
+}
+
+
+/* =========================================================
+   PRIMARY PAGE IMAGE
+   ========================================================= */
+
+.youtube-audio-primary-media {
+  position: relative;
+
+  width: 100%;
+
+  margin: 0;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    var(--youtube-audio-border);
+
+  border-top: 0;
+
+  border-radius:
+    0 0 18px 18px;
+
+  background:
+    #eceff3;
+
+  box-shadow:
+    var(--youtube-audio-shadow-sm);
+}
+
+
+.youtube-audio-primary-media::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  box-shadow:
+    inset 0 0 0 1px
+    rgba(255, 255, 255, 0.12);
+}
+
+
+.youtube-audio-primary-media img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  aspect-ratio:
+    1200 / 630;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+
+/* =========================================================
+   GENERAL SECTION EYEBROW
+   ========================================================= */
+
+.youtube-audio-section-eyebrow {
+  margin:
+    0 0
+    6px;
+
+  color:
+    var(--youtube-audio-pink);
+
+  font-size: 9px;
+  font-weight: 800;
+  line-height: 1.3;
+
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   GENERAL SECTION HEADINGS
+   ========================================================= */
+
+.youtube-audio-section-header h2,
+.youtube-audio-principles-header h2,
+.youtube-audio-editions-header h2,
+.youtube-audio-related-header h2,
+.youtube-audio-viewer-content h2 {
+  margin: 0;
+
+  color:
+    var(--youtube-audio-black);
+
+  font-size:
+    clamp(
+      26px,
+      3.1vw,
+      36px
+    );
+
+  font-weight: 820;
+  line-height: 1.1;
+
+  letter-spacing:
+    -0.032em;
+}
+
+
+.youtube-audio-section-header
+> p:last-child,
+.youtube-audio-principles-header
+> p:last-child,
+.youtube-audio-editions-header
+> p:last-child,
+.youtube-audio-related-header
+> p:last-child {
+  max-width: 820px;
+
+  margin:
+    9px 0
+    0;
+
+  color:
+    var(--youtube-audio-muted);
+
+  font-size: 12.5px;
+  line-height: 1.62;
+}
+
+
+/* =========================================================
+   CORE MODEL SECTION
+   ========================================================= */
+
+.youtube-audio-model-section {
+  padding:
+    54px 0
+    66px;
+
+  background:
+    var(--youtube-audio-bg);
+}
+
+
+.youtube-audio-section-header {
+  max-width: 870px;
+
+  margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   MODEL GRID
+   ========================================================= */
+
+.youtube-audio-model-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      3,
+      minmax(0, 1fr)
+    );
+
+  gap: 14px;
+}
+
+
+/* =========================================================
+   MODEL CARD
+   ========================================================= */
+
+.youtube-audio-model-card {
+  min-width: 0;
+
+  padding: 20px;
+
+  border:
+    1px solid
+    var(--youtube-audio-border);
+
+  border-radius: 18px;
+
+  background:
+    var(--youtube-audio-white);
+
+  box-shadow:
+    var(--youtube-audio-shadow-sm);
+
+  transition:
+    transform 170ms ease,
+    border-color 170ms ease,
+    box-shadow 170ms ease;
+}
+
+
+.youtube-audio-model-card:hover {
+  transform:
+    translateY(-2px);
+
+  border-color:
+    rgba(247, 25, 80, 0.18);
+
+  box-shadow:
+    var(--youtube-audio-shadow-md);
+}
+
+
+/* =========================================================
+   MODEL ICON
+   ========================================================= */
+
+.youtube-audio-model-icon {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 50px;
+  height: 50px;
+
+  margin-bottom: 15px;
+
+  border:
+    1px solid
+    #f2d2da;
+
+  border-radius: 14px;
+
+  background:
+    var(--youtube-audio-pink-soft);
+
+  color:
+    var(--youtube-audio-pink);
+}
+
+
+.youtube-audio-model-icon svg {
+  width: 26px;
+  height: 26px;
+
+  fill: none;
+
+  stroke:
+    currentColor;
+
+  stroke-width: 1.7;
+
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+
+/* =========================================================
+   MODEL CARD COPY
+   ========================================================= */
+
+.youtube-audio-model-card h3 {
+  margin: 0;
+
+  color:
+    var(--youtube-audio-black);
+
+  font-size: 15px;
+  font-weight: 780;
+  line-height: 1.3;
+}
+
+
+.youtube-audio-model-card p {
+  margin:
+    7px 0
+    0;
+
+  color:
+    var(--youtube-audio-muted);
+
+  font-size: 11.5px;
+  line-height: 1.56;
+}
+
+
+/* =========================================================
+   AUDIO AVAILABILITY NOTE
+   ========================================================= */
+
+.youtube-audio-availability-note {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns:
+    64px
+    minmax(0, 1fr);
+
+  align-items: start;
+
+  gap: 19px;
+
+  margin-top: 22px;
+
+  padding:
+    24px;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    rgba(8, 124, 240, 0.16);
+
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff 0%,
+      #f6faff 100%
+    );
+
+  box-shadow:
+    var(--youtube-audio-shadow-sm);
+}
+
+
+.youtube-audio-availability-note::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 4px;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      180deg,
+      var(--youtube-audio-blue),
+      #5a9fff
+    );
+}
+
+
+/* =========================================================
+   AVAILABILITY ICON
+   ========================================================= */
+
+.youtube-audio-availability-icon {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 60px;
+  height: 60px;
+
+  border:
+    1px solid
+    #d7eaff;
+
+  border-radius: 16px;
+
+  background:
+    var(--youtube-audio-blue-soft);
+
+  color:
+    var(--youtube-audio-blue);
+}
+
+
+.youtube-audio-availability-icon svg {
+  width: 31px;
+  height: 31px;
+
+  fill: none;
+
+  stroke:
+    currentColor;
+
+  stroke-width: 1.7;
+
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+
+/* =========================================================
+   AVAILABILITY NOTE COPY
+   ========================================================= */
+
+.youtube-audio-availability-eyebrow {
+  margin:
+    0 0
+    5px;
+
+  color:
+    var(--youtube-audio-blue);
+
+  font-size: 8.5px;
+  font-weight: 800;
+  line-height: 1.3;
+
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+
+.youtube-audio-availability-note h2 {
+  margin: 0;
+
+  color:
+    var(--youtube-audio-black);
+
+  font-size:
+    clamp(
+      22px,
+      2.7vw,
+      30px
+    );
+
+  font-weight: 820;
+  line-height: 1.13;
+
+  letter-spacing:
+    -0.025em;
+}
+
+
+.youtube-audio-availability-note
+> div:last-child
+> p:last-child {
+  max-width: 920px;
+
+  margin:
+    9px 0
+    0;
+
+  color:
+    var(--youtube-audio-text);
+
+  font-size: 12px;
+  line-height: 1.62;
+}
+
+
+/* =========================================================
+   WORKFLOW SECTION
+   ========================================================= */
+
+.youtube-audio-workflow-section {
+  padding:
+    66px 0;
+
+  border-top:
+    1px solid
+    var(--youtube-audio-border);
+
+  background:
+    var(--youtube-audio-white);
+}
+
+
+/* =========================================================
+   WORKFLOW LAYOUT
+   ========================================================= */
+
+.youtube-audio-workflow-layout {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.04fr)
+    minmax(0, 0.96fr);
+
+  align-items: center;
+
+  gap: 38px;
+}
+
+
+/* =========================================================
+   SECONDARY IMAGE
+   ========================================================= */
+
+.youtube-audio-secondary-media {
+  position: relative;
+
+  width: 100%;
+
+  margin: 0;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    var(--youtube-audio-border);
+
+  border-radius: 20px;
+
+  background:
+    #eceff3;
+
+  box-shadow:
+    var(--youtube-audio-shadow-md);
+}
+
+
+.youtube-audio-secondary-media::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  box-shadow:
+    inset 0 0 0 1px
+    rgba(255, 255, 255, 0.12);
+}
+
+
+.youtube-audio-secondary-media img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  aspect-ratio:
+    3 / 2;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+
+/* =========================================================
+   WORKFLOW CONTENT
+   ========================================================= */
+
+.youtube-audio-workflow-content {
+  min-width: 0;
+}
+
+
+.youtube-audio-workflow-eyebrow {
+  margin:
+    0 0
+    6px;
+
+  color:
+    var(--youtube-audio-pink);
+
+  font-size: 9px;
+  font-weight: 800;
+  line-height: 1.3;
+
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+
+.youtube-audio-workflow-content h2 {
+  max-width: 610px;
+
+  margin: 0;
+
+  color:
+    var(--youtube-audio-black);
+
+  font-size:
+    clamp(
+      27px,
+      3.4vw,
+      39px
+    );
+
+  font-weight: 830;
+  line-height: 1.08;
+
+  letter-spacing:
+    -0.035em;
+}
+
+
+.youtube-audio-workflow-content
+> p:not(.youtube-audio-workflow-eyebrow) {
+  max-width: 650px;
+
+  margin:
+    11px 0
+    0;
+
+  color:
+    var(--youtube-audio-text);
+
+  font-size: 12.5px;
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   WORKFLOW ACTIONS
+   ========================================================= */
+
+.youtube-audio-workflow-actions {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 7px;
+
+  margin-top: 18px;
+}
+
+
+.youtube-audio-workflow-actions a {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  min-height: 37px;
+
+  padding:
+    0 12px;
+
+  border:
+    1px solid
+    var(--youtube-audio-border);
+
+  border-radius: 999px;
+
+  background:
+    var(--youtube-audio-white);
+
+  color:
+    var(--youtube-audio-dark);
+
+  font-size: 9.5px;
+  font-weight: 700;
+  line-height: 1.2;
+
+  text-decoration: none;
+
+  transition:
+    color 150ms ease,
+    background 150ms ease,
+    border-color 150ms ease,
+    transform 150ms ease;
+}
+
+
+.youtube-audio-workflow-actions a:hover {
+  transform:
+    translateY(-1px);
+
+  border-color:
+    rgba(247, 25, 80, 0.22);
+
+  background:
+    var(--youtube-audio-pink-soft);
+
+  color:
+    var(--youtube-audio-pink);
+}
+
+
+.youtube-audio-workflow-actions
+a span[aria-hidden="true"] {
+  color:
+    var(--youtube-audio-pink);
+
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   MULTILINGUAL PRINCIPLES SECTION
+   ========================================================= */
+
+.youtube-audio-principles-section {
+  padding:
+    58px 0
+    64px;
+
+  border-top:
+    1px solid
+    var(--youtube-audio-border);
+
+  background:
+    var(--youtube-audio-bg);
+}
+
+
+/* =========================================================
+   PRINCIPLES HEADER
+   ========================================================= */
+
+.youtube-audio-principles-header {
+  max-width: 870px;
+
+  margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   PRINCIPLES GRID
+   ========================================================= */
+
+.youtube-audio-principles-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0, 1fr)
+    );
+
+  gap: 12px;
+}
+
+
+/* =========================================================
+   PRINCIPLE CARD
+   ========================================================= */
+
+.youtube-audio-principle-card {
+  display: grid;
+
+  grid-template-columns:
+    48px
+    minmax(0, 1fr);
+
+  align-items: start;
+
+  gap: 15px;
+
+  min-width: 0;
+
+  padding: 20px;
+
+  border:
+    1px solid
+    var(--youtube-audio-border);
+
+  border-radius: 18px;
+
+  background:
+    var(--youtube-audio-white);
+
+  box-shadow:
+    var(--youtube-audio-shadow-sm);
+
+  transition:
+    transform 170ms ease,
+    border-color 170ms ease,
+    box-shadow 170ms ease;
+}
+
+
+.youtube-audio-principle-card:hover {
+  transform:
+    translateY(-2px);
+
+  border-color:
+    rgba(247, 25, 80, 0.18);
+
+  box-shadow:
+    var(--youtube-audio-shadow-md);
+}
+
+
+/* =========================================================
+   PRINCIPLE NUMBER
+   ========================================================= */
+
+.youtube-audio-principle-number {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 48px;
+  height: 48px;
+
+  border:
+    1px solid
+    #f2d2da;
+
+  border-radius: 14px;
+
+  background:
+    var(--youtube-audio-pink-soft);
+
+  color:
+    var(--youtube-audio-pink);
+
+  font-size: 11px;
+  font-weight: 850;
+  line-height: 1;
+
+  letter-spacing: 0.05em;
+}
+
+
+/* =========================================================
+   PRINCIPLE COPY
+   ========================================================= */
+
+.youtube-audio-principle-card h3 {
+  margin: 0;
+
+  color:
+    var(--youtube-audio-black);
+
+  font-size: 14px;
+  font-weight: 790;
+  line-height: 1.35;
+}
+
+
+.youtube-audio-principle-card p {
+  margin:
+    6px 0
+    0;
+
+  color:
+    var(--youtube-audio-muted);
+
+  font-size: 11px;
+  line-height: 1.55;
+}
+
+
+/* =========================================================
+   AUDIO VS LANGUAGE EDITIONS
+   ========================================================= */
+
+.youtube-audio-editions-section {
+  padding:
+    58px 0
+    64px;
+
+  border-top:
+    1px solid
+    var(--youtube-audio-border);
+
+  background:
+    var(--youtube-audio-white);
+}
+
+
+/* =========================================================
+   EDITIONS HEADER
+   ========================================================= */
+
+.youtube-audio-editions-header {
+  max-width: 850px;
+
+  margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   COMPARISON GRID
+   ========================================================= */
+
+.youtube-audio-comparison-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0, 1fr)
+    );
+
+  gap: 14px;
+}
+
+
+/* =========================================================
+   COMPARISON CARD
+   ========================================================= */
+
+.youtube-audio-comparison-card {
+  display: grid;
+
+  grid-template-columns:
+    60px
+    minmax(0, 1fr);
+
+  align-items: start;
+
+  gap: 18px;
+
+  min-width: 0;
+
+  padding: 22px;
+
+  border:
+    1px solid
+    var(--youtube-audio-border);
+
+  border-radius: 19px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff 0%,
+      #fbfcfd 100%
+    );
+
+  box-shadow:
+    var(--youtube-audio-shadow-sm);
+
+  transition:
+    transform 170ms ease,
+    border-color 170ms ease,
+    box-shadow 170ms ease;
+}
+
+
+.youtube-audio-comparison-card:hover {
+  transform:
+    translateY(-2px);
+
+  border-color:
+    rgba(247, 25, 80, 0.18);
+
+  box-shadow:
+    var(--youtube-audio-shadow-md);
+}
+
+
+/* =========================================================
+   COMPARISON ICON
+   ========================================================= */
+
+.youtube-audio-comparison-icon {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 58px;
+  height: 58px;
+
+  border:
+    1px solid
+    #f2d2da;
+
+  border-radius: 16px;
+
+  background:
+    var(--youtube-audio-pink-soft);
+
+  color:
+    var(--youtube-audio-pink);
+}
+
+
+.youtube-audio-comparison-icon svg {
+  width: 29px;
+  height: 29px;
+
+  fill: none;
+
+  stroke:
+    currentColor;
+
+  stroke-width: 1.7;
+
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+
+/* =========================================================
+   COMPARISON COPY
+   ========================================================= */
+
+.youtube-audio-comparison-copy {
+  min-width: 0;
+}
+
+
+.youtube-audio-comparison-label {
+  margin:
+    0 0
+    5px;
+
+  color:
+    var(--youtube-audio-pink);
+
+  font-size: 8.5px;
+  font-weight: 800;
+  line-height: 1.3;
+
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+
+.youtube-audio-comparison-copy h3 {
+  margin: 0;
+
+  color:
+    var(--youtube-audio-black);
+
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.25;
+
+  letter-spacing:
+    -0.018em;
+}
+
+
+.youtube-audio-comparison-copy
+> p:last-child {
+  margin:
+    7px 0
+    0;
+
+  color:
+    var(--youtube-audio-muted);
+
+  font-size: 11.5px;
+  line-height: 1.56;
+}
+
+
+/* =========================================================
+   EDITIONS ACTION
+   ========================================================= */
+
+.youtube-audio-editions-action {
+  display: flex;
+
+  justify-content: flex-start;
+
+  margin-top: 18px;
+}
+
+
+.youtube-audio-editions-action a {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  min-height: 40px;
+
+  padding:
+    0 14px;
+
+  border:
+    1px solid
+    var(--youtube-audio-border);
+
+  border-radius: 999px;
+
+  background:
+    var(--youtube-audio-white);
+
+  color:
+    var(--youtube-audio-dark);
+
+  font-size: 10px;
+  font-weight: 720;
+  line-height: 1;
+
+  text-decoration: none;
+
+  transition:
+    transform 150ms ease,
+    color 150ms ease,
+    background 150ms ease,
+    border-color 150ms ease;
+}
+
+
+.youtube-audio-editions-action a:hover {
+  transform:
+    translateY(-1px);
+
+  border-color:
+    rgba(247, 25, 80, 0.22);
+
+  background:
+    var(--youtube-audio-pink-soft);
+
+  color:
+    var(--youtube-audio-pink);
+}
+
+
+.youtube-audio-editions-action
+span[aria-hidden="true"] {
+  color:
+    var(--youtube-audio-pink);
+
+  font-size: 15px;
+}
+
+
+/* =========================================================
+   VIEWER GUIDANCE SECTION
+   ========================================================= */
+
+.youtube-audio-viewer-section {
+  padding:
+    54px 0;
+
+  border-top:
+    1px solid
+    var(--youtube-audio-border);
+
+  background:
+    var(--youtube-audio-bg);
+}
+
+
+/* =========================================================
+   VIEWER BOX
+   ========================================================= */
+
+.youtube-audio-viewer-box {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns:
+    70px
+    minmax(0, 1fr);
+
+  align-items: start;
+
+  gap: 22px;
+
+  padding:
+    28px 30px;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    var(--youtube-audio-border);
+
+  border-radius: 20px;
+
+  background:
+    var(--youtube-audio-white);
+
+  box-shadow:
+    var(--youtube-audio-shadow-sm);
+}
+
+
+.youtube-audio-viewer-box::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 4px;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      180deg,
+      var(--youtube-audio-pink),
+      var(--youtube-audio-blue)
+    );
+}
+
+
+/* =========================================================
+   VIEWER ICON
+   ========================================================= */
+
+.youtube-audio-viewer-icon {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 66px;
+  height: 66px;
+
+  border:
+    1px solid
+    #f2d2da;
+
+  border-radius: 18px;
+
+  background:
+    var(--youtube-audio-pink-soft);
+
+  color:
+    var(--youtube-audio-pink);
+}
+
+
+.youtube-audio-viewer-icon svg {
+  width: 32px;
+  height: 32px;
+
+  fill: none;
+
+  stroke:
+    currentColor;
+
+  stroke-width: 1.7;
+
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+
+/* =========================================================
+   VIEWER CONTENT
+   ========================================================= */
+
+.youtube-audio-viewer-content {
+  min-width: 0;
+
+  max-width: 900px;
+}
+
+
+.youtube-audio-viewer-content
+> p:not(.youtube-audio-section-eyebrow) {
+  max-width: 830px;
+
+  margin:
+    9px 0
+    0;
+
+  color:
+    var(--youtube-audio-text);
+
+  font-size: 12.5px;
+  line-height: 1.62;
+}
+
+
+/* =========================================================
+   VIEWER ACTIONS
+   ========================================================= */
+
+.youtube-audio-viewer-actions {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 7px;
+
+  margin-top: 16px;
+}
+
+
+.youtube-audio-viewer-actions a {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  min-height: 38px;
+
+  padding:
+    0 13px;
+
+  border:
+    1px solid
+    var(--youtube-audio-border);
+
+  border-radius: 999px;
+
+  background:
+    var(--youtube-audio-white);
+
+  color:
+    var(--youtube-audio-dark);
+
+  font-size: 9.5px;
+  font-weight: 720;
+  line-height: 1.2;
+
+  text-decoration: none;
+
+  transition:
+    transform 150ms ease,
+    border-color 150ms ease,
+    background 150ms ease,
+    color 150ms ease;
+}
+
+
+.youtube-audio-viewer-actions a:hover {
+  transform:
+    translateY(-1px);
+
+  border-color:
+    rgba(247, 25, 80, 0.22);
+
+  background:
+    var(--youtube-audio-pink-soft);
+
+  color:
+    var(--youtube-audio-pink);
+}
+
+
+.youtube-audio-viewer-actions
+span[aria-hidden="true"] {
+  color:
+    var(--youtube-audio-pink);
+
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   RELATED GLOBAL PAGES
+   ========================================================= */
+
+.youtube-audio-related-section {
+  padding:
+    58px 0
+    68px;
+
+  border-top:
+    1px solid
+    var(--youtube-audio-border);
+
+  background:
+    var(--youtube-audio-white);
+}
+
+
+/* =========================================================
+   RELATED HEADER
+   ========================================================= */
+
+.youtube-audio-related-header {
+  max-width: 830px;
+
+  margin-bottom: 18px;
+}
+
+
+/* =========================================================
+   RELATED GRID
+   ========================================================= */
+
+.youtube-audio-related-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0, 1fr)
+    );
+
+  gap: 12px;
+}
+
+
+/* =========================================================
+   RELATED CARD
+   ========================================================= */
+
+.youtube-audio-related-grid > a {
+  display: grid;
+
+  grid-template-columns:
+    48px
+    minmax(0, 1fr)
+    auto;
+
+  align-items: center;
+
+  gap: 14px;
+
+  min-width: 0;
+
+  padding: 16px;
+
+  border:
+    1px solid
+    var(--youtube-audio-border);
+
+  border-radius: 16px;
+
+  background:
+    var(--youtube-audio-bg);
+
+  color:
+    inherit;
+
+  text-decoration: none;
+
+  box-shadow:
+    var(--youtube-audio-shadow-sm);
+
+  transition:
+    transform 160ms ease,
+    border-color 160ms ease,
+    background 160ms ease,
+    box-shadow 160ms ease;
+}
+
+
+.youtube-audio-related-grid > a:hover {
+  transform:
+    translateY(-2px);
+
+  border-color:
+    rgba(247, 25, 80, 0.20);
+
+  background:
+    var(--youtube-audio-white);
+
+  box-shadow:
+    var(--youtube-audio-shadow-md);
+}
+
+
+/* =========================================================
+   RELATED ICON
+   ========================================================= */
+
+.youtube-audio-related-icon {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 48px;
+  height: 48px;
+
+  border:
+    1px solid
+    #f2d2da;
+
+  border-radius: 13px;
+
+  background:
+    var(--youtube-audio-pink-soft);
+
+  color:
+    var(--youtube-audio-pink);
+}
+
+
+.youtube-audio-related-icon svg {
+  width: 25px;
+  height: 25px;
+
+  fill: none;
+
+  stroke:
+    currentColor;
+
+  stroke-width: 1.7;
+
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+
+/* =========================================================
+   RELATED COPY
+   ========================================================= */
+
+.youtube-audio-related-grid h3 {
+  margin: 0;
+
+  color:
+    var(--youtube-audio-black);
+
+  font-size: 13px;
+  font-weight: 780;
+  line-height: 1.3;
+}
+
+
+.youtube-audio-related-grid p {
+  margin:
+    4px 0
+    0;
+
+  color:
+    var(--youtube-audio-muted);
+
+  font-size: 10.5px;
+  line-height: 1.45;
+}
+
+
+.youtube-audio-related-arrow {
+  flex:
+    0 0 auto;
+
+  color:
+    var(--youtube-audio-pink);
+
+  font-size: 18px;
+
+  transition:
+    transform 150ms ease;
+}
+
+
+.youtube-audio-related-grid
+> a:hover
+.youtube-audio-related-arrow {
+  transform:
+    translateX(2px);
+}
+
+
+/* =========================================================
+   FOCUS STATES
+   ========================================================= */
+
+.youtube-audio-breadcrumb a:focus-visible,
+.youtube-audio-workflow-actions a:focus-visible,
+.youtube-audio-editions-action a:focus-visible,
+.youtube-audio-viewer-actions a:focus-visible,
+.youtube-audio-related-grid > a:focus-visible {
+  outline:
+    3px solid
+    rgba(247, 25, 80, 0.22);
+
+  outline-offset: 2px;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   ========================================================= */
+
+@media (min-width: 1280px) {
+
+  .youtube-audio-workflow-layout {
+    gap: 44px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 980px) {
+
+  .youtube-audio-container {
+    width:
+      min(
+        calc(100% - 44px),
+        var(--youtube-audio-width)
+      );
+  }
+
+
+  .youtube-audio-model-grid {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+  }
+
+
+  .youtube-audio-workflow-layout {
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(0, 1fr);
+
+    gap: 26px;
+  }
+
+
+  .youtube-audio-principles-grid {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+  }
+
+
+  .youtube-audio-comparison-grid {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+  }
+}
+
+
+/* =========================================================
+   NARROW TABLET
+   ========================================================= */
+
+@media (max-width: 820px) {
+
+  .youtube-audio-workflow-layout {
+    grid-template-columns:
+      1fr;
+
+    gap: 24px;
+  }
+
+
+  .youtube-audio-secondary-media {
+    max-width: 760px;
+  }
+
+
+  .youtube-audio-workflow-content {
+    max-width: 760px;
+  }
+
+
+  .youtube-audio-comparison-grid {
+    grid-template-columns:
+      1fr;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 680px) {
+
+  /* -------------------------------------------------------
+     Container
+     ------------------------------------------------------- */
+
+  .youtube-audio-container {
+    width:
+      calc(100% - 26px);
+  }
+
+
+  /* -------------------------------------------------------
+     Intro
+     ------------------------------------------------------- */
+
+  .youtube-audio-intro {
+    padding:
+      16px 0
+      14px;
+  }
+
+
+  .youtube-audio-breadcrumb {
+    gap: 5px;
+
+    margin-bottom: 10px;
+
+    font-size: 9px;
+  }
+
+
+  .youtube-audio-intro-box {
+    padding:
+      20px 17px
+      20px 20px;
+
+    border-radius:
+      15px 15px 0 0;
+  }
+
+
+  .youtube-audio-intro-box::before {
+    width: 3px;
+  }
+
+
+  .youtube-audio-eyebrow {
+    gap: 6px;
+
+    margin-bottom: 6px;
+
+    font-size: 8px;
+  }
+
+
+  .youtube-audio-eyebrow::before {
+    width: 5px;
+    height: 5px;
+
+    flex-basis: 5px;
+
+    box-shadow:
+      0 0 0 3px
+      rgba(247, 25, 80, 0.07);
+  }
+
+
+  .youtube-audio-intro-box h1 {
+    font-size:
+      clamp(
+        28px,
+        8vw,
+        38px
+      );
+
+    line-height: 1.04;
+  }
+
+
+  .youtube-audio-intro-text {
+    margin-top: 10px;
+
+    font-size: 12px;
+    line-height: 1.58;
+  }
+
+
+  .youtube-audio-intro-note {
+    margin-top: 7px;
+
+    font-size: 10.8px;
+    line-height: 1.52;
+  }
+
+
+  /* -------------------------------------------------------
+     Primary image
+     ------------------------------------------------------- */
+
+  .youtube-audio-primary-media {
+    border-radius:
+      0 0 15px 15px;
+  }
+
+
+  .youtube-audio-primary-media img {
+    aspect-ratio:
+      16 / 9;
+  }
+
+
+  /* -------------------------------------------------------
+     General headings
+     ------------------------------------------------------- */
+
+  .youtube-audio-section-eyebrow {
+    margin-bottom: 4px;
+
+    font-size: 7.8px;
+  }
+
+
+  .youtube-audio-section-header h2,
+  .youtube-audio-principles-header h2,
+  .youtube-audio-editions-header h2,
+  .youtube-audio-related-header h2,
+  .youtube-audio-viewer-content h2 {
+    font-size: 22px;
+  }
+
+
+  .youtube-audio-section-header
+  > p:last-child,
+  .youtube-audio-principles-header
+  > p:last-child,
+  .youtube-audio-editions-header
+  > p:last-child,
+  .youtube-audio-related-header
+  > p:last-child {
+    margin-top: 7px;
+
+    font-size: 10.8px;
+    line-height: 1.52;
+  }
+
+
+  /* -------------------------------------------------------
+     Model
+     ------------------------------------------------------- */
+
+  .youtube-audio-model-section {
+    padding:
+      34px 0
+      46px;
+  }
+
+
+  .youtube-audio-section-header {
+    margin-bottom: 14px;
+  }
+
+
+  .youtube-audio-model-grid {
+    grid-template-columns:
+      1fr;
+
+    gap: 9px;
+  }
+
+
+  .youtube-audio-model-card {
+    display: grid;
+
+    grid-template-columns:
+      46px
+      minmax(0, 1fr);
+
+    align-items: start;
+
+    column-gap: 12px;
+
+    padding: 14px;
+
+    border-radius: 15px;
+  }
+
+
+  .youtube-audio-model-icon {
+    grid-row:
+      1 / span 2;
+
+    width: 46px;
+    height: 46px;
+
+    margin: 0;
+
+    border-radius: 13px;
+  }
+
+
+  .youtube-audio-model-icon svg {
+    width: 23px;
+    height: 23px;
+  }
+
+
+  .youtube-audio-model-card h3 {
+    font-size: 12.5px;
+  }
+
+
+  .youtube-audio-model-card p {
+    margin-top: 4px;
+
+    font-size: 10.4px;
+    line-height: 1.48;
+  }
+
+
+  /* -------------------------------------------------------
+     Availability
+     ------------------------------------------------------- */
+
+  .youtube-audio-availability-note {
+    grid-template-columns:
+      52px
+      minmax(0, 1fr);
+
+    gap: 14px;
+
+    margin-top: 16px;
+
+    padding: 18px;
+
+    border-radius: 16px;
+  }
+
+
+  .youtube-audio-availability-note::before {
+    width: 3px;
+  }
+
+
+  .youtube-audio-availability-icon {
+    width: 50px;
+    height: 50px;
+
+    border-radius: 14px;
+  }
+
+
+  .youtube-audio-availability-icon svg {
+    width: 26px;
+    height: 26px;
+  }
+
+
+  .youtube-audio-availability-eyebrow {
+    font-size: 7.5px;
+  }
+
+
+  .youtube-audio-availability-note h2 {
+    font-size: 20px;
+  }
+
+
+  .youtube-audio-availability-note
+  > div:last-child
+  > p:last-child {
+    margin-top: 7px;
+
+    font-size: 10.8px;
+    line-height: 1.52;
+  }
+
+
+  /* -------------------------------------------------------
+     Workflow
+     ------------------------------------------------------- */
+
+  .youtube-audio-workflow-section {
+    padding:
+      42px 0
+      46px;
+  }
+
+
+  .youtube-audio-workflow-layout {
+    gap: 18px;
+  }
+
+
+  .youtube-audio-secondary-media {
+    border-radius: 16px;
+  }
+
+
+  .youtube-audio-secondary-media img {
+    aspect-ratio:
+      16 / 10;
+  }
+
+
+  .youtube-audio-workflow-eyebrow {
+    font-size: 7.8px;
+  }
+
+
+  .youtube-audio-workflow-content h2 {
+    font-size: 22px;
+  }
+
+
+  .youtube-audio-workflow-content
+  > p:not(.youtube-audio-workflow-eyebrow) {
+    margin-top: 8px;
+
+    font-size: 10.8px;
+    line-height: 1.54;
+  }
+
+
+  .youtube-audio-workflow-actions {
+    gap: 6px;
+
+    margin-top: 13px;
+  }
+
+
+  .youtube-audio-workflow-actions a {
+    min-height: 34px;
+
+    padding:
+      0 10px;
+
+    font-size: 8.8px;
+  }
+
+
+  /* -------------------------------------------------------
+     Principles
+     ------------------------------------------------------- */
+
+  .youtube-audio-principles-section {
+    padding:
+      40px 0
+      46px;
+  }
+
+
+  .youtube-audio-principles-header {
+    margin-bottom: 14px;
+  }
+
+
+  .youtube-audio-principles-grid {
+    grid-template-columns:
+      1fr;
+
+    gap: 9px;
+  }
+
+
+  .youtube-audio-principle-card {
+    grid-template-columns:
+      44px
+      minmax(0, 1fr);
+
+    gap: 12px;
+
+    padding: 14px;
+
+    border-radius: 15px;
+  }
+
+
+  .youtube-audio-principle-number {
+    width: 44px;
+    height: 44px;
+
+    border-radius: 12px;
+
+    font-size: 9.5px;
+  }
+
+
+  .youtube-audio-principle-card h3 {
+    font-size: 12.3px;
+  }
+
+
+  .youtube-audio-principle-card p {
+    margin-top: 4px;
+
+    font-size: 10.3px;
+    line-height: 1.48;
+  }
+
+
+  /* -------------------------------------------------------
+     Editions comparison
+     ------------------------------------------------------- */
+
+  .youtube-audio-editions-section {
+    padding:
+      40px 0
+      46px;
+  }
+
+
+  .youtube-audio-editions-header {
+    margin-bottom: 14px;
+  }
+
+
+  .youtube-audio-comparison-grid {
+    gap: 9px;
+  }
+
+
+  .youtube-audio-comparison-card {
+    grid-template-columns:
+      50px
+      minmax(0, 1fr);
+
+    gap: 13px;
+
+    padding: 15px;
+
+    border-radius: 16px;
+  }
+
+
+  .youtube-audio-comparison-icon {
+    width: 48px;
+    height: 48px;
+
+    border-radius: 14px;
+  }
+
+
+  .youtube-audio-comparison-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+
+
+  .youtube-audio-comparison-label {
+    font-size: 7.5px;
+  }
+
+
+  .youtube-audio-comparison-copy h3 {
+    font-size: 15px;
+  }
+
+
+  .youtube-audio-comparison-copy
+  > p:last-child {
+    margin-top: 5px;
+
+    font-size: 10.4px;
+    line-height: 1.48;
+  }
+
+
+  .youtube-audio-editions-action {
+    margin-top: 13px;
+  }
+
+
+  .youtube-audio-editions-action a {
+    min-height: 36px;
+
+    padding:
+      0 11px;
+
+    font-size: 9px;
+  }
+
+
+  /* -------------------------------------------------------
+     Viewer guidance
+     ------------------------------------------------------- */
+
+  .youtube-audio-viewer-section {
+    padding:
+      38px 0;
+  }
+
+
+  .youtube-audio-viewer-box {
+    grid-template-columns:
+      54px
+      minmax(0, 1fr);
+
+    gap: 14px;
+
+    padding: 18px;
+
+    border-radius: 16px;
+  }
+
+
+  .youtube-audio-viewer-box::before {
+    width: 3px;
+  }
+
+
+  .youtube-audio-viewer-icon {
+    width: 52px;
+    height: 52px;
+
+    border-radius: 14px;
+  }
+
+
+  .youtube-audio-viewer-icon svg {
+    width: 26px;
+    height: 26px;
+  }
+
+
+  .youtube-audio-viewer-content
+  > p:not(.youtube-audio-section-eyebrow) {
+    margin-top: 7px;
+
+    font-size: 10.8px;
+    line-height: 1.52;
+  }
+
+
+  .youtube-audio-viewer-actions {
+    gap: 6px;
+
+    margin-top: 12px;
+  }
+
+
+  .youtube-audio-viewer-actions a {
+    min-height: 34px;
+
+    padding:
+      0 10px;
+
+    font-size: 8.8px;
+  }
+
+
+  /* -------------------------------------------------------
+     Related
+     ------------------------------------------------------- */
+
+  .youtube-audio-related-section {
+    padding:
+      40px 0
+      48px;
+  }
+
+
+  .youtube-audio-related-header {
+    margin-bottom: 13px;
+  }
+
+
+  .youtube-audio-related-grid {
+    grid-template-columns:
+      1fr;
+
+    gap: 8px;
+  }
+
+
+  .youtube-audio-related-grid > a {
+    grid-template-columns:
+      42px
+      minmax(0, 1fr)
+      auto;
+
+    gap: 11px;
+
+    padding: 13px;
+
+    border-radius: 14px;
+  }
+
+
+  .youtube-audio-related-icon {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 12px;
+  }
+
+
+  .youtube-audio-related-icon svg {
+    width: 22px;
+    height: 22px;
+  }
+
+
+  .youtube-audio-related-grid h3 {
+    font-size: 11.5px;
+  }
+
+
+  .youtube-audio-related-grid p {
+    margin-top: 3px;
+
+    font-size: 9.8px;
+  }
+
+
+  .youtube-audio-related-arrow {
+    font-size: 16px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 390px) {
+
+  .youtube-audio-container {
+    width:
+      calc(100% - 22px);
+  }
+
+
+  .youtube-audio-intro-box {
+    padding:
+      18px 15px
+      18px 18px;
+  }
+
+
+  .youtube-audio-intro-box h1 {
+    font-size: 27px;
+  }
+
+
+  .youtube-audio-intro-text {
+    font-size: 11.5px;
+  }
+
+
+  .youtube-audio-intro-note {
+    font-size: 10.4px;
+  }
+
+
+  .youtube-audio-section-header h2,
+  .youtube-audio-principles-header h2,
+  .youtube-audio-editions-header h2,
+  .youtube-audio-related-header h2,
+  .youtube-audio-viewer-content h2 {
+    font-size: 20px;
+  }
+
+
+  .youtube-audio-model-card {
+    grid-template-columns:
+      42px
+      minmax(0, 1fr);
+
+    column-gap: 10px;
+
+    padding:
+      13px 12px;
+  }
+
+
+  .youtube-audio-model-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+
+  .youtube-audio-model-icon svg {
+    width: 21px;
+    height: 21px;
+  }
+
+
+  .youtube-audio-availability-note {
+    grid-template-columns:
+      1fr;
+
+    gap: 12px;
+
+    padding: 17px;
+  }
+
+
+  .youtube-audio-availability-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+
+  .youtube-audio-availability-note h2 {
+    font-size: 19px;
+  }
+
+
+  .youtube-audio-secondary-media img {
+    aspect-ratio:
+      4 / 3;
+  }
+
+
+  .youtube-audio-principle-card {
+    grid-template-columns:
+      42px
+      minmax(0, 1fr);
+
+    gap: 10px;
+
+    padding:
+      13px 12px;
+  }
+
+
+  .youtube-audio-principle-number {
+    width: 42px;
+    height: 42px;
+  }
+
+
+  .youtube-audio-comparison-card {
+    grid-template-columns:
+      46px
+      minmax(0, 1fr);
+
+    gap: 11px;
+
+    padding:
+      14px 12px;
+  }
+
+
+  .youtube-audio-comparison-icon {
+    width: 44px;
+    height: 44px;
+  }
+
+
+  .youtube-audio-comparison-icon svg {
+    width: 22px;
+    height: 22px;
+  }
+
+
+  .youtube-audio-viewer-box {
+    grid-template-columns:
+      1fr;
+
+    gap: 12px;
+
+    padding: 17px;
+  }
+
+
+  .youtube-audio-viewer-icon {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 340px) {
+
+  .youtube-audio-container {
+    width:
+      calc(100% - 18px);
+  }
+
+
+  .youtube-audio-intro-box h1 {
+    font-size: 25px;
+  }
+
+
+  .youtube-audio-model-card {
+    grid-template-columns:
+      40px
+      minmax(0, 1fr);
+
+    gap: 9px;
+
+    padding:
+      12px 10px;
+  }
+
+
+  .youtube-audio-model-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+
+  .youtube-audio-model-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+
+  .youtube-audio-workflow-actions {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+
+  .youtube-audio-workflow-actions a {
+    width: 100%;
+
+    justify-content: space-between;
+  }
+
+
+  .youtube-audio-principle-card {
+    grid-template-columns:
+      40px
+      minmax(0, 1fr);
+  }
+
+
+  .youtube-audio-principle-number {
+    width: 40px;
+    height: 40px;
+  }
+
+
+  .youtube-audio-comparison-card {
+    grid-template-columns:
+      42px
+      minmax(0, 1fr);
+  }
+
+
+  .youtube-audio-comparison-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+
+  .youtube-audio-editions-action a {
+    width: 100%;
+
+    justify-content: space-between;
+  }
+
+
+  .youtube-audio-viewer-actions {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+
+  .youtube-audio-viewer-actions a {
+    width: 100%;
+
+    justify-content: space-between;
+  }
+
+
+  .youtube-audio-related-grid > a {
+    grid-template-columns:
+      38px
+      minmax(0, 1fr)
+      auto;
+
+    gap: 9px;
+  }
+
+
+  .youtube-audio-related-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+
+  .youtube-audio-related-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .youtube-audio-breadcrumb a,
+  .youtube-audio-model-card,
+  .youtube-audio-principle-card,
+  .youtube-audio-comparison-card,
+  .youtube-audio-workflow-actions a,
+  .youtube-audio-editions-action a,
+  .youtube-audio-viewer-actions a,
+  .youtube-audio-related-grid > a,
+  .youtube-audio-related-arrow {
+    transition:
+      none !important;
+  }
+
+
+  .youtube-audio-model-card:hover,
+  .youtube-audio-principle-card:hover,
+  .youtube-audio-comparison-card:hover,
+  .youtube-audio-workflow-actions a:hover,
+  .youtube-audio-editions-action a:hover,
+  .youtube-audio-viewer-actions a:hover,
+  .youtube-audio-related-grid > a:hover {
+    transform:
+      none;
+  }
+
+
+  .youtube-audio-related-grid
+  > a:hover
+  .youtube-audio-related-arrow {
+    transform:
+      none;
+  }
+}
+
+
+/* =========================================================
+   HIGH CONTRAST
+   ========================================================= */
+
+@media (prefers-contrast: more) {
+
+  .youtube-audio-intro-box,
+  .youtube-audio-primary-media,
+  .youtube-audio-model-card,
+  .youtube-audio-availability-note,
+  .youtube-audio-secondary-media,
+  .youtube-audio-workflow-actions a,
+  .youtube-audio-principle-card,
+  .youtube-audio-comparison-card,
+  .youtube-audio-editions-action a,
+  .youtube-audio-viewer-box,
+  .youtube-audio-viewer-actions a,
+  .youtube-audio-related-grid > a {
+    border-color:
+      #bcc1c9;
+  }
+
+
+  .youtube-audio-intro-text,
+  .youtube-audio-intro-note,
+  .youtube-audio-section-header
+  > p:last-child,
+  .youtube-audio-model-card p,
+  .youtube-audio-availability-note
+  > div:last-child
+  > p:last-child,
+  .youtube-audio-workflow-content
+  > p:not(.youtube-audio-workflow-eyebrow),
+  .youtube-audio-principles-header
+  > p:last-child,
+  .youtube-audio-principle-card p,
+  .youtube-audio-editions-header
+  > p:last-child,
+  .youtube-audio-comparison-copy
+  > p:last-child,
+  .youtube-audio-viewer-content
+  > p:not(.youtube-audio-section-eyebrow),
+  .youtube-audio-related-header
+  > p:last-child,
+  .youtube-audio-related-grid p {
+    color:
+      #444850;
+  }
+}
+
+
+/* =========================================================
+   PRINT
+   ========================================================= */
+
+@media print {
+
+  .youtube-audio-page,
+  .youtube-audio-intro,
+  .youtube-audio-model-section,
+  .youtube-audio-workflow-section,
+  .youtube-audio-principles-section,
+  .youtube-audio-editions-section,
+  .youtube-audio-viewer-section,
+  .youtube-audio-related-section {
+    background:
+      #ffffff !important;
+  }
+
+
+  .youtube-audio-container {
+    width: 100%;
+  }
+
+
+  .youtube-audio-intro,
+  .youtube-audio-model-section,
+  .youtube-audio-workflow-section,
+  .youtube-audio-principles-section,
+  .youtube-audio-editions-section,
+  .youtube-audio-viewer-section,
+  .youtube-audio-related-section {
+    padding:
+      25px 20px;
+  }
+
+
+  .youtube-audio-breadcrumb {
+    display: none;
+  }
+
+
+  .youtube-audio-intro-box,
+  .youtube-audio-primary-media,
+  .youtube-audio-model-card,
+  .youtube-audio-availability-note,
+  .youtube-audio-secondary-media,
+  .youtube-audio-principle-card,
+  .youtube-audio-comparison-card,
+  .youtube-audio-viewer-box,
+  .youtube-audio-related-grid > a {
+    box-shadow:
+      none;
+  }
+
+
+  .youtube-audio-model-grid {
+    grid-template-columns:
+      repeat(
+        3,
+        minmax(0, 1fr)
+      );
+  }
+
+
+  .youtube-audio-workflow-layout {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+  }
+
+
+  .youtube-audio-principles-grid {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+  }
+
+
+  .youtube-audio-comparison-grid {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+  }
+
+
+  .youtube-audio-related-grid {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+  }
+
+
+  .youtube-audio-primary-media,
+  .youtube-audio-secondary-media,
+  .youtube-audio-model-card,
+  .youtube-audio-availability-note,
+  .youtube-audio-principle-card,
+  .youtube-audio-comparison-card,
+  .youtube-audio-viewer-box,
+  .youtube-audio-related-grid > a {
+    break-inside:
+      avoid;
+  }
+}

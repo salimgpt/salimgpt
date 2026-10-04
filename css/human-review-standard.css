@@ -1,0 +1,3992 @@
+/* =========================================================
+   SalimGPT Global
+   File: css/human-review-standard.css
+
+   Human Review Standard Page
+   - Introduction
+   - Primary page/share image
+   - Review responsibilities
+   - Human-led editorial principle
+   - Review model
+   - Review checkpoints
+   - AI output review
+   - Human judgment vs automation
+   - Multilingual review
+   - Post-publication accountability
+   - Review limitations
+   - Related trust resources
+
+   Shared:
+   - global.css
+   - header.css
+   - menu.css
+   - footer.css
+   ========================================================= */
+
+
+/* =========================================================
+   PAGE VARIABLES
+   ========================================================= */
+
+:root {
+  --human-review-pink: #f71950;
+  --human-review-pink-dark: #d90e40;
+  --human-review-pink-soft: #fff0f4;
+
+  --human-review-blue: #087cf0;
+  --human-review-blue-dark: #056fd9;
+  --human-review-blue-soft: #eef6ff;
+
+  --human-review-green: #268447;
+  --human-review-green-soft: #effaf3;
+
+  --human-review-black: #111216;
+  --human-review-dark: #202126;
+  --human-review-text: #565d68;
+  --human-review-muted: #7d8490;
+
+  --human-review-bg: #f7f8fa;
+  --human-review-bg-soft: #f1f3f6;
+  --human-review-white: #ffffff;
+
+  --human-review-border: #e5e8ed;
+  --human-review-border-strong: #d7dbe2;
+
+  --human-review-width: 1180px;
+
+  --human-review-shadow-sm:
+    0 4px 14px rgba(17, 18, 22, 0.035);
+
+  --human-review-shadow-md:
+    0 10px 28px rgba(17, 18, 22, 0.065);
+
+  --human-review-shadow-lg:
+    0 16px 40px rgba(17, 18, 22, 0.08);
+}
+
+
+/* =========================================================
+   PAGE
+   ========================================================= */
+
+.human-review-page {
+  width: 100%;
+  overflow: hidden;
+
+  background:
+    var(--human-review-bg);
+
+  color:
+    var(--human-review-dark);
+}
+
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.human-review-container {
+  width:
+    min(
+      calc(100% - 48px),
+      var(--human-review-width)
+    );
+
+  margin-inline: auto;
+}
+
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.human-review-intro {
+  padding:
+    28px 0
+    22px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #f9fafb 0%,
+      #f7f8fa 100%
+    );
+}
+
+
+/* =========================================================
+   BREADCRUMB
+   ========================================================= */
+
+.human-review-breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  gap: 6px;
+
+  margin:
+    0 0
+    13px;
+
+  color:
+    var(--human-review-muted);
+
+  font-size: 11px;
+  font-weight: 650;
+  line-height: 1.4;
+}
+
+
+.human-review-breadcrumb a {
+  color:
+    #626975;
+
+  text-decoration: none;
+
+  transition:
+    color 150ms ease;
+}
+
+
+.human-review-breadcrumb a:hover {
+  color:
+    var(--human-review-pink);
+}
+
+
+.human-review-breadcrumb
+span[aria-hidden="true"] {
+  color:
+    #c2c6cd;
+}
+
+
+.human-review-breadcrumb
+[aria-current="page"] {
+  color:
+    var(--human-review-dark);
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   INTRO BOX
+   ========================================================= */
+
+.human-review-intro-box {
+  position: relative;
+
+  overflow: hidden;
+
+  padding:
+    30px 32px;
+
+  border:
+    1px solid
+    var(--human-review-border);
+
+  border-radius:
+    18px 18px 0 0;
+
+  background:
+    var(--human-review-white);
+
+  box-shadow:
+    var(--human-review-shadow-sm);
+}
+
+
+.human-review-intro-box::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 4px;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      180deg,
+      var(--human-review-pink),
+      var(--human-review-pink-dark)
+    );
+}
+
+
+.human-review-intro-copy {
+  max-width: 900px;
+}
+
+
+/* =========================================================
+   INTRO EYEBROW
+   ========================================================= */
+
+.human-review-eyebrow {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 7px;
+
+  margin:
+    0 0
+    8px;
+
+  color:
+    var(--human-review-pink);
+
+  font-size: 10px;
+  font-weight: 800;
+  line-height: 1.3;
+
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+
+.human-review-eyebrow::before {
+  content: "";
+
+  width: 6px;
+  height: 6px;
+
+  flex:
+    0 0 6px;
+
+  border-radius: 50%;
+
+  background:
+    var(--human-review-pink);
+
+  box-shadow:
+    0 0 0 4px
+    rgba(247, 25, 80, 0.07);
+}
+
+
+/* =========================================================
+   INTRO TITLE
+   ========================================================= */
+
+.human-review-intro-box h1 {
+  max-width: 920px;
+
+  margin: 0;
+
+  color:
+    var(--human-review-black);
+
+  font-size:
+    clamp(
+      36px,
+      4.5vw,
+      54px
+    );
+
+  font-weight: 850;
+  line-height: 1.03;
+
+  letter-spacing:
+    -0.045em;
+}
+
+
+/* =========================================================
+   INTRO COPY
+   ========================================================= */
+
+.human-review-intro-text {
+  max-width: 860px;
+
+  margin:
+    14px 0
+    0;
+
+  color:
+    var(--human-review-text);
+
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.68;
+
+  text-wrap: pretty;
+}
+
+
+.human-review-intro-note {
+  max-width: 880px;
+
+  margin:
+    9px 0
+    0;
+
+  color:
+    var(--human-review-muted);
+
+  font-size: 12.5px;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   PRIMARY IMAGE
+   ========================================================= */
+
+.human-review-primary-media {
+  position: relative;
+
+  width: 100%;
+
+  margin: 0;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    var(--human-review-border);
+
+  border-top: 0;
+
+  border-radius:
+    0 0 18px 18px;
+
+  background:
+    #eceff3;
+
+  box-shadow:
+    var(--human-review-shadow-sm);
+}
+
+
+.human-review-primary-media::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  box-shadow:
+    inset 0 0 0 1px
+    rgba(255, 255, 255, 0.12);
+}
+
+
+.human-review-primary-media img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  aspect-ratio:
+    1200 / 630;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+
+/* =========================================================
+   SHARED SECTION EYEBROW
+   ========================================================= */
+
+.human-review-section-eyebrow {
+  margin:
+    0 0
+    6px;
+
+  color:
+    var(--human-review-pink);
+
+  font-size: 9px;
+  font-weight: 800;
+  line-height: 1.3;
+
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   SHARED SECTION HEADINGS
+   ========================================================= */
+
+.human-review-section-header h2,
+.human-review-principle-content h2,
+.human-review-checkpoints-header h2,
+.human-review-ai-content h2,
+.human-review-boundaries-header h2,
+.human-review-language-content h2,
+.human-review-accountability-header h2,
+.human-review-limits-content h2,
+.human-review-related-header h2 {
+  margin: 0;
+
+  color:
+    var(--human-review-black);
+
+  font-size:
+    clamp(
+      26px,
+      3.1vw,
+      36px
+    );
+
+  font-weight: 820;
+  line-height: 1.1;
+
+  letter-spacing:
+    -0.032em;
+}
+
+
+.human-review-section-header
+> p:last-child,
+.human-review-checkpoints-header
+> p:last-child,
+.human-review-boundaries-header
+> p:last-child,
+.human-review-accountability-header
+> p:last-child,
+.human-review-related-header
+> p:last-child {
+  max-width: 840px;
+
+  margin:
+    9px 0
+    0;
+
+  color:
+    var(--human-review-muted);
+
+  font-size: 12.5px;
+  line-height: 1.62;
+}
+
+
+/* =========================================================
+   REVIEW AREAS SECTION
+   ========================================================= */
+
+.human-review-areas-section {
+  padding:
+    54px 0
+    66px;
+
+  background:
+    var(--human-review-bg);
+}
+
+
+.human-review-section-header {
+  max-width: 890px;
+
+  margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   REVIEW AREAS GRID
+   ========================================================= */
+
+.human-review-areas-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      3,
+      minmax(0, 1fr)
+    );
+
+  gap: 14px;
+}
+
+
+/* =========================================================
+   REVIEW AREA CARD
+   ========================================================= */
+
+.human-review-area-card {
+  min-width: 0;
+
+  padding: 20px;
+
+  border:
+    1px solid
+    var(--human-review-border);
+
+  border-radius: 18px;
+
+  background:
+    var(--human-review-white);
+
+  box-shadow:
+    var(--human-review-shadow-sm);
+
+  transition:
+    transform 170ms ease,
+    border-color 170ms ease,
+    box-shadow 170ms ease;
+}
+
+
+.human-review-area-card:hover {
+  transform:
+    translateY(-2px);
+
+  border-color:
+    rgba(247, 25, 80, 0.18);
+
+  box-shadow:
+    var(--human-review-shadow-md);
+}
+
+
+/* =========================================================
+   REVIEW AREA ICON
+   ========================================================= */
+
+.human-review-area-icon {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 50px;
+  height: 50px;
+
+  margin-bottom: 15px;
+
+  border:
+    1px solid
+    #f2d2da;
+
+  border-radius: 14px;
+
+  background:
+    var(--human-review-pink-soft);
+
+  color:
+    var(--human-review-pink);
+}
+
+
+.human-review-area-icon svg {
+  width: 26px;
+  height: 26px;
+
+  fill: none;
+
+  stroke:
+    currentColor;
+
+  stroke-width: 1.7;
+
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+
+/* =========================================================
+   REVIEW AREA COPY
+   ========================================================= */
+
+.human-review-area-card h3 {
+  margin: 0;
+
+  color:
+    var(--human-review-black);
+
+  font-size: 15px;
+  font-weight: 780;
+  line-height: 1.3;
+}
+
+
+.human-review-area-card p {
+  margin:
+    7px 0
+    0;
+
+  color:
+    var(--human-review-muted);
+
+  font-size: 11.5px;
+  line-height: 1.56;
+}
+
+
+/* =========================================================
+   PRINCIPLE SECTION
+   ========================================================= */
+
+.human-review-principle-section {
+  padding:
+    0 0
+    66px;
+
+  background:
+    var(--human-review-bg);
+}
+
+
+/* =========================================================
+   PRINCIPLE BOX
+   ========================================================= */
+
+.human-review-principle-box {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns:
+    70px
+    minmax(0, 1fr);
+
+  align-items: start;
+
+  gap: 22px;
+
+  padding:
+    28px 30px;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    rgba(8, 124, 240, 0.16);
+
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff 0%,
+      #f6faff 100%
+    );
+
+  box-shadow:
+    var(--human-review-shadow-sm);
+}
+
+
+.human-review-principle-box::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 4px;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      180deg,
+      var(--human-review-blue),
+      #5a9fff
+    );
+}
+
+
+/* =========================================================
+   PRINCIPLE ICON
+   ========================================================= */
+
+.human-review-principle-icon {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 66px;
+  height: 66px;
+
+  border:
+    1px solid
+    #d7eaff;
+
+  border-radius: 18px;
+
+  background:
+    var(--human-review-blue-soft);
+
+  color:
+    var(--human-review-blue);
+}
+
+
+.human-review-principle-icon svg {
+  width: 32px;
+  height: 32px;
+
+  fill: none;
+
+  stroke:
+    currentColor;
+
+  stroke-width: 1.7;
+
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+
+/* =========================================================
+   PRINCIPLE CONTENT
+   ========================================================= */
+
+.human-review-principle-content {
+  min-width: 0;
+
+  max-width: 930px;
+}
+
+
+.human-review-principle-content
+.human-review-section-eyebrow {
+  color:
+    var(--human-review-blue);
+}
+
+
+.human-review-principle-content h2 {
+  font-size:
+    clamp(
+      23px,
+      2.8vw,
+      31px
+    );
+
+  line-height: 1.13;
+}
+
+
+.human-review-principle-content
+> p:not(.human-review-section-eyebrow) {
+  max-width: 860px;
+
+  margin:
+    9px 0
+    0;
+
+  color:
+    var(--human-review-text);
+
+  font-size: 12.5px;
+  line-height: 1.62;
+}
+
+
+/* =========================================================
+   PRINCIPLE ACTIONS
+   ========================================================= */
+
+.human-review-principle-actions {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 7px;
+
+  margin-top: 16px;
+}
+
+
+.human-review-principle-actions a {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  min-height: 38px;
+
+  padding:
+    0 13px;
+
+  border:
+    1px solid
+    rgba(8, 124, 240, 0.18);
+
+  border-radius: 999px;
+
+  background:
+    var(--human-review-white);
+
+  color:
+    var(--human-review-blue);
+
+  font-size: 9.5px;
+  font-weight: 720;
+  line-height: 1.2;
+
+  text-decoration: none;
+
+  transition:
+    transform 150ms ease,
+    border-color 150ms ease,
+    background 150ms ease,
+    color 150ms ease;
+}
+
+
+.human-review-principle-actions a:hover {
+  transform:
+    translateY(-1px);
+
+  border-color:
+    rgba(8, 124, 240, 0.30);
+
+  background:
+    var(--human-review-blue-soft);
+
+  color:
+    var(--human-review-blue-dark);
+}
+
+
+.human-review-principle-actions
+span[aria-hidden="true"] {
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   REVIEW MODEL SECTION
+   ========================================================= */
+
+.human-review-model-section {
+  padding:
+    66px 0;
+
+  border-top:
+    1px solid
+    var(--human-review-border);
+
+  background:
+    var(--human-review-white);
+}
+
+
+/* =========================================================
+   REVIEW MODEL LAYOUT
+   ========================================================= */
+
+.human-review-model-layout {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.04fr)
+    minmax(0, 0.96fr);
+
+  align-items: center;
+
+  gap: 38px;
+}
+
+
+/* =========================================================
+   SECONDARY IMAGE
+   ========================================================= */
+
+.human-review-secondary-media {
+  position: relative;
+
+  width: 100%;
+
+  margin: 0;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    var(--human-review-border);
+
+  border-radius: 20px;
+
+  background:
+    #eceff3;
+
+  box-shadow:
+    var(--human-review-shadow-md);
+}
+
+
+.human-review-secondary-media::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  box-shadow:
+    inset 0 0 0 1px
+    rgba(255, 255, 255, 0.12);
+}
+
+
+.human-review-secondary-media img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  aspect-ratio:
+    3 / 2;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+
+/* =========================================================
+   REVIEW MODEL CONTENT
+   ========================================================= */
+
+.human-review-model-content {
+  min-width: 0;
+}
+
+
+.human-review-model-eyebrow {
+  margin:
+    0 0
+    6px;
+
+  color:
+    var(--human-review-pink);
+
+  font-size: 9px;
+  font-weight: 800;
+  line-height: 1.3;
+
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+
+.human-review-model-content h2 {
+  max-width: 640px;
+
+  margin: 0;
+
+  color:
+    var(--human-review-black);
+
+  font-size:
+    clamp(
+      27px,
+      3.4vw,
+      39px
+    );
+
+  font-weight: 830;
+  line-height: 1.08;
+
+  letter-spacing:
+    -0.035em;
+}
+
+
+.human-review-model-content
+> p:not(.human-review-model-eyebrow) {
+  max-width: 660px;
+
+  margin:
+    11px 0
+    0;
+
+  color:
+    var(--human-review-text);
+
+  font-size: 12.5px;
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   REVIEW MODEL ACTIONS
+   ========================================================= */
+
+.human-review-model-actions {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 7px;
+
+  margin-top: 18px;
+}
+
+
+.human-review-model-actions a {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  min-height: 37px;
+
+  padding:
+    0 12px;
+
+  border:
+    1px solid
+    var(--human-review-border);
+
+  border-radius: 999px;
+
+  background:
+    var(--human-review-white);
+
+  color:
+    var(--human-review-dark);
+
+  font-size: 9.5px;
+  font-weight: 700;
+  line-height: 1.2;
+
+  text-decoration: none;
+
+  transition:
+    transform 150ms ease,
+    border-color 150ms ease,
+    background 150ms ease,
+    color 150ms ease;
+}
+
+
+.human-review-model-actions a:hover {
+  transform:
+    translateY(-1px);
+
+  border-color:
+    rgba(247, 25, 80, 0.22);
+
+  background:
+    var(--human-review-pink-soft);
+
+  color:
+    var(--human-review-pink);
+}
+
+
+.human-review-model-actions
+span[aria-hidden="true"] {
+  color:
+    var(--human-review-pink);
+
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   CHECKPOINTS SECTION
+   ========================================================= */
+
+.human-review-checkpoints-section {
+  padding:
+    58px 0
+    64px;
+
+  border-top:
+    1px solid
+    var(--human-review-border);
+
+  background:
+    var(--human-review-bg);
+}
+
+
+/* =========================================================
+   CHECKPOINTS HEADER
+   ========================================================= */
+
+.human-review-checkpoints-header {
+  max-width: 900px;
+
+  margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   CHECKPOINTS GRID
+   ========================================================= */
+
+.human-review-checkpoints-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      3,
+      minmax(0, 1fr)
+    );
+
+  gap: 12px;
+}
+
+
+/* =========================================================
+   CHECKPOINT CARD
+   ========================================================= */
+
+.human-review-checkpoint-card {
+  display: grid;
+
+  grid-template-columns:
+    48px
+    minmax(0, 1fr);
+
+  align-items: start;
+
+  gap: 15px;
+
+  min-width: 0;
+
+  padding: 20px;
+
+  border:
+    1px solid
+    var(--human-review-border);
+
+  border-radius: 18px;
+
+  background:
+    var(--human-review-white);
+
+  box-shadow:
+    var(--human-review-shadow-sm);
+
+  transition:
+    transform 170ms ease,
+    border-color 170ms ease,
+    box-shadow 170ms ease;
+}
+
+
+.human-review-checkpoint-card:hover {
+  transform:
+    translateY(-2px);
+
+  border-color:
+    rgba(247, 25, 80, 0.18);
+
+  box-shadow:
+    var(--human-review-shadow-md);
+}
+
+
+/* =========================================================
+   CHECKPOINT NUMBER
+   ========================================================= */
+
+.human-review-checkpoint-number {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 48px;
+  height: 48px;
+
+  border:
+    1px solid
+    #f2d2da;
+
+  border-radius: 14px;
+
+  background:
+    var(--human-review-pink-soft);
+
+  color:
+    var(--human-review-pink);
+
+  font-size: 11px;
+  font-weight: 850;
+  line-height: 1;
+
+  letter-spacing: 0.05em;
+}
+
+
+/* =========================================================
+   CHECKPOINT COPY
+   ========================================================= */
+
+.human-review-checkpoint-card h3 {
+  margin: 0;
+
+  color:
+    var(--human-review-black);
+
+  font-size: 14px;
+  font-weight: 790;
+  line-height: 1.35;
+}
+
+
+.human-review-checkpoint-card p {
+  margin:
+    6px 0
+    0;
+
+  color:
+    var(--human-review-muted);
+
+  font-size: 11px;
+  line-height: 1.55;
+}
+
+
+/* =========================================================
+   AI REVIEW SECTION
+   ========================================================= */
+
+.human-review-ai-section {
+  padding:
+    54px 0;
+
+  border-top:
+    1px solid
+    var(--human-review-border);
+
+  background:
+    var(--human-review-white);
+}
+
+
+/* =========================================================
+   AI REVIEW BOX
+   ========================================================= */
+
+.human-review-ai-box {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns:
+    70px
+    minmax(0, 1fr);
+
+  align-items: start;
+
+  gap: 22px;
+
+  padding:
+    28px 30px;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    rgba(8, 124, 240, 0.16);
+
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff 0%,
+      #f6faff 100%
+    );
+
+  box-shadow:
+    var(--human-review-shadow-sm);
+}
+
+
+.human-review-ai-box::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 4px;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      180deg,
+      var(--human-review-blue),
+      var(--human-review-pink)
+    );
+}
+
+
+/* =========================================================
+   AI REVIEW ICON
+   ========================================================= */
+
+.human-review-ai-icon {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 66px;
+  height: 66px;
+
+  border:
+    1px solid
+    #d7eaff;
+
+  border-radius: 18px;
+
+  background:
+    var(--human-review-blue-soft);
+
+  color:
+    var(--human-review-blue);
+}
+
+
+.human-review-ai-icon svg {
+  width: 32px;
+  height: 32px;
+
+  fill: none;
+
+  stroke:
+    currentColor;
+
+  stroke-width: 1.7;
+
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+
+/* =========================================================
+   AI REVIEW CONTENT
+   ========================================================= */
+
+.human-review-ai-content {
+  min-width: 0;
+
+  max-width: 930px;
+}
+
+
+.human-review-ai-content
+.human-review-section-eyebrow {
+  color:
+    var(--human-review-blue);
+}
+
+
+.human-review-ai-content h2 {
+  font-size:
+    clamp(
+      23px,
+      2.8vw,
+      31px
+    );
+
+  line-height: 1.13;
+}
+
+
+.human-review-ai-content
+> p:not(.human-review-section-eyebrow) {
+  max-width: 860px;
+
+  margin:
+    9px 0
+    0;
+
+  color:
+    var(--human-review-text);
+
+  font-size: 12.5px;
+  line-height: 1.62;
+}
+
+
+/* =========================================================
+   AI REVIEW ACTIONS
+   ========================================================= */
+
+.human-review-ai-actions {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 7px;
+
+  margin-top: 16px;
+}
+
+
+.human-review-ai-actions a {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  min-height: 38px;
+
+  padding:
+    0 13px;
+
+  border:
+    1px solid
+    rgba(8, 124, 240, 0.18);
+
+  border-radius: 999px;
+
+  background:
+    var(--human-review-white);
+
+  color:
+    var(--human-review-blue);
+
+  font-size: 9.5px;
+  font-weight: 720;
+  line-height: 1.2;
+
+  text-decoration: none;
+
+  transition:
+    transform 150ms ease,
+    border-color 150ms ease,
+    background 150ms ease,
+    color 150ms ease;
+}
+
+
+.human-review-ai-actions a:hover {
+  transform:
+    translateY(-1px);
+
+  border-color:
+    rgba(8, 124, 240, 0.30);
+
+  background:
+    var(--human-review-blue-soft);
+
+  color:
+    var(--human-review-blue-dark);
+}
+
+
+.human-review-ai-actions
+span[aria-hidden="true"] {
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   HUMAN VS AUTOMATION SECTION
+   ========================================================= */
+
+.human-review-boundaries-section {
+  padding:
+    58px 0
+    64px;
+
+  border-top:
+    1px solid
+    var(--human-review-border);
+
+  background:
+    var(--human-review-bg);
+}
+
+
+/* =========================================================
+   BOUNDARIES HEADER
+   ========================================================= */
+
+.human-review-boundaries-header {
+  max-width: 880px;
+
+  margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   BOUNDARIES GRID
+   ========================================================= */
+
+.human-review-boundaries-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0, 1fr)
+    );
+
+  gap: 14px;
+}
+
+
+/* =========================================================
+   BOUNDARY CARD
+   ========================================================= */
+
+.human-review-boundary-card {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns:
+    62px
+    minmax(0, 1fr);
+
+  align-items: start;
+
+  gap: 18px;
+
+  min-width: 0;
+
+  padding: 24px;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    var(--human-review-border);
+
+  border-radius: 20px;
+
+  background:
+    var(--human-review-white);
+
+  box-shadow:
+    var(--human-review-shadow-sm);
+
+  transition:
+    transform 170ms ease,
+    border-color 170ms ease,
+    box-shadow 170ms ease;
+}
+
+
+.human-review-boundary-card:hover {
+  transform:
+    translateY(-2px);
+
+  box-shadow:
+    var(--human-review-shadow-md);
+}
+
+
+.human-review-boundary-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 4px;
+  height: 100%;
+}
+
+
+.human-review-boundary-card.is-tool::before {
+  background:
+    var(--human-review-blue);
+}
+
+
+.human-review-boundary-card.is-human::before {
+  background:
+    var(--human-review-pink);
+}
+
+
+.human-review-boundary-card.is-tool:hover {
+  border-color:
+    rgba(8, 124, 240, 0.20);
+}
+
+
+.human-review-boundary-card.is-human:hover {
+  border-color:
+    rgba(247, 25, 80, 0.20);
+}
+
+
+/* =========================================================
+   BOUNDARY ICON
+   ========================================================= */
+
+.human-review-boundary-icon {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 60px;
+  height: 60px;
+
+  border-radius: 17px;
+}
+
+
+.human-review-boundary-card.is-tool
+.human-review-boundary-icon {
+  border:
+    1px solid
+    #d7eaff;
+
+  background:
+    var(--human-review-blue-soft);
+
+  color:
+    var(--human-review-blue);
+}
+
+
+.human-review-boundary-card.is-human
+.human-review-boundary-icon {
+  border:
+    1px solid
+    #f2d2da;
+
+  background:
+    var(--human-review-pink-soft);
+
+  color:
+    var(--human-review-pink);
+}
+
+
+.human-review-boundary-icon svg {
+  width: 30px;
+  height: 30px;
+
+  fill: none;
+
+  stroke:
+    currentColor;
+
+  stroke-width: 1.7;
+
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+
+/* =========================================================
+   BOUNDARY LABEL
+   ========================================================= */
+
+.human-review-boundary-label {
+  display: inline-flex;
+
+  align-items: center;
+
+  min-height: 23px;
+
+  margin-bottom: 7px;
+
+  padding:
+    0 8px;
+
+  border-radius: 999px;
+
+  font-size: 8px;
+  font-weight: 800;
+  line-height: 1;
+
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+
+.human-review-boundary-card.is-tool
+.human-review-boundary-label {
+  border:
+    1px solid
+    #d7eaff;
+
+  background:
+    var(--human-review-blue-soft);
+
+  color:
+    var(--human-review-blue);
+}
+
+
+.human-review-boundary-card.is-human
+.human-review-boundary-label {
+  border:
+    1px solid
+    #f2d2da;
+
+  background:
+    var(--human-review-pink-soft);
+
+  color:
+    var(--human-review-pink);
+}
+
+
+/* =========================================================
+   BOUNDARY COPY
+   ========================================================= */
+
+.human-review-boundary-card h3 {
+  margin: 0;
+
+  color:
+    var(--human-review-black);
+
+  font-size: 17px;
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+
+.human-review-boundary-card p {
+  margin:
+    7px 0
+    0;
+
+  color:
+    var(--human-review-muted);
+
+  font-size: 11.5px;
+  line-height: 1.58;
+}
+
+
+/* =========================================================
+   MULTILINGUAL REVIEW SECTION
+   ========================================================= */
+
+.human-review-language-section {
+  padding:
+    54px 0;
+
+  border-top:
+    1px solid
+    var(--human-review-border);
+
+  background:
+    var(--human-review-white);
+}
+
+
+/* =========================================================
+   MULTILINGUAL REVIEW BOX
+   ========================================================= */
+
+.human-review-language-box {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns:
+    70px
+    minmax(0, 1fr);
+
+  align-items: start;
+
+  gap: 22px;
+
+  padding:
+    28px 30px;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    rgba(8, 124, 240, 0.16);
+
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff 0%,
+      #f6faff 100%
+    );
+
+  box-shadow:
+    var(--human-review-shadow-sm);
+}
+
+
+.human-review-language-box::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 4px;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      180deg,
+      var(--human-review-blue),
+      var(--human-review-pink)
+    );
+}
+
+
+/* =========================================================
+   MULTILINGUAL REVIEW ICON
+   ========================================================= */
+
+.human-review-language-icon {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 66px;
+  height: 66px;
+
+  border:
+    1px solid
+    #d7eaff;
+
+  border-radius: 18px;
+
+  background:
+    var(--human-review-blue-soft);
+
+  color:
+    var(--human-review-blue);
+}
+
+
+.human-review-language-icon svg {
+  width: 32px;
+  height: 32px;
+
+  fill: none;
+
+  stroke:
+    currentColor;
+
+  stroke-width: 1.7;
+
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+
+/* =========================================================
+   MULTILINGUAL REVIEW CONTENT
+   ========================================================= */
+
+.human-review-language-content {
+  min-width: 0;
+
+  max-width: 930px;
+}
+
+
+.human-review-language-content
+.human-review-section-eyebrow {
+  color:
+    var(--human-review-blue);
+}
+
+
+.human-review-language-content h2 {
+  font-size:
+    clamp(
+      23px,
+      2.8vw,
+      31px
+    );
+
+  line-height: 1.13;
+}
+
+
+.human-review-language-content
+> p:not(.human-review-section-eyebrow) {
+  max-width: 860px;
+
+  margin:
+    9px 0
+    0;
+
+  color:
+    var(--human-review-text);
+
+  font-size: 12.5px;
+  line-height: 1.62;
+}
+
+
+/* =========================================================
+   MULTILINGUAL REVIEW ACTIONS
+   ========================================================= */
+
+.human-review-language-actions {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 7px;
+
+  margin-top: 16px;
+}
+
+
+.human-review-language-actions a {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  min-height: 38px;
+
+  padding:
+    0 13px;
+
+  border:
+    1px solid
+    rgba(8, 124, 240, 0.18);
+
+  border-radius: 999px;
+
+  background:
+    var(--human-review-white);
+
+  color:
+    var(--human-review-blue);
+
+  font-size: 9.5px;
+  font-weight: 720;
+  line-height: 1.2;
+
+  text-decoration: none;
+
+  transition:
+    transform 150ms ease,
+    border-color 150ms ease,
+    background 150ms ease,
+    color 150ms ease;
+}
+
+
+.human-review-language-actions a:hover {
+  transform:
+    translateY(-1px);
+
+  border-color:
+    rgba(8, 124, 240, 0.30);
+
+  background:
+    var(--human-review-blue-soft);
+
+  color:
+    var(--human-review-blue-dark);
+}
+
+
+.human-review-language-actions
+span[aria-hidden="true"] {
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   ACCOUNTABILITY SECTION
+   ========================================================= */
+
+.human-review-accountability-section {
+  padding:
+    58px 0
+    64px;
+
+  border-top:
+    1px solid
+    var(--human-review-border);
+
+  background:
+    var(--human-review-bg);
+}
+
+
+/* =========================================================
+   ACCOUNTABILITY HEADER
+   ========================================================= */
+
+.human-review-accountability-header {
+  max-width: 880px;
+
+  margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   ACCOUNTABILITY GRID
+   ========================================================= */
+
+.human-review-accountability-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0, 1fr)
+    );
+
+  gap: 12px;
+}
+
+
+/* =========================================================
+   ACCOUNTABILITY CARD
+   ========================================================= */
+
+.human-review-accountability-grid > a {
+  display: grid;
+
+  grid-template-columns:
+    48px
+    minmax(0, 1fr)
+    auto;
+
+  align-items: center;
+
+  gap: 14px;
+
+  min-width: 0;
+
+  padding: 16px;
+
+  border:
+    1px solid
+    var(--human-review-border);
+
+  border-radius: 16px;
+
+  background:
+    var(--human-review-white);
+
+  color:
+    inherit;
+
+  text-decoration: none;
+
+  box-shadow:
+    var(--human-review-shadow-sm);
+
+  transition:
+    transform 160ms ease,
+    border-color 160ms ease,
+    box-shadow 160ms ease;
+}
+
+
+.human-review-accountability-grid > a:hover {
+  transform:
+    translateY(-2px);
+
+  border-color:
+    rgba(247, 25, 80, 0.20);
+
+  box-shadow:
+    var(--human-review-shadow-md);
+}
+
+
+/* =========================================================
+   ACCOUNTABILITY ICON
+   ========================================================= */
+
+.human-review-accountability-icon {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 48px;
+  height: 48px;
+
+  border:
+    1px solid
+    #f2d2da;
+
+  border-radius: 13px;
+
+  background:
+    var(--human-review-pink-soft);
+
+  color:
+    var(--human-review-pink);
+}
+
+
+.human-review-accountability-icon svg {
+  width: 25px;
+  height: 25px;
+
+  fill: none;
+
+  stroke:
+    currentColor;
+
+  stroke-width: 1.7;
+
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+
+/* =========================================================
+   ACCOUNTABILITY COPY
+   ========================================================= */
+
+.human-review-accountability-grid h3 {
+  margin: 0;
+
+  color:
+    var(--human-review-black);
+
+  font-size: 13px;
+  font-weight: 780;
+  line-height: 1.3;
+}
+
+
+.human-review-accountability-grid p {
+  margin:
+    4px 0
+    0;
+
+  color:
+    var(--human-review-muted);
+
+  font-size: 10.5px;
+  line-height: 1.45;
+}
+
+
+.human-review-accountability-arrow {
+  flex:
+    0 0 auto;
+
+  color:
+    var(--human-review-pink);
+
+  font-size: 18px;
+
+  transition:
+    transform 150ms ease;
+}
+
+
+.human-review-accountability-grid
+> a:hover
+.human-review-accountability-arrow {
+  transform:
+    translateX(2px);
+}
+
+
+/* =========================================================
+   LIMITS SECTION
+   ========================================================= */
+
+.human-review-limits-section {
+  padding:
+    54px 0;
+
+  border-top:
+    1px solid
+    var(--human-review-border);
+
+  background:
+    var(--human-review-white);
+}
+
+
+/* =========================================================
+   LIMITS BOX
+   ========================================================= */
+
+.human-review-limits-box {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns:
+    70px
+    minmax(0, 1fr);
+
+  align-items: start;
+
+  gap: 22px;
+
+  padding:
+    28px 30px;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    var(--human-review-border);
+
+  border-radius: 20px;
+
+  background:
+    var(--human-review-bg);
+
+  box-shadow:
+    var(--human-review-shadow-sm);
+}
+
+
+.human-review-limits-box::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 4px;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      180deg,
+      var(--human-review-pink),
+      var(--human-review-blue)
+    );
+}
+
+
+/* =========================================================
+   LIMITS ICON
+   ========================================================= */
+
+.human-review-limits-icon {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 66px;
+  height: 66px;
+
+  border:
+    1px solid
+    #f2d2da;
+
+  border-radius: 18px;
+
+  background:
+    var(--human-review-pink-soft);
+
+  color:
+    var(--human-review-pink);
+}
+
+
+.human-review-limits-icon svg {
+  width: 32px;
+  height: 32px;
+
+  fill: none;
+
+  stroke:
+    currentColor;
+
+  stroke-width: 1.7;
+
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+
+/* =========================================================
+   LIMITS CONTENT
+   ========================================================= */
+
+.human-review-limits-content {
+  min-width: 0;
+
+  max-width: 930px;
+}
+
+
+.human-review-limits-content h2 {
+  font-size:
+    clamp(
+      23px,
+      2.8vw,
+      31px
+    );
+
+  line-height: 1.13;
+}
+
+
+.human-review-limits-content
+> p:not(.human-review-section-eyebrow) {
+  max-width: 860px;
+
+  margin:
+    9px 0
+    0;
+
+  color:
+    var(--human-review-text);
+
+  font-size: 12.5px;
+  line-height: 1.62;
+}
+
+
+/* =========================================================
+   RELATED SECTION
+   ========================================================= */
+
+.human-review-related-section {
+  padding:
+    58px 0
+    68px;
+
+  border-top:
+    1px solid
+    var(--human-review-border);
+
+  background:
+    var(--human-review-bg);
+}
+
+
+/* =========================================================
+   RELATED HEADER
+   ========================================================= */
+
+.human-review-related-header {
+  max-width: 850px;
+
+  margin-bottom: 18px;
+}
+
+
+/* =========================================================
+   RELATED GRID
+   ========================================================= */
+
+.human-review-related-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0, 1fr)
+    );
+
+  gap: 12px;
+}
+
+
+/* =========================================================
+   RELATED CARD
+   ========================================================= */
+
+.human-review-related-grid > a {
+  display: grid;
+
+  grid-template-columns:
+    48px
+    minmax(0, 1fr)
+    auto;
+
+  align-items: center;
+
+  gap: 14px;
+
+  min-width: 0;
+
+  padding: 16px;
+
+  border:
+    1px solid
+    var(--human-review-border);
+
+  border-radius: 16px;
+
+  background:
+    var(--human-review-white);
+
+  color:
+    inherit;
+
+  text-decoration: none;
+
+  box-shadow:
+    var(--human-review-shadow-sm);
+
+  transition:
+    transform 160ms ease,
+    border-color 160ms ease,
+    box-shadow 160ms ease;
+}
+
+
+.human-review-related-grid > a:hover {
+  transform:
+    translateY(-2px);
+
+  border-color:
+    rgba(247, 25, 80, 0.20);
+
+  box-shadow:
+    var(--human-review-shadow-md);
+}
+
+
+/* =========================================================
+   RELATED ICON
+   ========================================================= */
+
+.human-review-related-icon {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 48px;
+  height: 48px;
+
+  border:
+    1px solid
+    #f2d2da;
+
+  border-radius: 13px;
+
+  background:
+    var(--human-review-pink-soft);
+
+  color:
+    var(--human-review-pink);
+}
+
+
+.human-review-related-icon svg {
+  width: 25px;
+  height: 25px;
+
+  fill: none;
+
+  stroke:
+    currentColor;
+
+  stroke-width: 1.7;
+
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+
+/* =========================================================
+   RELATED COPY
+   ========================================================= */
+
+.human-review-related-grid h3 {
+  margin: 0;
+
+  color:
+    var(--human-review-black);
+
+  font-size: 13px;
+  font-weight: 780;
+  line-height: 1.3;
+}
+
+
+.human-review-related-grid p {
+  margin:
+    4px 0
+    0;
+
+  color:
+    var(--human-review-muted);
+
+  font-size: 10.5px;
+  line-height: 1.45;
+}
+
+
+.human-review-related-arrow {
+  flex:
+    0 0 auto;
+
+  color:
+    var(--human-review-pink);
+
+  font-size: 18px;
+
+  transition:
+    transform 150ms ease;
+}
+
+
+.human-review-related-grid
+> a:hover
+.human-review-related-arrow {
+  transform:
+    translateX(2px);
+}
+
+
+/* =========================================================
+   FOCUS STATES
+   ========================================================= */
+
+.human-review-breadcrumb a:focus-visible,
+.human-review-principle-actions a:focus-visible,
+.human-review-model-actions a:focus-visible,
+.human-review-ai-actions a:focus-visible,
+.human-review-language-actions a:focus-visible,
+.human-review-accountability-grid > a:focus-visible,
+.human-review-related-grid > a:focus-visible {
+  outline:
+    3px solid
+    rgba(247, 25, 80, 0.22);
+
+  outline-offset: 2px;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   ========================================================= */
+
+@media (min-width: 1280px) {
+
+  .human-review-model-layout {
+    gap: 44px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 980px) {
+
+  .human-review-container {
+    width:
+      min(
+        calc(100% - 44px),
+        var(--human-review-width)
+      );
+  }
+
+
+  .human-review-areas-grid,
+  .human-review-checkpoints-grid {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+  }
+
+
+  .human-review-model-layout {
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(0, 1fr);
+
+    gap: 26px;
+  }
+
+
+  .human-review-boundaries-grid,
+  .human-review-accountability-grid,
+  .human-review-related-grid {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+  }
+}
+
+
+/* =========================================================
+   NARROW TABLET
+   ========================================================= */
+
+@media (max-width: 820px) {
+
+  .human-review-model-layout {
+    grid-template-columns:
+      1fr;
+
+    gap: 24px;
+  }
+
+
+  .human-review-secondary-media {
+    max-width: 760px;
+  }
+
+
+  .human-review-model-content {
+    max-width: 760px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 680px) {
+
+  /* -------------------------------------------------------
+     Container
+     ------------------------------------------------------- */
+
+  .human-review-container {
+    width:
+      calc(100% - 26px);
+  }
+
+
+  /* -------------------------------------------------------
+     Intro
+     ------------------------------------------------------- */
+
+  .human-review-intro {
+    padding:
+      16px 0
+      14px;
+  }
+
+
+  .human-review-breadcrumb {
+    gap: 5px;
+
+    margin-bottom: 10px;
+
+    font-size: 9px;
+  }
+
+
+  .human-review-intro-box {
+    padding:
+      20px 17px
+      20px 20px;
+
+    border-radius:
+      15px 15px 0 0;
+  }
+
+
+  .human-review-intro-box::before {
+    width: 3px;
+  }
+
+
+  .human-review-eyebrow {
+    gap: 6px;
+
+    margin-bottom: 6px;
+
+    font-size: 8px;
+  }
+
+
+  .human-review-eyebrow::before {
+    width: 5px;
+    height: 5px;
+
+    flex-basis: 5px;
+
+    box-shadow:
+      0 0 0 3px
+      rgba(247, 25, 80, 0.07);
+  }
+
+
+  .human-review-intro-box h1 {
+    font-size:
+      clamp(
+        28px,
+        8.4vw,
+        38px
+      );
+
+    line-height: 1.04;
+  }
+
+
+  .human-review-intro-text {
+    margin-top: 10px;
+
+    font-size: 12px;
+    line-height: 1.58;
+  }
+
+
+  .human-review-intro-note {
+    margin-top: 7px;
+
+    font-size: 10.8px;
+    line-height: 1.52;
+  }
+
+
+  /* -------------------------------------------------------
+     Primary Image
+     ------------------------------------------------------- */
+
+  .human-review-primary-media {
+    border-radius:
+      0 0 15px 15px;
+  }
+
+
+  .human-review-primary-media img {
+    aspect-ratio:
+      16 / 9;
+  }
+
+
+  /* -------------------------------------------------------
+     Shared Heading
+     ------------------------------------------------------- */
+
+  .human-review-section-eyebrow {
+    margin-bottom: 4px;
+
+    font-size: 7.8px;
+  }
+
+
+  .human-review-section-header h2,
+  .human-review-principle-content h2,
+  .human-review-checkpoints-header h2,
+  .human-review-ai-content h2,
+  .human-review-boundaries-header h2,
+  .human-review-language-content h2,
+  .human-review-accountability-header h2,
+  .human-review-limits-content h2,
+  .human-review-related-header h2 {
+    font-size: 22px;
+  }
+
+
+  .human-review-section-header
+  > p:last-child,
+  .human-review-checkpoints-header
+  > p:last-child,
+  .human-review-boundaries-header
+  > p:last-child,
+  .human-review-accountability-header
+  > p:last-child,
+  .human-review-related-header
+  > p:last-child {
+    margin-top: 7px;
+
+    font-size: 10.8px;
+    line-height: 1.52;
+  }
+
+
+  /* -------------------------------------------------------
+     Review Areas
+     ------------------------------------------------------- */
+
+  .human-review-areas-section {
+    padding:
+      34px 0
+      40px;
+  }
+
+
+  .human-review-section-header {
+    margin-bottom: 14px;
+  }
+
+
+  .human-review-areas-grid {
+    grid-template-columns:
+      1fr;
+
+    gap: 9px;
+  }
+
+
+  .human-review-area-card {
+    display: grid;
+
+    grid-template-columns:
+      46px
+      minmax(0, 1fr);
+
+    align-items: start;
+
+    column-gap: 12px;
+
+    padding: 14px;
+
+    border-radius: 15px;
+  }
+
+
+  .human-review-area-icon {
+    grid-row:
+      1 / span 2;
+
+    width: 46px;
+    height: 46px;
+
+    margin: 0;
+
+    border-radius: 13px;
+  }
+
+
+  .human-review-area-icon svg {
+    width: 23px;
+    height: 23px;
+  }
+
+
+  .human-review-area-card h3 {
+    font-size: 12.5px;
+  }
+
+
+  .human-review-area-card p {
+    margin-top: 4px;
+
+    font-size: 10.4px;
+    line-height: 1.48;
+  }
+
+
+  /* -------------------------------------------------------
+     Principle
+     ------------------------------------------------------- */
+
+  .human-review-principle-section {
+    padding-bottom: 46px;
+  }
+
+
+  .human-review-principle-box {
+    grid-template-columns:
+      54px
+      minmax(0, 1fr);
+
+    gap: 14px;
+
+    padding: 18px;
+
+    border-radius: 16px;
+  }
+
+
+  .human-review-principle-box::before {
+    width: 3px;
+  }
+
+
+  .human-review-principle-icon {
+    width: 52px;
+    height: 52px;
+
+    border-radius: 14px;
+  }
+
+
+  .human-review-principle-icon svg {
+    width: 26px;
+    height: 26px;
+  }
+
+
+  .human-review-principle-content h2 {
+    font-size: 20px;
+  }
+
+
+  .human-review-principle-content
+  > p:not(.human-review-section-eyebrow) {
+    margin-top: 7px;
+
+    font-size: 10.8px;
+    line-height: 1.52;
+  }
+
+
+  .human-review-principle-actions {
+    gap: 6px;
+
+    margin-top: 12px;
+  }
+
+
+  .human-review-principle-actions a {
+    min-height: 34px;
+
+    padding:
+      0 10px;
+
+    font-size: 8.8px;
+  }
+
+
+  /* -------------------------------------------------------
+     Review Model
+     ------------------------------------------------------- */
+
+  .human-review-model-section {
+    padding:
+      42px 0
+      46px;
+  }
+
+
+  .human-review-model-layout {
+    gap: 18px;
+  }
+
+
+  .human-review-secondary-media {
+    border-radius: 16px;
+  }
+
+
+  .human-review-secondary-media img {
+    aspect-ratio:
+      16 / 10;
+  }
+
+
+  .human-review-model-eyebrow {
+    font-size: 7.8px;
+  }
+
+
+  .human-review-model-content h2 {
+    font-size: 22px;
+  }
+
+
+  .human-review-model-content
+  > p:not(.human-review-model-eyebrow) {
+    margin-top: 8px;
+
+    font-size: 10.8px;
+    line-height: 1.54;
+  }
+
+
+  .human-review-model-actions {
+    gap: 6px;
+
+    margin-top: 13px;
+  }
+
+
+  .human-review-model-actions a {
+    min-height: 34px;
+
+    padding:
+      0 10px;
+
+    font-size: 8.8px;
+  }
+
+
+  /* -------------------------------------------------------
+     Checkpoints
+     ------------------------------------------------------- */
+
+  .human-review-checkpoints-section {
+    padding:
+      40px 0
+      46px;
+  }
+
+
+  .human-review-checkpoints-header {
+    margin-bottom: 14px;
+  }
+
+
+  .human-review-checkpoints-grid {
+    grid-template-columns:
+      1fr;
+
+    gap: 9px;
+  }
+
+
+  .human-review-checkpoint-card {
+    grid-template-columns:
+      44px
+      minmax(0, 1fr);
+
+    gap: 12px;
+
+    padding: 14px;
+
+    border-radius: 15px;
+  }
+
+
+  .human-review-checkpoint-number {
+    width: 44px;
+    height: 44px;
+
+    border-radius: 12px;
+
+    font-size: 9.5px;
+  }
+
+
+  .human-review-checkpoint-card h3 {
+    font-size: 12.3px;
+  }
+
+
+  .human-review-checkpoint-card p {
+    margin-top: 4px;
+
+    font-size: 10.3px;
+    line-height: 1.48;
+  }
+
+
+  /* -------------------------------------------------------
+     AI Review
+     ------------------------------------------------------- */
+
+  .human-review-ai-section {
+    padding:
+      38px 0;
+  }
+
+
+  .human-review-ai-box {
+    grid-template-columns:
+      54px
+      minmax(0, 1fr);
+
+    gap: 14px;
+
+    padding: 18px;
+
+    border-radius: 16px;
+  }
+
+
+  .human-review-ai-box::before {
+    width: 3px;
+  }
+
+
+  .human-review-ai-icon {
+    width: 52px;
+    height: 52px;
+
+    border-radius: 14px;
+  }
+
+
+  .human-review-ai-icon svg {
+    width: 26px;
+    height: 26px;
+  }
+
+
+  .human-review-ai-content h2 {
+    font-size: 20px;
+  }
+
+
+  .human-review-ai-content
+  > p:not(.human-review-section-eyebrow) {
+    margin-top: 7px;
+
+    font-size: 10.8px;
+    line-height: 1.52;
+  }
+
+
+  .human-review-ai-actions {
+    gap: 6px;
+
+    margin-top: 12px;
+  }
+
+
+  .human-review-ai-actions a {
+    min-height: 34px;
+
+    padding:
+      0 10px;
+
+    font-size: 8.8px;
+  }
+
+
+  /* -------------------------------------------------------
+     Boundaries
+     ------------------------------------------------------- */
+
+  .human-review-boundaries-section {
+    padding:
+      40px 0
+      46px;
+  }
+
+
+  .human-review-boundaries-header {
+    margin-bottom: 14px;
+  }
+
+
+  .human-review-boundaries-grid {
+    grid-template-columns:
+      1fr;
+
+    gap: 10px;
+  }
+
+
+  .human-review-boundary-card {
+    grid-template-columns:
+      50px
+      minmax(0, 1fr);
+
+    gap: 13px;
+
+    padding: 16px;
+
+    border-radius: 16px;
+  }
+
+
+  .human-review-boundary-card::before {
+    width: 3px;
+  }
+
+
+  .human-review-boundary-icon {
+    width: 48px;
+    height: 48px;
+
+    border-radius: 13px;
+  }
+
+
+  .human-review-boundary-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+
+
+  .human-review-boundary-label {
+    min-height: 21px;
+
+    margin-bottom: 5px;
+
+    padding:
+      0 7px;
+
+    font-size: 7.4px;
+  }
+
+
+  .human-review-boundary-card h3 {
+    font-size: 13px;
+  }
+
+
+  .human-review-boundary-card p {
+    margin-top: 4px;
+
+    font-size: 10.3px;
+    line-height: 1.5;
+  }
+
+
+  /* -------------------------------------------------------
+     Language Review
+     ------------------------------------------------------- */
+
+  .human-review-language-section {
+    padding:
+      38px 0;
+  }
+
+
+  .human-review-language-box {
+    grid-template-columns:
+      54px
+      minmax(0, 1fr);
+
+    gap: 14px;
+
+    padding: 18px;
+
+    border-radius: 16px;
+  }
+
+
+  .human-review-language-box::before {
+    width: 3px;
+  }
+
+
+  .human-review-language-icon {
+    width: 52px;
+    height: 52px;
+
+    border-radius: 14px;
+  }
+
+
+  .human-review-language-icon svg {
+    width: 26px;
+    height: 26px;
+  }
+
+
+  .human-review-language-content h2 {
+    font-size: 20px;
+  }
+
+
+  .human-review-language-content
+  > p:not(.human-review-section-eyebrow) {
+    margin-top: 7px;
+
+    font-size: 10.8px;
+    line-height: 1.52;
+  }
+
+
+  .human-review-language-actions {
+    gap: 6px;
+
+    margin-top: 12px;
+  }
+
+
+  .human-review-language-actions a {
+    min-height: 34px;
+
+    padding:
+      0 10px;
+
+    font-size: 8.8px;
+  }
+
+
+  /* -------------------------------------------------------
+     Accountability
+     ------------------------------------------------------- */
+
+  .human-review-accountability-section {
+    padding:
+      40px 0
+      46px;
+  }
+
+
+  .human-review-accountability-header {
+    margin-bottom: 14px;
+  }
+
+
+  .human-review-accountability-grid {
+    grid-template-columns:
+      1fr;
+
+    gap: 8px;
+  }
+
+
+  .human-review-accountability-grid > a {
+    grid-template-columns:
+      42px
+      minmax(0, 1fr)
+      auto;
+
+    gap: 11px;
+
+    padding: 13px;
+
+    border-radius: 14px;
+  }
+
+
+  .human-review-accountability-icon {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 12px;
+  }
+
+
+  .human-review-accountability-icon svg {
+    width: 22px;
+    height: 22px;
+  }
+
+
+  .human-review-accountability-grid h3 {
+    font-size: 11.5px;
+  }
+
+
+  .human-review-accountability-grid p {
+    margin-top: 3px;
+
+    font-size: 9.8px;
+  }
+
+
+  .human-review-accountability-arrow {
+    font-size: 16px;
+  }
+
+
+  /* -------------------------------------------------------
+     Limits
+     ------------------------------------------------------- */
+
+  .human-review-limits-section {
+    padding:
+      38px 0;
+  }
+
+
+  .human-review-limits-box {
+    grid-template-columns:
+      54px
+      minmax(0, 1fr);
+
+    gap: 14px;
+
+    padding: 18px;
+
+    border-radius: 16px;
+  }
+
+
+  .human-review-limits-box::before {
+    width: 3px;
+  }
+
+
+  .human-review-limits-icon {
+    width: 52px;
+    height: 52px;
+
+    border-radius: 14px;
+  }
+
+
+  .human-review-limits-icon svg {
+    width: 26px;
+    height: 26px;
+  }
+
+
+  .human-review-limits-content h2 {
+    font-size: 20px;
+  }
+
+
+  .human-review-limits-content
+  > p:not(.human-review-section-eyebrow) {
+    margin-top: 7px;
+
+    font-size: 10.8px;
+    line-height: 1.52;
+  }
+
+
+  /* -------------------------------------------------------
+     Related
+     ------------------------------------------------------- */
+
+  .human-review-related-section {
+    padding:
+      40px 0
+      48px;
+  }
+
+
+  .human-review-related-header {
+    margin-bottom: 13px;
+  }
+
+
+  .human-review-related-grid {
+    grid-template-columns:
+      1fr;
+
+    gap: 8px;
+  }
+
+
+  .human-review-related-grid > a {
+    grid-template-columns:
+      42px
+      minmax(0, 1fr)
+      auto;
+
+    gap: 11px;
+
+    padding: 13px;
+
+    border-radius: 14px;
+  }
+
+
+  .human-review-related-icon {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 12px;
+  }
+
+
+  .human-review-related-icon svg {
+    width: 22px;
+    height: 22px;
+  }
+
+
+  .human-review-related-grid h3 {
+    font-size: 11.5px;
+  }
+
+
+  .human-review-related-grid p {
+    margin-top: 3px;
+
+    font-size: 9.8px;
+  }
+
+
+  .human-review-related-arrow {
+    font-size: 16px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 390px) {
+
+  .human-review-container {
+    width:
+      calc(100% - 22px);
+  }
+
+
+  .human-review-intro-box {
+    padding:
+      18px 15px
+      18px 18px;
+  }
+
+
+  .human-review-intro-box h1 {
+    font-size: 27px;
+  }
+
+
+  .human-review-intro-text {
+    font-size: 11.5px;
+  }
+
+
+  .human-review-intro-note {
+    font-size: 10.4px;
+  }
+
+
+  .human-review-section-header h2,
+  .human-review-principle-content h2,
+  .human-review-checkpoints-header h2,
+  .human-review-ai-content h2,
+  .human-review-boundaries-header h2,
+  .human-review-language-content h2,
+  .human-review-accountability-header h2,
+  .human-review-limits-content h2,
+  .human-review-related-header h2 {
+    font-size: 20px;
+  }
+
+
+  .human-review-area-card {
+    grid-template-columns:
+      42px
+      minmax(0, 1fr);
+
+    column-gap: 10px;
+
+    padding:
+      13px 12px;
+  }
+
+
+  .human-review-area-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+
+  .human-review-area-icon svg {
+    width: 21px;
+    height: 21px;
+  }
+
+
+  .human-review-principle-box,
+  .human-review-ai-box,
+  .human-review-language-box,
+  .human-review-limits-box {
+    grid-template-columns:
+      1fr;
+
+    gap: 12px;
+
+    padding: 17px;
+  }
+
+
+  .human-review-principle-icon,
+  .human-review-ai-icon,
+  .human-review-language-icon,
+  .human-review-limits-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+
+  .human-review-principle-icon svg,
+  .human-review-ai-icon svg,
+  .human-review-language-icon svg,
+  .human-review-limits-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+
+
+  .human-review-secondary-media img {
+    aspect-ratio:
+      4 / 3;
+  }
+
+
+  .human-review-checkpoint-card {
+    grid-template-columns:
+      42px
+      minmax(0, 1fr);
+
+    gap: 10px;
+
+    padding:
+      13px 12px;
+  }
+
+
+  .human-review-checkpoint-number {
+    width: 42px;
+    height: 42px;
+  }
+
+
+  .human-review-boundary-card {
+    grid-template-columns:
+      44px
+      minmax(0, 1fr);
+
+    gap: 11px;
+
+    padding: 14px;
+  }
+
+
+  .human-review-boundary-icon {
+    width: 44px;
+    height: 44px;
+  }
+
+
+  .human-review-boundary-icon svg {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 340px) {
+
+  .human-review-container {
+    width:
+      calc(100% - 18px);
+  }
+
+
+  .human-review-intro-box h1 {
+    font-size: 25px;
+  }
+
+
+  .human-review-area-card {
+    grid-template-columns:
+      40px
+      minmax(0, 1fr);
+
+    gap: 9px;
+
+    padding:
+      12px 10px;
+  }
+
+
+  .human-review-area-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+
+  .human-review-area-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+
+  .human-review-principle-actions,
+  .human-review-model-actions,
+  .human-review-ai-actions,
+  .human-review-language-actions {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+
+  .human-review-principle-actions a,
+  .human-review-model-actions a,
+  .human-review-ai-actions a,
+  .human-review-language-actions a {
+    width: 100%;
+
+    justify-content: space-between;
+  }
+
+
+  .human-review-checkpoint-card {
+    grid-template-columns:
+      40px
+      minmax(0, 1fr);
+
+    gap: 9px;
+  }
+
+
+  .human-review-checkpoint-number {
+    width: 40px;
+    height: 40px;
+  }
+
+
+  .human-review-boundary-card {
+    grid-template-columns:
+      1fr;
+
+    gap: 10px;
+  }
+
+
+  .human-review-boundary-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+
+  .human-review-accountability-grid > a,
+  .human-review-related-grid > a {
+    grid-template-columns:
+      38px
+      minmax(0, 1fr)
+      auto;
+
+    gap: 9px;
+  }
+
+
+  .human-review-accountability-icon,
+  .human-review-related-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+
+  .human-review-accountability-icon svg,
+  .human-review-related-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .human-review-breadcrumb a,
+  .human-review-area-card,
+  .human-review-principle-actions a,
+  .human-review-model-actions a,
+  .human-review-checkpoint-card,
+  .human-review-ai-actions a,
+  .human-review-boundary-card,
+  .human-review-language-actions a,
+  .human-review-accountability-grid > a,
+  .human-review-accountability-arrow,
+  .human-review-related-grid > a,
+  .human-review-related-arrow {
+    transition:
+      none !important;
+  }
+
+
+  .human-review-area-card:hover,
+  .human-review-principle-actions a:hover,
+  .human-review-model-actions a:hover,
+  .human-review-checkpoint-card:hover,
+  .human-review-ai-actions a:hover,
+  .human-review-boundary-card:hover,
+  .human-review-language-actions a:hover,
+  .human-review-accountability-grid > a:hover,
+  .human-review-related-grid > a:hover {
+    transform:
+      none;
+  }
+
+
+  .human-review-accountability-grid
+  > a:hover
+  .human-review-accountability-arrow,
+  .human-review-related-grid
+  > a:hover
+  .human-review-related-arrow {
+    transform:
+      none;
+  }
+}
+
+
+/* =========================================================
+   HIGH CONTRAST
+   ========================================================= */
+
+@media (prefers-contrast: more) {
+
+  .human-review-intro-box,
+  .human-review-primary-media,
+  .human-review-area-card,
+  .human-review-principle-box,
+  .human-review-principle-actions a,
+  .human-review-secondary-media,
+  .human-review-model-actions a,
+  .human-review-checkpoint-card,
+  .human-review-ai-box,
+  .human-review-ai-actions a,
+  .human-review-boundary-card,
+  .human-review-language-box,
+  .human-review-language-actions a,
+  .human-review-accountability-grid > a,
+  .human-review-limits-box,
+  .human-review-related-grid > a {
+    border-color:
+      #bcc1c9;
+  }
+
+
+  .human-review-intro-text,
+  .human-review-intro-note,
+  .human-review-section-header
+  > p:last-child,
+  .human-review-area-card p,
+  .human-review-principle-content
+  > p:not(.human-review-section-eyebrow),
+  .human-review-model-content
+  > p:not(.human-review-model-eyebrow),
+  .human-review-checkpoints-header
+  > p:last-child,
+  .human-review-checkpoint-card p,
+  .human-review-ai-content
+  > p:not(.human-review-section-eyebrow),
+  .human-review-boundaries-header
+  > p:last-child,
+  .human-review-boundary-card p,
+  .human-review-language-content
+  > p:not(.human-review-section-eyebrow),
+  .human-review-accountability-header
+  > p:last-child,
+  .human-review-accountability-grid p,
+  .human-review-limits-content
+  > p:not(.human-review-section-eyebrow),
+  .human-review-related-header
+  > p:last-child,
+  .human-review-related-grid p {
+    color:
+      #444850;
+  }
+}
+
+
+/* =========================================================
+   PRINT
+   ========================================================= */
+
+@media print {
+
+  .human-review-page,
+  .human-review-intro,
+  .human-review-areas-section,
+  .human-review-principle-section,
+  .human-review-model-section,
+  .human-review-checkpoints-section,
+  .human-review-ai-section,
+  .human-review-boundaries-section,
+  .human-review-language-section,
+  .human-review-accountability-section,
+  .human-review-limits-section,
+  .human-review-related-section {
+    background:
+      #ffffff !important;
+  }
+
+
+  .human-review-container {
+    width: 100%;
+  }
+
+
+  .human-review-intro,
+  .human-review-areas-section,
+  .human-review-principle-section,
+  .human-review-model-section,
+  .human-review-checkpoints-section,
+  .human-review-ai-section,
+  .human-review-boundaries-section,
+  .human-review-language-section,
+  .human-review-accountability-section,
+  .human-review-limits-section,
+  .human-review-related-section {
+    padding:
+      25px 20px;
+  }
+
+
+  .human-review-breadcrumb {
+    display: none;
+  }
+
+
+  .human-review-intro-box,
+  .human-review-primary-media,
+  .human-review-area-card,
+  .human-review-principle-box,
+  .human-review-secondary-media,
+  .human-review-checkpoint-card,
+  .human-review-ai-box,
+  .human-review-boundary-card,
+  .human-review-language-box,
+  .human-review-accountability-grid > a,
+  .human-review-limits-box,
+  .human-review-related-grid > a {
+    box-shadow:
+      none;
+  }
+
+
+  .human-review-areas-grid,
+  .human-review-checkpoints-grid {
+    grid-template-columns:
+      repeat(
+        3,
+        minmax(0, 1fr)
+      );
+  }
+
+
+  .human-review-model-layout {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+  }
+
+
+  .human-review-boundaries-grid,
+  .human-review-accountability-grid,
+  .human-review-related-grid {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+  }
+
+
+  .human-review-primary-media,
+  .human-review-secondary-media,
+  .human-review-area-card,
+  .human-review-principle-box,
+  .human-review-checkpoint-card,
+  .human-review-ai-box,
+  .human-review-boundary-card,
+  .human-review-language-box,
+  .human-review-accountability-grid > a,
+  .human-review-limits-box,
+  .human-review-related-grid > a {
+    break-inside:
+      avoid;
+  }
+}

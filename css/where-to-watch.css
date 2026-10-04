@@ -1,0 +1,3523 @@
+/* =========================================================
+   SalimGPT Global
+   File: css/where-to-watch.css
+
+   Where to Watch Page
+   - Editorial introduction
+   - Primary page/share image
+   - Official destination cards
+   - Primary YouTube viewing model
+   - Secondary supporting image
+   - Viewing journey
+   - Language edition cards
+   - Viewing guidance
+   - Official source note
+   - Related global navigation
+
+   Shared:
+   - global.css
+   - header.css
+   - menu.css
+   - footer.css
+   ========================================================= */
+
+
+/* =========================================================
+   PAGE VARIABLES
+   ========================================================= */
+
+:root {
+  --where-watch-pink: #f71950;
+  --where-watch-pink-dark: #d90e40;
+  --where-watch-pink-soft: #fff0f4;
+
+  --where-watch-blue: #087cf0;
+  --where-watch-blue-soft: #eef6ff;
+
+  --where-watch-green: #268447;
+  --where-watch-green-soft: #effaf3;
+
+  --where-watch-black: #111216;
+  --where-watch-dark: #202126;
+  --where-watch-text: #565d68;
+  --where-watch-muted: #7d8490;
+
+  --where-watch-bg: #f7f8fa;
+  --where-watch-bg-soft: #f1f3f6;
+  --where-watch-white: #ffffff;
+
+  --where-watch-border: #e5e8ed;
+  --where-watch-border-strong: #d7dbe2;
+
+  --where-watch-width: 1180px;
+
+  --where-watch-shadow-sm:
+    0 4px 14px rgba(17, 18, 22, 0.035);
+
+  --where-watch-shadow-md:
+    0 10px 28px rgba(17, 18, 22, 0.065);
+
+  --where-watch-shadow-lg:
+    0 16px 40px rgba(17, 18, 22, 0.08);
+}
+
+
+/* =========================================================
+   PAGE
+   ========================================================= */
+
+.where-watch-page {
+  width: 100%;
+  overflow: hidden;
+
+  background:
+    var(--where-watch-bg);
+
+  color:
+    var(--where-watch-dark);
+}
+
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.where-watch-container {
+  width:
+    min(
+      calc(100% - 48px),
+      var(--where-watch-width)
+    );
+
+  margin-inline: auto;
+}
+
+
+/* =========================================================
+   INTRO SECTION
+   ========================================================= */
+
+.where-watch-intro {
+  padding:
+    28px 0
+    22px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #f9fafb 0%,
+      #f7f8fa 100%
+    );
+}
+
+
+/* =========================================================
+   BREADCRUMB
+   ========================================================= */
+
+.where-watch-breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  gap: 6px;
+
+  margin:
+    0 0
+    13px;
+
+  color:
+    var(--where-watch-muted);
+
+  font-size: 11px;
+  font-weight: 650;
+  line-height: 1.4;
+}
+
+
+.where-watch-breadcrumb a {
+  color:
+    #626975;
+
+  text-decoration: none;
+
+  transition:
+    color 150ms ease;
+}
+
+
+.where-watch-breadcrumb a:hover {
+  color:
+    var(--where-watch-pink);
+}
+
+
+.where-watch-breadcrumb
+span[aria-hidden="true"] {
+  color:
+    #c2c6cd;
+}
+
+
+.where-watch-breadcrumb
+[aria-current="page"] {
+  color:
+    var(--where-watch-dark);
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   INTRO BOX
+   ========================================================= */
+
+.where-watch-intro-box {
+  position: relative;
+
+  overflow: hidden;
+
+  padding:
+    30px 32px;
+
+  border:
+    1px solid
+    var(--where-watch-border);
+
+  border-radius:
+    18px 18px 0 0;
+
+  background:
+    var(--where-watch-white);
+
+  box-shadow:
+    var(--where-watch-shadow-sm);
+}
+
+
+.where-watch-intro-box::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 4px;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      180deg,
+      var(--where-watch-pink),
+      var(--where-watch-pink-dark)
+    );
+}
+
+
+.where-watch-intro-copy {
+  max-width: 900px;
+}
+
+
+/* =========================================================
+   INTRO EYEBROW
+   ========================================================= */
+
+.where-watch-eyebrow {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 7px;
+
+  margin:
+    0 0
+    8px;
+
+  color:
+    var(--where-watch-pink);
+
+  font-size: 10px;
+  font-weight: 800;
+  line-height: 1.3;
+
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+
+.where-watch-eyebrow::before {
+  content: "";
+
+  width: 6px;
+  height: 6px;
+
+  flex:
+    0 0 6px;
+
+  border-radius: 50%;
+
+  background:
+    var(--where-watch-pink);
+
+  box-shadow:
+    0 0 0 4px
+    rgba(247, 25, 80, 0.07);
+}
+
+
+/* =========================================================
+   INTRO TITLE
+   ========================================================= */
+
+.where-watch-intro-box h1 {
+  max-width: 900px;
+
+  margin: 0;
+
+  color:
+    var(--where-watch-black);
+
+  font-size:
+    clamp(
+      36px,
+      4.5vw,
+      54px
+    );
+
+  font-weight: 850;
+  line-height: 1.03;
+
+  letter-spacing:
+    -0.045em;
+
+  text-align: left;
+}
+
+
+/* =========================================================
+   INTRO TEXT
+   ========================================================= */
+
+.where-watch-intro-text {
+  max-width: 850px;
+
+  margin:
+    14px 0
+    0;
+
+  color:
+    var(--where-watch-text);
+
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.68;
+
+  text-align: left;
+  text-wrap: pretty;
+}
+
+
+.where-watch-intro-note {
+  max-width: 870px;
+
+  margin:
+    9px 0
+    0;
+
+  color:
+    var(--where-watch-muted);
+
+  font-size: 12.5px;
+  line-height: 1.6;
+
+  text-align: left;
+}
+
+
+/* =========================================================
+   PRIMARY IMAGE
+   ========================================================= */
+
+.where-watch-primary-media {
+  position: relative;
+
+  width: 100%;
+
+  margin: 0;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    var(--where-watch-border);
+
+  border-top: 0;
+
+  border-radius:
+    0 0 18px 18px;
+
+  background:
+    #eceff3;
+
+  box-shadow:
+    var(--where-watch-shadow-sm);
+}
+
+
+.where-watch-primary-media::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  box-shadow:
+    inset 0 0 0 1px
+    rgba(255, 255, 255, 0.12);
+}
+
+
+.where-watch-primary-media img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  aspect-ratio:
+    1200 / 630;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+
+/* =========================================================
+   GENERAL SECTION EYEBROW
+   ========================================================= */
+
+.where-watch-section-eyebrow {
+  margin:
+    0 0
+    6px;
+
+  color:
+    var(--where-watch-pink);
+
+  font-size: 9px;
+  font-weight: 800;
+  line-height: 1.3;
+
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   GENERAL SECTION HEADINGS
+   ========================================================= */
+
+.where-watch-section-header h2,
+.where-watch-primary-content h2,
+.where-watch-languages-header h2,
+.where-watch-guidance-header h2,
+.where-watch-official-content h2,
+.where-watch-related-header h2 {
+  margin: 0;
+
+  color:
+    var(--where-watch-black);
+
+  font-size:
+    clamp(
+      26px,
+      3.1vw,
+      36px
+    );
+
+  font-weight: 820;
+  line-height: 1.1;
+
+  letter-spacing:
+    -0.032em;
+}
+
+
+.where-watch-section-header
+> p:last-child,
+.where-watch-languages-header
+> div > p:last-child,
+.where-watch-guidance-header
+> p:last-child,
+.where-watch-related-header
+> p:last-child {
+  max-width: 820px;
+
+  margin:
+    9px 0
+    0;
+
+  color:
+    var(--where-watch-muted);
+
+  font-size: 12.5px;
+  line-height: 1.62;
+}
+
+
+/* =========================================================
+   OFFICIAL DESTINATIONS SECTION
+   ========================================================= */
+
+.where-watch-options-section {
+  padding:
+    54px 0
+    66px;
+
+  background:
+    var(--where-watch-bg);
+}
+
+
+.where-watch-section-header {
+  max-width: 870px;
+
+  margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   DESTINATION GRID
+   ========================================================= */
+
+.where-watch-options-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0, 1fr)
+    );
+
+  gap: 14px;
+}
+
+
+/* =========================================================
+   DESTINATION CARD
+   ========================================================= */
+
+.where-watch-option-card {
+  display: grid;
+
+  grid-template-columns:
+    58px
+    minmax(0, 1fr);
+
+  align-items: start;
+
+  gap: 17px;
+
+  min-width: 0;
+
+  padding: 22px;
+
+  border:
+    1px solid
+    var(--where-watch-border);
+
+  border-radius: 19px;
+
+  background:
+    var(--where-watch-white);
+
+  box-shadow:
+    var(--where-watch-shadow-sm);
+
+  transition:
+    transform 170ms ease,
+    border-color 170ms ease,
+    box-shadow 170ms ease;
+}
+
+
+.where-watch-option-card:hover {
+  transform:
+    translateY(-2px);
+
+  border-color:
+    rgba(247, 25, 80, 0.18);
+
+  box-shadow:
+    var(--where-watch-shadow-md);
+}
+
+
+/* =========================================================
+   DESTINATION ICON
+   ========================================================= */
+
+.where-watch-option-icon {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 56px;
+  height: 56px;
+
+  border:
+    1px solid
+    #f2d2da;
+
+  border-radius: 16px;
+
+  background:
+    var(--where-watch-pink-soft);
+
+  color:
+    var(--where-watch-pink);
+}
+
+
+.where-watch-option-icon svg {
+  width: 28px;
+  height: 28px;
+
+  fill: none;
+
+  stroke:
+    currentColor;
+
+  stroke-width: 1.7;
+
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+
+/* =========================================================
+   DESTINATION COPY
+   ========================================================= */
+
+.where-watch-option-label {
+  margin:
+    0 0
+    5px;
+
+  color:
+    var(--where-watch-pink);
+
+  font-size: 8.5px;
+  font-weight: 800;
+  line-height: 1.3;
+
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+
+.where-watch-option-card h3 {
+  margin: 0;
+
+  color:
+    var(--where-watch-black);
+
+  font-size: 17px;
+  font-weight: 800;
+  line-height: 1.28;
+
+  letter-spacing:
+    -0.018em;
+}
+
+
+.where-watch-option-card
+> div:last-child
+> p:not(.where-watch-option-label) {
+  margin:
+    7px 0
+    0;
+
+  color:
+    var(--where-watch-muted);
+
+  font-size: 11.5px;
+  line-height: 1.56;
+}
+
+
+/* =========================================================
+   DESTINATION CARD LINK
+   ========================================================= */
+
+.where-watch-option-card a {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  margin-top: 13px;
+
+  color:
+    var(--where-watch-pink);
+
+  font-size: 9.5px;
+  font-weight: 750;
+  line-height: 1.35;
+
+  text-decoration: none;
+}
+
+
+.where-watch-option-card a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+
+.where-watch-option-card
+a span[aria-hidden="true"] {
+  font-size: 14px;
+
+  transition:
+    transform 150ms ease;
+}
+
+
+.where-watch-option-card
+a:hover
+span[aria-hidden="true"] {
+  transform:
+    translateX(2px);
+}
+
+
+/* =========================================================
+   PRIMARY VIEWING MODEL SECTION
+   ========================================================= */
+
+.where-watch-primary-section {
+  padding:
+    0 0
+    66px;
+
+  background:
+    var(--where-watch-bg);
+}
+
+
+/* =========================================================
+   PRIMARY VIEWING BOX
+   ========================================================= */
+
+.where-watch-primary-box {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns:
+    70px
+    minmax(0, 1fr);
+
+  align-items: start;
+
+  gap: 22px;
+
+  padding:
+    28px 30px;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    rgba(8, 124, 240, 0.16);
+
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff 0%,
+      #f6faff 100%
+    );
+
+  box-shadow:
+    var(--where-watch-shadow-sm);
+}
+
+
+.where-watch-primary-box::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 4px;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      180deg,
+      var(--where-watch-blue),
+      #5a9fff
+    );
+}
+
+
+/* =========================================================
+   PRIMARY VIEWING ICON
+   ========================================================= */
+
+.where-watch-primary-icon {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 66px;
+  height: 66px;
+
+  border:
+    1px solid
+    #d7eaff;
+
+  border-radius: 18px;
+
+  background:
+    var(--where-watch-blue-soft);
+
+  color:
+    var(--where-watch-blue);
+}
+
+
+.where-watch-primary-icon svg {
+  width: 32px;
+  height: 32px;
+
+  fill: none;
+
+  stroke:
+    currentColor;
+
+  stroke-width: 1.7;
+
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+
+/* =========================================================
+   PRIMARY VIEWING CONTENT
+   ========================================================= */
+
+.where-watch-primary-content {
+  min-width: 0;
+
+  max-width: 920px;
+}
+
+
+.where-watch-primary-content
+.where-watch-section-eyebrow {
+  color:
+    var(--where-watch-blue);
+}
+
+
+.where-watch-primary-content h2 {
+  font-size:
+    clamp(
+      23px,
+      2.8vw,
+      31px
+    );
+
+  line-height: 1.13;
+}
+
+
+.where-watch-primary-content
+> p:not(.where-watch-section-eyebrow) {
+  max-width: 850px;
+
+  margin:
+    9px 0
+    0;
+
+  color:
+    var(--where-watch-text);
+
+  font-size: 12px;
+  line-height: 1.62;
+}
+
+
+/* =========================================================
+   PRIMARY VIEWING LINK
+   ========================================================= */
+
+.where-watch-primary-link {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  min-height: 38px;
+
+  margin-top: 16px;
+
+  padding:
+    0 13px;
+
+  border:
+    1px solid
+    rgba(8, 124, 240, 0.18);
+
+  border-radius: 999px;
+
+  background:
+    var(--where-watch-white);
+
+  color:
+    var(--where-watch-blue);
+
+  font-size: 9.5px;
+  font-weight: 720;
+  line-height: 1.2;
+
+  text-decoration: none;
+
+  transition:
+    transform 150ms ease,
+    border-color 150ms ease,
+    background 150ms ease,
+    color 150ms ease;
+}
+
+
+.where-watch-primary-link:hover {
+  transform:
+    translateY(-1px);
+
+  border-color:
+    rgba(8, 124, 240, 0.30);
+
+  background:
+    var(--where-watch-blue-soft);
+
+  color:
+    #056fd9;
+}
+
+
+.where-watch-primary-link
+span[aria-hidden="true"] {
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   VIEWING JOURNEY SECTION
+   ========================================================= */
+
+.where-watch-journey-section {
+  padding:
+    66px 0;
+
+  border-top:
+    1px solid
+    var(--where-watch-border);
+
+  background:
+    var(--where-watch-white);
+}
+
+
+/* =========================================================
+   VIEWING JOURNEY LAYOUT
+   ========================================================= */
+
+.where-watch-journey-layout {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.04fr)
+    minmax(0, 0.96fr);
+
+  align-items: center;
+
+  gap: 38px;
+}
+
+
+/* =========================================================
+   SECONDARY IMAGE
+   ========================================================= */
+
+.where-watch-secondary-media {
+  position: relative;
+
+  width: 100%;
+
+  margin: 0;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    var(--where-watch-border);
+
+  border-radius: 20px;
+
+  background:
+    #eceff3;
+
+  box-shadow:
+    var(--where-watch-shadow-md);
+}
+
+
+.where-watch-secondary-media::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  box-shadow:
+    inset 0 0 0 1px
+    rgba(255, 255, 255, 0.12);
+}
+
+
+.where-watch-secondary-media img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  aspect-ratio:
+    3 / 2;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+
+/* =========================================================
+   JOURNEY CONTENT
+   ========================================================= */
+
+.where-watch-journey-content {
+  min-width: 0;
+}
+
+
+.where-watch-journey-eyebrow {
+  margin:
+    0 0
+    6px;
+
+  color:
+    var(--where-watch-pink);
+
+  font-size: 9px;
+  font-weight: 800;
+  line-height: 1.3;
+
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+
+.where-watch-journey-content h2 {
+  max-width: 610px;
+
+  margin: 0;
+
+  color:
+    var(--where-watch-black);
+
+  font-size:
+    clamp(
+      27px,
+      3.4vw,
+      39px
+    );
+
+  font-weight: 830;
+  line-height: 1.08;
+
+  letter-spacing:
+    -0.035em;
+}
+
+
+.where-watch-journey-content
+> p:not(.where-watch-journey-eyebrow) {
+  max-width: 650px;
+
+  margin:
+    11px 0
+    0;
+
+  color:
+    var(--where-watch-text);
+
+  font-size: 12.5px;
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   JOURNEY ACTIONS
+   ========================================================= */
+
+.where-watch-journey-actions {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 7px;
+
+  margin-top: 18px;
+}
+
+
+.where-watch-journey-actions a {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  min-height: 37px;
+
+  padding:
+    0 12px;
+
+  border:
+    1px solid
+    var(--where-watch-border);
+
+  border-radius: 999px;
+
+  background:
+    var(--where-watch-white);
+
+  color:
+    var(--where-watch-dark);
+
+  font-size: 9.5px;
+  font-weight: 700;
+  line-height: 1.2;
+
+  text-decoration: none;
+
+  transition:
+    color 150ms ease,
+    background 150ms ease,
+    border-color 150ms ease,
+    transform 150ms ease;
+}
+
+
+.where-watch-journey-actions a:hover {
+  transform:
+    translateY(-1px);
+
+  border-color:
+    rgba(247, 25, 80, 0.22);
+
+  background:
+    var(--where-watch-pink-soft);
+
+  color:
+    var(--where-watch-pink);
+}
+
+
+.where-watch-journey-actions
+a span[aria-hidden="true"] {
+  color:
+    var(--where-watch-pink);
+
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   LANGUAGE EDITIONS SECTION
+   ========================================================= */
+
+.where-watch-languages-section {
+  padding:
+    58px 0
+    64px;
+
+  border-top:
+    1px solid
+    var(--where-watch-border);
+
+  background:
+    var(--where-watch-bg);
+}
+
+
+/* =========================================================
+   LANGUAGE HEADER
+   ========================================================= */
+
+.where-watch-languages-header {
+  display: flex;
+
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 26px;
+
+  margin-bottom: 18px;
+}
+
+
+.where-watch-languages-header > div {
+  min-width: 0;
+}
+
+
+/* =========================================================
+   ALL LANGUAGE EDITIONS LINK
+   ========================================================= */
+
+.where-watch-all-languages-link {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  flex:
+    0 0 auto;
+
+  min-height: 38px;
+
+  padding:
+    0 13px;
+
+  border:
+    1px solid
+    var(--where-watch-border);
+
+  border-radius: 999px;
+
+  background:
+    var(--where-watch-white);
+
+  color:
+    var(--where-watch-dark);
+
+  font-size: 9.5px;
+  font-weight: 700;
+  line-height: 1;
+
+  text-decoration: none;
+
+  transition:
+    border-color 150ms ease,
+    background 150ms ease,
+    color 150ms ease,
+    transform 150ms ease;
+}
+
+
+.where-watch-all-languages-link:hover {
+  transform:
+    translateY(-1px);
+
+  border-color:
+    rgba(247, 25, 80, 0.24);
+
+  background:
+    var(--where-watch-pink-soft);
+
+  color:
+    var(--where-watch-pink);
+}
+
+
+.where-watch-all-languages-link
+span[aria-hidden="true"] {
+  color:
+    var(--where-watch-pink);
+
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   LANGUAGE GRID
+   ========================================================= */
+
+.where-watch-language-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      3,
+      minmax(0, 1fr)
+    );
+
+  gap: 14px;
+}
+
+
+/* =========================================================
+   LANGUAGE CARD
+   ========================================================= */
+
+.where-watch-language-card {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+  min-height: 230px;
+
+  padding: 18px;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    var(--where-watch-border);
+
+  border-radius: 18px;
+
+  background:
+    var(--where-watch-white);
+
+  color:
+    inherit;
+
+  text-decoration: none;
+
+  box-shadow:
+    var(--where-watch-shadow-sm);
+
+  isolation: isolate;
+
+  transition:
+    transform 170ms ease,
+    border-color 170ms ease,
+    box-shadow 170ms ease;
+}
+
+
+.where-watch-language-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: -95px;
+  right: -95px;
+
+  width: 200px;
+  height: 200px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(247, 25, 80, 0.07),
+      rgba(247, 25, 80, 0.016) 48%,
+      transparent 70%
+    );
+
+  z-index: -1;
+
+  pointer-events: none;
+}
+
+
+.where-watch-language-card:hover {
+  transform:
+    translateY(-3px);
+
+  border-color:
+    rgba(247, 25, 80, 0.20);
+
+  box-shadow:
+    var(--where-watch-shadow-md);
+}
+
+
+/* =========================================================
+   LANGUAGE CARD TOP
+   ========================================================= */
+
+.where-watch-language-card-top {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 10px;
+}
+
+
+/* =========================================================
+   LANGUAGE CODE
+   ========================================================= */
+
+.where-watch-language-code {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-width: 40px;
+  height: 27px;
+
+  padding:
+    0 9px;
+
+  border:
+    1px solid
+    #f2d0d8;
+
+  border-radius: 999px;
+
+  background:
+    var(--where-watch-pink-soft);
+
+  color:
+    var(--where-watch-pink);
+
+  font-size: 9px;
+  font-weight: 800;
+  line-height: 1;
+
+  letter-spacing: 0.07em;
+}
+
+
+/* =========================================================
+   LANGUAGE STATUS
+   ========================================================= */
+
+.where-watch-language-status {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 27px;
+
+  padding:
+    0 9px;
+
+  border:
+    1px solid
+    #d7eadc;
+
+  border-radius: 999px;
+
+  background:
+    var(--where-watch-green-soft);
+
+  color:
+    var(--where-watch-green);
+
+  font-size: 9px;
+  font-weight: 750;
+  line-height: 1;
+}
+
+
+/* =========================================================
+   LANGUAGE MAIN
+   ========================================================= */
+
+.where-watch-language-main {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    58px;
+
+  align-items: center;
+
+  gap: 14px;
+
+  flex:
+    1 1 auto;
+
+  min-width: 0;
+
+  padding-top: 20px;
+
+  direction: ltr;
+}
+
+
+.where-watch-language-main > div {
+  min-width: 0;
+}
+
+
+/* =========================================================
+   LANGUAGE LABEL
+   ========================================================= */
+
+.where-watch-language-label {
+  margin:
+    0 0
+    5px;
+
+  color:
+    var(--where-watch-muted);
+
+  font-size: 8.8px;
+  font-weight: 750;
+  line-height: 1.3;
+
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   LANGUAGE TITLE
+   ========================================================= */
+
+.where-watch-language-main h3 {
+  margin: 0;
+
+  color:
+    var(--where-watch-black);
+
+  font-size:
+    clamp(
+      25px,
+      2.6vw,
+      33px
+    );
+
+  font-weight: 820;
+  line-height: 1.05;
+
+  letter-spacing:
+    -0.03em;
+}
+
+
+/* =========================================================
+   LANGUAGE DESCRIPTION
+   ========================================================= */
+
+.where-watch-language-main
+> div > p:last-child {
+  margin:
+    6px 0
+    0;
+
+  color:
+    var(--where-watch-muted);
+
+  font-size: 10.7px;
+  line-height: 1.46;
+}
+
+
+/* =========================================================
+   LANGUAGE LOGO
+   ========================================================= */
+
+.where-watch-language-main img {
+  display: block;
+
+  width: 58px;
+  height: 58px;
+
+  justify-self: end;
+
+  object-fit: contain;
+
+  user-select: none;
+
+  -webkit-user-drag: none;
+
+  filter:
+    drop-shadow(
+      0 5px 9px
+      rgba(17, 18, 22, 0.09)
+    );
+}
+
+
+/* =========================================================
+   LANGUAGE ACTION
+   ========================================================= */
+
+.where-watch-language-action {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 8px;
+
+  margin-top: 14px;
+
+  padding-top: 11px;
+
+  border-top:
+    1px solid
+    #eef0f3;
+
+  color:
+    var(--where-watch-pink);
+
+  font-size: 9.5px;
+  font-weight: 750;
+  line-height: 1.3;
+}
+
+
+.where-watch-language-action
+> span:last-child {
+  flex:
+    0 0 auto;
+
+  font-size: 15px;
+
+  transition:
+    transform 150ms ease;
+}
+
+
+.where-watch-language-card:hover
+.where-watch-language-action
+> span:last-child {
+  transform:
+    translateX(2px);
+}
+
+
+/* =========================================================
+   LANGUAGE FONT SUPPORT
+   ========================================================= */
+
+.where-watch-language-card[lang="bn"] {
+  font-family:
+    "Hind Siliguri",
+    "Noto Sans Bengali",
+    "Nirmala UI",
+    system-ui,
+    sans-serif;
+}
+
+
+.where-watch-language-card[lang="hi"] {
+  font-family:
+    "Noto Sans Devanagari",
+    "Nirmala UI",
+    system-ui,
+    sans-serif;
+}
+
+
+/* =========================================================
+   VIEWING GUIDANCE SECTION
+   ========================================================= */
+
+.where-watch-guidance-section {
+  padding:
+    58px 0
+    64px;
+
+  border-top:
+    1px solid
+    var(--where-watch-border);
+
+  background:
+    var(--where-watch-white);
+}
+
+
+/* =========================================================
+   GUIDANCE HEADER
+   ========================================================= */
+
+.where-watch-guidance-header {
+  max-width: 870px;
+
+  margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   GUIDANCE GRID
+   ========================================================= */
+
+.where-watch-guidance-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0, 1fr)
+    );
+
+  gap: 12px;
+}
+
+
+/* =========================================================
+   GUIDANCE CARD
+   ========================================================= */
+
+.where-watch-guidance-card {
+  display: grid;
+
+  grid-template-columns:
+    48px
+    minmax(0, 1fr);
+
+  align-items: start;
+
+  gap: 15px;
+
+  min-width: 0;
+
+  padding: 20px;
+
+  border:
+    1px solid
+    var(--where-watch-border);
+
+  border-radius: 18px;
+
+  background:
+    var(--where-watch-bg);
+
+  box-shadow:
+    var(--where-watch-shadow-sm);
+
+  transition:
+    transform 170ms ease,
+    border-color 170ms ease,
+    background 170ms ease,
+    box-shadow 170ms ease;
+}
+
+
+.where-watch-guidance-card:hover {
+  transform:
+    translateY(-2px);
+
+  border-color:
+    rgba(247, 25, 80, 0.18);
+
+  background:
+    var(--where-watch-white);
+
+  box-shadow:
+    var(--where-watch-shadow-md);
+}
+
+
+/* =========================================================
+   GUIDANCE NUMBER
+   ========================================================= */
+
+.where-watch-guidance-number {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 48px;
+  height: 48px;
+
+  border:
+    1px solid
+    #f2d2da;
+
+  border-radius: 14px;
+
+  background:
+    var(--where-watch-pink-soft);
+
+  color:
+    var(--where-watch-pink);
+
+  font-size: 11px;
+  font-weight: 850;
+  line-height: 1;
+
+  letter-spacing: 0.05em;
+}
+
+
+/* =========================================================
+   GUIDANCE COPY
+   ========================================================= */
+
+.where-watch-guidance-card h3 {
+  margin: 0;
+
+  color:
+    var(--where-watch-black);
+
+  font-size: 14px;
+  font-weight: 790;
+  line-height: 1.35;
+}
+
+
+.where-watch-guidance-card p {
+  margin:
+    6px 0
+    0;
+
+  color:
+    var(--where-watch-muted);
+
+  font-size: 11px;
+  line-height: 1.55;
+}
+
+
+/* =========================================================
+   OFFICIAL SOURCE SECTION
+   ========================================================= */
+
+.where-watch-official-section {
+  padding:
+    54px 0;
+
+  border-top:
+    1px solid
+    var(--where-watch-border);
+
+  background:
+    var(--where-watch-bg);
+}
+
+
+/* =========================================================
+   OFFICIAL SOURCE BOX
+   ========================================================= */
+
+.where-watch-official-box {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns:
+    70px
+    minmax(0, 1fr);
+
+  align-items: start;
+
+  gap: 22px;
+
+  padding:
+    28px 30px;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    var(--where-watch-border);
+
+  border-radius: 20px;
+
+  background:
+    var(--where-watch-white);
+
+  box-shadow:
+    var(--where-watch-shadow-sm);
+}
+
+
+.where-watch-official-box::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 4px;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      180deg,
+      var(--where-watch-pink),
+      var(--where-watch-blue)
+    );
+}
+
+
+/* =========================================================
+   OFFICIAL SOURCE ICON
+   ========================================================= */
+
+.where-watch-official-icon {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 66px;
+  height: 66px;
+
+  border:
+    1px solid
+    #f2d2da;
+
+  border-radius: 18px;
+
+  background:
+    var(--where-watch-pink-soft);
+
+  color:
+    var(--where-watch-pink);
+}
+
+
+.where-watch-official-icon svg {
+  width: 32px;
+  height: 32px;
+
+  fill: none;
+
+  stroke:
+    currentColor;
+
+  stroke-width: 1.7;
+
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+
+/* =========================================================
+   OFFICIAL SOURCE CONTENT
+   ========================================================= */
+
+.where-watch-official-content {
+  min-width: 0;
+
+  max-width: 900px;
+}
+
+
+.where-watch-official-content
+> p:not(.where-watch-section-eyebrow) {
+  max-width: 830px;
+
+  margin:
+    9px 0
+    0;
+
+  color:
+    var(--where-watch-text);
+
+  font-size: 12.5px;
+  line-height: 1.62;
+}
+
+
+/* =========================================================
+   OFFICIAL SOURCE ACTIONS
+   ========================================================= */
+
+.where-watch-official-actions {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 7px;
+
+  margin-top: 16px;
+}
+
+
+.where-watch-official-actions a {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  min-height: 38px;
+
+  padding:
+    0 13px;
+
+  border:
+    1px solid
+    var(--where-watch-border);
+
+  border-radius: 999px;
+
+  background:
+    var(--where-watch-white);
+
+  color:
+    var(--where-watch-dark);
+
+  font-size: 9.5px;
+  font-weight: 720;
+  line-height: 1.2;
+
+  text-decoration: none;
+
+  transition:
+    transform 150ms ease,
+    border-color 150ms ease,
+    background 150ms ease,
+    color 150ms ease;
+}
+
+
+.where-watch-official-actions a:hover {
+  transform:
+    translateY(-1px);
+
+  border-color:
+    rgba(247, 25, 80, 0.22);
+
+  background:
+    var(--where-watch-pink-soft);
+
+  color:
+    var(--where-watch-pink);
+}
+
+
+.where-watch-official-actions
+span[aria-hidden="true"] {
+  color:
+    var(--where-watch-pink);
+
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   RELATED GLOBAL PAGES
+   ========================================================= */
+
+.where-watch-related-section {
+  padding:
+    58px 0
+    68px;
+
+  border-top:
+    1px solid
+    var(--where-watch-border);
+
+  background:
+    var(--where-watch-white);
+}
+
+
+/* =========================================================
+   RELATED HEADER
+   ========================================================= */
+
+.where-watch-related-header {
+  max-width: 830px;
+
+  margin-bottom: 18px;
+}
+
+
+/* =========================================================
+   RELATED GRID
+   ========================================================= */
+
+.where-watch-related-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0, 1fr)
+    );
+
+  gap: 12px;
+}
+
+
+/* =========================================================
+   RELATED CARD
+   ========================================================= */
+
+.where-watch-related-grid > a {
+  display: grid;
+
+  grid-template-columns:
+    48px
+    minmax(0, 1fr)
+    auto;
+
+  align-items: center;
+
+  gap: 14px;
+
+  min-width: 0;
+
+  padding: 16px;
+
+  border:
+    1px solid
+    var(--where-watch-border);
+
+  border-radius: 16px;
+
+  background:
+    var(--where-watch-bg);
+
+  color:
+    inherit;
+
+  text-decoration: none;
+
+  box-shadow:
+    var(--where-watch-shadow-sm);
+
+  transition:
+    transform 160ms ease,
+    border-color 160ms ease,
+    background 160ms ease,
+    box-shadow 160ms ease;
+}
+
+
+.where-watch-related-grid > a:hover {
+  transform:
+    translateY(-2px);
+
+  border-color:
+    rgba(247, 25, 80, 0.20);
+
+  background:
+    var(--where-watch-white);
+
+  box-shadow:
+    var(--where-watch-shadow-md);
+}
+
+
+/* =========================================================
+   RELATED ICON
+   ========================================================= */
+
+.where-watch-related-icon {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 48px;
+  height: 48px;
+
+  border:
+    1px solid
+    #f2d2da;
+
+  border-radius: 13px;
+
+  background:
+    var(--where-watch-pink-soft);
+
+  color:
+    var(--where-watch-pink);
+}
+
+
+.where-watch-related-icon svg {
+  width: 25px;
+  height: 25px;
+
+  fill: none;
+
+  stroke:
+    currentColor;
+
+  stroke-width: 1.7;
+
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+
+/* =========================================================
+   RELATED COPY
+   ========================================================= */
+
+.where-watch-related-grid h3 {
+  margin: 0;
+
+  color:
+    var(--where-watch-black);
+
+  font-size: 13px;
+  font-weight: 780;
+  line-height: 1.3;
+}
+
+
+.where-watch-related-grid p {
+  margin:
+    4px 0
+    0;
+
+  color:
+    var(--where-watch-muted);
+
+  font-size: 10.5px;
+  line-height: 1.45;
+}
+
+
+.where-watch-related-arrow {
+  flex:
+    0 0 auto;
+
+  color:
+    var(--where-watch-pink);
+
+  font-size: 18px;
+
+  transition:
+    transform 150ms ease;
+}
+
+
+.where-watch-related-grid
+> a:hover
+.where-watch-related-arrow {
+  transform:
+    translateX(2px);
+}
+
+
+/* =========================================================
+   FOCUS STATES
+   ========================================================= */
+
+.where-watch-breadcrumb a:focus-visible,
+.where-watch-option-card a:focus-visible,
+.where-watch-primary-link:focus-visible,
+.where-watch-journey-actions a:focus-visible,
+.where-watch-all-languages-link:focus-visible,
+.where-watch-language-card:focus-visible,
+.where-watch-official-actions a:focus-visible,
+.where-watch-related-grid > a:focus-visible {
+  outline:
+    3px solid
+    rgba(247, 25, 80, 0.22);
+
+  outline-offset: 2px;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   ========================================================= */
+
+@media (min-width: 1280px) {
+
+  .where-watch-journey-layout {
+    gap: 44px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 980px) {
+
+  .where-watch-container {
+    width:
+      min(
+        calc(100% - 44px),
+        var(--where-watch-width)
+      );
+  }
+
+
+  .where-watch-options-grid {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+  }
+
+
+  .where-watch-journey-layout {
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(0, 1fr);
+
+    gap: 26px;
+  }
+
+
+  .where-watch-language-grid {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+  }
+
+
+  .where-watch-language-card:last-child {
+    grid-column:
+      span 2;
+  }
+
+
+  .where-watch-guidance-grid {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+  }
+}
+
+
+/* =========================================================
+   NARROW TABLET
+   ========================================================= */
+
+@media (max-width: 820px) {
+
+  .where-watch-journey-layout {
+    grid-template-columns:
+      1fr;
+
+    gap: 24px;
+  }
+
+
+  .where-watch-secondary-media {
+    max-width: 760px;
+  }
+
+
+  .where-watch-journey-content {
+    max-width: 760px;
+  }
+
+
+  .where-watch-languages-header {
+    align-items: flex-start;
+    flex-direction: column;
+
+    gap: 13px;
+  }
+
+
+  .where-watch-all-languages-link {
+    align-self: flex-start;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 680px) {
+
+  /* -------------------------------------------------------
+     Container
+     ------------------------------------------------------- */
+
+  .where-watch-container {
+    width:
+      calc(100% - 26px);
+  }
+
+
+  /* -------------------------------------------------------
+     Intro
+     ------------------------------------------------------- */
+
+  .where-watch-intro {
+    padding:
+      16px 0
+      14px;
+  }
+
+
+  .where-watch-breadcrumb {
+    gap: 5px;
+
+    margin-bottom: 10px;
+
+    font-size: 9px;
+  }
+
+
+  .where-watch-intro-box {
+    padding:
+      20px 17px
+      20px 20px;
+
+    border-radius:
+      15px 15px 0 0;
+  }
+
+
+  .where-watch-intro-box::before {
+    width: 3px;
+  }
+
+
+  .where-watch-eyebrow {
+    gap: 6px;
+
+    margin-bottom: 6px;
+
+    font-size: 8px;
+  }
+
+
+  .where-watch-eyebrow::before {
+    width: 5px;
+    height: 5px;
+
+    flex-basis: 5px;
+
+    box-shadow:
+      0 0 0 3px
+      rgba(247, 25, 80, 0.07);
+  }
+
+
+  .where-watch-intro-box h1 {
+    font-size:
+      clamp(
+        29px,
+        8.5vw,
+        38px
+      );
+
+    line-height: 1.04;
+  }
+
+
+  .where-watch-intro-text {
+    margin-top: 10px;
+
+    font-size: 12px;
+    line-height: 1.58;
+  }
+
+
+  .where-watch-intro-note {
+    margin-top: 7px;
+
+    font-size: 10.8px;
+    line-height: 1.52;
+  }
+
+
+  /* -------------------------------------------------------
+     Primary image
+     ------------------------------------------------------- */
+
+  .where-watch-primary-media {
+    border-radius:
+      0 0 15px 15px;
+  }
+
+
+  .where-watch-primary-media img {
+    aspect-ratio:
+      16 / 9;
+  }
+
+
+  /* -------------------------------------------------------
+     General headings
+     ------------------------------------------------------- */
+
+  .where-watch-section-eyebrow {
+    margin-bottom: 4px;
+
+    font-size: 7.8px;
+  }
+
+
+  .where-watch-section-header h2,
+  .where-watch-primary-content h2,
+  .where-watch-languages-header h2,
+  .where-watch-guidance-header h2,
+  .where-watch-official-content h2,
+  .where-watch-related-header h2 {
+    font-size: 22px;
+  }
+
+
+  .where-watch-section-header
+  > p:last-child,
+  .where-watch-languages-header
+  > div > p:last-child,
+  .where-watch-guidance-header
+  > p:last-child,
+  .where-watch-related-header
+  > p:last-child {
+    margin-top: 7px;
+
+    font-size: 10.8px;
+    line-height: 1.52;
+  }
+
+
+  /* -------------------------------------------------------
+     Options
+     ------------------------------------------------------- */
+
+  .where-watch-options-section {
+    padding:
+      34px 0
+      40px;
+  }
+
+
+  .where-watch-section-header {
+    margin-bottom: 14px;
+  }
+
+
+  .where-watch-options-grid {
+    grid-template-columns:
+      1fr;
+
+    gap: 9px;
+  }
+
+
+  .where-watch-option-card {
+    grid-template-columns:
+      46px
+      minmax(0, 1fr);
+
+    gap: 12px;
+
+    padding: 14px;
+
+    border-radius: 15px;
+  }
+
+
+  .where-watch-option-icon {
+    width: 46px;
+    height: 46px;
+
+    border-radius: 13px;
+  }
+
+
+  .where-watch-option-icon svg {
+    width: 23px;
+    height: 23px;
+  }
+
+
+  .where-watch-option-label {
+    font-size: 7.5px;
+  }
+
+
+  .where-watch-option-card h3 {
+    font-size: 13px;
+  }
+
+
+  .where-watch-option-card
+  > div:last-child
+  > p:not(.where-watch-option-label) {
+    margin-top: 4px;
+
+    font-size: 10.4px;
+    line-height: 1.48;
+  }
+
+
+  .where-watch-option-card a {
+    margin-top: 8px;
+
+    font-size: 8.8px;
+  }
+
+
+  /* -------------------------------------------------------
+     Primary viewing model
+     ------------------------------------------------------- */
+
+  .where-watch-primary-section {
+    padding-bottom: 46px;
+  }
+
+
+  .where-watch-primary-box {
+    grid-template-columns:
+      54px
+      minmax(0, 1fr);
+
+    gap: 14px;
+
+    padding: 18px;
+
+    border-radius: 16px;
+  }
+
+
+  .where-watch-primary-box::before {
+    width: 3px;
+  }
+
+
+  .where-watch-primary-icon {
+    width: 52px;
+    height: 52px;
+
+    border-radius: 14px;
+  }
+
+
+  .where-watch-primary-icon svg {
+    width: 26px;
+    height: 26px;
+  }
+
+
+  .where-watch-primary-content h2 {
+    font-size: 20px;
+  }
+
+
+  .where-watch-primary-content
+  > p:not(.where-watch-section-eyebrow) {
+    margin-top: 7px;
+
+    font-size: 10.8px;
+    line-height: 1.52;
+  }
+
+
+  .where-watch-primary-link {
+    min-height: 34px;
+
+    margin-top: 12px;
+
+    padding:
+      0 10px;
+
+    font-size: 8.8px;
+  }
+
+
+  /* -------------------------------------------------------
+     Journey
+     ------------------------------------------------------- */
+
+  .where-watch-journey-section {
+    padding:
+      42px 0
+      46px;
+  }
+
+
+  .where-watch-journey-layout {
+    gap: 18px;
+  }
+
+
+  .where-watch-secondary-media {
+    border-radius: 16px;
+  }
+
+
+  .where-watch-secondary-media img {
+    aspect-ratio:
+      16 / 10;
+  }
+
+
+  .where-watch-journey-eyebrow {
+    font-size: 7.8px;
+  }
+
+
+  .where-watch-journey-content h2 {
+    font-size: 22px;
+  }
+
+
+  .where-watch-journey-content
+  > p:not(.where-watch-journey-eyebrow) {
+    margin-top: 8px;
+
+    font-size: 10.8px;
+    line-height: 1.54;
+  }
+
+
+  .where-watch-journey-actions {
+    gap: 6px;
+
+    margin-top: 13px;
+  }
+
+
+  .where-watch-journey-actions a {
+    min-height: 34px;
+
+    padding:
+      0 10px;
+
+    font-size: 8.8px;
+  }
+
+
+  /* -------------------------------------------------------
+     Languages
+     ------------------------------------------------------- */
+
+  .where-watch-languages-section {
+    padding:
+      40px 0
+      46px;
+  }
+
+
+  .where-watch-languages-header {
+    margin-bottom: 14px;
+  }
+
+
+  .where-watch-all-languages-link {
+    min-height: 34px;
+
+    padding:
+      0 10px;
+
+    font-size: 8.8px;
+  }
+
+
+  .where-watch-language-grid {
+    grid-template-columns:
+      1fr;
+
+    gap: 9px;
+  }
+
+
+  .where-watch-language-card:last-child {
+    grid-column: auto;
+  }
+
+
+  .where-watch-language-card {
+    min-height: 190px;
+
+    padding: 15px;
+
+    border-radius: 16px;
+  }
+
+
+  .where-watch-language-code {
+    min-width: 36px;
+    height: 25px;
+
+    padding:
+      0 8px;
+
+    font-size: 8.5px;
+  }
+
+
+  .where-watch-language-status {
+    min-height: 25px;
+
+    padding:
+      0 8px;
+
+    font-size: 8.5px;
+  }
+
+
+  .where-watch-language-main {
+    grid-template-columns:
+      minmax(0, 1fr)
+      52px;
+
+    gap: 10px;
+
+    padding-top: 17px;
+  }
+
+
+  .where-watch-language-label {
+    font-size: 7.8px;
+  }
+
+
+  .where-watch-language-main h3 {
+    font-size: 24px;
+  }
+
+
+  .where-watch-language-main
+  > div > p:last-child {
+    margin-top: 4px;
+
+    font-size: 10px;
+  }
+
+
+  .where-watch-language-main img {
+    width: 52px;
+    height: 52px;
+  }
+
+
+  .where-watch-language-action {
+    margin-top: 10px;
+
+    padding-top: 9px;
+
+    font-size: 8.8px;
+  }
+
+
+  /* -------------------------------------------------------
+     Guidance
+     ------------------------------------------------------- */
+
+  .where-watch-guidance-section {
+    padding:
+      40px 0
+      46px;
+  }
+
+
+  .where-watch-guidance-header {
+    margin-bottom: 14px;
+  }
+
+
+  .where-watch-guidance-grid {
+    grid-template-columns:
+      1fr;
+
+    gap: 9px;
+  }
+
+
+  .where-watch-guidance-card {
+    grid-template-columns:
+      44px
+      minmax(0, 1fr);
+
+    gap: 12px;
+
+    padding: 14px;
+
+    border-radius: 15px;
+  }
+
+
+  .where-watch-guidance-number {
+    width: 44px;
+    height: 44px;
+
+    border-radius: 12px;
+
+    font-size: 9.5px;
+  }
+
+
+  .where-watch-guidance-card h3 {
+    font-size: 12.3px;
+  }
+
+
+  .where-watch-guidance-card p {
+    margin-top: 4px;
+
+    font-size: 10.3px;
+    line-height: 1.48;
+  }
+
+
+  /* -------------------------------------------------------
+     Official source
+     ------------------------------------------------------- */
+
+  .where-watch-official-section {
+    padding:
+      38px 0;
+  }
+
+
+  .where-watch-official-box {
+    grid-template-columns:
+      54px
+      minmax(0, 1fr);
+
+    gap: 14px;
+
+    padding: 18px;
+
+    border-radius: 16px;
+  }
+
+
+  .where-watch-official-box::before {
+    width: 3px;
+  }
+
+
+  .where-watch-official-icon {
+    width: 52px;
+    height: 52px;
+
+    border-radius: 14px;
+  }
+
+
+  .where-watch-official-icon svg {
+    width: 26px;
+    height: 26px;
+  }
+
+
+  .where-watch-official-content
+  > p:not(.where-watch-section-eyebrow) {
+    margin-top: 7px;
+
+    font-size: 10.8px;
+    line-height: 1.52;
+  }
+
+
+  .where-watch-official-actions {
+    gap: 6px;
+
+    margin-top: 12px;
+  }
+
+
+  .where-watch-official-actions a {
+    min-height: 34px;
+
+    padding:
+      0 10px;
+
+    font-size: 8.8px;
+  }
+
+
+  /* -------------------------------------------------------
+     Related
+     ------------------------------------------------------- */
+
+  .where-watch-related-section {
+    padding:
+      40px 0
+      48px;
+  }
+
+
+  .where-watch-related-header {
+    margin-bottom: 13px;
+  }
+
+
+  .where-watch-related-grid {
+    grid-template-columns:
+      1fr;
+
+    gap: 8px;
+  }
+
+
+  .where-watch-related-grid > a {
+    grid-template-columns:
+      42px
+      minmax(0, 1fr)
+      auto;
+
+    gap: 11px;
+
+    padding: 13px;
+
+    border-radius: 14px;
+  }
+
+
+  .where-watch-related-icon {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 12px;
+  }
+
+
+  .where-watch-related-icon svg {
+    width: 22px;
+    height: 22px;
+  }
+
+
+  .where-watch-related-grid h3 {
+    font-size: 11.5px;
+  }
+
+
+  .where-watch-related-grid p {
+    margin-top: 3px;
+
+    font-size: 9.8px;
+  }
+
+
+  .where-watch-related-arrow {
+    font-size: 16px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 390px) {
+
+  .where-watch-container {
+    width:
+      calc(100% - 22px);
+  }
+
+
+  .where-watch-intro-box {
+    padding:
+      18px 15px
+      18px 18px;
+  }
+
+
+  .where-watch-intro-box h1 {
+    font-size: 28px;
+  }
+
+
+  .where-watch-intro-text {
+    font-size: 11.5px;
+  }
+
+
+  .where-watch-intro-note {
+    font-size: 10.4px;
+  }
+
+
+  .where-watch-section-header h2,
+  .where-watch-primary-content h2,
+  .where-watch-languages-header h2,
+  .where-watch-guidance-header h2,
+  .where-watch-official-content h2,
+  .where-watch-related-header h2 {
+    font-size: 20px;
+  }
+
+
+  .where-watch-option-card {
+    grid-template-columns:
+      42px
+      minmax(0, 1fr);
+
+    gap: 10px;
+
+    padding:
+      13px 12px;
+  }
+
+
+  .where-watch-option-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+
+  .where-watch-option-icon svg {
+    width: 21px;
+    height: 21px;
+  }
+
+
+  .where-watch-primary-box {
+    grid-template-columns:
+      1fr;
+
+    gap: 12px;
+
+    padding: 17px;
+  }
+
+
+  .where-watch-primary-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+
+  .where-watch-secondary-media img {
+    aspect-ratio:
+      4 / 3;
+  }
+
+
+  .where-watch-language-main {
+    grid-template-columns:
+      minmax(0, 1fr)
+      48px;
+  }
+
+
+  .where-watch-language-main img {
+    width: 48px;
+    height: 48px;
+  }
+
+
+  .where-watch-language-main h3 {
+    font-size: 22px;
+  }
+
+
+  .where-watch-guidance-card {
+    grid-template-columns:
+      42px
+      minmax(0, 1fr);
+
+    gap: 10px;
+
+    padding:
+      13px 12px;
+  }
+
+
+  .where-watch-guidance-number {
+    width: 42px;
+    height: 42px;
+  }
+
+
+  .where-watch-official-box {
+    grid-template-columns:
+      1fr;
+
+    gap: 12px;
+
+    padding: 17px;
+  }
+
+
+  .where-watch-official-icon {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 340px) {
+
+  .where-watch-container {
+    width:
+      calc(100% - 18px);
+  }
+
+
+  .where-watch-intro-box h1 {
+    font-size: 26px;
+  }
+
+
+  .where-watch-option-card {
+    grid-template-columns:
+      40px
+      minmax(0, 1fr);
+
+    gap: 9px;
+
+    padding:
+      12px 10px;
+  }
+
+
+  .where-watch-option-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+
+  .where-watch-option-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+
+  .where-watch-primary-link {
+    width: 100%;
+
+    justify-content: space-between;
+  }
+
+
+  .where-watch-journey-actions {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+
+  .where-watch-journey-actions a {
+    width: 100%;
+
+    justify-content: space-between;
+  }
+
+
+  .where-watch-all-languages-link {
+    width: 100%;
+  }
+
+
+  .where-watch-language-main {
+    grid-template-columns:
+      minmax(0, 1fr)
+      44px;
+  }
+
+
+  .where-watch-language-main img {
+    width: 44px;
+    height: 44px;
+  }
+
+
+  .where-watch-guidance-card {
+    grid-template-columns:
+      40px
+      minmax(0, 1fr);
+  }
+
+
+  .where-watch-guidance-number {
+    width: 40px;
+    height: 40px;
+  }
+
+
+  .where-watch-official-actions {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+
+  .where-watch-official-actions a {
+    width: 100%;
+
+    justify-content: space-between;
+  }
+
+
+  .where-watch-related-grid > a {
+    grid-template-columns:
+      38px
+      minmax(0, 1fr)
+      auto;
+
+    gap: 9px;
+  }
+
+
+  .where-watch-related-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+
+  .where-watch-related-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .where-watch-breadcrumb a,
+  .where-watch-option-card,
+  .where-watch-option-card a span[aria-hidden="true"],
+  .where-watch-primary-link,
+  .where-watch-journey-actions a,
+  .where-watch-all-languages-link,
+  .where-watch-language-card,
+  .where-watch-language-action
+  > span:last-child,
+  .where-watch-guidance-card,
+  .where-watch-official-actions a,
+  .where-watch-related-grid > a,
+  .where-watch-related-arrow {
+    transition:
+      none !important;
+  }
+
+
+  .where-watch-option-card:hover,
+  .where-watch-primary-link:hover,
+  .where-watch-journey-actions a:hover,
+  .where-watch-all-languages-link:hover,
+  .where-watch-language-card:hover,
+  .where-watch-guidance-card:hover,
+  .where-watch-official-actions a:hover,
+  .where-watch-related-grid > a:hover {
+    transform:
+      none;
+  }
+
+
+  .where-watch-option-card
+  a:hover
+  span[aria-hidden="true"],
+  .where-watch-language-card:hover
+  .where-watch-language-action
+  > span:last-child,
+  .where-watch-related-grid
+  > a:hover
+  .where-watch-related-arrow {
+    transform:
+      none;
+  }
+}
+
+
+/* =========================================================
+   HIGH CONTRAST
+   ========================================================= */
+
+@media (prefers-contrast: more) {
+
+  .where-watch-intro-box,
+  .where-watch-primary-media,
+  .where-watch-option-card,
+  .where-watch-primary-box,
+  .where-watch-primary-link,
+  .where-watch-secondary-media,
+  .where-watch-journey-actions a,
+  .where-watch-all-languages-link,
+  .where-watch-language-card,
+  .where-watch-guidance-card,
+  .where-watch-official-box,
+  .where-watch-official-actions a,
+  .where-watch-related-grid > a {
+    border-color:
+      #bcc1c9;
+  }
+
+
+  .where-watch-intro-text,
+  .where-watch-intro-note,
+  .where-watch-section-header
+  > p:last-child,
+  .where-watch-option-card
+  > div:last-child
+  > p:not(.where-watch-option-label),
+  .where-watch-primary-content
+  > p:not(.where-watch-section-eyebrow),
+  .where-watch-journey-content
+  > p:not(.where-watch-journey-eyebrow),
+  .where-watch-languages-header
+  > div > p:last-child,
+  .where-watch-language-main
+  > div > p:last-child,
+  .where-watch-guidance-header
+  > p:last-child,
+  .where-watch-guidance-card p,
+  .where-watch-official-content
+  > p:not(.where-watch-section-eyebrow),
+  .where-watch-related-header
+  > p:last-child,
+  .where-watch-related-grid p {
+    color:
+      #444850;
+  }
+}
+
+
+/* =========================================================
+   PRINT
+   ========================================================= */
+
+@media print {
+
+  .where-watch-page,
+  .where-watch-intro,
+  .where-watch-options-section,
+  .where-watch-primary-section,
+  .where-watch-journey-section,
+  .where-watch-languages-section,
+  .where-watch-guidance-section,
+  .where-watch-official-section,
+  .where-watch-related-section {
+    background:
+      #ffffff !important;
+  }
+
+
+  .where-watch-container {
+    width: 100%;
+  }
+
+
+  .where-watch-intro,
+  .where-watch-options-section,
+  .where-watch-primary-section,
+  .where-watch-journey-section,
+  .where-watch-languages-section,
+  .where-watch-guidance-section,
+  .where-watch-official-section,
+  .where-watch-related-section {
+    padding:
+      25px 20px;
+  }
+
+
+  .where-watch-breadcrumb,
+  .where-watch-all-languages-link {
+    display: none;
+  }
+
+
+  .where-watch-intro-box,
+  .where-watch-primary-media,
+  .where-watch-option-card,
+  .where-watch-primary-box,
+  .where-watch-secondary-media,
+  .where-watch-language-card,
+  .where-watch-guidance-card,
+  .where-watch-official-box,
+  .where-watch-related-grid > a {
+    box-shadow:
+      none;
+  }
+
+
+  .where-watch-options-grid {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+  }
+
+
+  .where-watch-journey-layout {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+  }
+
+
+  .where-watch-language-grid {
+    grid-template-columns:
+      repeat(
+        3,
+        minmax(0, 1fr)
+      );
+  }
+
+
+  .where-watch-language-card:last-child {
+    grid-column:
+      auto;
+  }
+
+
+  .where-watch-guidance-grid {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+  }
+
+
+  .where-watch-related-grid {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+  }
+
+
+  .where-watch-primary-media,
+  .where-watch-secondary-media,
+  .where-watch-option-card,
+  .where-watch-primary-box,
+  .where-watch-language-card,
+  .where-watch-guidance-card,
+  .where-watch-official-box,
+  .where-watch-related-grid > a {
+    break-inside:
+      avoid;
+  }
+}

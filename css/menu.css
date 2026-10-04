@@ -1,0 +1,1506 @@
+/* =========================================================
+   SalimGPT Global
+   File: css/menu.css
+
+   Shared Side Menu / Drawer
+
+   Final mobile direction:
+   - Drawer opens from right
+   - Mobile / tablet width = 75vw
+   - Approximately 3/4 of screen
+   - Remaining 25% stays visible with dark overlay
+   - Drawer top bar matches main top bar proportions
+   - Compact logo / branding / close button
+   ========================================================= */
+
+
+/* =========================================================
+   OVERLAY
+   ========================================================= */
+
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+
+  z-index: var(--sg-z-overlay, 1100);
+
+  visibility: hidden;
+  opacity: 0;
+
+  background: rgba(17, 18, 22, 0.58);
+
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+
+  transition:
+    opacity 240ms ease,
+    visibility 240ms ease;
+}
+
+
+.menu-overlay.is-visible,
+body.menu-open .menu-overlay {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+/* =========================================================
+   SIDE MENU
+   ========================================================= */
+
+.side-menu {
+  position: fixed;
+
+  top: 0;
+  right: 0;
+  bottom: 0;
+
+  z-index: var(--sg-z-menu, 1200);
+
+  width: 455px;
+  max-width: 100vw;
+
+  height: 100dvh;
+
+  visibility: hidden;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  color: #25272c;
+
+  border-left: 1px solid #dfe6ee;
+
+  box-shadow:
+    -20px 0 54px
+    rgba(17, 18, 22, 0.18);
+
+  transform: translateX(104%);
+
+  transition:
+    transform 280ms cubic-bezier(0.22, 1, 0.36, 1),
+    visibility 280ms ease;
+}
+
+
+.side-menu.is-open,
+body.menu-open .side-menu {
+  visibility: visible;
+
+  transform: translateX(0);
+}
+
+
+/* =========================================================
+   INNER
+   ========================================================= */
+
+.side-menu-inner {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  height: 100%;
+
+  min-height: 0;
+
+  background: #ffffff;
+}
+
+
+/* =========================================================
+   MENU HEADER
+   ========================================================= */
+
+.side-menu-header {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 12px;
+
+  flex: 0 0 auto;
+
+  min-height: 78px;
+
+  padding:
+    max(10px, env(safe-area-inset-top))
+    14px
+    10px;
+
+  border-bottom: 1px solid #dce6ef;
+
+  background: #f2f7fd;
+}
+
+
+/* =========================================================
+   SIDE MENU BRAND
+   ========================================================= */
+
+.side-menu-brand {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  min-width: 0;
+
+  color: inherit;
+
+  text-decoration: none;
+
+  border-radius: 12px;
+}
+
+
+.side-menu-brand:hover {
+  text-decoration: none;
+}
+
+
+.side-menu-brand:focus-visible {
+  outline:
+    3px solid
+    rgba(247, 25, 80, 0.22);
+
+  outline-offset: 3px;
+}
+
+
+/* =========================================================
+   SIDE MENU LOGO
+   ========================================================= */
+
+.side-menu-logo {
+  display: block;
+
+  width: 47px;
+  height: 47px;
+
+  flex: 0 0 47px;
+
+  object-fit: contain;
+
+  user-select: none;
+  -webkit-user-drag: none;
+
+  filter:
+    drop-shadow(
+      0 3px 6px
+      rgba(17, 18, 22, 0.11)
+    );
+}
+
+
+/* =========================================================
+   BRAND COPY
+   ========================================================= */
+
+.side-menu-brand-copy {
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+
+  gap: 3px;
+}
+
+
+.side-menu-brand-name {
+  display: inline-flex;
+  align-items: baseline;
+
+  min-width: 0;
+
+  white-space: nowrap;
+
+  font-size: 21px;
+  font-weight: 820;
+
+  line-height: 1;
+
+  letter-spacing: -0.045em;
+}
+
+
+.side-menu-brand-name .brand-salim {
+  color: #111216;
+}
+
+
+.side-menu-brand-name .brand-gpt {
+  color: #f71950;
+}
+
+
+.side-menu-brand-tagline {
+  color: #747b86;
+
+  font-size: 9px;
+  font-weight: 600;
+
+  line-height: 1.25;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   CLOSE BUTTON
+   ========================================================= */
+
+.menu-close-button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 46px;
+  height: 46px;
+
+  flex: 0 0 46px;
+
+  padding: 0;
+
+  border: 1px solid #d8dfe7;
+  border-radius: 14px;
+
+  background: #ffffff;
+
+  color: #111216;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 2px 6px
+    rgba(17, 18, 22, 0.025);
+
+  transition:
+    color 160ms ease,
+    border-color 160ms ease,
+    background 160ms ease;
+}
+
+
+.menu-close-button:hover {
+  border-color: #f2bdca;
+
+  background: #fff0f4;
+
+  color: #f71950;
+}
+
+
+.menu-close-button:active {
+  background: #ffe6ec;
+}
+
+
+.menu-close-button svg {
+  width: 22px;
+  height: 22px;
+
+  fill: none;
+
+  stroke: currentColor;
+  stroke-width: 1.9;
+
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+
+/* =========================================================
+   SEARCH AREA
+   ========================================================= */
+
+.side-menu-search {
+  position: relative;
+
+  flex: 0 0 auto;
+
+  padding:
+    12px 13px;
+
+  border-bottom:
+    1px solid
+    #e6ebf0;
+
+  background: #ffffff;
+}
+
+
+/* =========================================================
+   SEARCH FIELD
+   ========================================================= */
+
+.side-menu-search-field {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+
+  min-height: 46px;
+
+  border:
+    1px solid
+    #d8dee7;
+
+  border-radius: 13px;
+
+  background: #ffffff;
+
+  transition:
+    border-color 170ms ease,
+    box-shadow 170ms ease;
+}
+
+
+.side-menu-search-field:focus-within {
+  border-color:
+    rgba(247, 25, 80, 0.46);
+
+  box-shadow:
+    0 0 0 3px
+    rgba(247, 25, 80, 0.07);
+}
+
+
+.side-menu-search-field > svg {
+  position: absolute;
+
+  top: 50%;
+  left: 13px;
+
+  width: 18px;
+  height: 18px;
+
+  transform:
+    translateY(-50%);
+
+  fill: none;
+
+  stroke: #858c97;
+  stroke-width: 1.8;
+
+  stroke-linecap: round;
+  stroke-linejoin: round;
+
+  pointer-events: none;
+}
+
+
+.side-menu-search-field input {
+  width: 100%;
+  height: 44px;
+
+  padding:
+    0 10px
+    0 41px;
+
+  border: 0;
+  outline: 0;
+
+  border-radius: inherit;
+
+  background: transparent;
+
+  color: #111216;
+
+  font-size: 12px;
+  font-weight: 550;
+}
+
+
+.side-menu-search-field input::placeholder {
+  color: #9aa0aa;
+
+  opacity: 1;
+}
+
+
+/* =========================================================
+   SEARCH RESULTS
+   ========================================================= */
+
+.global-search-results {
+  position: absolute;
+
+  top:
+    calc(100% - 3px);
+
+  left: 13px;
+  right: 13px;
+
+  z-index: 20;
+
+  max-height: 290px;
+
+  overflow-y: auto;
+
+  padding: 7px;
+
+  border:
+    1px solid
+    #e1e5ea;
+
+  border-radius: 12px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 16px 42px
+    rgba(17, 18, 22, 0.15);
+}
+
+
+.global-search-results[hidden] {
+  display: none !important;
+}
+
+
+.global-search-results a {
+  display: block;
+
+  padding:
+    9px 10px;
+
+  border-radius: 8px;
+
+  color: #373a40;
+
+  font-size: 11px;
+  font-weight: 650;
+
+  line-height: 1.4;
+
+  text-decoration: none;
+}
+
+
+.global-search-results a:hover {
+  background: #fff0f4;
+
+  color: #f71950;
+}
+
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.side-menu-navigation {
+  flex: 1 1 auto;
+
+  min-height: 0;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  padding:
+    13px 12px
+    20px;
+
+  background: #ffffff;
+
+  overscroll-behavior: contain;
+
+  scrollbar-width: thin;
+
+  scrollbar-color:
+    #c7ccd3
+    transparent;
+}
+
+
+.side-menu-navigation::-webkit-scrollbar {
+  width: 6px;
+}
+
+
+.side-menu-navigation::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+
+.side-menu-navigation::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+
+  background: #c7ccd3;
+}
+
+
+/* =========================================================
+   MENU SECTION
+   ========================================================= */
+
+.side-menu-section {
+  position: relative;
+
+  padding-bottom: 13px;
+
+  margin-bottom: 13px;
+
+  border-bottom:
+    1px solid
+    #e3e6ea;
+}
+
+
+.side-menu-section:last-child {
+  margin-bottom: 0;
+
+  border-bottom: 0;
+}
+
+
+/* =========================================================
+   SECTION TITLE
+   ========================================================= */
+
+.side-menu-section-title {
+  margin:
+    0 0
+    7px;
+
+  padding:
+    0 2px;
+
+  color: #9096a0;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  line-height: 1.35;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   MENU ENTRY / GROUP TOGGLE
+   ========================================================= */
+
+.menu-entry,
+.side-menu-group-toggle {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns:
+    43px
+    minmax(0, 1fr)
+    20px;
+
+  align-items: center;
+
+  gap: 9px;
+
+  width: 100%;
+
+  min-height: 56px;
+
+  margin:
+    0 0
+    5px;
+
+  padding:
+    6px 7px
+    6px 6px;
+
+  border:
+    1px solid
+    transparent;
+
+  border-radius: 14px;
+
+  background: transparent;
+
+  color: #27292e;
+
+  text-align: left;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition:
+    color 160ms ease,
+    background 160ms ease,
+    border-color 160ms ease;
+}
+
+
+.menu-entry:hover,
+.side-menu-group-toggle:hover {
+  border-color: #e7e9ed;
+
+  background: #fafbfc;
+}
+
+
+.menu-entry:focus-visible,
+.side-menu-group-toggle:focus-visible {
+  outline:
+    3px solid
+    rgba(247, 25, 80, 0.20);
+
+  outline-offset: 2px;
+}
+
+
+/* =========================================================
+   ICON TILE
+   ========================================================= */
+
+.menu-icon-tile {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 43px;
+  height: 43px;
+
+  flex: 0 0 43px;
+
+  border-radius: 13px;
+
+  background: #f1f3f6;
+
+  color: #626873;
+
+  transition:
+    color 160ms ease,
+    background 160ms ease;
+}
+
+
+.menu-icon-tile svg {
+  width: 22px;
+  height: 22px;
+
+  fill: none;
+
+  stroke: currentColor;
+  stroke-width: 1.8;
+
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+
+/* =========================================================
+   LABEL
+   ========================================================= */
+
+.menu-entry-label {
+  min-width: 0;
+
+  color: inherit;
+
+  font-size: 12px;
+  font-weight: 760;
+
+  line-height: 1.25;
+
+  letter-spacing: -0.01em;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   CHEVRON
+   ========================================================= */
+
+.menu-chevron {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 20px;
+  height: 32px;
+
+  color: #afb3ba;
+
+  font-family:
+    Arial,
+    sans-serif;
+
+  font-size: 24px;
+  font-weight: 300;
+
+  line-height: 1;
+
+  transition:
+    color 160ms ease,
+    transform 180ms ease;
+}
+
+
+/* =========================================================
+   ACTIVE ENTRY
+   ========================================================= */
+
+.menu-entry.is-active,
+.menu-entry[aria-current="page"] {
+  border-color: #f4bdcb;
+
+  background: #fff0f4;
+
+  color: #d81448;
+}
+
+
+.menu-entry.is-active
+.menu-icon-tile,
+.menu-entry[aria-current="page"]
+.menu-icon-tile {
+  background: #ff1754;
+
+  color: #ffffff;
+}
+
+
+.menu-entry.is-active
+.menu-chevron,
+.menu-entry[aria-current="page"]
+.menu-chevron {
+  color: #e5164d;
+}
+
+
+/* =========================================================
+   GROUP
+   ========================================================= */
+
+.side-menu-group {
+  margin: 0;
+}
+
+
+.side-menu-group-toggle[aria-expanded="true"] {
+  border-color: #f5c5d0;
+
+  background: #fff4f6;
+
+  color: #d81448;
+}
+
+
+.side-menu-group-toggle[aria-expanded="true"]
+.menu-icon-tile {
+  background: #ff1754;
+
+  color: #ffffff;
+}
+
+
+.side-menu-group-toggle[aria-expanded="true"]
+.menu-chevron {
+  color: #e5164d;
+
+  transform: rotate(90deg);
+}
+
+
+/* =========================================================
+   SUBMENU
+   ========================================================= */
+
+.side-menu-submenu {
+  display: flex;
+  flex-direction: column;
+
+  gap: 2px;
+
+  margin:
+    2px 0
+    9px
+    51px;
+
+  padding:
+    5px 0
+    3px
+    9px;
+
+  border-left:
+    2px solid
+    #f0d2d9;
+}
+
+
+.side-menu-submenu[hidden] {
+  display: none !important;
+}
+
+
+/* =========================================================
+   SUBMENU LINKS
+   ========================================================= */
+
+.side-menu-submenu a {
+  display: flex;
+  align-items: center;
+
+  min-height: 33px;
+
+  padding:
+    6px 7px;
+
+  border-radius: 8px;
+
+  color: #666c75;
+
+  font-size: 10px;
+  font-weight: 650;
+
+  line-height: 1.35;
+
+  text-decoration: none;
+
+  overflow-wrap: anywhere;
+
+  transition:
+    color 150ms ease,
+    background 150ms ease;
+}
+
+
+.side-menu-submenu a::before {
+  content: "";
+
+  width: 4px;
+  height: 4px;
+
+  flex: 0 0 4px;
+
+  margin-right: 7px;
+
+  border-radius: 50%;
+
+  background: #c5c9d0;
+}
+
+
+.side-menu-submenu a:hover {
+  background: #f8f9fb;
+
+  color: #f71950;
+}
+
+
+.side-menu-submenu a:hover::before {
+  background: #f71950;
+}
+
+
+.side-menu-submenu a.is-active,
+.side-menu-submenu a[aria-current="page"] {
+  background: #fff0f4;
+
+  color: #d81448;
+
+  font-weight: 750;
+}
+
+
+.side-menu-submenu a.is-active::before,
+.side-menu-submenu a[aria-current="page"]::before {
+  background: #f71950;
+}
+
+
+/* =========================================================
+   MENU FOOTER
+   ========================================================= */
+
+.side-menu-footer {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 8px;
+
+  flex: 0 0 auto;
+
+  min-height: 60px;
+
+  padding:
+    11px 13px
+    max(11px, env(safe-area-inset-bottom));
+
+  border-top:
+    1px solid
+    #dce6ef;
+
+  background: #f2f7fd;
+
+  color: #727985;
+
+  font-size: 9px;
+  font-weight: 600;
+
+  line-height: 1.35;
+}
+
+
+.side-menu-footer span {
+  min-width: 0;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   DESKTOP
+   ========================================================= */
+
+@media (min-width: 821px) {
+
+  .side-menu {
+    width:
+      min(
+        455px,
+        75vw
+      );
+  }
+}
+
+
+/* =========================================================
+   TABLET
+   3 / 4 SCREEN WIDTH
+   ========================================================= */
+
+@media (max-width: 820px) {
+
+  .side-menu {
+    width: 75vw;
+    max-width: 75vw;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .menu-overlay {
+    background:
+      rgba(17, 18, 22, 0.61);
+
+    backdrop-filter:
+      blur(5px);
+
+    -webkit-backdrop-filter:
+      blur(5px);
+  }
+
+
+  /* -------------------------------------------------------
+     Drawer = 3/4 screen
+     ------------------------------------------------------- */
+
+  .side-menu {
+    width: 75vw;
+    max-width: 75vw;
+
+    min-width: 0;
+  }
+
+
+  /* -------------------------------------------------------
+     Header
+     Keep visually close to main top bar
+     ------------------------------------------------------- */
+
+  .side-menu-header {
+    min-height: 78px;
+
+    gap: 8px;
+
+    padding:
+      max(9px, env(safe-area-inset-top))
+      10px
+      9px;
+  }
+
+
+  .side-menu-brand {
+    gap: 8px;
+  }
+
+
+  .side-menu-logo {
+    width: 43px;
+    height: 43px;
+
+    flex-basis: 43px;
+  }
+
+
+  .side-menu-brand-copy {
+    gap: 2px;
+  }
+
+
+  .side-menu-brand-name {
+    font-size: 19px;
+  }
+
+
+  .side-menu-brand-tagline {
+    font-size: 8.5px;
+  }
+
+
+  .menu-close-button {
+    width: 44px;
+    height: 44px;
+
+    flex-basis: 44px;
+
+    border-radius: 13px;
+  }
+
+
+  .menu-close-button svg {
+    width: 21px;
+    height: 21px;
+  }
+
+
+  /* -------------------------------------------------------
+     Search
+     ------------------------------------------------------- */
+
+  .side-menu-search {
+    padding:
+      10px 9px;
+  }
+
+
+  .side-menu-search-field {
+    min-height: 44px;
+
+    border-radius: 12px;
+  }
+
+
+  .side-menu-search-field > svg {
+    left: 12px;
+
+    width: 17px;
+    height: 17px;
+  }
+
+
+  .side-menu-search-field input {
+    height: 42px;
+
+    padding:
+      0 8px
+      0 37px;
+
+    font-size: 11px;
+  }
+
+
+  .global-search-results {
+    left: 9px;
+    right: 9px;
+
+    max-height: 250px;
+  }
+
+
+  /* -------------------------------------------------------
+     Navigation
+     ------------------------------------------------------- */
+
+  .side-menu-navigation {
+    padding:
+      10px 8px
+      16px;
+  }
+
+
+  .side-menu-section {
+    margin-bottom: 11px;
+
+    padding-bottom: 11px;
+  }
+
+
+  .side-menu-section-title {
+    margin-bottom: 5px;
+
+    font-size: 9px;
+  }
+
+
+  .menu-entry,
+  .side-menu-group-toggle {
+    grid-template-columns:
+      40px
+      minmax(0, 1fr)
+      18px;
+
+    gap: 7px;
+
+    min-height: 52px;
+
+    margin-bottom: 4px;
+
+    padding:
+      5px 6px
+      5px 4px;
+
+    border-radius: 12px;
+  }
+
+
+  .menu-icon-tile {
+    width: 40px;
+    height: 40px;
+
+    flex-basis: 40px;
+
+    border-radius: 11px;
+  }
+
+
+  .menu-icon-tile svg {
+    width: 20px;
+    height: 20px;
+  }
+
+
+  .menu-entry-label {
+    font-size: 11px;
+
+    line-height: 1.22;
+  }
+
+
+  .menu-chevron {
+    width: 18px;
+    height: 28px;
+
+    font-size: 22px;
+  }
+
+
+  /* -------------------------------------------------------
+     Submenu
+     ------------------------------------------------------- */
+
+  .side-menu-submenu {
+    margin:
+      1px 0
+      7px
+      46px;
+
+    padding:
+      4px 0
+      2px
+      7px;
+  }
+
+
+  .side-menu-submenu a {
+    min-height: 31px;
+
+    padding:
+      5px 6px;
+
+    font-size: 9px;
+
+    line-height: 1.3;
+  }
+
+
+  /* -------------------------------------------------------
+     Footer
+     ------------------------------------------------------- */
+
+  .side-menu-footer {
+    min-height: 55px;
+
+    padding:
+      9px 10px
+      max(9px, env(safe-area-inset-bottom));
+
+    font-size: 8px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+  .side-menu {
+    width: 75vw;
+    max-width: 75vw;
+  }
+
+
+  .side-menu-header {
+    min-height: 74px;
+
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+
+  .side-menu-logo {
+    width: 40px;
+    height: 40px;
+
+    flex-basis: 40px;
+  }
+
+
+  .side-menu-brand {
+    gap: 7px;
+  }
+
+
+  .side-menu-brand-name {
+    font-size: 17px;
+  }
+
+
+  .side-menu-brand-tagline {
+    font-size: 7.5px;
+  }
+
+
+  .menu-close-button {
+    width: 40px;
+    height: 40px;
+
+    flex-basis: 40px;
+
+    border-radius: 12px;
+  }
+
+
+  .menu-close-button svg {
+    width: 19px;
+    height: 19px;
+  }
+
+
+  .side-menu-search {
+    padding:
+      8px 7px;
+  }
+
+
+  .side-menu-navigation {
+    padding:
+      9px 6px
+      14px;
+  }
+
+
+  .menu-entry,
+  .side-menu-group-toggle {
+    grid-template-columns:
+      38px
+      minmax(0, 1fr)
+      17px;
+
+    gap: 6px;
+
+    min-height: 49px;
+  }
+
+
+  .menu-icon-tile {
+    width: 38px;
+    height: 38px;
+
+    flex-basis: 38px;
+
+    border-radius: 11px;
+  }
+
+
+  .menu-icon-tile svg {
+    width: 19px;
+    height: 19px;
+  }
+
+
+  .menu-entry-label {
+    font-size: 10px;
+  }
+
+
+  .menu-chevron {
+    width: 17px;
+
+    font-size: 21px;
+  }
+
+
+  .side-menu-submenu {
+    margin-left: 43px;
+  }
+
+
+  .side-menu-footer {
+    flex-direction: column;
+
+    align-items: flex-start;
+    justify-content: center;
+
+    gap: 2px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 340px) {
+
+  .side-menu {
+    width: 75vw;
+    max-width: 75vw;
+  }
+
+
+  .side-menu-header {
+    min-height: 70px;
+
+    gap: 5px;
+
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+
+
+  .side-menu-logo {
+    width: 36px;
+    height: 36px;
+
+    flex-basis: 36px;
+  }
+
+
+  .side-menu-brand-name {
+    font-size: 15px;
+  }
+
+
+  .side-menu-brand-tagline {
+    font-size: 7px;
+  }
+
+
+  .menu-close-button {
+    width: 36px;
+    height: 36px;
+
+    flex-basis: 36px;
+  }
+
+
+  .menu-close-button svg {
+    width: 18px;
+    height: 18px;
+  }
+
+
+  .menu-entry-label {
+    font-size: 9.5px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .menu-overlay,
+  .side-menu,
+  .menu-entry,
+  .side-menu-group-toggle,
+  .menu-icon-tile,
+  .menu-chevron,
+  .menu-close-button,
+  .side-menu-search-field,
+  .side-menu-submenu a {
+    transition: none !important;
+  }
+}
+
+
+/* =========================================================
+   HIGH CONTRAST
+   ========================================================= */
+
+@media (prefers-contrast: more) {
+
+  .side-menu {
+    border-left-color: #aeb5be;
+  }
+
+
+  .side-menu-header,
+  .side-menu-footer {
+    border-color: #bfc6ce;
+  }
+
+
+  .menu-entry,
+  .side-menu-group-toggle {
+    color: #111216;
+  }
+
+
+  .side-menu-section-title {
+    color: #626872;
+  }
+
+
+  .side-menu-submenu a {
+    color: #3e4249;
+  }
+}
+
+
+/* =========================================================
+   PRINT
+   ========================================================= */
+
+@media print {
+
+  .menu-overlay,
+  .side-menu {
+    display: none !important;
+  }
+}

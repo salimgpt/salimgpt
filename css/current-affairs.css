@@ -1,0 +1,3058 @@
+/* =========================================================
+   SalimGPT Global
+   File: css/current-affairs.css
+
+   Current Affairs Topic Page
+   - Editorial introduction
+   - Primary page/share image
+   - Current affairs scope cards
+   - Open-ended current affairs scope
+   - Secondary supporting image
+   - Research and source-context section
+   - Documentary principles
+   - Language edition cards
+   - Related topic navigation
+
+   Shared:
+   - global.css
+   - header.css
+   - menu.css
+   - footer.css
+   ========================================================= */
+
+
+/* =========================================================
+   PAGE VARIABLES
+   ========================================================= */
+
+:root {
+  --current-affairs-pink: #f71950;
+  --current-affairs-pink-dark: #d90e40;
+  --current-affairs-pink-soft: #fff0f4;
+
+  --current-affairs-blue: #087cf0;
+  --current-affairs-blue-soft: #eef6ff;
+
+  --current-affairs-black: #111216;
+  --current-affairs-dark: #202126;
+  --current-affairs-text: #565d68;
+  --current-affairs-muted: #7d8490;
+
+  --current-affairs-bg: #f7f8fa;
+  --current-affairs-bg-soft: #f1f3f6;
+  --current-affairs-white: #ffffff;
+
+  --current-affairs-border: #e5e8ed;
+  --current-affairs-border-strong: #d7dbe2;
+
+  --current-affairs-width: 1180px;
+
+  --current-affairs-shadow-sm:
+    0 4px 14px rgba(17, 18, 22, 0.035);
+
+  --current-affairs-shadow-md:
+    0 10px 28px rgba(17, 18, 22, 0.065);
+
+  --current-affairs-shadow-lg:
+    0 16px 40px rgba(17, 18, 22, 0.08);
+}
+
+
+/* =========================================================
+   PAGE
+   ========================================================= */
+
+.current-affairs-page {
+  width: 100%;
+  overflow: hidden;
+
+  background:
+    var(--current-affairs-bg);
+
+  color:
+    var(--current-affairs-dark);
+}
+
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.current-affairs-container {
+  width:
+    min(
+      calc(100% - 48px),
+      var(--current-affairs-width)
+    );
+
+  margin-inline: auto;
+}
+
+
+/* =========================================================
+   INTRO SECTION
+   ========================================================= */
+
+.current-affairs-intro {
+  padding:
+    28px 0
+    22px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #f9fafb 0%,
+      #f7f8fa 100%
+    );
+}
+
+
+/* =========================================================
+   BREADCRUMB
+   ========================================================= */
+
+.current-affairs-breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  gap: 6px;
+
+  margin:
+    0 0
+    13px;
+
+  color:
+    var(--current-affairs-muted);
+
+  font-size: 11px;
+  font-weight: 650;
+  line-height: 1.4;
+}
+
+
+.current-affairs-breadcrumb a {
+  color:
+    #626975;
+
+  text-decoration: none;
+
+  transition:
+    color 150ms ease;
+}
+
+
+.current-affairs-breadcrumb a:hover {
+  color:
+    var(--current-affairs-pink);
+}
+
+
+.current-affairs-breadcrumb
+span[aria-hidden="true"] {
+  color:
+    #c2c6cd;
+}
+
+
+.current-affairs-breadcrumb
+[aria-current="page"] {
+  color:
+    var(--current-affairs-dark);
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   INTRO BOX
+   ========================================================= */
+
+.current-affairs-intro-box {
+  position: relative;
+
+  overflow: hidden;
+
+  padding:
+    30px 32px;
+
+  border:
+    1px solid
+    var(--current-affairs-border);
+
+  border-radius:
+    18px 18px 0 0;
+
+  background:
+    var(--current-affairs-white);
+
+  box-shadow:
+    var(--current-affairs-shadow-sm);
+}
+
+
+.current-affairs-intro-box::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 4px;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      180deg,
+      var(--current-affairs-pink),
+      var(--current-affairs-pink-dark)
+    );
+}
+
+
+.current-affairs-intro-copy {
+  max-width: 890px;
+}
+
+
+/* =========================================================
+   INTRO EYEBROW
+   ========================================================= */
+
+.current-affairs-eyebrow {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 7px;
+
+  margin:
+    0 0
+    8px;
+
+  color:
+    var(--current-affairs-pink);
+
+  font-size: 10px;
+  font-weight: 800;
+  line-height: 1.3;
+
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+
+.current-affairs-eyebrow::before {
+  content: "";
+
+  width: 6px;
+  height: 6px;
+
+  flex:
+    0 0 6px;
+
+  border-radius: 50%;
+
+  background:
+    var(--current-affairs-pink);
+
+  box-shadow:
+    0 0 0 4px
+    rgba(247, 25, 80, 0.07);
+}
+
+
+/* =========================================================
+   INTRO TITLE
+   ========================================================= */
+
+.current-affairs-intro-box h1 {
+  max-width: 880px;
+
+  margin: 0;
+
+  color:
+    var(--current-affairs-black);
+
+  font-size:
+    clamp(
+      36px,
+      4.5vw,
+      54px
+    );
+
+  font-weight: 850;
+  line-height: 1.03;
+
+  letter-spacing:
+    -0.045em;
+
+  text-align: left;
+}
+
+
+/* =========================================================
+   INTRO TEXT
+   ========================================================= */
+
+.current-affairs-intro-text {
+  max-width: 840px;
+
+  margin:
+    14px 0
+    0;
+
+  color:
+    var(--current-affairs-text);
+
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.68;
+
+  text-align: left;
+  text-wrap: pretty;
+}
+
+
+.current-affairs-intro-note {
+  max-width: 860px;
+
+  margin:
+    9px 0
+    0;
+
+  color:
+    var(--current-affairs-muted);
+
+  font-size: 12.5px;
+  line-height: 1.6;
+
+  text-align: left;
+}
+
+
+/* =========================================================
+   PRIMARY IMAGE
+   ========================================================= */
+
+.current-affairs-primary-media {
+  position: relative;
+
+  width: 100%;
+
+  margin: 0;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    var(--current-affairs-border);
+
+  border-top: 0;
+
+  border-radius:
+    0 0 18px 18px;
+
+  background:
+    #eceff3;
+
+  box-shadow:
+    var(--current-affairs-shadow-sm);
+}
+
+
+.current-affairs-primary-media::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  box-shadow:
+    inset 0 0 0 1px
+    rgba(255, 255, 255, 0.12);
+}
+
+
+.current-affairs-primary-media img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  aspect-ratio:
+    1200 / 630;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+
+/* =========================================================
+   CURRENT AFFAIRS SCOPE SECTION
+   ========================================================= */
+
+.current-affairs-scope-section {
+  padding:
+    54px 0
+    66px;
+
+  background:
+    var(--current-affairs-bg);
+}
+
+
+/* =========================================================
+   SECTION HEADER
+   ========================================================= */
+
+.current-affairs-section-header {
+  max-width: 860px;
+
+  margin-bottom: 20px;
+}
+
+
+.current-affairs-section-eyebrow {
+  margin:
+    0 0
+    6px;
+
+  color:
+    var(--current-affairs-pink);
+
+  font-size: 9px;
+  font-weight: 800;
+  line-height: 1.3;
+
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+
+.current-affairs-section-header h2,
+.current-affairs-principles-header h2,
+.current-affairs-languages-header h2,
+.current-affairs-related-header h2 {
+  margin: 0;
+
+  color:
+    var(--current-affairs-black);
+
+  font-size:
+    clamp(
+      26px,
+      3.1vw,
+      36px
+    );
+
+  font-weight: 820;
+  line-height: 1.1;
+
+  letter-spacing:
+    -0.032em;
+}
+
+
+.current-affairs-section-header
+> p:last-child,
+.current-affairs-principles-header
+> p:last-child,
+.current-affairs-related-header
+> p:last-child {
+  max-width: 800px;
+
+  margin:
+    9px 0
+    0;
+
+  color:
+    var(--current-affairs-muted);
+
+  font-size: 12.5px;
+  line-height: 1.62;
+}
+
+
+/* =========================================================
+   SCOPE GRID
+   ========================================================= */
+
+.current-affairs-scope-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      3,
+      minmax(0, 1fr)
+    );
+
+  gap: 14px;
+}
+
+
+/* =========================================================
+   SCOPE CARD
+   ========================================================= */
+
+.current-affairs-scope-card {
+  min-width: 0;
+
+  padding: 20px;
+
+  border:
+    1px solid
+    var(--current-affairs-border);
+
+  border-radius: 18px;
+
+  background:
+    var(--current-affairs-white);
+
+  box-shadow:
+    var(--current-affairs-shadow-sm);
+
+  transition:
+    transform 170ms ease,
+    border-color 170ms ease,
+    box-shadow 170ms ease;
+}
+
+
+.current-affairs-scope-card:hover {
+  transform:
+    translateY(-2px);
+
+  border-color:
+    rgba(247, 25, 80, 0.18);
+
+  box-shadow:
+    var(--current-affairs-shadow-md);
+}
+
+
+/* =========================================================
+   SCOPE ICON
+   ========================================================= */
+
+.current-affairs-scope-icon {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 50px;
+  height: 50px;
+
+  margin-bottom: 15px;
+
+  border:
+    1px solid
+    #f2d2da;
+
+  border-radius: 14px;
+
+  background:
+    var(--current-affairs-pink-soft);
+
+  color:
+    var(--current-affairs-pink);
+}
+
+
+.current-affairs-scope-icon svg {
+  width: 26px;
+  height: 26px;
+
+  fill: none;
+
+  stroke:
+    currentColor;
+
+  stroke-width: 1.7;
+
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+
+/* =========================================================
+   SCOPE CARD COPY
+   ========================================================= */
+
+.current-affairs-scope-card h3 {
+  margin: 0;
+
+  color:
+    var(--current-affairs-black);
+
+  font-size: 15px;
+  font-weight: 780;
+  line-height: 1.3;
+}
+
+
+.current-affairs-scope-card p {
+  margin:
+    7px 0
+    0;
+
+  color:
+    var(--current-affairs-muted);
+
+  font-size: 11.5px;
+  line-height: 1.56;
+}
+
+
+/* =========================================================
+   OPEN-ENDED CURRENT AFFAIRS SCOPE
+   ========================================================= */
+
+.current-affairs-scope-note {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns:
+    64px
+    minmax(0, 1fr);
+
+  align-items: start;
+
+  gap: 19px;
+
+  margin-top: 22px;
+
+  padding:
+    24px;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    rgba(8, 124, 240, 0.16);
+
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff 0%,
+      #f6faff 100%
+    );
+
+  box-shadow:
+    var(--current-affairs-shadow-sm);
+}
+
+
+.current-affairs-scope-note::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 4px;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      180deg,
+      var(--current-affairs-blue),
+      #5a9fff
+    );
+}
+
+
+/* =========================================================
+   SCOPE NOTE ICON
+   ========================================================= */
+
+.current-affairs-scope-note-icon {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 60px;
+  height: 60px;
+
+  border:
+    1px solid
+    #d7eaff;
+
+  border-radius: 16px;
+
+  background:
+    var(--current-affairs-blue-soft);
+
+  color:
+    var(--current-affairs-blue);
+}
+
+
+.current-affairs-scope-note-icon svg {
+  width: 31px;
+  height: 31px;
+
+  fill: none;
+
+  stroke:
+    currentColor;
+
+  stroke-width: 1.7;
+
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+
+/* =========================================================
+   SCOPE NOTE COPY
+   ========================================================= */
+
+.current-affairs-scope-note-eyebrow {
+  margin:
+    0 0
+    5px;
+
+  color:
+    var(--current-affairs-blue);
+
+  font-size: 8.5px;
+  font-weight: 800;
+  line-height: 1.3;
+
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+
+.current-affairs-scope-note h2 {
+  margin: 0;
+
+  color:
+    var(--current-affairs-black);
+
+  font-size:
+    clamp(
+      22px,
+      2.7vw,
+      30px
+    );
+
+  font-weight: 820;
+  line-height: 1.13;
+
+  letter-spacing:
+    -0.025em;
+}
+
+
+.current-affairs-scope-note
+> div:last-child
+> p:last-child {
+  max-width: 920px;
+
+  margin:
+    9px 0
+    0;
+
+  color:
+    var(--current-affairs-text);
+
+  font-size: 12px;
+  line-height: 1.62;
+}
+
+
+/* =========================================================
+   RESEARCH SECTION
+   ========================================================= */
+
+.current-affairs-research-section {
+  padding:
+    66px 0;
+
+  border-top:
+    1px solid
+    var(--current-affairs-border);
+
+  background:
+    var(--current-affairs-white);
+}
+
+
+/* =========================================================
+   RESEARCH LAYOUT
+   ========================================================= */
+
+.current-affairs-research-layout {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.04fr)
+    minmax(0, 0.96fr);
+
+  align-items: center;
+
+  gap: 38px;
+}
+
+
+/* =========================================================
+   SECONDARY IMAGE
+   ========================================================= */
+
+.current-affairs-secondary-media {
+  position: relative;
+
+  width: 100%;
+
+  margin: 0;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    var(--current-affairs-border);
+
+  border-radius: 20px;
+
+  background:
+    #eceff3;
+
+  box-shadow:
+    var(--current-affairs-shadow-md);
+}
+
+
+.current-affairs-secondary-media::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  box-shadow:
+    inset 0 0 0 1px
+    rgba(255, 255, 255, 0.12);
+}
+
+
+.current-affairs-secondary-media img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  aspect-ratio:
+    3 / 2;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+
+/* =========================================================
+   RESEARCH CONTENT
+   ========================================================= */
+
+.current-affairs-research-content {
+  min-width: 0;
+}
+
+
+.current-affairs-research-eyebrow {
+  margin:
+    0 0
+    6px;
+
+  color:
+    var(--current-affairs-pink);
+
+  font-size: 9px;
+  font-weight: 800;
+  line-height: 1.3;
+
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+
+.current-affairs-research-content h2 {
+  max-width: 600px;
+
+  margin: 0;
+
+  color:
+    var(--current-affairs-black);
+
+  font-size:
+    clamp(
+      27px,
+      3.4vw,
+      39px
+    );
+
+  font-weight: 830;
+  line-height: 1.08;
+
+  letter-spacing:
+    -0.035em;
+}
+
+
+.current-affairs-research-content
+> p:not(.current-affairs-research-eyebrow) {
+  max-width: 650px;
+
+  margin:
+    11px 0
+    0;
+
+  color:
+    var(--current-affairs-text);
+
+  font-size: 12.5px;
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   RESEARCH ACTIONS
+   ========================================================= */
+
+.current-affairs-research-actions {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 7px;
+
+  margin-top: 18px;
+}
+
+
+.current-affairs-research-actions a {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  min-height: 37px;
+
+  padding:
+    0 12px;
+
+  border:
+    1px solid
+    var(--current-affairs-border);
+
+  border-radius: 999px;
+
+  background:
+    var(--current-affairs-white);
+
+  color:
+    var(--current-affairs-dark);
+
+  font-size: 9.5px;
+  font-weight: 700;
+  line-height: 1.2;
+
+  text-decoration: none;
+
+  transition:
+    color 150ms ease,
+    background 150ms ease,
+    border-color 150ms ease,
+    transform 150ms ease;
+}
+
+
+.current-affairs-research-actions a:hover {
+  transform:
+    translateY(-1px);
+
+  border-color:
+    rgba(247, 25, 80, 0.22);
+
+  background:
+    var(--current-affairs-pink-soft);
+
+  color:
+    var(--current-affairs-pink);
+}
+
+
+.current-affairs-research-actions
+a span[aria-hidden="true"] {
+  color:
+    var(--current-affairs-pink);
+
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   CURRENT AFFAIRS PRINCIPLES SECTION
+   ========================================================= */
+
+.current-affairs-principles-section {
+  padding:
+    58px 0
+    64px;
+
+  border-top:
+    1px solid
+    var(--current-affairs-border);
+
+  background:
+    var(--current-affairs-bg);
+}
+
+
+/* =========================================================
+   PRINCIPLES HEADER
+   ========================================================= */
+
+.current-affairs-principles-header {
+  max-width: 880px;
+
+  margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   PRINCIPLES GRID
+   ========================================================= */
+
+.current-affairs-principles-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0, 1fr)
+    );
+
+  gap: 12px;
+}
+
+
+/* =========================================================
+   PRINCIPLE CARD
+   ========================================================= */
+
+.current-affairs-principle-card {
+  display: grid;
+
+  grid-template-columns:
+    48px
+    minmax(0, 1fr);
+
+  align-items: start;
+
+  gap: 15px;
+
+  min-width: 0;
+
+  padding: 20px;
+
+  border:
+    1px solid
+    var(--current-affairs-border);
+
+  border-radius: 18px;
+
+  background:
+    var(--current-affairs-white);
+
+  box-shadow:
+    var(--current-affairs-shadow-sm);
+
+  transition:
+    transform 170ms ease,
+    border-color 170ms ease,
+    box-shadow 170ms ease;
+}
+
+
+.current-affairs-principle-card:hover {
+  transform:
+    translateY(-2px);
+
+  border-color:
+    rgba(247, 25, 80, 0.18);
+
+  box-shadow:
+    var(--current-affairs-shadow-md);
+}
+
+
+/* =========================================================
+   PRINCIPLE NUMBER
+   ========================================================= */
+
+.current-affairs-principle-number {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 48px;
+  height: 48px;
+
+  border:
+    1px solid
+    #f2d2da;
+
+  border-radius: 14px;
+
+  background:
+    var(--current-affairs-pink-soft);
+
+  color:
+    var(--current-affairs-pink);
+
+  font-size: 11px;
+  font-weight: 850;
+  line-height: 1;
+
+  letter-spacing: 0.05em;
+}
+
+
+/* =========================================================
+   PRINCIPLE COPY
+   ========================================================= */
+
+.current-affairs-principle-card h3 {
+  margin: 0;
+
+  color:
+    var(--current-affairs-black);
+
+  font-size: 14px;
+  font-weight: 790;
+  line-height: 1.35;
+}
+
+
+.current-affairs-principle-card p {
+  margin:
+    6px 0
+    0;
+
+  color:
+    var(--current-affairs-muted);
+
+  font-size: 11px;
+  line-height: 1.55;
+}
+
+
+/* =========================================================
+   LANGUAGE EDITIONS SECTION
+   ========================================================= */
+
+.current-affairs-languages-section {
+  padding:
+    58px 0
+    64px;
+
+  border-top:
+    1px solid
+    var(--current-affairs-border);
+
+  background:
+    var(--current-affairs-white);
+}
+
+
+/* =========================================================
+   LANGUAGE HEADER
+   ========================================================= */
+
+.current-affairs-languages-header {
+  display: flex;
+
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 26px;
+
+  margin-bottom: 18px;
+}
+
+
+.current-affairs-languages-header > div {
+  min-width: 0;
+}
+
+
+.current-affairs-languages-header
+> div > p:last-child {
+  max-width: 680px;
+
+  margin:
+    8px 0
+    0;
+
+  color:
+    var(--current-affairs-muted);
+
+  font-size: 11.5px;
+  line-height: 1.55;
+}
+
+
+/* =========================================================
+   ALL LANGUAGES LINK
+   ========================================================= */
+
+.current-affairs-all-languages-link {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  flex:
+    0 0 auto;
+
+  min-height: 38px;
+
+  padding:
+    0 13px;
+
+  border:
+    1px solid
+    var(--current-affairs-border);
+
+  border-radius: 999px;
+
+  background:
+    var(--current-affairs-white);
+
+  color:
+    var(--current-affairs-dark);
+
+  font-size: 9.5px;
+  font-weight: 700;
+  line-height: 1;
+
+  text-decoration: none;
+
+  transition:
+    border-color 150ms ease,
+    background 150ms ease,
+    color 150ms ease,
+    transform 150ms ease;
+}
+
+
+.current-affairs-all-languages-link:hover {
+  transform:
+    translateY(-1px);
+
+  border-color:
+    rgba(247, 25, 80, 0.24);
+
+  background:
+    var(--current-affairs-pink-soft);
+
+  color:
+    var(--current-affairs-pink);
+}
+
+
+.current-affairs-all-languages-link
+span[aria-hidden="true"] {
+  color:
+    var(--current-affairs-pink);
+
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   LANGUAGE GRID
+   ========================================================= */
+
+.current-affairs-language-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      3,
+      minmax(0, 1fr)
+    );
+
+  gap: 14px;
+}
+
+
+/* =========================================================
+   LANGUAGE CARD
+   ========================================================= */
+
+.current-affairs-language-card {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+  min-height: 214px;
+
+  padding: 18px;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    var(--current-affairs-border);
+
+  border-radius: 18px;
+
+  background:
+    var(--current-affairs-white);
+
+  color:
+    inherit;
+
+  text-decoration: none;
+
+  box-shadow:
+    var(--current-affairs-shadow-sm);
+
+  isolation: isolate;
+
+  transition:
+    transform 170ms ease,
+    border-color 170ms ease,
+    box-shadow 170ms ease;
+}
+
+
+.current-affairs-language-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: -95px;
+  right: -95px;
+
+  width: 200px;
+  height: 200px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(247, 25, 80, 0.07),
+      rgba(247, 25, 80, 0.016) 48%,
+      transparent 70%
+    );
+
+  z-index: -1;
+
+  pointer-events: none;
+}
+
+
+.current-affairs-language-card:hover {
+  transform:
+    translateY(-3px);
+
+  border-color:
+    rgba(247, 25, 80, 0.20);
+
+  box-shadow:
+    var(--current-affairs-shadow-md);
+}
+
+
+/* =========================================================
+   LANGUAGE CARD TOP
+   ========================================================= */
+
+.current-affairs-language-card-top {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 10px;
+}
+
+
+.current-affairs-language-code {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-width: 40px;
+  height: 27px;
+
+  padding:
+    0 9px;
+
+  border:
+    1px solid
+    #f2d0d8;
+
+  border-radius: 999px;
+
+  background:
+    var(--current-affairs-pink-soft);
+
+  color:
+    var(--current-affairs-pink);
+
+  font-size: 9px;
+  font-weight: 800;
+  line-height: 1;
+
+  letter-spacing: 0.07em;
+}
+
+
+.current-affairs-language-status {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 27px;
+
+  padding:
+    0 9px;
+
+  border:
+    1px solid
+    #d7eadc;
+
+  border-radius: 999px;
+
+  background:
+    #effaf3;
+
+  color:
+    #268447;
+
+  font-size: 9px;
+  font-weight: 750;
+  line-height: 1;
+}
+
+
+/* =========================================================
+   LANGUAGE MAIN
+   ========================================================= */
+
+.current-affairs-language-main {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    58px;
+
+  align-items: center;
+
+  gap: 14px;
+
+  flex:
+    1 1 auto;
+
+  min-width: 0;
+
+  padding-top: 20px;
+
+  direction: ltr;
+}
+
+
+.current-affairs-language-main > div {
+  min-width: 0;
+}
+
+
+.current-affairs-language-main h3 {
+  margin: 0;
+
+  color:
+    var(--current-affairs-black);
+
+  font-size:
+    clamp(
+      25px,
+      2.6vw,
+      33px
+    );
+
+  font-weight: 820;
+  line-height: 1.05;
+
+  letter-spacing:
+    -0.03em;
+}
+
+
+.current-affairs-language-main p {
+  margin:
+    6px 0
+    0;
+
+  color:
+    var(--current-affairs-muted);
+
+  font-size: 10.7px;
+  line-height: 1.46;
+}
+
+
+.current-affairs-language-main img {
+  display: block;
+
+  width: 58px;
+  height: 58px;
+
+  justify-self: end;
+
+  object-fit: contain;
+
+  user-select: none;
+
+  -webkit-user-drag: none;
+
+  filter:
+    drop-shadow(
+      0 5px 9px
+      rgba(17, 18, 22, 0.09)
+    );
+}
+
+
+/* =========================================================
+   LANGUAGE ACTION
+   ========================================================= */
+
+.current-affairs-language-action {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 8px;
+
+  margin-top: 14px;
+
+  padding-top: 11px;
+
+  border-top:
+    1px solid
+    #eef0f3;
+
+  color:
+    var(--current-affairs-pink);
+
+  font-size: 9.5px;
+  font-weight: 750;
+  line-height: 1.3;
+}
+
+
+.current-affairs-language-action
+> span:last-child {
+  flex:
+    0 0 auto;
+
+  font-size: 15px;
+
+  transition:
+    transform 150ms ease;
+}
+
+
+.current-affairs-language-card:hover
+.current-affairs-language-action
+> span:last-child {
+  transform:
+    translateX(2px);
+}
+
+
+/* =========================================================
+   LANGUAGE FONT SUPPORT
+   ========================================================= */
+
+.current-affairs-language-card[lang="bn"] {
+  font-family:
+    "Hind Siliguri",
+    "Noto Sans Bengali",
+    "Nirmala UI",
+    system-ui,
+    sans-serif;
+}
+
+
+.current-affairs-language-card[lang="hi"] {
+  font-family:
+    "Noto Sans Devanagari",
+    "Nirmala UI",
+    system-ui,
+    sans-serif;
+}
+
+
+/* =========================================================
+   RELATED TOPICS SECTION
+   ========================================================= */
+
+.current-affairs-related-section {
+  padding:
+    58px 0
+    68px;
+
+  border-top:
+    1px solid
+    var(--current-affairs-border);
+
+  background:
+    var(--current-affairs-bg);
+}
+
+
+/* =========================================================
+   RELATED HEADER
+   ========================================================= */
+
+.current-affairs-related-header {
+  max-width: 820px;
+
+  margin-bottom: 18px;
+}
+
+
+/* =========================================================
+   RELATED GRID
+   ========================================================= */
+
+.current-affairs-related-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0, 1fr)
+    );
+
+  gap: 12px;
+}
+
+
+/* =========================================================
+   RELATED CARD
+   ========================================================= */
+
+.current-affairs-related-grid > a {
+  display: grid;
+
+  grid-template-columns:
+    48px
+    minmax(0, 1fr)
+    auto;
+
+  align-items: center;
+
+  gap: 14px;
+
+  min-width: 0;
+
+  padding: 16px;
+
+  border:
+    1px solid
+    var(--current-affairs-border);
+
+  border-radius: 16px;
+
+  background:
+    var(--current-affairs-white);
+
+  color:
+    inherit;
+
+  text-decoration: none;
+
+  box-shadow:
+    var(--current-affairs-shadow-sm);
+
+  transition:
+    transform 160ms ease,
+    border-color 160ms ease,
+    box-shadow 160ms ease;
+}
+
+
+.current-affairs-related-grid > a:hover {
+  transform:
+    translateY(-2px);
+
+  border-color:
+    rgba(247, 25, 80, 0.20);
+
+  box-shadow:
+    var(--current-affairs-shadow-md);
+}
+
+
+/* =========================================================
+   RELATED ICON
+   ========================================================= */
+
+.current-affairs-related-icon {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 48px;
+  height: 48px;
+
+  border:
+    1px solid
+    #f2d2da;
+
+  border-radius: 13px;
+
+  background:
+    var(--current-affairs-pink-soft);
+
+  color:
+    var(--current-affairs-pink);
+}
+
+
+.current-affairs-related-icon svg {
+  width: 25px;
+  height: 25px;
+
+  fill: none;
+
+  stroke:
+    currentColor;
+
+  stroke-width: 1.7;
+
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+
+/* =========================================================
+   RELATED COPY
+   ========================================================= */
+
+.current-affairs-related-grid h3 {
+  margin: 0;
+
+  color:
+    var(--current-affairs-black);
+
+  font-size: 13px;
+  font-weight: 780;
+  line-height: 1.3;
+}
+
+
+.current-affairs-related-grid p {
+  margin:
+    4px 0
+    0;
+
+  color:
+    var(--current-affairs-muted);
+
+  font-size: 10.5px;
+  line-height: 1.45;
+}
+
+
+.current-affairs-related-arrow {
+  flex:
+    0 0 auto;
+
+  color:
+    var(--current-affairs-pink);
+
+  font-size: 18px;
+
+  transition:
+    transform 150ms ease;
+}
+
+
+.current-affairs-related-grid
+> a:hover
+.current-affairs-related-arrow {
+  transform:
+    translateX(2px);
+}
+
+
+/* =========================================================
+   VIEW ALL TOPICS
+   ========================================================= */
+
+.current-affairs-all-topics {
+  display: flex;
+
+  justify-content: flex-start;
+
+  margin-top: 17px;
+}
+
+
+.current-affairs-all-topics a {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  min-height: 40px;
+
+  padding:
+    0 14px;
+
+  border:
+    1px solid
+    var(--current-affairs-border);
+
+  border-radius: 999px;
+
+  background:
+    var(--current-affairs-white);
+
+  color:
+    var(--current-affairs-dark);
+
+  font-size: 10px;
+  font-weight: 720;
+  line-height: 1;
+
+  text-decoration: none;
+
+  transition:
+    transform 150ms ease,
+    color 150ms ease,
+    background 150ms ease,
+    border-color 150ms ease;
+}
+
+
+.current-affairs-all-topics a:hover {
+  transform:
+    translateY(-1px);
+
+  border-color:
+    rgba(247, 25, 80, 0.22);
+
+  background:
+    var(--current-affairs-pink-soft);
+
+  color:
+    var(--current-affairs-pink);
+}
+
+
+.current-affairs-all-topics
+span[aria-hidden="true"] {
+  color:
+    var(--current-affairs-pink);
+
+  font-size: 15px;
+}
+
+
+/* =========================================================
+   FOCUS STATES
+   ========================================================= */
+
+.current-affairs-breadcrumb a:focus-visible,
+.current-affairs-research-actions a:focus-visible,
+.current-affairs-all-languages-link:focus-visible,
+.current-affairs-language-card:focus-visible,
+.current-affairs-related-grid > a:focus-visible,
+.current-affairs-all-topics a:focus-visible {
+  outline:
+    3px solid
+    rgba(247, 25, 80, 0.22);
+
+  outline-offset: 2px;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   ========================================================= */
+
+@media (min-width: 1280px) {
+
+  .current-affairs-research-layout {
+    gap: 44px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 980px) {
+
+  .current-affairs-container {
+    width:
+      min(
+        calc(100% - 44px),
+        var(--current-affairs-width)
+      );
+  }
+
+
+  .current-affairs-scope-grid {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+  }
+
+
+  .current-affairs-research-layout {
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(0, 1fr);
+
+    gap: 26px;
+  }
+
+
+  .current-affairs-principles-grid {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+  }
+
+
+  .current-affairs-language-grid {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+  }
+
+
+  .current-affairs-language-card:last-child {
+    grid-column:
+      span 2;
+  }
+}
+
+
+/* =========================================================
+   NARROW TABLET
+   ========================================================= */
+
+@media (max-width: 820px) {
+
+  .current-affairs-research-layout {
+    grid-template-columns:
+      1fr;
+
+    gap: 24px;
+  }
+
+
+  .current-affairs-secondary-media {
+    max-width: 760px;
+  }
+
+
+  .current-affairs-research-content {
+    max-width: 760px;
+  }
+
+
+  .current-affairs-languages-header {
+    align-items: flex-start;
+    flex-direction: column;
+
+    gap: 13px;
+  }
+
+
+  .current-affairs-all-languages-link {
+    align-self: flex-start;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 680px) {
+
+  /* -------------------------------------------------------
+     Container
+     ------------------------------------------------------- */
+
+  .current-affairs-container {
+    width:
+      calc(100% - 26px);
+  }
+
+
+  /* -------------------------------------------------------
+     Intro
+     ------------------------------------------------------- */
+
+  .current-affairs-intro {
+    padding:
+      16px 0
+      14px;
+  }
+
+
+  .current-affairs-breadcrumb {
+    gap: 5px;
+
+    margin-bottom: 10px;
+
+    font-size: 9px;
+  }
+
+
+  .current-affairs-intro-box {
+    padding:
+      20px 17px
+      20px 20px;
+
+    border-radius:
+      15px 15px 0 0;
+  }
+
+
+  .current-affairs-intro-box::before {
+    width: 3px;
+  }
+
+
+  .current-affairs-eyebrow {
+    gap: 6px;
+
+    margin-bottom: 6px;
+
+    font-size: 8px;
+  }
+
+
+  .current-affairs-eyebrow::before {
+    width: 5px;
+    height: 5px;
+
+    flex-basis: 5px;
+
+    box-shadow:
+      0 0 0 3px
+      rgba(247, 25, 80, 0.07);
+  }
+
+
+  .current-affairs-intro-box h1 {
+    font-size:
+      clamp(
+        29px,
+        8.5vw,
+        38px
+      );
+
+    line-height: 1.04;
+  }
+
+
+  .current-affairs-intro-text {
+    margin-top: 10px;
+
+    font-size: 12px;
+    line-height: 1.58;
+  }
+
+
+  .current-affairs-intro-note {
+    margin-top: 7px;
+
+    font-size: 10.8px;
+    line-height: 1.52;
+  }
+
+
+  /* -------------------------------------------------------
+     Primary image
+     ------------------------------------------------------- */
+
+  .current-affairs-primary-media {
+    border-radius:
+      0 0 15px 15px;
+  }
+
+
+  .current-affairs-primary-media img {
+    aspect-ratio:
+      16 / 9;
+  }
+
+
+  /* -------------------------------------------------------
+     Scope
+     ------------------------------------------------------- */
+
+  .current-affairs-scope-section {
+    padding:
+      34px 0
+      46px;
+  }
+
+
+  .current-affairs-section-header {
+    margin-bottom: 14px;
+  }
+
+
+  .current-affairs-section-eyebrow {
+    margin-bottom: 4px;
+
+    font-size: 7.8px;
+  }
+
+
+  .current-affairs-section-header h2,
+  .current-affairs-principles-header h2,
+  .current-affairs-languages-header h2,
+  .current-affairs-related-header h2 {
+    font-size: 22px;
+  }
+
+
+  .current-affairs-section-header
+  > p:last-child,
+  .current-affairs-principles-header
+  > p:last-child,
+  .current-affairs-related-header
+  > p:last-child,
+  .current-affairs-languages-header
+  > div > p:last-child {
+    margin-top: 7px;
+
+    font-size: 10.8px;
+    line-height: 1.52;
+  }
+
+
+  .current-affairs-scope-grid {
+    grid-template-columns:
+      1fr;
+
+    gap: 9px;
+  }
+
+
+  .current-affairs-scope-card {
+    display: grid;
+
+    grid-template-columns:
+      46px
+      minmax(0, 1fr);
+
+    align-items: start;
+
+    column-gap: 12px;
+
+    padding: 14px;
+
+    border-radius: 15px;
+  }
+
+
+  .current-affairs-scope-icon {
+    grid-row:
+      1 / span 2;
+
+    width: 46px;
+    height: 46px;
+
+    margin: 0;
+
+    border-radius: 13px;
+  }
+
+
+  .current-affairs-scope-icon svg {
+    width: 23px;
+    height: 23px;
+  }
+
+
+  .current-affairs-scope-card h3 {
+    font-size: 12.5px;
+  }
+
+
+  .current-affairs-scope-card p {
+    margin-top: 4px;
+
+    font-size: 10.4px;
+    line-height: 1.48;
+  }
+
+
+  /* -------------------------------------------------------
+     Open-ended scope
+     ------------------------------------------------------- */
+
+  .current-affairs-scope-note {
+    grid-template-columns:
+      52px
+      minmax(0, 1fr);
+
+    gap: 14px;
+
+    margin-top: 16px;
+
+    padding: 18px;
+
+    border-radius: 16px;
+  }
+
+
+  .current-affairs-scope-note::before {
+    width: 3px;
+  }
+
+
+  .current-affairs-scope-note-icon {
+    width: 50px;
+    height: 50px;
+
+    border-radius: 14px;
+  }
+
+
+  .current-affairs-scope-note-icon svg {
+    width: 26px;
+    height: 26px;
+  }
+
+
+  .current-affairs-scope-note-eyebrow {
+    font-size: 7.5px;
+  }
+
+
+  .current-affairs-scope-note h2 {
+    font-size: 20px;
+  }
+
+
+  .current-affairs-scope-note
+  > div:last-child
+  > p:last-child {
+    margin-top: 7px;
+
+    font-size: 10.8px;
+    line-height: 1.52;
+  }
+
+
+  /* -------------------------------------------------------
+     Research
+     ------------------------------------------------------- */
+
+  .current-affairs-research-section {
+    padding:
+      42px 0
+      46px;
+  }
+
+
+  .current-affairs-research-layout {
+    gap: 18px;
+  }
+
+
+  .current-affairs-secondary-media {
+    border-radius: 16px;
+  }
+
+
+  .current-affairs-secondary-media img {
+    aspect-ratio:
+      16 / 10;
+  }
+
+
+  .current-affairs-research-eyebrow {
+    font-size: 7.8px;
+  }
+
+
+  .current-affairs-research-content h2 {
+    font-size: 22px;
+  }
+
+
+  .current-affairs-research-content
+  > p:not(.current-affairs-research-eyebrow) {
+    margin-top: 8px;
+
+    font-size: 10.8px;
+    line-height: 1.54;
+  }
+
+
+  .current-affairs-research-actions {
+    gap: 6px;
+
+    margin-top: 13px;
+  }
+
+
+  .current-affairs-research-actions a {
+    min-height: 34px;
+
+    padding:
+      0 10px;
+
+    font-size: 8.8px;
+  }
+
+
+  /* -------------------------------------------------------
+     Principles
+     ------------------------------------------------------- */
+
+  .current-affairs-principles-section {
+    padding:
+      40px 0
+      46px;
+  }
+
+
+  .current-affairs-principles-header {
+    margin-bottom: 14px;
+  }
+
+
+  .current-affairs-principles-grid {
+    grid-template-columns:
+      1fr;
+
+    gap: 9px;
+  }
+
+
+  .current-affairs-principle-card {
+    grid-template-columns:
+      44px
+      minmax(0, 1fr);
+
+    gap: 12px;
+
+    padding: 14px;
+
+    border-radius: 15px;
+  }
+
+
+  .current-affairs-principle-number {
+    width: 44px;
+    height: 44px;
+
+    border-radius: 12px;
+
+    font-size: 9.5px;
+  }
+
+
+  .current-affairs-principle-card h3 {
+    font-size: 12.3px;
+  }
+
+
+  .current-affairs-principle-card p {
+    margin-top: 4px;
+
+    font-size: 10.3px;
+    line-height: 1.48;
+  }
+
+
+  /* -------------------------------------------------------
+     Languages
+     ------------------------------------------------------- */
+
+  .current-affairs-languages-section {
+    padding:
+      40px 0
+      46px;
+  }
+
+
+  .current-affairs-languages-header {
+    margin-bottom: 14px;
+  }
+
+
+  .current-affairs-all-languages-link {
+    min-height: 34px;
+
+    padding:
+      0 10px;
+
+    font-size: 8.8px;
+  }
+
+
+  .current-affairs-language-grid {
+    grid-template-columns:
+      1fr;
+
+    gap: 9px;
+  }
+
+
+  .current-affairs-language-card:last-child {
+    grid-column: auto;
+  }
+
+
+  .current-affairs-language-card {
+    min-height: 174px;
+
+    padding: 15px;
+
+    border-radius: 16px;
+  }
+
+
+  .current-affairs-language-code {
+    min-width: 36px;
+    height: 25px;
+
+    padding:
+      0 8px;
+
+    font-size: 8.5px;
+  }
+
+
+  .current-affairs-language-status {
+    min-height: 25px;
+
+    padding:
+      0 8px;
+
+    font-size: 8.5px;
+  }
+
+
+  .current-affairs-language-main {
+    grid-template-columns:
+      minmax(0, 1fr)
+      52px;
+
+    gap: 10px;
+
+    padding-top: 17px;
+  }
+
+
+  .current-affairs-language-main h3 {
+    font-size: 24px;
+  }
+
+
+  .current-affairs-language-main p {
+    margin-top: 4px;
+
+    font-size: 10px;
+  }
+
+
+  .current-affairs-language-main img {
+    width: 52px;
+    height: 52px;
+  }
+
+
+  .current-affairs-language-action {
+    margin-top: 10px;
+
+    padding-top: 9px;
+
+    font-size: 8.8px;
+  }
+
+
+  /* -------------------------------------------------------
+     Related Topics
+     ------------------------------------------------------- */
+
+  .current-affairs-related-section {
+    padding:
+      40px 0
+      48px;
+  }
+
+
+  .current-affairs-related-header {
+    margin-bottom: 13px;
+  }
+
+
+  .current-affairs-related-grid {
+    grid-template-columns:
+      1fr;
+
+    gap: 8px;
+  }
+
+
+  .current-affairs-related-grid > a {
+    grid-template-columns:
+      42px
+      minmax(0, 1fr)
+      auto;
+
+    gap: 11px;
+
+    padding: 13px;
+
+    border-radius: 14px;
+  }
+
+
+  .current-affairs-related-icon {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 12px;
+  }
+
+
+  .current-affairs-related-icon svg {
+    width: 22px;
+    height: 22px;
+  }
+
+
+  .current-affairs-related-grid h3 {
+    font-size: 11.5px;
+  }
+
+
+  .current-affairs-related-grid p {
+    margin-top: 3px;
+
+    font-size: 9.8px;
+  }
+
+
+  .current-affairs-related-arrow {
+    font-size: 16px;
+  }
+
+
+  .current-affairs-all-topics {
+    margin-top: 13px;
+  }
+
+
+  .current-affairs-all-topics a {
+    min-height: 36px;
+
+    padding:
+      0 11px;
+
+    font-size: 9px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 390px) {
+
+  .current-affairs-container {
+    width:
+      calc(100% - 22px);
+  }
+
+
+  .current-affairs-intro-box {
+    padding:
+      18px 15px
+      18px 18px;
+  }
+
+
+  .current-affairs-intro-box h1 {
+    font-size: 28px;
+  }
+
+
+  .current-affairs-intro-text {
+    font-size: 11.5px;
+  }
+
+
+  .current-affairs-intro-note {
+    font-size: 10.4px;
+  }
+
+
+  .current-affairs-section-header h2,
+  .current-affairs-principles-header h2,
+  .current-affairs-languages-header h2,
+  .current-affairs-related-header h2 {
+    font-size: 20px;
+  }
+
+
+  .current-affairs-scope-card {
+    grid-template-columns:
+      42px
+      minmax(0, 1fr);
+
+    column-gap: 10px;
+
+    padding:
+      13px 12px;
+  }
+
+
+  .current-affairs-scope-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+
+  .current-affairs-scope-icon svg {
+    width: 21px;
+    height: 21px;
+  }
+
+
+  .current-affairs-scope-note {
+    grid-template-columns:
+      1fr;
+
+    gap: 12px;
+
+    padding: 17px;
+  }
+
+
+  .current-affairs-scope-note-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+
+  .current-affairs-scope-note h2 {
+    font-size: 19px;
+  }
+
+
+  .current-affairs-secondary-media img {
+    aspect-ratio:
+      4 / 3;
+  }
+
+
+  .current-affairs-principle-card {
+    grid-template-columns:
+      42px
+      minmax(0, 1fr);
+
+    gap: 10px;
+
+    padding:
+      13px 12px;
+  }
+
+
+  .current-affairs-principle-number {
+    width: 42px;
+    height: 42px;
+  }
+
+
+  .current-affairs-language-main {
+    grid-template-columns:
+      minmax(0, 1fr)
+      48px;
+  }
+
+
+  .current-affairs-language-main img {
+    width: 48px;
+    height: 48px;
+  }
+
+
+  .current-affairs-language-main h3 {
+    font-size: 22px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 340px) {
+
+  .current-affairs-container {
+    width:
+      calc(100% - 18px);
+  }
+
+
+  .current-affairs-intro-box h1 {
+    font-size: 26px;
+  }
+
+
+  .current-affairs-scope-card {
+    grid-template-columns:
+      40px
+      minmax(0, 1fr);
+
+    gap: 9px;
+
+    padding:
+      12px 10px;
+  }
+
+
+  .current-affairs-scope-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+
+  .current-affairs-scope-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+
+  .current-affairs-research-actions {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+
+  .current-affairs-research-actions a {
+    width: 100%;
+
+    justify-content: space-between;
+  }
+
+
+  .current-affairs-principle-card {
+    grid-template-columns:
+      40px
+      minmax(0, 1fr);
+  }
+
+
+  .current-affairs-principle-number {
+    width: 40px;
+    height: 40px;
+  }
+
+
+  .current-affairs-all-languages-link {
+    width: 100%;
+  }
+
+
+  .current-affairs-language-main {
+    grid-template-columns:
+      minmax(0, 1fr)
+      44px;
+  }
+
+
+  .current-affairs-language-main img {
+    width: 44px;
+    height: 44px;
+  }
+
+
+  .current-affairs-related-grid > a {
+    grid-template-columns:
+      38px
+      minmax(0, 1fr)
+      auto;
+
+    gap: 9px;
+  }
+
+
+  .current-affairs-related-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+
+  .current-affairs-related-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .current-affairs-breadcrumb a,
+  .current-affairs-scope-card,
+  .current-affairs-principle-card,
+  .current-affairs-research-actions a,
+  .current-affairs-all-languages-link,
+  .current-affairs-language-card,
+  .current-affairs-language-action
+  > span:last-child,
+  .current-affairs-related-grid > a,
+  .current-affairs-related-arrow,
+  .current-affairs-all-topics a {
+    transition:
+      none !important;
+  }
+
+
+  .current-affairs-scope-card:hover,
+  .current-affairs-principle-card:hover,
+  .current-affairs-research-actions a:hover,
+  .current-affairs-all-languages-link:hover,
+  .current-affairs-language-card:hover,
+  .current-affairs-related-grid > a:hover,
+  .current-affairs-all-topics a:hover {
+    transform:
+      none;
+  }
+
+
+  .current-affairs-language-card:hover
+  .current-affairs-language-action
+  > span:last-child,
+  .current-affairs-related-grid
+  > a:hover
+  .current-affairs-related-arrow {
+    transform:
+      none;
+  }
+}
+
+
+/* =========================================================
+   HIGH CONTRAST
+   ========================================================= */
+
+@media (prefers-contrast: more) {
+
+  .current-affairs-intro-box,
+  .current-affairs-primary-media,
+  .current-affairs-scope-card,
+  .current-affairs-scope-note,
+  .current-affairs-secondary-media,
+  .current-affairs-principle-card,
+  .current-affairs-research-actions a,
+  .current-affairs-all-languages-link,
+  .current-affairs-language-card,
+  .current-affairs-related-grid > a,
+  .current-affairs-all-topics a {
+    border-color:
+      #bcc1c9;
+  }
+
+
+  .current-affairs-intro-text,
+  .current-affairs-intro-note,
+  .current-affairs-section-header
+  > p:last-child,
+  .current-affairs-scope-card p,
+  .current-affairs-scope-note
+  > div:last-child
+  > p:last-child,
+  .current-affairs-research-content
+  > p:not(.current-affairs-research-eyebrow),
+  .current-affairs-principles-header
+  > p:last-child,
+  .current-affairs-principle-card p,
+  .current-affairs-languages-header
+  > div > p:last-child,
+  .current-affairs-language-main p,
+  .current-affairs-related-header
+  > p:last-child,
+  .current-affairs-related-grid p {
+    color:
+      #444850;
+  }
+}
+
+
+/* =========================================================
+   PRINT
+   ========================================================= */
+
+@media print {
+
+  .current-affairs-page,
+  .current-affairs-intro,
+  .current-affairs-scope-section,
+  .current-affairs-research-section,
+  .current-affairs-principles-section,
+  .current-affairs-languages-section,
+  .current-affairs-related-section {
+    background:
+      #ffffff !important;
+  }
+
+
+  .current-affairs-container {
+    width: 100%;
+  }
+
+
+  .current-affairs-intro,
+  .current-affairs-scope-section,
+  .current-affairs-research-section,
+  .current-affairs-principles-section,
+  .current-affairs-languages-section,
+  .current-affairs-related-section {
+    padding:
+      25px 20px;
+  }
+
+
+  .current-affairs-breadcrumb,
+  .current-affairs-all-languages-link {
+    display: none;
+  }
+
+
+  .current-affairs-intro-box,
+  .current-affairs-primary-media,
+  .current-affairs-scope-card,
+  .current-affairs-scope-note,
+  .current-affairs-secondary-media,
+  .current-affairs-principle-card,
+  .current-affairs-language-card,
+  .current-affairs-related-grid > a {
+    box-shadow:
+      none;
+  }
+
+
+  .current-affairs-scope-grid {
+    grid-template-columns:
+      repeat(
+        3,
+        minmax(0, 1fr)
+      );
+  }
+
+
+  .current-affairs-research-layout {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+  }
+
+
+  .current-affairs-principles-grid {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+  }
+
+
+  .current-affairs-language-grid {
+    grid-template-columns:
+      repeat(
+        3,
+        minmax(0, 1fr)
+      );
+  }
+
+
+  .current-affairs-language-card:last-child {
+    grid-column:
+      auto;
+  }
+
+
+  .current-affairs-related-grid {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+  }
+
+
+  .current-affairs-primary-media,
+  .current-affairs-secondary-media,
+  .current-affairs-scope-card,
+  .current-affairs-scope-note,
+  .current-affairs-principle-card,
+  .current-affairs-language-card,
+  .current-affairs-related-grid > a {
+    break-inside:
+      avoid;
+  }
+}

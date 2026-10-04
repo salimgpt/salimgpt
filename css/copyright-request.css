@@ -1,0 +1,3716 @@
+/* =========================================================
+   SalimGPT Global
+   File: css/copyright-request.css
+
+   Copyright Request Page
+   - Editorial introduction
+   - Primary page/share image
+   - Copyright concern categories
+   - Rights review standard
+   - Secondary supporting image
+   - Request preparation guidance
+   - Request checklist
+   - Review workflow
+   - Submission pathway notice
+   - Request-type distinctions
+   - Legal information note
+   - Related rights/help resources
+
+   Shared:
+   - global.css
+   - header.css
+   - menu.css
+   - footer.css
+   ========================================================= */
+
+
+/* =========================================================
+   PAGE VARIABLES
+   ========================================================= */
+
+:root {
+  --copyright-pink: #f71950;
+  --copyright-pink-dark: #d90e40;
+  --copyright-pink-soft: #fff0f4;
+
+  --copyright-blue: #087cf0;
+  --copyright-blue-dark: #056fd9;
+  --copyright-blue-soft: #eef6ff;
+
+  --copyright-green: #268447;
+  --copyright-green-soft: #effaf3;
+
+  --copyright-black: #111216;
+  --copyright-dark: #202126;
+  --copyright-text: #565d68;
+  --copyright-muted: #7d8490;
+
+  --copyright-bg: #f7f8fa;
+  --copyright-bg-soft: #f1f3f6;
+  --copyright-white: #ffffff;
+
+  --copyright-border: #e5e8ed;
+  --copyright-border-strong: #d7dbe2;
+
+  --copyright-width: 1180px;
+
+  --copyright-shadow-sm:
+    0 4px 14px rgba(17, 18, 22, 0.035);
+
+  --copyright-shadow-md:
+    0 10px 28px rgba(17, 18, 22, 0.065);
+
+  --copyright-shadow-lg:
+    0 16px 40px rgba(17, 18, 22, 0.08);
+}
+
+
+/* =========================================================
+   PAGE
+   ========================================================= */
+
+.copyright-page {
+  width: 100%;
+  overflow: hidden;
+
+  background:
+    var(--copyright-bg);
+
+  color:
+    var(--copyright-dark);
+}
+
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.copyright-container {
+  width:
+    min(
+      calc(100% - 48px),
+      var(--copyright-width)
+    );
+
+  margin-inline: auto;
+}
+
+
+/* =========================================================
+   INTRO SECTION
+   ========================================================= */
+
+.copyright-intro {
+  padding:
+    28px 0
+    22px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #f9fafb 0%,
+      #f7f8fa 100%
+    );
+}
+
+
+/* =========================================================
+   BREADCRUMB
+   ========================================================= */
+
+.copyright-breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  gap: 6px;
+
+  margin:
+    0 0
+    13px;
+
+  color:
+    var(--copyright-muted);
+
+  font-size: 11px;
+  font-weight: 650;
+  line-height: 1.4;
+}
+
+
+.copyright-breadcrumb a {
+  color:
+    #626975;
+
+  text-decoration: none;
+
+  transition:
+    color 150ms ease;
+}
+
+
+.copyright-breadcrumb a:hover {
+  color:
+    var(--copyright-pink);
+}
+
+
+.copyright-breadcrumb
+span[aria-hidden="true"] {
+  color:
+    #c2c6cd;
+}
+
+
+.copyright-breadcrumb
+[aria-current="page"] {
+  color:
+    var(--copyright-dark);
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   INTRO BOX
+   ========================================================= */
+
+.copyright-intro-box {
+  position: relative;
+
+  overflow: hidden;
+
+  padding:
+    30px 32px;
+
+  border:
+    1px solid
+    var(--copyright-border);
+
+  border-radius:
+    18px 18px 0 0;
+
+  background:
+    var(--copyright-white);
+
+  box-shadow:
+    var(--copyright-shadow-sm);
+}
+
+
+.copyright-intro-box::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 4px;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      180deg,
+      var(--copyright-pink),
+      var(--copyright-pink-dark)
+    );
+}
+
+
+.copyright-intro-copy {
+  max-width: 900px;
+}
+
+
+/* =========================================================
+   INTRO EYEBROW
+   ========================================================= */
+
+.copyright-eyebrow {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 7px;
+
+  margin:
+    0 0
+    8px;
+
+  color:
+    var(--copyright-pink);
+
+  font-size: 10px;
+  font-weight: 800;
+  line-height: 1.3;
+
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+
+.copyright-eyebrow::before {
+  content: "";
+
+  width: 6px;
+  height: 6px;
+
+  flex:
+    0 0 6px;
+
+  border-radius: 50%;
+
+  background:
+    var(--copyright-pink);
+
+  box-shadow:
+    0 0 0 4px
+    rgba(247, 25, 80, 0.07);
+}
+
+
+/* =========================================================
+   INTRO TITLE
+   ========================================================= */
+
+.copyright-intro-box h1 {
+  max-width: 920px;
+
+  margin: 0;
+
+  color:
+    var(--copyright-black);
+
+  font-size:
+    clamp(
+      36px,
+      4.5vw,
+      54px
+    );
+
+  font-weight: 850;
+  line-height: 1.03;
+
+  letter-spacing:
+    -0.045em;
+
+  text-align: left;
+}
+
+
+/* =========================================================
+   INTRO TEXT
+   ========================================================= */
+
+.copyright-intro-text {
+  max-width: 850px;
+
+  margin:
+    14px 0
+    0;
+
+  color:
+    var(--copyright-text);
+
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.68;
+
+  text-align: left;
+  text-wrap: pretty;
+}
+
+
+.copyright-intro-note {
+  max-width: 870px;
+
+  margin:
+    9px 0
+    0;
+
+  color:
+    var(--copyright-muted);
+
+  font-size: 12.5px;
+  line-height: 1.6;
+
+  text-align: left;
+}
+
+
+/* =========================================================
+   PRIMARY IMAGE
+   ========================================================= */
+
+.copyright-primary-media {
+  position: relative;
+
+  width: 100%;
+
+  margin: 0;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    var(--copyright-border);
+
+  border-top: 0;
+
+  border-radius:
+    0 0 18px 18px;
+
+  background:
+    #eceff3;
+
+  box-shadow:
+    var(--copyright-shadow-sm);
+}
+
+
+.copyright-primary-media::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  box-shadow:
+    inset 0 0 0 1px
+    rgba(255, 255, 255, 0.12);
+}
+
+
+.copyright-primary-media img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  aspect-ratio:
+    1200 / 630;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+
+/* =========================================================
+   GENERAL SECTION EYEBROW
+   ========================================================= */
+
+.copyright-section-eyebrow {
+  margin:
+    0 0
+    6px;
+
+  color:
+    var(--copyright-pink);
+
+  font-size: 9px;
+  font-weight: 800;
+  line-height: 1.3;
+
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   GENERAL SECTION HEADINGS
+   ========================================================= */
+
+.copyright-section-header h2,
+.copyright-standard-content h2,
+.copyright-checklist-header h2,
+.copyright-process-header h2,
+.copyright-submit-content h2,
+.copyright-distinctions-header h2,
+.copyright-note-content h2,
+.copyright-related-header h2 {
+  margin: 0;
+
+  color:
+    var(--copyright-black);
+
+  font-size:
+    clamp(
+      26px,
+      3.1vw,
+      36px
+    );
+
+  font-weight: 820;
+  line-height: 1.1;
+
+  letter-spacing:
+    -0.032em;
+}
+
+
+.copyright-section-header
+> p:last-child,
+.copyright-checklist-header
+> p:last-child,
+.copyright-process-header
+> p:last-child,
+.copyright-distinctions-header
+> p:last-child,
+.copyright-related-header
+> p:last-child {
+  max-width: 820px;
+
+  margin:
+    9px 0
+    0;
+
+  color:
+    var(--copyright-muted);
+
+  font-size: 12.5px;
+  line-height: 1.62;
+}
+
+
+/* =========================================================
+   COPYRIGHT ISSUES SECTION
+   ========================================================= */
+
+.copyright-issues-section {
+  padding:
+    54px 0
+    66px;
+
+  background:
+    var(--copyright-bg);
+}
+
+
+.copyright-section-header {
+  max-width: 870px;
+
+  margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   COPYRIGHT ISSUES GRID
+   ========================================================= */
+
+.copyright-issues-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      3,
+      minmax(0, 1fr)
+    );
+
+  gap: 14px;
+}
+
+
+/* =========================================================
+   COPYRIGHT ISSUE CARD
+   ========================================================= */
+
+.copyright-issue-card {
+  min-width: 0;
+
+  padding: 20px;
+
+  border:
+    1px solid
+    var(--copyright-border);
+
+  border-radius: 18px;
+
+  background:
+    var(--copyright-white);
+
+  box-shadow:
+    var(--copyright-shadow-sm);
+
+  transition:
+    transform 170ms ease,
+    border-color 170ms ease,
+    box-shadow 170ms ease;
+}
+
+
+.copyright-issue-card:hover {
+  transform:
+    translateY(-2px);
+
+  border-color:
+    rgba(247, 25, 80, 0.18);
+
+  box-shadow:
+    var(--copyright-shadow-md);
+}
+
+
+/* =========================================================
+   ISSUE ICON
+   ========================================================= */
+
+.copyright-issue-icon {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 50px;
+  height: 50px;
+
+  margin-bottom: 15px;
+
+  border:
+    1px solid
+    #f2d2da;
+
+  border-radius: 14px;
+
+  background:
+    var(--copyright-pink-soft);
+
+  color:
+    var(--copyright-pink);
+}
+
+
+.copyright-issue-icon svg {
+  width: 26px;
+  height: 26px;
+
+  fill: none;
+
+  stroke:
+    currentColor;
+
+  stroke-width: 1.7;
+
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+
+/* =========================================================
+   ISSUE COPY
+   ========================================================= */
+
+.copyright-issue-card h3 {
+  margin: 0;
+
+  color:
+    var(--copyright-black);
+
+  font-size: 15px;
+  font-weight: 780;
+  line-height: 1.3;
+}
+
+
+.copyright-issue-card p {
+  margin:
+    7px 0
+    0;
+
+  color:
+    var(--copyright-muted);
+
+  font-size: 11.5px;
+  line-height: 1.56;
+}
+
+
+/* =========================================================
+   RIGHTS REVIEW SECTION
+   ========================================================= */
+
+.copyright-standard-section {
+  padding:
+    0 0
+    66px;
+
+  background:
+    var(--copyright-bg);
+}
+
+
+/* =========================================================
+   RIGHTS REVIEW BOX
+   ========================================================= */
+
+.copyright-standard-box {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns:
+    70px
+    minmax(0, 1fr);
+
+  align-items: start;
+
+  gap: 22px;
+
+  padding:
+    28px 30px;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    rgba(8, 124, 240, 0.16);
+
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff 0%,
+      #f6faff 100%
+    );
+
+  box-shadow:
+    var(--copyright-shadow-sm);
+}
+
+
+.copyright-standard-box::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 4px;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      180deg,
+      var(--copyright-blue),
+      #5a9fff
+    );
+}
+
+
+/* =========================================================
+   RIGHTS REVIEW ICON
+   ========================================================= */
+
+.copyright-standard-icon {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 66px;
+  height: 66px;
+
+  border:
+    1px solid
+    #d7eaff;
+
+  border-radius: 18px;
+
+  background:
+    var(--copyright-blue-soft);
+
+  color:
+    var(--copyright-blue);
+}
+
+
+.copyright-standard-icon svg {
+  width: 32px;
+  height: 32px;
+
+  fill: none;
+
+  stroke:
+    currentColor;
+
+  stroke-width: 1.7;
+
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+
+/* =========================================================
+   RIGHTS REVIEW CONTENT
+   ========================================================= */
+
+.copyright-standard-content {
+  min-width: 0;
+
+  max-width: 920px;
+}
+
+
+.copyright-standard-content
+.copyright-section-eyebrow {
+  color:
+    var(--copyright-blue);
+}
+
+
+.copyright-standard-content h2 {
+  font-size:
+    clamp(
+      23px,
+      2.8vw,
+      31px
+    );
+
+  line-height: 1.13;
+}
+
+
+.copyright-standard-content
+> p:not(.copyright-section-eyebrow) {
+  max-width: 850px;
+
+  margin:
+    9px 0
+    0;
+
+  color:
+    var(--copyright-text);
+
+  font-size: 12px;
+  line-height: 1.62;
+}
+
+
+/* =========================================================
+   RIGHTS REVIEW ACTIONS
+   ========================================================= */
+
+.copyright-standard-actions {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 7px;
+
+  margin-top: 16px;
+}
+
+
+.copyright-standard-actions a {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  min-height: 38px;
+
+  padding:
+    0 13px;
+
+  border:
+    1px solid
+    rgba(8, 124, 240, 0.18);
+
+  border-radius: 999px;
+
+  background:
+    var(--copyright-white);
+
+  color:
+    var(--copyright-blue);
+
+  font-size: 9.5px;
+  font-weight: 720;
+  line-height: 1.2;
+
+  text-decoration: none;
+
+  transition:
+    transform 150ms ease,
+    border-color 150ms ease,
+    background 150ms ease,
+    color 150ms ease;
+}
+
+
+.copyright-standard-actions a:hover {
+  transform:
+    translateY(-1px);
+
+  border-color:
+    rgba(8, 124, 240, 0.30);
+
+  background:
+    var(--copyright-blue-soft);
+
+  color:
+    var(--copyright-blue-dark);
+}
+
+
+.copyright-standard-actions
+span[aria-hidden="true"] {
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   DETAILS SECTION
+   ========================================================= */
+
+.copyright-details-section {
+  padding:
+    66px 0;
+
+  border-top:
+    1px solid
+    var(--copyright-border);
+
+  background:
+    var(--copyright-white);
+}
+
+
+/* =========================================================
+   DETAILS LAYOUT
+   ========================================================= */
+
+.copyright-details-layout {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.04fr)
+    minmax(0, 0.96fr);
+
+  align-items: center;
+
+  gap: 38px;
+}
+
+
+/* =========================================================
+   SECONDARY IMAGE
+   ========================================================= */
+
+.copyright-secondary-media {
+  position: relative;
+
+  width: 100%;
+
+  margin: 0;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    var(--copyright-border);
+
+  border-radius: 20px;
+
+  background:
+    #eceff3;
+
+  box-shadow:
+    var(--copyright-shadow-md);
+}
+
+
+.copyright-secondary-media::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  box-shadow:
+    inset 0 0 0 1px
+    rgba(255, 255, 255, 0.12);
+}
+
+
+.copyright-secondary-media img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  aspect-ratio:
+    3 / 2;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+
+/* =========================================================
+   DETAILS CONTENT
+   ========================================================= */
+
+.copyright-details-content {
+  min-width: 0;
+}
+
+
+.copyright-details-eyebrow {
+  margin:
+    0 0
+    6px;
+
+  color:
+    var(--copyright-pink);
+
+  font-size: 9px;
+  font-weight: 800;
+  line-height: 1.3;
+
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+
+.copyright-details-content h2 {
+  max-width: 620px;
+
+  margin: 0;
+
+  color:
+    var(--copyright-black);
+
+  font-size:
+    clamp(
+      27px,
+      3.4vw,
+      39px
+    );
+
+  font-weight: 830;
+  line-height: 1.08;
+
+  letter-spacing:
+    -0.035em;
+}
+
+
+.copyright-details-content
+> p:not(.copyright-details-eyebrow) {
+  max-width: 650px;
+
+  margin:
+    11px 0
+    0;
+
+  color:
+    var(--copyright-text);
+
+  font-size: 12.5px;
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   DETAILS ACTIONS
+   ========================================================= */
+
+.copyright-details-actions {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 7px;
+
+  margin-top: 18px;
+}
+
+
+.copyright-details-actions a {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  min-height: 37px;
+
+  padding:
+    0 12px;
+
+  border:
+    1px solid
+    var(--copyright-border);
+
+  border-radius: 999px;
+
+  background:
+    var(--copyright-white);
+
+  color:
+    var(--copyright-dark);
+
+  font-size: 9.5px;
+  font-weight: 700;
+  line-height: 1.2;
+
+  text-decoration: none;
+
+  transition:
+    transform 150ms ease,
+    border-color 150ms ease,
+    background 150ms ease,
+    color 150ms ease;
+}
+
+
+.copyright-details-actions a:hover {
+  transform:
+    translateY(-1px);
+
+  border-color:
+    rgba(247, 25, 80, 0.22);
+
+  background:
+    var(--copyright-pink-soft);
+
+  color:
+    var(--copyright-pink);
+}
+
+
+.copyright-details-actions
+span[aria-hidden="true"] {
+  color:
+    var(--copyright-pink);
+
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   CHECKLIST SECTION
+   ========================================================= */
+
+.copyright-checklist-section {
+  padding:
+    58px 0
+    64px;
+
+  border-top:
+    1px solid
+    var(--copyright-border);
+
+  background:
+    var(--copyright-bg);
+}
+
+
+/* =========================================================
+   CHECKLIST HEADER
+   ========================================================= */
+
+.copyright-checklist-header {
+  max-width: 870px;
+
+  margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   CHECKLIST GRID
+   ========================================================= */
+
+.copyright-checklist-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      3,
+      minmax(0, 1fr)
+    );
+
+  gap: 12px;
+}
+
+
+/* =========================================================
+   CHECKLIST CARD
+   ========================================================= */
+
+.copyright-checklist-card {
+  display: grid;
+
+  grid-template-columns:
+    48px
+    minmax(0, 1fr);
+
+  align-items: start;
+
+  gap: 15px;
+
+  min-width: 0;
+
+  padding: 20px;
+
+  border:
+    1px solid
+    var(--copyright-border);
+
+  border-radius: 18px;
+
+  background:
+    var(--copyright-white);
+
+  box-shadow:
+    var(--copyright-shadow-sm);
+
+  transition:
+    transform 170ms ease,
+    border-color 170ms ease,
+    box-shadow 170ms ease;
+}
+
+
+.copyright-checklist-card:hover {
+  transform:
+    translateY(-2px);
+
+  border-color:
+    rgba(247, 25, 80, 0.18);
+
+  box-shadow:
+    var(--copyright-shadow-md);
+}
+
+
+/* =========================================================
+   CHECKLIST NUMBER
+   ========================================================= */
+
+.copyright-checklist-number {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 48px;
+  height: 48px;
+
+  border:
+    1px solid
+    #f2d2da;
+
+  border-radius: 14px;
+
+  background:
+    var(--copyright-pink-soft);
+
+  color:
+    var(--copyright-pink);
+
+  font-size: 11px;
+  font-weight: 850;
+  line-height: 1;
+
+  letter-spacing: 0.05em;
+}
+
+
+/* =========================================================
+   CHECKLIST COPY
+   ========================================================= */
+
+.copyright-checklist-card h3 {
+  margin: 0;
+
+  color:
+    var(--copyright-black);
+
+  font-size: 14px;
+  font-weight: 790;
+  line-height: 1.35;
+}
+
+
+.copyright-checklist-card p {
+  margin:
+    6px 0
+    0;
+
+  color:
+    var(--copyright-muted);
+
+  font-size: 11px;
+  line-height: 1.55;
+}
+
+
+/* =========================================================
+   REVIEW PROCESS SECTION
+   ========================================================= */
+
+.copyright-process-section {
+  padding:
+    58px 0
+    64px;
+
+  border-top:
+    1px solid
+    var(--copyright-border);
+
+  background:
+    var(--copyright-white);
+}
+
+
+/* =========================================================
+   PROCESS HEADER
+   ========================================================= */
+
+.copyright-process-header {
+  max-width: 870px;
+
+  margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   PROCESS GRID
+   ========================================================= */
+
+.copyright-process-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0, 1fr)
+    );
+
+  gap: 12px;
+}
+
+
+/* =========================================================
+   PROCESS CARD
+   ========================================================= */
+
+.copyright-process-card {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns:
+    50px
+    minmax(0, 1fr);
+
+  align-items: start;
+
+  gap: 15px;
+
+  min-width: 0;
+
+  padding: 20px;
+
+  border:
+    1px solid
+    var(--copyright-border);
+
+  border-radius: 18px;
+
+  background:
+    var(--copyright-bg);
+
+  box-shadow:
+    var(--copyright-shadow-sm);
+
+  transition:
+    transform 170ms ease,
+    border-color 170ms ease,
+    background 170ms ease,
+    box-shadow 170ms ease;
+}
+
+
+.copyright-process-card:hover {
+  transform:
+    translateY(-2px);
+
+  border-color:
+    rgba(8, 124, 240, 0.18);
+
+  background:
+    var(--copyright-white);
+
+  box-shadow:
+    var(--copyright-shadow-md);
+}
+
+
+/* =========================================================
+   PROCESS STEP
+   ========================================================= */
+
+.copyright-process-step {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 48px;
+  height: 48px;
+
+  border:
+    1px solid
+    #d7eaff;
+
+  border-radius: 14px;
+
+  background:
+    var(--copyright-blue-soft);
+
+  color:
+    var(--copyright-blue);
+
+  font-size: 11px;
+  font-weight: 850;
+  line-height: 1;
+
+  letter-spacing: 0.05em;
+}
+
+
+/* =========================================================
+   PROCESS COPY
+   ========================================================= */
+
+.copyright-process-card h3 {
+  margin: 0;
+
+  color:
+    var(--copyright-black);
+
+  font-size: 14px;
+  font-weight: 790;
+  line-height: 1.35;
+}
+
+
+.copyright-process-card p {
+  margin:
+    6px 0
+    0;
+
+  color:
+    var(--copyright-muted);
+
+  font-size: 11px;
+  line-height: 1.55;
+}
+
+
+/* =========================================================
+   SUBMISSION SECTION
+   ========================================================= */
+
+.copyright-submit-section {
+  padding:
+    54px 0;
+
+  border-top:
+    1px solid
+    var(--copyright-border);
+
+  background:
+    var(--copyright-bg);
+}
+
+
+/* =========================================================
+   SUBMISSION BOX
+   ========================================================= */
+
+.copyright-submit-box {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns:
+    70px
+    minmax(0, 1fr);
+
+  align-items: start;
+
+  gap: 22px;
+
+  padding:
+    28px 30px;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    rgba(8, 124, 240, 0.16);
+
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff 0%,
+      #f6faff 100%
+    );
+
+  box-shadow:
+    var(--copyright-shadow-sm);
+}
+
+
+.copyright-submit-box::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 4px;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      180deg,
+      var(--copyright-blue),
+      var(--copyright-pink)
+    );
+}
+
+
+/* =========================================================
+   SUBMISSION ICON
+   ========================================================= */
+
+.copyright-submit-icon {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 66px;
+  height: 66px;
+
+  border:
+    1px solid
+    #d7eaff;
+
+  border-radius: 18px;
+
+  background:
+    var(--copyright-blue-soft);
+
+  color:
+    var(--copyright-blue);
+}
+
+
+.copyright-submit-icon svg {
+  width: 32px;
+  height: 32px;
+
+  fill: none;
+
+  stroke:
+    currentColor;
+
+  stroke-width: 1.7;
+
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+
+/* =========================================================
+   SUBMISSION CONTENT
+   ========================================================= */
+
+.copyright-submit-content {
+  min-width: 0;
+
+  max-width: 920px;
+}
+
+
+.copyright-submit-content
+.copyright-section-eyebrow {
+  color:
+    var(--copyright-blue);
+}
+
+
+.copyright-submit-content h2 {
+  font-size:
+    clamp(
+      23px,
+      2.8vw,
+      31px
+    );
+
+  line-height: 1.13;
+}
+
+
+.copyright-submit-content
+> p:not(.copyright-section-eyebrow) {
+  max-width: 850px;
+
+  margin:
+    9px 0
+    0;
+
+  color:
+    var(--copyright-text);
+
+  font-size: 12.5px;
+  line-height: 1.62;
+}
+
+
+/* =========================================================
+   SUBMISSION ACTIONS
+   ========================================================= */
+
+.copyright-submit-actions {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 7px;
+
+  margin-top: 16px;
+}
+
+
+.copyright-submit-actions a {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  min-height: 38px;
+
+  padding:
+    0 13px;
+
+  border:
+    1px solid
+    var(--copyright-border);
+
+  border-radius: 999px;
+
+  background:
+    var(--copyright-white);
+
+  color:
+    var(--copyright-dark);
+
+  font-size: 9.5px;
+  font-weight: 720;
+  line-height: 1.2;
+
+  text-decoration: none;
+
+  transition:
+    transform 150ms ease,
+    border-color 150ms ease,
+    background 150ms ease,
+    color 150ms ease;
+}
+
+
+.copyright-submit-actions a:hover {
+  transform:
+    translateY(-1px);
+
+  border-color:
+    rgba(8, 124, 240, 0.24);
+
+  background:
+    var(--copyright-blue-soft);
+
+  color:
+    var(--copyright-blue);
+}
+
+
+.copyright-submit-actions
+span[aria-hidden="true"] {
+  color:
+    var(--copyright-blue);
+
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   DISTINCTIONS SECTION
+   ========================================================= */
+
+.copyright-distinctions-section {
+  padding:
+    58px 0
+    64px;
+
+  border-top:
+    1px solid
+    var(--copyright-border);
+
+  background:
+    var(--copyright-white);
+}
+
+
+/* =========================================================
+   DISTINCTIONS HEADER
+   ========================================================= */
+
+.copyright-distinctions-header {
+  max-width: 870px;
+
+  margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   DISTINCTIONS GRID
+   ========================================================= */
+
+.copyright-distinctions-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0, 1fr)
+    );
+
+  gap: 12px;
+}
+
+
+/* =========================================================
+   DISTINCTION CARD
+   ========================================================= */
+
+.copyright-distinction-card {
+  display: grid;
+
+  grid-template-columns:
+    48px
+    minmax(0, 1fr)
+    auto;
+
+  align-items: center;
+
+  gap: 14px;
+
+  min-width: 0;
+
+  padding: 16px;
+
+  border:
+    1px solid
+    var(--copyright-border);
+
+  border-radius: 16px;
+
+  background:
+    var(--copyright-bg);
+
+  color:
+    inherit;
+
+  text-decoration: none;
+
+  box-shadow:
+    var(--copyright-shadow-sm);
+
+  transition:
+    transform 160ms ease,
+    border-color 160ms ease,
+    background 160ms ease,
+    box-shadow 160ms ease;
+}
+
+
+a.copyright-distinction-card:hover {
+  transform:
+    translateY(-2px);
+
+  border-color:
+    rgba(247, 25, 80, 0.20);
+
+  background:
+    var(--copyright-white);
+
+  box-shadow:
+    var(--copyright-shadow-md);
+}
+
+
+/* =========================================================
+   CURRENT DISTINCTION
+   ========================================================= */
+
+.copyright-distinction-card.is-current {
+  border-color:
+    rgba(247, 25, 80, 0.20);
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff 0%,
+      #fff7f9 100%
+    );
+}
+
+
+.copyright-distinction-card.is-current
+.copyright-distinction-icon {
+  border-color:
+    #f1ccd5;
+
+  background:
+    var(--copyright-pink-soft);
+}
+
+
+/* =========================================================
+   DISTINCTION STATUS
+   ========================================================= */
+
+.copyright-distinction-status {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 23px;
+
+  margin-bottom: 5px;
+
+  padding:
+    0 8px;
+
+  border:
+    1px solid
+    #f1ccd5;
+
+  border-radius: 999px;
+
+  background:
+    var(--copyright-pink-soft);
+
+  color:
+    var(--copyright-pink);
+
+  font-size: 8px;
+  font-weight: 800;
+  line-height: 1;
+
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   DISTINCTION ICON
+   ========================================================= */
+
+.copyright-distinction-icon {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 48px;
+  height: 48px;
+
+  border:
+    1px solid
+    #f2d2da;
+
+  border-radius: 13px;
+
+  background:
+    var(--copyright-pink-soft);
+
+  color:
+    var(--copyright-pink);
+}
+
+
+.copyright-distinction-icon svg {
+  width: 25px;
+  height: 25px;
+
+  fill: none;
+
+  stroke:
+    currentColor;
+
+  stroke-width: 1.7;
+
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+
+/* =========================================================
+   DISTINCTION COPY
+   ========================================================= */
+
+.copyright-distinction-card h3 {
+  margin: 0;
+
+  color:
+    var(--copyright-black);
+
+  font-size: 13px;
+  font-weight: 780;
+  line-height: 1.3;
+}
+
+
+.copyright-distinction-card p {
+  margin:
+    4px 0
+    0;
+
+  color:
+    var(--copyright-muted);
+
+  font-size: 10.5px;
+  line-height: 1.45;
+}
+
+
+.copyright-distinction-arrow {
+  flex:
+    0 0 auto;
+
+  color:
+    var(--copyright-pink);
+
+  font-size: 18px;
+
+  transition:
+    transform 150ms ease;
+}
+
+
+a.copyright-distinction-card:hover
+.copyright-distinction-arrow {
+  transform:
+    translateX(2px);
+}
+
+
+/* =========================================================
+   IMPORTANT NOTE SECTION
+   ========================================================= */
+
+.copyright-note-section {
+  padding:
+    54px 0;
+
+  border-top:
+    1px solid
+    var(--copyright-border);
+
+  background:
+    var(--copyright-bg);
+}
+
+
+/* =========================================================
+   IMPORTANT NOTE BOX
+   ========================================================= */
+
+.copyright-note-box {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns:
+    70px
+    minmax(0, 1fr);
+
+  align-items: start;
+
+  gap: 22px;
+
+  padding:
+    28px 30px;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    var(--copyright-border);
+
+  border-radius: 20px;
+
+  background:
+    var(--copyright-white);
+
+  box-shadow:
+    var(--copyright-shadow-sm);
+}
+
+
+.copyright-note-box::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 4px;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      180deg,
+      var(--copyright-pink),
+      var(--copyright-blue)
+    );
+}
+
+
+/* =========================================================
+   IMPORTANT NOTE ICON
+   ========================================================= */
+
+.copyright-note-icon {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 66px;
+  height: 66px;
+
+  border:
+    1px solid
+    #f2d2da;
+
+  border-radius: 18px;
+
+  background:
+    var(--copyright-pink-soft);
+
+  color:
+    var(--copyright-pink);
+}
+
+
+.copyright-note-icon svg {
+  width: 32px;
+  height: 32px;
+
+  fill: none;
+
+  stroke:
+    currentColor;
+
+  stroke-width: 1.7;
+
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+
+/* =========================================================
+   IMPORTANT NOTE CONTENT
+   ========================================================= */
+
+.copyright-note-content {
+  min-width: 0;
+
+  max-width: 900px;
+}
+
+
+.copyright-note-content h2 {
+  font-size:
+    clamp(
+      23px,
+      2.8vw,
+      31px
+    );
+
+  line-height: 1.13;
+}
+
+
+.copyright-note-content
+> p:not(.copyright-section-eyebrow) {
+  max-width: 840px;
+
+  margin:
+    9px 0
+    0;
+
+  color:
+    var(--copyright-text);
+
+  font-size: 12.5px;
+  line-height: 1.62;
+}
+
+
+/* =========================================================
+   IMPORTANT NOTE ACTIONS
+   ========================================================= */
+
+.copyright-note-actions {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 7px;
+
+  margin-top: 16px;
+}
+
+
+.copyright-note-actions a {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  min-height: 38px;
+
+  padding:
+    0 13px;
+
+  border:
+    1px solid
+    var(--copyright-border);
+
+  border-radius: 999px;
+
+  background:
+    var(--copyright-white);
+
+  color:
+    var(--copyright-dark);
+
+  font-size: 9.5px;
+  font-weight: 720;
+  line-height: 1.2;
+
+  text-decoration: none;
+
+  transition:
+    transform 150ms ease,
+    border-color 150ms ease,
+    background 150ms ease,
+    color 150ms ease;
+}
+
+
+.copyright-note-actions a:hover {
+  transform:
+    translateY(-1px);
+
+  border-color:
+    rgba(247, 25, 80, 0.22);
+
+  background:
+    var(--copyright-pink-soft);
+
+  color:
+    var(--copyright-pink);
+}
+
+
+.copyright-note-actions
+span[aria-hidden="true"] {
+  color:
+    var(--copyright-pink);
+
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   RELATED SECTION
+   ========================================================= */
+
+.copyright-related-section {
+  padding:
+    58px 0
+    68px;
+
+  border-top:
+    1px solid
+    var(--copyright-border);
+
+  background:
+    var(--copyright-white);
+}
+
+
+/* =========================================================
+   RELATED HEADER
+   ========================================================= */
+
+.copyright-related-header {
+  max-width: 830px;
+
+  margin-bottom: 18px;
+}
+
+
+/* =========================================================
+   RELATED GRID
+   ========================================================= */
+
+.copyright-related-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0, 1fr)
+    );
+
+  gap: 12px;
+}
+
+
+/* =========================================================
+   RELATED CARD
+   ========================================================= */
+
+.copyright-related-grid > a {
+  display: grid;
+
+  grid-template-columns:
+    48px
+    minmax(0, 1fr)
+    auto;
+
+  align-items: center;
+
+  gap: 14px;
+
+  min-width: 0;
+
+  padding: 16px;
+
+  border:
+    1px solid
+    var(--copyright-border);
+
+  border-radius: 16px;
+
+  background:
+    var(--copyright-bg);
+
+  color:
+    inherit;
+
+  text-decoration: none;
+
+  box-shadow:
+    var(--copyright-shadow-sm);
+
+  transition:
+    transform 160ms ease,
+    border-color 160ms ease,
+    background 160ms ease,
+    box-shadow 160ms ease;
+}
+
+
+.copyright-related-grid > a:hover {
+  transform:
+    translateY(-2px);
+
+  border-color:
+    rgba(247, 25, 80, 0.20);
+
+  background:
+    var(--copyright-white);
+
+  box-shadow:
+    var(--copyright-shadow-md);
+}
+
+
+/* =========================================================
+   RELATED ICON
+   ========================================================= */
+
+.copyright-related-icon {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 48px;
+  height: 48px;
+
+  border:
+    1px solid
+    #f2d2da;
+
+  border-radius: 13px;
+
+  background:
+    var(--copyright-pink-soft);
+
+  color:
+    var(--copyright-pink);
+}
+
+
+.copyright-related-icon svg {
+  width: 25px;
+  height: 25px;
+
+  fill: none;
+
+  stroke:
+    currentColor;
+
+  stroke-width: 1.7;
+
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+
+/* =========================================================
+   RELATED COPY
+   ========================================================= */
+
+.copyright-related-grid h3 {
+  margin: 0;
+
+  color:
+    var(--copyright-black);
+
+  font-size: 13px;
+  font-weight: 780;
+  line-height: 1.3;
+}
+
+
+.copyright-related-grid p {
+  margin:
+    4px 0
+    0;
+
+  color:
+    var(--copyright-muted);
+
+  font-size: 10.5px;
+  line-height: 1.45;
+}
+
+
+.copyright-related-arrow {
+  flex:
+    0 0 auto;
+
+  color:
+    var(--copyright-pink);
+
+  font-size: 18px;
+
+  transition:
+    transform 150ms ease;
+}
+
+
+.copyright-related-grid
+> a:hover
+.copyright-related-arrow {
+  transform:
+    translateX(2px);
+}
+
+
+/* =========================================================
+   FOCUS STATES
+   ========================================================= */
+
+.copyright-breadcrumb a:focus-visible,
+.copyright-standard-actions a:focus-visible,
+.copyright-details-actions a:focus-visible,
+.copyright-submit-actions a:focus-visible,
+.copyright-distinction-card:focus-visible,
+.copyright-note-actions a:focus-visible,
+.copyright-related-grid > a:focus-visible {
+  outline:
+    3px solid
+    rgba(247, 25, 80, 0.22);
+
+  outline-offset: 2px;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   ========================================================= */
+
+@media (min-width: 1280px) {
+
+  .copyright-details-layout {
+    gap: 44px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 980px) {
+
+  .copyright-container {
+    width:
+      min(
+        calc(100% - 44px),
+        var(--copyright-width)
+      );
+  }
+
+
+  .copyright-issues-grid {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+  }
+
+
+  .copyright-details-layout {
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(0, 1fr);
+
+    gap: 26px;
+  }
+
+
+  .copyright-checklist-grid {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+  }
+
+
+  .copyright-process-grid,
+  .copyright-distinctions-grid,
+  .copyright-related-grid {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+  }
+}
+
+
+/* =========================================================
+   NARROW TABLET
+   ========================================================= */
+
+@media (max-width: 820px) {
+
+  .copyright-details-layout {
+    grid-template-columns:
+      1fr;
+
+    gap: 24px;
+  }
+
+
+  .copyright-secondary-media {
+    max-width: 760px;
+  }
+
+
+  .copyright-details-content {
+    max-width: 760px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 680px) {
+
+  /* -------------------------------------------------------
+     Container
+     ------------------------------------------------------- */
+
+  .copyright-container {
+    width:
+      calc(100% - 26px);
+  }
+
+
+  /* -------------------------------------------------------
+     Intro
+     ------------------------------------------------------- */
+
+  .copyright-intro {
+    padding:
+      16px 0
+      14px;
+  }
+
+
+  .copyright-breadcrumb {
+    gap: 5px;
+
+    margin-bottom: 10px;
+
+    font-size: 9px;
+  }
+
+
+  .copyright-intro-box {
+    padding:
+      20px 17px
+      20px 20px;
+
+    border-radius:
+      15px 15px 0 0;
+  }
+
+
+  .copyright-intro-box::before {
+    width: 3px;
+  }
+
+
+  .copyright-eyebrow {
+    gap: 6px;
+
+    margin-bottom: 6px;
+
+    font-size: 8px;
+  }
+
+
+  .copyright-eyebrow::before {
+    width: 5px;
+    height: 5px;
+
+    flex-basis: 5px;
+
+    box-shadow:
+      0 0 0 3px
+      rgba(247, 25, 80, 0.07);
+  }
+
+
+  .copyright-intro-box h1 {
+    font-size:
+      clamp(
+        28px,
+        8.3vw,
+        38px
+      );
+
+    line-height: 1.04;
+  }
+
+
+  .copyright-intro-text {
+    margin-top: 10px;
+
+    font-size: 12px;
+    line-height: 1.58;
+  }
+
+
+  .copyright-intro-note {
+    margin-top: 7px;
+
+    font-size: 10.8px;
+    line-height: 1.52;
+  }
+
+
+  /* -------------------------------------------------------
+     Primary image
+     ------------------------------------------------------- */
+
+  .copyright-primary-media {
+    border-radius:
+      0 0 15px 15px;
+  }
+
+
+  .copyright-primary-media img {
+    aspect-ratio:
+      16 / 9;
+  }
+
+
+  /* -------------------------------------------------------
+     General headings
+     ------------------------------------------------------- */
+
+  .copyright-section-eyebrow {
+    margin-bottom: 4px;
+
+    font-size: 7.8px;
+  }
+
+
+  .copyright-section-header h2,
+  .copyright-standard-content h2,
+  .copyright-checklist-header h2,
+  .copyright-process-header h2,
+  .copyright-submit-content h2,
+  .copyright-distinctions-header h2,
+  .copyright-note-content h2,
+  .copyright-related-header h2 {
+    font-size: 22px;
+  }
+
+
+  .copyright-section-header
+  > p:last-child,
+  .copyright-checklist-header
+  > p:last-child,
+  .copyright-process-header
+  > p:last-child,
+  .copyright-distinctions-header
+  > p:last-child,
+  .copyright-related-header
+  > p:last-child {
+    margin-top: 7px;
+
+    font-size: 10.8px;
+    line-height: 1.52;
+  }
+
+
+  /* -------------------------------------------------------
+     Issues
+     ------------------------------------------------------- */
+
+  .copyright-issues-section {
+    padding:
+      34px 0
+      40px;
+  }
+
+
+  .copyright-section-header {
+    margin-bottom: 14px;
+  }
+
+
+  .copyright-issues-grid {
+    grid-template-columns:
+      1fr;
+
+    gap: 9px;
+  }
+
+
+  .copyright-issue-card {
+    display: grid;
+
+    grid-template-columns:
+      46px
+      minmax(0, 1fr);
+
+    align-items: start;
+
+    column-gap: 12px;
+
+    padding: 14px;
+
+    border-radius: 15px;
+  }
+
+
+  .copyright-issue-icon {
+    grid-row:
+      1 / span 2;
+
+    width: 46px;
+    height: 46px;
+
+    margin: 0;
+
+    border-radius: 13px;
+  }
+
+
+  .copyright-issue-icon svg {
+    width: 23px;
+    height: 23px;
+  }
+
+
+  .copyright-issue-card h3 {
+    font-size: 12.5px;
+  }
+
+
+  .copyright-issue-card p {
+    margin-top: 4px;
+
+    font-size: 10.4px;
+    line-height: 1.48;
+  }
+
+
+  /* -------------------------------------------------------
+     Rights review
+     ------------------------------------------------------- */
+
+  .copyright-standard-section {
+    padding-bottom: 46px;
+  }
+
+
+  .copyright-standard-box {
+    grid-template-columns:
+      54px
+      minmax(0, 1fr);
+
+    gap: 14px;
+
+    padding: 18px;
+
+    border-radius: 16px;
+  }
+
+
+  .copyright-standard-box::before {
+    width: 3px;
+  }
+
+
+  .copyright-standard-icon {
+    width: 52px;
+    height: 52px;
+
+    border-radius: 14px;
+  }
+
+
+  .copyright-standard-icon svg {
+    width: 26px;
+    height: 26px;
+  }
+
+
+  .copyright-standard-content h2 {
+    font-size: 20px;
+  }
+
+
+  .copyright-standard-content
+  > p:not(.copyright-section-eyebrow) {
+    margin-top: 7px;
+
+    font-size: 10.8px;
+    line-height: 1.52;
+  }
+
+
+  .copyright-standard-actions {
+    gap: 6px;
+
+    margin-top: 12px;
+  }
+
+
+  .copyright-standard-actions a {
+    min-height: 34px;
+
+    padding:
+      0 10px;
+
+    font-size: 8.8px;
+  }
+
+
+  /* -------------------------------------------------------
+     Details
+     ------------------------------------------------------- */
+
+  .copyright-details-section {
+    padding:
+      42px 0
+      46px;
+  }
+
+
+  .copyright-details-layout {
+    gap: 18px;
+  }
+
+
+  .copyright-secondary-media {
+    border-radius: 16px;
+  }
+
+
+  .copyright-secondary-media img {
+    aspect-ratio:
+      16 / 10;
+  }
+
+
+  .copyright-details-eyebrow {
+    font-size: 7.8px;
+  }
+
+
+  .copyright-details-content h2 {
+    font-size: 22px;
+  }
+
+
+  .copyright-details-content
+  > p:not(.copyright-details-eyebrow) {
+    margin-top: 8px;
+
+    font-size: 10.8px;
+    line-height: 1.54;
+  }
+
+
+  .copyright-details-actions {
+    gap: 6px;
+
+    margin-top: 13px;
+  }
+
+
+  .copyright-details-actions a {
+    min-height: 34px;
+
+    padding:
+      0 10px;
+
+    font-size: 8.8px;
+  }
+
+
+  /* -------------------------------------------------------
+     Checklist
+     ------------------------------------------------------- */
+
+  .copyright-checklist-section {
+    padding:
+      40px 0
+      46px;
+  }
+
+
+  .copyright-checklist-header {
+    margin-bottom: 14px;
+  }
+
+
+  .copyright-checklist-grid {
+    grid-template-columns:
+      1fr;
+
+    gap: 9px;
+  }
+
+
+  .copyright-checklist-card {
+    grid-template-columns:
+      44px
+      minmax(0, 1fr);
+
+    gap: 12px;
+
+    padding: 14px;
+
+    border-radius: 15px;
+  }
+
+
+  .copyright-checklist-number {
+    width: 44px;
+    height: 44px;
+
+    border-radius: 12px;
+
+    font-size: 9.5px;
+  }
+
+
+  .copyright-checklist-card h3 {
+    font-size: 12.3px;
+  }
+
+
+  .copyright-checklist-card p {
+    margin-top: 4px;
+
+    font-size: 10.3px;
+    line-height: 1.48;
+  }
+
+
+  /* -------------------------------------------------------
+     Process
+     ------------------------------------------------------- */
+
+  .copyright-process-section {
+    padding:
+      40px 0
+      46px;
+  }
+
+
+  .copyright-process-header {
+    margin-bottom: 14px;
+  }
+
+
+  .copyright-process-grid {
+    grid-template-columns:
+      1fr;
+
+    gap: 9px;
+  }
+
+
+  .copyright-process-card {
+    grid-template-columns:
+      44px
+      minmax(0, 1fr);
+
+    gap: 12px;
+
+    padding: 14px;
+
+    border-radius: 15px;
+  }
+
+
+  .copyright-process-step {
+    width: 44px;
+    height: 44px;
+
+    border-radius: 12px;
+
+    font-size: 9.5px;
+  }
+
+
+  .copyright-process-card h3 {
+    font-size: 12.3px;
+  }
+
+
+  .copyright-process-card p {
+    margin-top: 4px;
+
+    font-size: 10.3px;
+    line-height: 1.48;
+  }
+
+
+  /* -------------------------------------------------------
+     Submission
+     ------------------------------------------------------- */
+
+  .copyright-submit-section {
+    padding:
+      38px 0;
+  }
+
+
+  .copyright-submit-box {
+    grid-template-columns:
+      54px
+      minmax(0, 1fr);
+
+    gap: 14px;
+
+    padding: 18px;
+
+    border-radius: 16px;
+  }
+
+
+  .copyright-submit-box::before {
+    width: 3px;
+  }
+
+
+  .copyright-submit-icon {
+    width: 52px;
+    height: 52px;
+
+    border-radius: 14px;
+  }
+
+
+  .copyright-submit-icon svg {
+    width: 26px;
+    height: 26px;
+  }
+
+
+  .copyright-submit-content h2 {
+    font-size: 20px;
+  }
+
+
+  .copyright-submit-content
+  > p:not(.copyright-section-eyebrow) {
+    margin-top: 7px;
+
+    font-size: 10.8px;
+    line-height: 1.52;
+  }
+
+
+  .copyright-submit-actions {
+    gap: 6px;
+
+    margin-top: 12px;
+  }
+
+
+  .copyright-submit-actions a {
+    min-height: 34px;
+
+    padding:
+      0 10px;
+
+    font-size: 8.8px;
+  }
+
+
+  /* -------------------------------------------------------
+     Distinctions
+     ------------------------------------------------------- */
+
+  .copyright-distinctions-section {
+    padding:
+      40px 0
+      46px;
+  }
+
+
+  .copyright-distinctions-header {
+    margin-bottom: 14px;
+  }
+
+
+  .copyright-distinctions-grid {
+    grid-template-columns:
+      1fr;
+
+    gap: 8px;
+  }
+
+
+  .copyright-distinction-card {
+    grid-template-columns:
+      42px
+      minmax(0, 1fr)
+      auto;
+
+    gap: 11px;
+
+    padding: 13px;
+
+    border-radius: 14px;
+  }
+
+
+  .copyright-distinction-icon {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 12px;
+  }
+
+
+  .copyright-distinction-icon svg {
+    width: 22px;
+    height: 22px;
+  }
+
+
+  .copyright-distinction-status {
+    min-height: 21px;
+
+    margin-bottom: 4px;
+
+    padding:
+      0 7px;
+
+    font-size: 7.3px;
+  }
+
+
+  .copyright-distinction-card h3 {
+    font-size: 11.5px;
+  }
+
+
+  .copyright-distinction-card p {
+    margin-top: 3px;
+
+    font-size: 9.8px;
+  }
+
+
+  .copyright-distinction-arrow {
+    font-size: 16px;
+  }
+
+
+  /* -------------------------------------------------------
+     Important note
+     ------------------------------------------------------- */
+
+  .copyright-note-section {
+    padding:
+      38px 0;
+  }
+
+
+  .copyright-note-box {
+    grid-template-columns:
+      54px
+      minmax(0, 1fr);
+
+    gap: 14px;
+
+    padding: 18px;
+
+    border-radius: 16px;
+  }
+
+
+  .copyright-note-box::before {
+    width: 3px;
+  }
+
+
+  .copyright-note-icon {
+    width: 52px;
+    height: 52px;
+
+    border-radius: 14px;
+  }
+
+
+  .copyright-note-icon svg {
+    width: 26px;
+    height: 26px;
+  }
+
+
+  .copyright-note-content h2 {
+    font-size: 20px;
+  }
+
+
+  .copyright-note-content
+  > p:not(.copyright-section-eyebrow) {
+    margin-top: 7px;
+
+    font-size: 10.8px;
+    line-height: 1.52;
+  }
+
+
+  .copyright-note-actions {
+    gap: 6px;
+
+    margin-top: 12px;
+  }
+
+
+  .copyright-note-actions a {
+    min-height: 34px;
+
+    padding:
+      0 10px;
+
+    font-size: 8.8px;
+  }
+
+
+  /* -------------------------------------------------------
+     Related
+     ------------------------------------------------------- */
+
+  .copyright-related-section {
+    padding:
+      40px 0
+      48px;
+  }
+
+
+  .copyright-related-header {
+    margin-bottom: 13px;
+  }
+
+
+  .copyright-related-grid {
+    grid-template-columns:
+      1fr;
+
+    gap: 8px;
+  }
+
+
+  .copyright-related-grid > a {
+    grid-template-columns:
+      42px
+      minmax(0, 1fr)
+      auto;
+
+    gap: 11px;
+
+    padding: 13px;
+
+    border-radius: 14px;
+  }
+
+
+  .copyright-related-icon {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 12px;
+  }
+
+
+  .copyright-related-icon svg {
+    width: 22px;
+    height: 22px;
+  }
+
+
+  .copyright-related-grid h3 {
+    font-size: 11.5px;
+  }
+
+
+  .copyright-related-grid p {
+    margin-top: 3px;
+
+    font-size: 9.8px;
+  }
+
+
+  .copyright-related-arrow {
+    font-size: 16px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 390px) {
+
+  .copyright-container {
+    width:
+      calc(100% - 22px);
+  }
+
+
+  .copyright-intro-box {
+    padding:
+      18px 15px
+      18px 18px;
+  }
+
+
+  .copyright-intro-box h1 {
+    font-size: 27px;
+  }
+
+
+  .copyright-intro-text {
+    font-size: 11.5px;
+  }
+
+
+  .copyright-intro-note {
+    font-size: 10.4px;
+  }
+
+
+  .copyright-section-header h2,
+  .copyright-standard-content h2,
+  .copyright-checklist-header h2,
+  .copyright-process-header h2,
+  .copyright-submit-content h2,
+  .copyright-distinctions-header h2,
+  .copyright-note-content h2,
+  .copyright-related-header h2 {
+    font-size: 20px;
+  }
+
+
+  .copyright-issue-card {
+    grid-template-columns:
+      42px
+      minmax(0, 1fr);
+
+    column-gap: 10px;
+
+    padding:
+      13px 12px;
+  }
+
+
+  .copyright-issue-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+
+  .copyright-issue-icon svg {
+    width: 21px;
+    height: 21px;
+  }
+
+
+  .copyright-standard-box {
+    grid-template-columns:
+      1fr;
+
+    gap: 12px;
+
+    padding: 17px;
+  }
+
+
+  .copyright-standard-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+
+  .copyright-secondary-media img {
+    aspect-ratio:
+      4 / 3;
+  }
+
+
+  .copyright-checklist-card,
+  .copyright-process-card {
+    grid-template-columns:
+      42px
+      minmax(0, 1fr);
+
+    gap: 10px;
+
+    padding:
+      13px 12px;
+  }
+
+
+  .copyright-checklist-number,
+  .copyright-process-step {
+    width: 42px;
+    height: 42px;
+  }
+
+
+  .copyright-submit-box {
+    grid-template-columns:
+      1fr;
+
+    gap: 12px;
+
+    padding: 17px;
+  }
+
+
+  .copyright-submit-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+
+  .copyright-note-box {
+    grid-template-columns:
+      1fr;
+
+    gap: 12px;
+
+    padding: 17px;
+  }
+
+
+  .copyright-note-icon {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 340px) {
+
+  .copyright-container {
+    width:
+      calc(100% - 18px);
+  }
+
+
+  .copyright-intro-box h1 {
+    font-size: 25px;
+  }
+
+
+  .copyright-issue-card {
+    grid-template-columns:
+      40px
+      minmax(0, 1fr);
+
+    gap: 9px;
+
+    padding:
+      12px 10px;
+  }
+
+
+  .copyright-issue-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+
+  .copyright-issue-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+
+  .copyright-standard-actions,
+  .copyright-details-actions,
+  .copyright-submit-actions,
+  .copyright-note-actions {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+
+  .copyright-standard-actions a,
+  .copyright-details-actions a,
+  .copyright-submit-actions a,
+  .copyright-note-actions a {
+    width: 100%;
+
+    justify-content: space-between;
+  }
+
+
+  .copyright-checklist-card,
+  .copyright-process-card {
+    grid-template-columns:
+      40px
+      minmax(0, 1fr);
+  }
+
+
+  .copyright-checklist-number,
+  .copyright-process-step {
+    width: 40px;
+    height: 40px;
+  }
+
+
+  .copyright-distinction-card,
+  .copyright-related-grid > a {
+    grid-template-columns:
+      38px
+      minmax(0, 1fr)
+      auto;
+
+    gap: 9px;
+  }
+
+
+  .copyright-distinction-icon,
+  .copyright-related-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+
+  .copyright-distinction-icon svg,
+  .copyright-related-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .copyright-breadcrumb a,
+  .copyright-issue-card,
+  .copyright-standard-actions a,
+  .copyright-details-actions a,
+  .copyright-checklist-card,
+  .copyright-process-card,
+  .copyright-submit-actions a,
+  .copyright-distinction-card,
+  .copyright-distinction-arrow,
+  .copyright-note-actions a,
+  .copyright-related-grid > a,
+  .copyright-related-arrow {
+    transition:
+      none !important;
+  }
+
+
+  .copyright-issue-card:hover,
+  .copyright-standard-actions a:hover,
+  .copyright-details-actions a:hover,
+  .copyright-checklist-card:hover,
+  .copyright-process-card:hover,
+  .copyright-submit-actions a:hover,
+  a.copyright-distinction-card:hover,
+  .copyright-note-actions a:hover,
+  .copyright-related-grid > a:hover {
+    transform:
+      none;
+  }
+
+
+  a.copyright-distinction-card:hover
+  .copyright-distinction-arrow,
+  .copyright-related-grid
+  > a:hover
+  .copyright-related-arrow {
+    transform:
+      none;
+  }
+}
+
+
+/* =========================================================
+   HIGH CONTRAST
+   ========================================================= */
+
+@media (prefers-contrast: more) {
+
+  .copyright-intro-box,
+  .copyright-primary-media,
+  .copyright-issue-card,
+  .copyright-standard-box,
+  .copyright-standard-actions a,
+  .copyright-secondary-media,
+  .copyright-details-actions a,
+  .copyright-checklist-card,
+  .copyright-process-card,
+  .copyright-submit-box,
+  .copyright-submit-actions a,
+  .copyright-distinction-card,
+  .copyright-note-box,
+  .copyright-note-actions a,
+  .copyright-related-grid > a {
+    border-color:
+      #bcc1c9;
+  }
+
+
+  .copyright-intro-text,
+  .copyright-intro-note,
+  .copyright-section-header
+  > p:last-child,
+  .copyright-issue-card p,
+  .copyright-standard-content
+  > p:not(.copyright-section-eyebrow),
+  .copyright-details-content
+  > p:not(.copyright-details-eyebrow),
+  .copyright-checklist-header
+  > p:last-child,
+  .copyright-checklist-card p,
+  .copyright-process-header
+  > p:last-child,
+  .copyright-process-card p,
+  .copyright-submit-content
+  > p:not(.copyright-section-eyebrow),
+  .copyright-distinctions-header
+  > p:last-child,
+  .copyright-distinction-card p,
+  .copyright-note-content
+  > p:not(.copyright-section-eyebrow),
+  .copyright-related-header
+  > p:last-child,
+  .copyright-related-grid p {
+    color:
+      #444850;
+  }
+}
+
+
+/* =========================================================
+   PRINT
+   ========================================================= */
+
+@media print {
+
+  .copyright-page,
+  .copyright-intro,
+  .copyright-issues-section,
+  .copyright-standard-section,
+  .copyright-details-section,
+  .copyright-checklist-section,
+  .copyright-process-section,
+  .copyright-submit-section,
+  .copyright-distinctions-section,
+  .copyright-note-section,
+  .copyright-related-section {
+    background:
+      #ffffff !important;
+  }
+
+
+  .copyright-container {
+    width: 100%;
+  }
+
+
+  .copyright-intro,
+  .copyright-issues-section,
+  .copyright-standard-section,
+  .copyright-details-section,
+  .copyright-checklist-section,
+  .copyright-process-section,
+  .copyright-submit-section,
+  .copyright-distinctions-section,
+  .copyright-note-section,
+  .copyright-related-section {
+    padding:
+      25px 20px;
+  }
+
+
+  .copyright-breadcrumb {
+    display: none;
+  }
+
+
+  .copyright-intro-box,
+  .copyright-primary-media,
+  .copyright-issue-card,
+  .copyright-standard-box,
+  .copyright-secondary-media,
+  .copyright-checklist-card,
+  .copyright-process-card,
+  .copyright-submit-box,
+  .copyright-distinction-card,
+  .copyright-note-box,
+  .copyright-related-grid > a {
+    box-shadow:
+      none;
+  }
+
+
+  .copyright-issues-grid {
+    grid-template-columns:
+      repeat(
+        3,
+        minmax(0, 1fr)
+      );
+  }
+
+
+  .copyright-details-layout {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+  }
+
+
+  .copyright-checklist-grid {
+    grid-template-columns:
+      repeat(
+        3,
+        minmax(0, 1fr)
+      );
+  }
+
+
+  .copyright-process-grid,
+  .copyright-distinctions-grid,
+  .copyright-related-grid {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+  }
+
+
+  .copyright-primary-media,
+  .copyright-secondary-media,
+  .copyright-issue-card,
+  .copyright-standard-box,
+  .copyright-checklist-card,
+  .copyright-process-card,
+  .copyright-submit-box,
+  .copyright-distinction-card,
+  .copyright-note-box,
+  .copyright-related-grid > a {
+    break-inside:
+      avoid;
+  }
+}
