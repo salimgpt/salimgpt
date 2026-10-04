@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://salimgpt.github.io/salimgpt/sitemap.xml

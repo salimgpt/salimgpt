@@ -1,0 +1,64 @@
+{
+  "id": "./",
+  "name": "SalimGPT — Research-Based Documentary Media",
+  "short_name": "SalimGPT",
+  "description": "SalimGPT is an independent, research-based multilingual documentary media brand. Explore official SalimGPT language editions, editorial standards, research methodology, transparency information and global resources.",
+  "lang": "en",
+  "dir": "ltr",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": [
+    "standalone",
+    "minimal-ui",
+    "browser"
+  ],
+  "orientation": "any",
+  "background_color": "#f7f8fa",
+  "theme_color": "#ffffff",
+  "categories": [
+    "education",
+    "news",
+    "entertainment"
+  ],
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/brand/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Explore Languages",
+      "short_name": "Languages",
+      "description": "Choose an official SalimGPT language edition.",
+      "url": "explore-languages/"
+    },
+    {
+      "name": "About SalimGPT",
+      "short_name": "About",
+      "description": "Learn about SalimGPT, its mission and editorial approach.",
+      "url": "about/"
+    },
+    {
+      "name": "How We Work",
+      "short_name": "How We Work",
+      "description": "Explore SalimGPT research, fact-checking and editorial standards.",
+      "url": "how-we-work/documentary-approach/"
+    },
+    {
+      "name": "Search SalimGPT",
+      "short_name": "Search",
+      "description": "Search SalimGPT global pages and resources.",
+      "url": "help/search/"
+    }
+  ]
+}

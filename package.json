@@ -1,0 +1,33 @@
+{
+  "name": "salimgpt-global",
+  "version": "1.0.0",
+  "private": true,
+  "description": "SalimGPT global brand, language gateway, editorial standards, research, transparency, help and legal website.",
+  "homepage": "https://salimgpt.github.io/salimgpt/",
+  "license": "UNLICENSED",
+  "type": "commonjs",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "build:search": "node scripts/build-search-index.js",
+    "build:faq": "node scripts/build-faq-index.js",
+    "build:sitemap": "node scripts/build-sitemap.js",
+    "build:all": "npm run build:search && npm run build:faq && npm run build:sitemap && npm run build",
+    "check": "node --check scripts/build.js && node --check scripts/build-search-index.js && node --check scripts/build-faq-index.js && node --check scripts/build-sitemap.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "salimgpt",
+    "documentary",
+    "documentary-media",
+    "research",
+    "multilingual",
+    "editorial",
+    "fact-checking",
+    "github-pages"
+  ],
+  "author": {
+    "name": "Mohammad Salim"
+  }
+}
