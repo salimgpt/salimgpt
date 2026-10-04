@@ -1,0 +1,482 @@
+/* =========================================================
+   SalimGPT
+   File: css/404.css
+
+   Page-specific styles for 404.html only.
+   Shared header, menu, footer, buttons, cards and typography
+   remain controlled by their existing global stylesheets.
+   ========================================================= */
+
+
+/* =========================================================
+   PAGE
+   ========================================================= */
+
+.error-page {
+  width: 100%;
+  min-width: 0;
+  overflow-x: hidden;
+  background: var(--sg-page-bg, #f7f8fa);
+}
+
+
+/* =========================================================
+   ERROR HERO
+   ========================================================= */
+
+.error-hero {
+  position: relative;
+  isolation: isolate;
+
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  min-height: 620px;
+
+  overflow: hidden;
+
+  padding: 72px 24px 76px;
+
+  background:
+    radial-gradient(
+      circle at 18% 22%,
+      rgba(8, 124, 240, 0.10),
+      transparent 34%
+    ),
+    radial-gradient(
+      circle at 82% 78%,
+      rgba(247, 25, 80, 0.10),
+      transparent 34%
+    ),
+    linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #f7f9fc 100%
+    );
+
+  border-bottom: 1px solid var(--sg-border, #e7e9ee);
+}
+
+.error-hero::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+
+  pointer-events: none;
+
+  background-image:
+    linear-gradient(
+      rgba(17, 18, 22, 0.025) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(17, 18, 22, 0.025) 1px,
+      transparent 1px
+    );
+
+  background-size: 44px 44px;
+
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.72),
+    transparent 88%
+  );
+}
+
+.error-hero-inner {
+  width: min(100%, 860px);
+  min-width: 0;
+
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   LARGE 404 NUMBER
+   ========================================================= */
+
+.error-code {
+  margin: 0 0 18px;
+
+  color: #e7ebf1;
+
+  font-size: clamp(92px, 18vw, 210px);
+  font-weight: 900;
+  line-height: 0.78;
+
+  letter-spacing: -0.075em;
+
+  user-select: none;
+}
+
+
+/* =========================================================
+   BRAND
+   ========================================================= */
+
+.error-brand {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  max-width: 100%;
+
+  margin: 0 auto 26px;
+}
+
+.error-brand > img:first-child {
+  display: block;
+
+  width: 58px;
+  height: 58px;
+
+  flex: 0 0 58px;
+
+  object-fit: contain;
+
+  filter: drop-shadow(
+    0 5px 12px rgba(17, 18, 22, 0.10)
+  );
+}
+
+.error-wordmark {
+  display: block;
+
+  width: auto;
+  max-width: min(220px, 62vw);
+  height: 42px;
+
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   HERO COPY
+   ========================================================= */
+
+.error-hero .sg-eyebrow {
+  justify-content: center;
+
+  margin-bottom: 15px;
+}
+
+.error-hero h1 {
+  max-width: 760px;
+
+  margin: 0 auto;
+
+  color: var(--sg-black, #111216);
+
+  font-size: clamp(34px, 6vw, 62px);
+  font-weight: 850;
+  line-height: 1.05;
+
+  letter-spacing: -0.045em;
+}
+
+.error-description {
+  max-width: 650px;
+
+  margin: 22px auto 0;
+
+  color: var(--sg-text-soft, #616772);
+
+  font-size: clamp(16px, 2vw, 19px);
+  line-height: 1.72;
+}
+
+
+/* =========================================================
+   HERO ACTIONS
+   ========================================================= */
+
+.error-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  margin-top: 30px;
+}
+
+.error-actions .sg-button {
+  min-width: 168px;
+}
+
+
+/* =========================================================
+   RECOVERY LINKS SECTION
+   ========================================================= */
+
+.error-links-section {
+  width: 100%;
+
+  padding: 78px 0 92px;
+
+  background: #ffffff;
+}
+
+.error-links-section .sg-section-header {
+  max-width: 760px;
+
+  margin-right: auto;
+  margin-left: auto;
+
+  text-align: center;
+}
+
+.error-links-section .sg-eyebrow {
+  justify-content: center;
+}
+
+
+/* =========================================================
+   RECOVERY LINK GRID
+   ========================================================= */
+
+.error-links-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 18px;
+
+  width: 100%;
+
+  margin-top: 38px;
+}
+
+.error-link-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  min-width: 0;
+  min-height: 220px;
+
+  padding: 26px;
+
+  color: inherit;
+  text-decoration: none;
+
+  border: 1px solid var(--sg-border, #e7e9ee);
+
+  transition:
+    transform var(--sg-transition, 180ms ease),
+    border-color var(--sg-transition, 180ms ease),
+    box-shadow var(--sg-transition, 180ms ease),
+    background var(--sg-transition, 180ms ease);
+}
+
+.error-link-card:hover {
+  transform: translateY(-4px);
+
+  border-color: #f2becb;
+
+  background: #fffafb;
+
+  box-shadow: var(--sg-shadow-md, 0 12px 34px rgba(17, 18, 22, 0.065));
+
+  text-decoration: none;
+}
+
+.error-link-card:focus-visible {
+  outline: 3px solid rgba(247, 25, 80, 0.22);
+  outline-offset: 4px;
+}
+
+.error-link-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 48px;
+  height: 48px;
+
+  margin-bottom: 20px;
+
+  flex: 0 0 48px;
+
+  border: 1px solid #dde6ef;
+  border-radius: 14px;
+
+  background: #f4f8fc;
+
+  color: var(--sg-pink, #f71950);
+
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.error-link-card strong {
+  display: block;
+
+  margin: 0;
+
+  color: var(--sg-black, #111216);
+
+  font-size: 18px;
+  font-weight: 780;
+  line-height: 1.3;
+}
+
+.error-link-card > span:last-child {
+  display: block;
+
+  margin-top: 10px;
+
+  color: var(--sg-text-soft, #616772);
+
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .error-hero {
+    min-height: 560px;
+
+    padding-top: 60px;
+    padding-bottom: 64px;
+  }
+
+  .error-links-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .error-link-card {
+    min-height: 205px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 640px) {
+
+  .error-hero {
+    min-height: auto;
+
+    padding: 50px 18px 58px;
+  }
+
+  .error-code {
+    margin-bottom: 16px;
+
+    font-size: clamp(88px, 30vw, 132px);
+  }
+
+  .error-brand {
+    gap: 10px;
+
+    margin-bottom: 22px;
+  }
+
+  .error-brand > img:first-child {
+    width: 50px;
+    height: 50px;
+
+    flex-basis: 50px;
+  }
+
+  .error-wordmark {
+    max-width: 180px;
+    height: 36px;
+  }
+
+  .error-hero h1 {
+    font-size: clamp(32px, 9vw, 44px);
+  }
+
+  .error-description {
+    margin-top: 18px;
+
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .error-actions {
+    flex-direction: column;
+
+    width: 100%;
+
+    margin-top: 26px;
+  }
+
+  .error-actions .sg-button {
+    width: 100%;
+    max-width: 360px;
+  }
+
+  .error-links-section {
+    padding: 58px 0 68px;
+  }
+
+  .error-links-grid {
+    grid-template-columns: 1fr;
+
+    gap: 14px;
+
+    margin-top: 30px;
+  }
+
+  .error-link-card {
+    min-height: 0;
+
+    padding: 22px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL SCREENS
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+  .error-hero {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .error-brand {
+    flex-direction: column;
+  }
+
+  .error-wordmark {
+    max-width: 170px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .error-link-card {
+    transition: none;
+  }
+
+  .error-link-card:hover {
+    transform: none;
+  }
+}
