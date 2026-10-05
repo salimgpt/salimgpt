@@ -1,0 +1,20 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 64 64"
+  role="img"
+  aria-labelledby="facebookTitle"
+>
+  <title id="facebookTitle">Facebook</title>
+
+  <circle
+    cx="32"
+    cy="32"
+    r="28"
+    fill="#1877F2"
+  />
+
+  <path
+    d="M35.7 19.5H41V11.4C40.1 11.3 37 11 33.4 11C26.2 11 21.2 15.4 21.2 23.5V30H13V39H21.2V61C22.9 61.5 24.7 61.8 26.6 61.9C28.5 61.9 30.3 61.7 32 61.2V39H39.5L40.7 30H32V24.4C32 21.8 32.7 19.5 35.7 19.5Z"
+    fill="#FFFFFF"
+  />
+</svg>
