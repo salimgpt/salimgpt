@@ -6,7 +6,7 @@ SalimGPT Global is the central website for **SalimGPT**, an independent, researc
 
 SalimGPT is **not an AI chatbot or AI model**. Artificial intelligence may assist selected parts of documentary research, drafting, language adaptation, visual development and production, while **editorial judgment, source verification, fact-checking, creative direction, review and final publication approval remain human-led**.
 
------
+------
 
 ## Official Website
 
