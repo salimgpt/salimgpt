@@ -1322,6 +1322,10 @@ function validateHtmlFiles() {
         path
           .extname(filePath)
           .toLowerCase() === ".html"
+    ).filter(
+      (filePath) =>
+        path.basename(filePath) !==
+        "googlecd711d3906daa66c.html"
     );
 
 
